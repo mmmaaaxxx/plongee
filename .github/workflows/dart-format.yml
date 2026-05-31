@@ -21,13 +21,13 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: stable
+          channel: stable
 
       - name: Install dependencies
         run: flutter pub get
 
       - name: Format Dart files
-        run: dart format --output=none .
+        run: dart format --output=write .
 
       - name: Auto-commit formatted files
         uses: stefanzweifel/git-auto-commit-action@v5

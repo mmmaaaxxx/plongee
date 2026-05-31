@@ -3326,5 +3326,44 @@ Question(
 ),
 ];
 
+const List<QuizModule> quizModules = [
+  QuizModule(
+    id: 'niveau1',
+    title: 'Niveau 1',
+    subtitle: 'Plongeur PE20',
+    level: 'N1',
+    color: '0xFF1565C0',
+    icon: '🤿',
+    questions: _niveau1Questions,
+  ),
+  QuizModule(
+    id: 'niveau2',
+    title: 'Niveau 2',
+    subtitle: 'Plongeur PE40',
+    level: 'N2',
+    color: '0xFF00838F',
+    icon: '🌊',
+    questions: _niveau2Questions,
+  ),
+  QuizModule(
+    id: 'niveau3',
+    title: 'Niveau 3',
+    subtitle: 'Plongeur PE60',
+    level: 'N3',
+    color: '0xFF2E7D32',
+    icon: '⚓',
+    questions: _niveau3Questions,
+  ),
+  QuizModule(
+    id: 'niveau4',
+    title: 'Niveau 4',
+    subtitle: 'Guide de Palanquée',
+    level: 'N4',
+    color: '0xFF6A1B9A',
+    icon: '🏅',
+    questions: _niveau4Questions,
+  ),
+];
+
 
 

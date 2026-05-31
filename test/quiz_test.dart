@@ -162,7 +162,7 @@ void main() {
     });
 
     test('total points examen est 600', () {
-      final q = n4Module.questions.firstWhere((q) => q.id == 'n4_08');
+      final q = n4Module.questions.firstWhere((q) => q.id == 'n4_12');
       expect(q.correctAnswer, contains('600'));
     });
   });

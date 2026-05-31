@@ -27,7 +27,7 @@ class GazMixture {
 
   double get ppO2Max => fo2 > 0 ? 1.4 / fo2 - 1 : double.infinity; // profondeur max MOD (bar)
   double get modMeters => fo2 > 0 ? (1.4 / fo2 - 1) * 10 : double.infinity;
-  double get endAtDepth(double depth) => (depth / 10 + 1) * fn2 / 0.79 * 10 - 10;
+  double endAtDepth(double depth) => (depth / 10 + 1) * fn2 / 0.79 * 10 - 10;
 }
 
 const List<GazMixture> gasMixtures = [

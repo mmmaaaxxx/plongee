@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../data/quiz_data.dart';
 import '../models/question.dart';
 import 'quiz_screen.dart';
+import 'dive_planning_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -96,23 +97,157 @@ class HomeScreen extends StatelessWidget {
             sliver: SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
+                  // index 0 → stats
+                  // index 1 → bouton planification
+                  // index 2+ → modules QCM
                   if (index == 0) {
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 16),
                       child: _buildStatsRow(context),
                     );
                   }
-                  final module = quizModules[index - 1];
+                  if (index == 1) {
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 20),
+                      child: _buildPlanningButton(context),
+                    );
+                  }
+                  final module = quizModules[index - 2];
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 16),
                     child: _ModuleCard(module: module),
                   );
                 },
-                childCount: quizModules.length + 1,
+                childCount: quizModules.length + 2,
               ),
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildPlanningButton(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const DivePlanningScreen(),
+          ),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF006064).withOpacity(0.3),
+              blurRadius: 12,
+              offset: const Offset(0, 6),
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: Stack(
+            children: [
+              Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [Color(0xFF004D40), Color(0xFF00838F)],
+                  ),
+                ),
+              ),
+              Positioned(
+                right: -20,
+                top: -20,
+                child: Container(
+                  width: 120,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.07),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        const Text('🧭', style: TextStyle(fontSize: 42)),
+                        const SizedBox(height: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: const Text(
+                            'OUTIL',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 11,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Planification de Plongée',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            'Calcul conso · DTR · Paliers MN90',
+                            style: TextStyle(
+                              color: Colors.white.withOpacity(0.85),
+                              fontSize: 13,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Wrap(
+                            spacing: 6,
+                            children: ['10/12/15 L', 'Nitrox', 'Air']
+                                .map((t) => _InfoChip(label: t))
+                                .toList(),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.2),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(
+                        Icons.arrow_forward_ios_rounded,
+                        color: Colors.white,
+                        size: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -235,7 +370,6 @@ class _ModuleCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           child: Stack(
             children: [
-              // Background gradient
               Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
@@ -248,7 +382,6 @@ class _ModuleCard extends StatelessWidget {
                   ),
                 ),
               ),
-              // Wave decoration
               Positioned(
                 right: -20,
                 top: -20,
@@ -273,12 +406,10 @@ class _ModuleCard extends StatelessWidget {
                   ),
                 ),
               ),
-              // Content
               Padding(
                 padding: const EdgeInsets.all(20),
                 child: Row(
                   children: [
-                    // Icon & Level badge
                     Column(
                       children: [
                         Text(
@@ -307,7 +438,6 @@ class _ModuleCard extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(width: 20),
-                    // Info
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -340,7 +470,6 @@ class _ModuleCard extends StatelessWidget {
                         ],
                       ),
                     ),
-                    // Arrow
                     Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
@@ -365,10 +494,10 @@ class _ModuleCard extends StatelessWidget {
 }
 
 class _InfoChip extends StatelessWidget {
-  final IconData icon;
+  final IconData? icon;
   final String label;
 
-  const _InfoChip({required this.icon, required this.label});
+  const _InfoChip({this.icon, required this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -381,8 +510,10 @@ class _InfoChip extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, color: Colors.white, size: 14),
-          const SizedBox(width: 4),
+          if (icon != null) ...[
+            Icon(icon, color: Colors.white, size: 14),
+            const SizedBox(width: 4),
+          ],
           Text(
             label,
             style: const TextStyle(color: Colors.white, fontSize: 12),

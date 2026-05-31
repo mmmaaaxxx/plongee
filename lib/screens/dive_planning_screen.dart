@@ -4,15 +4,308 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+// ═══════════════════════════════════════════════════════════════
+// BÜHLMANN ZH-L16C
+// 16 compartiments tissulaires — constantes officielles
+// ═══════════════════════════════════════════════════════════════
+
+class _Compartment {
+  final double halfTimeN2; // min
+  final double aN2;        // bar
+  final double bN2;
+  final double halfTimeHe; // min
+  final double aHe;        // bar
+  final double bHe;
+
+  const _Compartment({
+    required this.halfTimeN2,
+    required this.aN2,
+    required this.bN2,
+    required this.halfTimeHe,
+    required this.aHe,
+    required this.bHe,
+  });
+}
+
+const List<_Compartment> _zhl16c = [
+  _Compartment(halfTimeN2: 4.0,   aN2: 1.2599, bN2: 0.5050, halfTimeHe: 1.51,  aHe: 1.7424, bHe: 0.4245),
+  _Compartment(halfTimeN2: 8.0,   aN2: 1.0000, bN2: 0.6514, halfTimeHe: 3.02,  aHe: 1.3830, bHe: 0.5747),
+  _Compartment(halfTimeN2: 12.5,  aN2: 0.8618, bN2: 0.7222, halfTimeHe: 4.72,  aHe: 1.1919, bHe: 0.6527),
+  _Compartment(halfTimeN2: 18.5,  aN2: 0.7562, bN2: 0.7725, halfTimeHe: 6.99,  aHe: 1.0458, bHe: 0.7223),
+  _Compartment(halfTimeN2: 27.0,  aN2: 0.6200, bN2: 0.8125, halfTimeHe: 10.21, aHe: 0.9220, bHe: 0.7582),
+  _Compartment(halfTimeN2: 38.3,  aN2: 0.5043, bN2: 0.8434, halfTimeHe: 14.48, aHe: 0.8205, bHe: 0.7957),
+  _Compartment(halfTimeN2: 54.3,  aN2: 0.4410, bN2: 0.8693, halfTimeHe: 20.53, aHe: 0.7305, bHe: 0.8279),
+  _Compartment(halfTimeN2: 77.0,  aN2: 0.4000, bN2: 0.8910, halfTimeHe: 29.11, aHe: 0.6502, bHe: 0.8553),
+  _Compartment(halfTimeN2: 109.0, aN2: 0.3750, bN2: 0.9092, halfTimeHe: 41.20, aHe: 0.5950, bHe: 0.8757),
+  _Compartment(halfTimeN2: 146.0, aN2: 0.3500, bN2: 0.9222, halfTimeHe: 55.19, aHe: 0.5545, bHe: 0.8903),
+  _Compartment(halfTimeN2: 187.0, aN2: 0.3295, bN2: 0.9319, halfTimeHe: 70.69, aHe: 0.5333, bHe: 0.8997),
+  _Compartment(halfTimeN2: 239.0, aN2: 0.3065, bN2: 0.9403, halfTimeHe: 90.34, aHe: 0.5189, bHe: 0.9073),
+  _Compartment(halfTimeN2: 305.0, aN2: 0.2835, bN2: 0.9477, halfTimeHe: 115.29,aHe: 0.5181, bHe: 0.9122),
+  _Compartment(halfTimeN2: 390.0, aN2: 0.2610, bN2: 0.9544, halfTimeHe: 147.42,aHe: 0.5176, bHe: 0.9171),
+  _Compartment(halfTimeN2: 498.0, aN2: 0.2480, bN2: 0.9602, halfTimeHe: 188.24,aHe: 0.5172, bHe: 0.9217),
+  _Compartment(halfTimeN2: 635.0, aN2: 0.2327, bN2: 0.9653, halfTimeHe: 240.03,aHe: 0.5119, bHe: 0.9267),
+];
+
+// Pression d'eau douce vs mer — on utilise mer (10.1325 m/bar)
+const double _mPerBar = 10.0;
+// Pression vapeur d'eau alvéolaire
+const double _pH2O = 0.0627; // bar
+// Fraction N2 dans l'air alvéolaire au repos (surface)
+const double _surfacePpN2 = (1.0 - _pH2O) * 0.79; // ≈ 0.7400 bar
+
 // ─────────────────────────────────────────────
-// Modèles de données
+// Modèle Bühlmann : simulation compartiments
 // ─────────────────────────────────────────────
+
+class BuhlmannEngine {
+  // Saturation initiale à la surface (air)
+  List<double> _ppN2 = List.filled(16, _surfacePpN2);
+  List<double> _ppHe = List.filled(16, 0.0);
+
+  BuhlmannEngine();
+
+  // Clone de l'état courant
+  BuhlmannEngine._clone(List<double> n2, List<double> he)
+      : _ppN2 = List.of(n2),
+        _ppHe = List.of(he);
+
+  BuhlmannEngine clone() => BuhlmannEngine._clone(_ppN2, _ppHe);
+
+  // Exposition à une pression ambiante pendant [minutes] minutes
+  void expose({
+    required double ambientBar, // pression ambiante en bar
+    required double fn2,        // fraction N2 du gaz
+    required double fhe,        // fraction He du gaz (0 pour Nitrox/Air)
+    required double minutes,
+  }) {
+    final inspiredN2 = (ambientBar - _pH2O) * fn2;
+    final inspiredHe = (ambientBar - _pH2O) * fhe;
+
+    for (int i = 0; i < 16; i++) {
+      final c = _zhl16c[i];
+      final kN2 = log(2) / c.halfTimeN2;
+      final kHe = log(2) / c.halfTimeHe;
+      _ppN2[i] += (inspiredN2 - _ppN2[i]) * (1 - exp(-kN2 * minutes));
+      _ppHe[i] += (inspiredHe - _ppHe[i]) * (1 - exp(-kHe * minutes));
+    }
+  }
+
+  // Pression de seuil de tolérance (M-value) à une pression ambiante donnée
+  // Retourne la pression de gaz inerte max tolérée dans chaque compartiment
+  double ceilingBar() {
+    double ceiling = 0.0;
+    for (int i = 0; i < 16; i++) {
+      final c = _zhl16c[i];
+      // a et b mixés He/N2
+      final totalPpInert = _ppN2[i] + _ppHe[i];
+      if (totalPpInert <= 0) continue;
+      final fracHe = _ppHe[i] / totalPpInert;
+      final fracN2 = 1.0 - fracHe;
+      final a = fracN2 * c.aN2 + fracHe * c.aHe;
+      final b = fracN2 * c.bN2 + fracHe * c.bHe;
+      // Plafond minimum pour ce compartiment
+      final pMin = (totalPpInert - a) * b;
+      if (pMin > ceiling) ceiling = pMin;
+    }
+    return ceiling;
+  }
+
+  // Profondeur plafond en mètres (0 = pas de palier)
+  double ceilingMeters() {
+    final ceil = ceilingBar();
+    if (ceil <= 1.0) return 0.0;
+    return ((ceil - 1.0) * _mPerBar);
+  }
+
+  // Profondeur de palier arrondie à 3 m supérieurs
+  int stopDepthMeters() {
+    final ceil = ceilingMeters();
+    if (ceil <= 0) return 0;
+    return (((ceil / 3.0).ceil()) * 3).toInt();
+  }
+}
+
+// ─────────────────────────────────────────────
+// Calcul plan complet avec Bühlmann
+// ─────────────────────────────────────────────
+
+class DecoStop {
+  final int depth;    // m
+  final int duration; // min
+  const DecoStop({required this.depth, required this.duration});
+}
+
+class BuhlmannResult {
+  final List<DecoStop> stops;
+  final int dtr;           // durée totale de remontée (min) paliers inclus
+  final bool ndl;          // true = sans décompression
+  final int ndlMinutes;    // limite sans déco restante à ce profil (si ndl)
+  final double maxSaturation; // % saturation max compartiment critique
+  final int tts;           // Time To Surface (min)
+
+  const BuhlmannResult({
+    required this.stops,
+    required this.dtr,
+    required this.ndl,
+    required this.ndlMinutes,
+    required this.maxSaturation,
+    required this.tts,
+  });
+}
+
+const double _ascentRate = 9.0;  // m/min
+const double _descentRate = 20.0; // m/min
+
+BuhlmannResult computeBuhlmann({
+  required double depth,      // m
+  required int bottomTime,    // min
+  required GazMixture gas,
+}) {
+  final engine = BuhlmannEngine();
+  final ambientBottom = depth / _mPerBar + 1.0;
+
+  // 1. Descente
+  final descentMin = depth / _descentRate;
+  // Pression moyenne pendant la descente
+  for (int step = 0; step < (descentMin * 10).round(); step++) {
+    final frac = step / (descentMin * 10);
+    final p = 1.0 + (depth * frac) / _mPerBar;
+    engine.expose(ambientBar: p, fn2: gas.fn2, fhe: 0, minutes: 0.1);
+  }
+
+  // 2. Fond
+  engine.expose(
+    ambientBar: ambientBottom,
+    fn2: gas.fn2,
+    fhe: 0,
+    minutes: bottomTime.toDouble(),
+  );
+
+  // Calcul saturation max (pour affichage)
+  double maxSat = 0;
+  for (int i = 0; i < 16; i++) {
+    final c = _zhl16c[i];
+    final totalInert = engine._ppN2[i] + engine._ppHe[i];
+    final mVal = c.aN2 + ambientBottom / c.bN2;
+    final sat = totalInert / mVal;
+    if (sat > maxSat) maxSat = sat;
+  }
+
+  // 3. Calcul NDL (pour info — combien de minutes supplémentaires possibles)
+  int ndlMinutes = 0;
+  {
+    final testEngine = engine.clone();
+    while (ndlMinutes < 999) {
+      testEngine.expose(
+          ambientBar: ambientBottom, fn2: gas.fn2, fhe: 0, minutes: 1);
+      ndlMinutes++;
+      // Simuler remontée directe depuis ce point
+      final testEngine2 = testEngine.clone();
+      final ceil = _simulateDirectAscent(testEngine2, depth, gas);
+      if (ceil > 0) break;
+    }
+  }
+
+  // 4. Remontée avec paliers
+  final stops = <DecoStop>[];
+  int dtr = 0;
+  double currentDepth = depth;
+  final ascentEngine = engine.clone();
+
+  while (currentDepth > 0) {
+    final stopDepth = ascentEngine.stopDepthMeters();
+
+    if (stopDepth <= 0) {
+      // Remontée libre jusqu'à surface
+      final tMin = currentDepth / _ascentRate;
+      for (int step = 0; step < (tMin * 10).round(); step++) {
+        final frac = step / (tMin * 10);
+        final p = (1.0 + currentDepth / _mPerBar) * (1 - frac) +
+            1.0 * frac;
+        ascentEngine.expose(
+            ambientBar: p, fn2: gas.fn2, fhe: 0, minutes: 0.1);
+      }
+      dtr += tMin.ceil();
+      break;
+    }
+
+    // Remonter jusqu'au prochain palier
+    if (stopDepth < currentDepth) {
+      final travelMin = (currentDepth - stopDepth) / _ascentRate;
+      for (int step = 0; step < (travelMin * 10).round(); step++) {
+        final frac = step / (travelMin * 10);
+        final p = (1.0 + currentDepth / _mPerBar) * (1 - frac) +
+            (1.0 + stopDepth / _mPerBar) * frac;
+        ascentEngine.expose(
+            ambientBar: p, fn2: gas.fn2, fhe: 0, minutes: 0.1);
+      }
+      dtr += travelMin.ceil();
+      currentDepth = stopDepth.toDouble();
+    }
+
+    // Tenir le palier minute par minute
+    int stopDuration = 0;
+    while (ascentEngine.stopDepthMeters() >= stopDepth && stopDuration < 120) {
+      ascentEngine.expose(
+          ambientBar: 1.0 + currentDepth / _mPerBar,
+          fn2: gas.fn2,
+          fhe: 0,
+          minutes: 1);
+      stopDuration++;
+      dtr++;
+    }
+
+    if (stopDuration > 0) {
+      stops.add(DecoStop(depth: stopDepth, duration: stopDuration));
+    }
+
+    // Remonter de 3 m
+    currentDepth = (currentDepth - 3).clamp(0, double.infinity);
+  }
+
+  final ndl = stops.isEmpty;
+  final tts = dtr;
+
+  return BuhlmannResult(
+    stops: stops,
+    dtr: dtr,
+    ndl: ndl,
+    ndlMinutes: ndlMinutes,
+    maxSaturation: maxSat,
+    tts: tts,
+  );
+}
+
+// Simule une remontée directe et retourne le plafond max rencontré
+double _simulateDirectAscent(
+    BuhlmannEngine engine, double depth, GazMixture gas) {
+  double maxCeil = 0;
+  double current = depth;
+  while (current > 0) {
+    final next = (current - 3).clamp(0, double.infinity);
+    final travelMin = (current - next) / _ascentRate;
+    for (int s = 0; s < (travelMin * 10).round(); s++) {
+      final frac = s / (travelMin * 10);
+      final p = (1.0 + current / _mPerBar) * (1 - frac) +
+          (1.0 + next / _mPerBar) * frac;
+      engine.expose(ambientBar: p, fn2: gas.fn2, fhe: 0, minutes: 0.1);
+    }
+    final c = engine.ceilingMeters();
+    if (c > maxCeil) maxCeil = c;
+    current = next;
+  }
+  return maxCeil;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// Modèles gaz & données
+// ═══════════════════════════════════════════════════════════════
 
 class GazMixture {
   final String name;
   final String label;
-  final double fo2; // fraction O2
-  final double fn2; // fraction N2
+  final double fo2;
+  final double fn2;
   final String icon;
   final Color color;
 
@@ -25,165 +318,34 @@ class GazMixture {
     required this.color,
   });
 
-  double get ppO2Max => fo2 > 0 ? 1.4 / fo2 - 1 : double.infinity; // profondeur max MOD (bar)
-  double get modMeters => fo2 > 0 ? (1.4 / fo2 - 1) * 10 : double.infinity;
-  double endAtDepth(double depth) => (depth / 10 + 1) * fn2 / 0.79 * 10 - 10;
+  double get modMeters => fo2 > 0 ? (1.4 / fo2 - 1) * _mPerBar : double.infinity;
+  double endAtDepth(double depth) =>
+      ((depth / _mPerBar + 1) * fn2 / 0.79 - 1) * _mPerBar;
 }
 
 const List<GazMixture> gasMixtures = [
-  GazMixture(
-    name: 'air',
-    label: 'Air',
-    fo2: 0.21,
-    fn2: 0.79,
-    icon: '💨',
-    color: Color(0xFF1565C0),
-  ),
-  GazMixture(
-    name: 'nitrox32',
-    label: 'Nitrox 32%',
-    fo2: 0.32,
-    fn2: 0.68,
-    icon: '🟢',
-    color: Color(0xFF2E7D32),
-  ),
-  GazMixture(
-    name: 'nitrox36',
-    label: 'Nitrox 36%',
-    fo2: 0.36,
-    fn2: 0.64,
-    icon: '🟡',
-    color: Color(0xFFF57F17),
-  ),
-  GazMixture(
-    name: 'nitrox40',
-    label: 'Nitrox 40%',
-    fo2: 0.40,
-    fn2: 0.60,
-    icon: '🟠',
-    color: Color(0xFFE65100),
-  ),
+  GazMixture(name: 'air',      label: 'Air',        fo2: 0.21, fn2: 0.79, icon: '💨', color: Color(0xFF1565C0)),
+  GazMixture(name: 'nitrox32', label: 'Nitrox 32%', fo2: 0.32, fn2: 0.68, icon: '🟢', color: Color(0xFF2E7D32)),
+  GazMixture(name: 'nitrox36', label: 'Nitrox 36%', fo2: 0.36, fn2: 0.64, icon: '🟡', color: Color(0xFFF57F17)),
+  GazMixture(name: 'nitrox40', label: 'Nitrox 40%', fo2: 0.40, fn2: 0.60, icon: '🟠', color: Color(0xFFE65100)),
 ];
 
-// ─────────────────────────────────────────────
-// Modèle MN90 simplifié — paliers DTR
-// La table MN90 officielle pour les cas courants
-// ─────────────────────────────────────────────
-
-class DiveProfile {
-  final int depth;      // profondeur en m
-  final int time;       // temps fond en min
-  final List<DecoStop> stops;
-  final int dtr;        // durée totale de remontée (min)
-  final String group;   // groupe de désaturation
-
-  const DiveProfile({
-    required this.depth,
-    required this.time,
-    required this.stops,
-    required this.dtr,
-    required this.group,
-  });
-}
-
-class DecoStop {
-  final int depth;
-  final int duration;
-  const DecoStop({required this.depth, required this.duration});
-}
-
-// Table MN90 simplifiée (profondeur → [(temps, paliers, dtr, groupe)])
-// paliers format : liste de {depth: x, dur: y}
-final Map<int, List<Map<String, dynamic>>> _mn90Table = {
-  10: [
-    {'t': 20, 'stops': [], 'dtr': 2, 'g': 'A'},
-    {'t': 40, 'stops': [], 'dtr': 2, 'g': 'B'},
-    {'t': 60, 'stops': [], 'dtr': 2, 'g': 'C'},
-    {'t': 120, 'stops': [], 'dtr': 2, 'g': 'D'},
-    {'t': 180, 'stops': [], 'dtr': 2, 'g': 'E'},
-  ],
-  15: [
-    {'t': 20, 'stops': [], 'dtr': 3, 'g': 'A'},
-    {'t': 40, 'stops': [], 'dtr': 3, 'g': 'B'},
-    {'t': 60, 'stops': [], 'dtr': 3, 'g': 'C'},
-    {'t': 90, 'stops': [], 'dtr': 3, 'g': 'D'},
-    {'t': 120, 'stops': [{'d': 3, 'dur': 3}], 'dtr': 6, 'g': 'E'},
-  ],
-  20: [
-    {'t': 20, 'stops': [], 'dtr': 4, 'g': 'A'},
-    {'t': 35, 'stops': [], 'dtr': 4, 'g': 'B'},
-    {'t': 45, 'stops': [], 'dtr': 4, 'g': 'C'},
-    {'t': 55, 'stops': [{'d': 3, 'dur': 5}], 'dtr': 9, 'g': 'D'},
-    {'t': 70, 'stops': [{'d': 3, 'dur': 15}], 'dtr': 19, 'g': 'E'},
-  ],
-  25: [
-    {'t': 15, 'stops': [], 'dtr': 5, 'g': 'A'},
-    {'t': 25, 'stops': [], 'dtr': 5, 'g': 'B'},
-    {'t': 35, 'stops': [{'d': 3, 'dur': 5}], 'dtr': 10, 'g': 'C'},
-    {'t': 45, 'stops': [{'d': 3, 'dur': 15}], 'dtr': 20, 'g': 'D'},
-    {'t': 55, 'stops': [{'d': 6, 'dur': 5}, {'d': 3, 'dur': 25}], 'dtr': 35, 'g': 'E'},
-  ],
-  30: [
-    {'t': 10, 'stops': [], 'dtr': 6, 'g': 'A'},
-    {'t': 20, 'stops': [], 'dtr': 6, 'g': 'B'},
-    {'t': 25, 'stops': [{'d': 3, 'dur': 5}], 'dtr': 11, 'g': 'C'},
-    {'t': 30, 'stops': [{'d': 3, 'dur': 15}], 'dtr': 21, 'g': 'D'},
-    {'t': 40, 'stops': [{'d': 6, 'dur': 5}, {'d': 3, 'dur': 25}], 'dtr': 36, 'g': 'E'},
-  ],
-  35: [
-    {'t': 10, 'stops': [], 'dtr': 7, 'g': 'A'},
-    {'t': 15, 'stops': [], 'dtr': 7, 'g': 'B'},
-    {'t': 20, 'stops': [{'d': 3, 'dur': 5}], 'dtr': 12, 'g': 'C'},
-    {'t': 25, 'stops': [{'d': 6, 'dur': 5}, {'d': 3, 'dur': 15}], 'dtr': 27, 'g': 'D'},
-    {'t': 30, 'stops': [{'d': 9, 'dur': 5}, {'d': 6, 'dur': 10}, {'d': 3, 'dur': 20}], 'dtr': 42, 'g': 'E'},
-  ],
-  40: [
-    {'t': 5, 'stops': [], 'dtr': 8, 'g': 'A'},
-    {'t': 10, 'stops': [], 'dtr': 8, 'g': 'B'},
-    {'t': 15, 'stops': [{'d': 3, 'dur': 5}], 'dtr': 13, 'g': 'C'},
-    {'t': 20, 'stops': [{'d': 6, 'dur': 5}, {'d': 3, 'dur': 15}], 'dtr': 28, 'g': 'D'},
-    {'t': 25, 'stops': [{'d': 9, 'dur': 5}, {'d': 6, 'dur': 10}, {'d': 3, 'dur': 25}], 'dtr': 47, 'g': 'E'},
-  ],
-};
-
-Map<String, dynamic>? _lookupMN90(int depth, int time) {
-  // Arrondi à la profondeur standard supérieure
-  final depths = _mn90Table.keys.toList()..sort();
-  int? tableDepth;
-  for (final d in depths) {
-    if (depth <= d) {
-      tableDepth = d;
-      break;
-    }
-  }
-  if (tableDepth == null) return null;
-
-  final rows = _mn90Table[tableDepth]!;
-  for (final row in rows) {
-    if (time <= (row['t'] as int)) return row;
-  }
-  // Dépasse la table → hors table
-  return null;
-}
-
-// ─────────────────────────────────────────────
-// Calculs de consommation
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
+// Calcul consommation gaz
+// ═══════════════════════════════════════════════════════════════
 
 class DivePlanResult {
-  final double pressureAtDepth;      // bar
-  final double volumeAtDepth;        // L/min au fond
-  final double totalVolumeConsumed;  // L totaux
-  final double totalPressureConsumed; // bar
-  final double reservePressure;      // bar (réserve 50 bar)
-  final double usablePressure;       // bar disponible hors réserve
+  final double pressureAtDepth;
+  final double volumeAtDepth;
+  final double totalVolumeConsumed;
+  final double totalPressureConsumed;
+  final double reservePressure;
   final bool hasEnoughGas;
-  final double autonomyMinutes;      // autonomie totale en min
-  final Map<String, dynamic>? mn90;
-  final bool outOfTable;
+  final double autonomyMinutes;
   final bool exceedsMOD;
   final double mod;
-  final double end; // equivalent narcotic depth (air équivalent)
+  final double end;
+  final BuhlmannResult buhlmann;
 
   const DivePlanResult({
     required this.pressureAtDepth,
@@ -191,56 +353,49 @@ class DivePlanResult {
     required this.totalVolumeConsumed,
     required this.totalPressureConsumed,
     required this.reservePressure,
-    required this.usablePressure,
     required this.hasEnoughGas,
     required this.autonomyMinutes,
-    required this.mn90,
-    required this.outOfTable,
     required this.exceedsMOD,
     required this.mod,
     required this.end,
+    required this.buhlmann,
   });
 }
 
 DivePlanResult computeDivePlan({
-  required int bottleVolume,       // L
-  required int chargePressure,     // bar (pression de charge)
-  required double depth,           // m
-  required int divingTime,         // min
+  required int bottleVolume,
+  required int chargePressure,
+  required double depth,
+  required int divingTime,
   required GazMixture gas,
-  required double conso,           // L/min surface (consommation plongeur)
+  required double conso,
 }) {
   const reserveBar = 50.0;
+  final pressureAtDepth = depth / _mPerBar + 1.0;
+  final volumeAtDepth = conso * pressureAtDepth;
 
-  final pressureAtDepth = depth / 10 + 1; // bar absolus
-  final volumeAtDepth = conso * pressureAtDepth; // L/min au fond
-
-  // Consommation totale (simplifiée : fond + remontée à 9 m/min)
-  final ascentTime = depth / 9; // min remontée directe sans palier
+  final ascentTime = depth / _ascentRate;
   final avgAscentPressure = (pressureAtDepth + 1) / 2;
-  final ascentVolume = conso * avgAscentPressure * ascentTime;
-  final bottomVolume = conso * pressureAtDepth * divingTime;
-  final totalVolumeConsumed = bottomVolume + ascentVolume;
+  final totalVolumeConsumed =
+      conso * pressureAtDepth * divingTime + conso * avgAscentPressure * ascentTime;
 
   final totalCapacity = bottleVolume.toDouble() * chargePressure.toDouble();
   final reserveVolume = bottleVolume * reserveBar;
   final usableVolume = totalCapacity - reserveVolume;
 
   final totalPressureConsumed = totalVolumeConsumed / bottleVolume;
-  final usablePressure = chargePressure - reserveBar;
   final hasEnoughGas = totalVolumeConsumed <= usableVolume;
   final autonomyMinutes = usableVolume / volumeAtDepth;
 
-  // MN90
-  final mn90 = _lookupMN90(depth.toInt(), divingTime);
-  final outOfTable = mn90 == null && depth <= 40;
-
-  // MOD (Maximum Operating Depth)
   final mod = gas.modMeters;
   final exceedsMOD = depth > mod;
+  final end = gas.endAtDepth(depth);
 
-  // END (Equivalent Narcotic Depth) — profondeur narcotique équivalente air
-  final end = (pressureAtDepth * gas.fn2 / 0.79 - 1) * 10;
+  final buhlmann = computeBuhlmann(
+    depth: depth,
+    bottomTime: divingTime,
+    gas: gas,
+  );
 
   return DivePlanResult(
     pressureAtDepth: pressureAtDepth,
@@ -248,20 +403,18 @@ DivePlanResult computeDivePlan({
     totalVolumeConsumed: totalVolumeConsumed,
     totalPressureConsumed: totalPressureConsumed,
     reservePressure: reserveBar,
-    usablePressure: usablePressure,
     hasEnoughGas: hasEnoughGas,
     autonomyMinutes: autonomyMinutes,
-    mn90: mn90,
-    outOfTable: outOfTable,
     exceedsMOD: exceedsMOD,
     mod: mod,
     end: end,
+    buhlmann: buhlmann,
   );
 }
 
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
 // Écran principal
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
 
 class DivePlanningScreen extends StatefulWidget {
   const DivePlanningScreen({super.key});
@@ -272,13 +425,12 @@ class DivePlanningScreen extends StatefulWidget {
 
 class _DivePlanningScreenState extends State<DivePlanningScreen>
     with SingleTickerProviderStateMixin {
-  // Paramètres
   int _bottleVolume = 12;
   int _chargePressure = 200;
   double _depth = 20;
   int _divingTime = 30;
   GazMixture _selectedGas = gasMixtures[0];
-  double _conso = 20; // L/min surface par défaut
+  double _conso = 20;
 
   late AnimationController _resultAnim;
   late Animation<double> _fadeAnim;
@@ -288,15 +440,12 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
   final _depthController = TextEditingController(text: '20');
   final _timeController = TextEditingController(text: '30');
   final _consoController = TextEditingController(text: '20');
-  final _pressureController = TextEditingController(text: '200');
 
   @override
   void initState() {
     super.initState();
     _resultAnim = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 500),
-    );
+        vsync: this, duration: const Duration(milliseconds: 500));
     _fadeAnim = CurvedAnimation(parent: _resultAnim, curve: Curves.easeOut);
     _compute();
   }
@@ -307,7 +456,6 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
     _depthController.dispose();
     _timeController.dispose();
     _consoController.dispose();
-    _pressureController.dispose();
     super.dispose();
   }
 
@@ -351,96 +499,65 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
             const SizedBox(height: 16),
             _buildComputeButton(),
             const SizedBox(height: 20),
-            if (_result != null) ...[
+            if (_result != null)
               FadeTransition(
                 opacity: _fadeAnim,
                 child: Column(
                   children: [
-                    if (_result!.exceedsMOD) _buildWarningBanner(),
-                    const SizedBox(height: 8),
-                    _buildGasConsumptionCard(),
+                    if (_result!.exceedsMOD) ...[
+                      _buildWarningBanner(),
+                      const SizedBox(height: 8),
+                    ],
+                    _buildGasCard(),
                     const SizedBox(height: 16),
-                    _buildDTRCard(),
+                    _buildBuhlmannCard(),
                     const SizedBox(height: 16),
                     _buildSafetyCard(),
                     const SizedBox(height: 32),
                   ],
                 ),
               ),
-            ],
           ],
         ),
       ),
     );
   }
 
-  // ─── Carte paramètres ───
+  // ─── Paramètres ───
 
   Widget _buildParametersCard() {
     return _Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _SectionTitle(icon: '⚙️', title: 'Paramètres de plongée'),
+          const _SectionTitle(icon: '⚙️', title: 'Paramètres de plongée'),
           const SizedBox(height: 16),
-
-          // Bouteille
-          _Label('Volume de bouteille'),
+          const _Label('Volume de bouteille'),
           const SizedBox(height: 8),
           Row(
             children: [10, 12, 15].map((vol) {
-              final selected = _bottleVolume == vol;
+              final sel = _bottleVolume == vol;
               return Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(right: 8),
                   child: GestureDetector(
-                    onTap: () {
-                      setState(() => _bottleVolume = vol);
-                      _compute();
-                    },
+                    onTap: () { setState(() => _bottleVolume = vol); _compute(); },
                     child: AnimatedContainer(
                       duration: const Duration(milliseconds: 200),
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       decoration: BoxDecoration(
-                        color: selected
-                            ? const Color(0xFF006064)
-                            : Colors.white,
+                        color: sel ? const Color(0xFF006064) : Colors.white,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
-                          color: selected
-                              ? const Color(0xFF006064)
-                              : const Color(0xFFCFD8DC),
-                          width: selected ? 2 : 1,
+                          color: sel ? const Color(0xFF006064) : const Color(0xFFCFD8DC),
+                          width: sel ? 2 : 1,
                         ),
-                        boxShadow: selected
-                            ? [
-                                BoxShadow(
-                                  color: const Color(0xFF006064).withOpacity(0.25),
-                                  blurRadius: 8,
-                                  offset: const Offset(0, 3),
-                                )
-                              ]
-                            : [],
+                        boxShadow: sel ? [BoxShadow(color: const Color(0xFF006064).withOpacity(0.25), blurRadius: 8, offset: const Offset(0, 3))] : [],
                       ),
                       child: Column(
                         children: [
-                          Text(
-                            '$vol L',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: selected ? Colors.white : const Color(0xFF37474F),
-                            ),
-                          ),
-                          Text(
-                            vol == 10 ? 'Compact' : vol == 12 ? 'Standard' : 'Grande',
-                            style: TextStyle(
-                              fontSize: 11,
-                              color: selected
-                                  ? Colors.white70
-                                  : const Color(0xFF78909C),
-                            ),
-                          ),
+                          Text('$vol L', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: sel ? Colors.white : const Color(0xFF37474F))),
+                          Text(vol == 10 ? 'Compact' : vol == 12 ? 'Standard' : 'Grande', style: TextStyle(fontSize: 11, color: sel ? Colors.white70 : const Color(0xFF78909C))),
                         ],
                       ),
                     ),
@@ -449,64 +566,40 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
               );
             }).toList(),
           ),
-
           const SizedBox(height: 20),
-
-          // Pression de charge
-          _Label('Pression de charge (bar)'),
+          const _Label('Pression de charge (bar)'),
           const SizedBox(height: 8),
           Row(
             children: [150, 200, 232, 300].map((p) {
-              final selected = _chargePressure == p;
+              final sel = _chargePressure == p;
               return Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(right: 6),
                   child: GestureDetector(
-                    onTap: () {
-                      setState(() => _chargePressure = p);
-                      _pressureController.text = '$p';
-                      _compute();
-                    },
+                    onTap: () { setState(() => _chargePressure = p); _compute(); },
                     child: AnimatedContainer(
                       duration: const Duration(milliseconds: 200),
                       padding: const EdgeInsets.symmetric(vertical: 10),
                       decoration: BoxDecoration(
-                        color: selected
-                            ? const Color(0xFF00838F)
-                            : Colors.white,
+                        color: sel ? const Color(0xFF00838F) : Colors.white,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: selected
-                              ? const Color(0xFF00838F)
-                              : const Color(0xFFCFD8DC),
-                        ),
+                        border: Border.all(color: sel ? const Color(0xFF00838F) : const Color(0xFFCFD8DC)),
                       ),
-                      child: Text(
-                        '$p',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                          color: selected ? Colors.white : const Color(0xFF455A64),
-                        ),
-                      ),
+                      child: Text('$p', textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: sel ? Colors.white : const Color(0xFF455A64))),
                     ),
                   ),
                 ),
               );
             }).toList(),
           ),
-
           const SizedBox(height: 20),
-
-          // Profondeur + Temps
           Row(
             children: [
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _Label('Profondeur (m)'),
+                    const _Label('Profondeur (m)'),
                     const SizedBox(height: 8),
                     _NumberInput(
                       controller: _depthController,
@@ -514,10 +607,7 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
                       suffix: 'm',
                       onChanged: (v) {
                         final d = double.tryParse(v);
-                        if (d != null && d > 0 && d <= 60) {
-                          _depth = d;
-                          _compute();
-                        }
+                        if (d != null && d > 0 && d <= 60) { _depth = d; _compute(); }
                       },
                     ),
                   ],
@@ -528,7 +618,7 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _Label('Temps fond (min)'),
+                    const _Label('Temps fond (min)'),
                     const SizedBox(height: 8),
                     _NumberInput(
                       controller: _timeController,
@@ -536,10 +626,7 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
                       suffix: 'min',
                       onChanged: (v) {
                         final t = int.tryParse(v);
-                        if (t != null && t > 0) {
-                          _divingTime = t;
-                          _compute();
-                        }
+                        if (t != null && t > 0) { _divingTime = t; _compute(); }
                       },
                     ),
                   ],
@@ -547,32 +634,20 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
               ),
             ],
           ),
-
           const SizedBox(height: 16),
-
-          // Consommation
-          _Label('Consommation surface (L/min)'),
+          const _Label('Consommation surface (L/min)'),
           const SizedBox(height: 4),
-          Text(
-            'Débutant ≈ 25 L/min · Confirmé ≈ 20 · Expert ≈ 15',
-            style: const TextStyle(fontSize: 11, color: Color(0xFF78909C)),
-          ),
+          const Text('Débutant ≈ 25 · Confirmé ≈ 20 · Expert ≈ 15', style: TextStyle(fontSize: 11, color: Color(0xFF78909C))),
           const SizedBox(height: 8),
           Row(
             children: [
               Expanded(
                 child: Slider(
-                  value: _conso,
-                  min: 10,
-                  max: 40,
-                  divisions: 30,
+                  value: _conso, min: 10, max: 40, divisions: 30,
                   activeColor: const Color(0xFF006064),
                   label: '${_conso.round()} L/min',
                   onChanged: (v) {
-                    setState(() {
-                      _conso = v;
-                      _consoController.text = v.round().toString();
-                    });
+                    setState(() { _conso = v; _consoController.text = v.round().toString(); });
                     _compute();
                   },
                 ),
@@ -580,19 +655,8 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
               Container(
                 width: 60,
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF006064).withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Text(
-                  '${_conso.round()}',
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF006064),
-                    fontSize: 16,
-                  ),
-                ),
+                decoration: BoxDecoration(color: const Color(0xFF006064).withOpacity(0.1), borderRadius: BorderRadius.circular(8)),
+                child: Text('${_conso.round()}', textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF006064), fontSize: 16)),
               ),
             ],
           ),
@@ -601,33 +665,27 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
     );
   }
 
-  // ─── Sélecteur de gaz ───
+  // ─── Sélecteur gaz ───
 
   Widget _buildGasSelector() {
     return _Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _SectionTitle(icon: '🫁', title: 'Gaz de plongée'),
+          const _SectionTitle(icon: '🫁', title: 'Gaz de plongée'),
           const SizedBox(height: 12),
           ...gasMixtures.map((gas) {
-            final selected = _selectedGas.name == gas.name;
+            final sel = _selectedGas.name == gas.name;
             return GestureDetector(
-              onTap: () {
-                setState(() => _selectedGas = gas);
-                _compute();
-              },
+              onTap: () { setState(() => _selectedGas = gas); _compute(); },
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 200),
                 margin: const EdgeInsets.only(bottom: 8),
                 padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                 decoration: BoxDecoration(
-                  color: selected ? gas.color.withOpacity(0.08) : Colors.white,
+                  color: sel ? gas.color.withOpacity(0.08) : Colors.white,
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: selected ? gas.color : const Color(0xFFCFD8DC),
-                    width: selected ? 2 : 1,
-                  ),
+                  border: Border.all(color: sel ? gas.color : const Color(0xFFCFD8DC), width: sel ? 2 : 1),
                 ),
                 child: Row(
                   children: [
@@ -637,26 +695,13 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            gas.label,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
-                              color: selected ? gas.color : const Color(0xFF37474F),
-                            ),
-                          ),
-                          Text(
-                            'O₂: ${(gas.fo2 * 100).round()}%  ·  N₂: ${(gas.fn2 * 100).round()}%  ·  MOD: ${gas.modMeters.isInfinite ? "∞" : "${gas.modMeters.round()} m"}',
-                            style: const TextStyle(
-                              fontSize: 12,
-                              color: Color(0xFF78909C),
-                            ),
-                          ),
+                          Text(gas.label, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: sel ? gas.color : const Color(0xFF37474F))),
+                          Text('O₂: ${(gas.fo2 * 100).round()}%  ·  N₂: ${(gas.fn2 * 100).round()}%  ·  MOD: ${gas.modMeters.isInfinite ? "∞" : "${gas.modMeters.round()} m"}',
+                              style: const TextStyle(fontSize: 12, color: Color(0xFF78909C))),
                         ],
                       ),
                     ),
-                    if (selected)
-                      Icon(Icons.check_circle, color: gas.color, size: 22),
+                    if (sel) Icon(Icons.check_circle, color: gas.color, size: 22),
                   ],
                 ),
               ),
@@ -666,8 +711,6 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
       ),
     );
   }
-
-  // ─── Bouton calculer ───
 
   Widget _buildComputeButton() {
     return ElevatedButton.icon(
@@ -684,37 +727,18 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
     );
   }
 
-  // ─── Bannière avertissement MOD ───
-
   Widget _buildWarningBanner() {
     return Container(
       padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: const Color(0xFFB71C1C),
-        borderRadius: BorderRadius.circular(14),
-      ),
+      decoration: BoxDecoration(color: const Color(0xFFB71C1C), borderRadius: BorderRadius.circular(14)),
       child: Row(
         children: [
           const Text('⛔', style: TextStyle(fontSize: 24)),
           const SizedBox(width: 12),
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'Profondeur hors limite MOD !',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                  ),
-                ),
-                Text(
-                  'La MOD du ${_selectedGas.label} est ${_result!.mod.round()} m. '
-                  'Risque d\'hyperoxie (ppO₂ > 1,4 bar).',
-                  style: const TextStyle(color: Colors.white70, fontSize: 13),
-                ),
-              ],
+            child: Text(
+              'Profondeur hors limite MOD !\nMOD du ${_selectedGas.label} : ${_result!.mod.round()} m. Risque d\'hyperoxie (ppO₂ > 1,4 bar).',
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
             ),
           ),
         ],
@@ -724,147 +748,62 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
 
   // ─── Carte consommation gaz ───
 
-  Widget _buildGasConsumptionCard() {
+  Widget _buildGasCard() {
     final r = _result!;
-    final totalCapacity = _bottleVolume * _chargePressure;
-    final usedPercent = (r.totalVolumeConsumed / totalCapacity).clamp(0.0, 1.0);
+    final totalCap = _bottleVolume * _chargePressure;
+    final usedPct = (r.totalVolumeConsumed / totalCap).clamp(0.0, 1.0);
 
     return _Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _SectionTitle(icon: '🔋', title: 'Consommation de gaz'),
+          const _SectionTitle(icon: '🔋', title: 'Consommation de gaz'),
           const SizedBox(height: 16),
-
-          // Jauges
-          _GaugeRow(
-            label: 'Pression absolue fond',
-            value: '${r.pressureAtDepth.toStringAsFixed(1)} bar',
-            color: const Color(0xFF0288D1),
-          ),
-          _GaugeRow(
-            label: 'Débit au fond',
-            value: '${r.volumeAtDepth.toStringAsFixed(1)} L/min',
-            color: const Color(0xFF00838F),
-          ),
-          _GaugeRow(
-            label: 'Volume consommé (total)',
-            value: '${r.totalVolumeConsumed.toStringAsFixed(0)} L',
-            color: r.hasEnoughGas
-                ? const Color(0xFF2E7D32)
-                : const Color(0xFFC62828),
-          ),
-          _GaugeRow(
-            label: 'Pression consommée',
-            value: '${r.totalPressureConsumed.toStringAsFixed(0)} bar',
-            color: r.hasEnoughGas
-                ? const Color(0xFF2E7D32)
-                : const Color(0xFFC62828),
-          ),
-
-          const SizedBox(height: 16),
-
-          // Barre de progression
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          _GaugeRow(label: 'Pression absolue fond', value: '${r.pressureAtDepth.toStringAsFixed(1)} bar', color: const Color(0xFF0288D1)),
+          _GaugeRow(label: 'Débit au fond', value: '${r.volumeAtDepth.toStringAsFixed(1)} L/min', color: const Color(0xFF00838F)),
+          _GaugeRow(label: 'Volume consommé total', value: '${r.totalVolumeConsumed.toStringAsFixed(0)} L', color: r.hasEnoughGas ? const Color(0xFF2E7D32) : const Color(0xFFC62828)),
+          _GaugeRow(label: 'Pression consommée', value: '${r.totalPressureConsumed.toStringAsFixed(0)} bar', color: r.hasEnoughGas ? const Color(0xFF2E7D32) : const Color(0xFFC62828)),
+          const SizedBox(height: 12),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text('Capacité totale utilisée',
-                      style: TextStyle(fontSize: 13, color: Color(0xFF546E7A))),
-                  Text(
-                    '${(usedPercent * 100).toStringAsFixed(0)}%',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: usedPercent > 0.8
-                          ? const Color(0xFFC62828)
-                          : const Color(0xFF006064),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 6),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: LinearProgressIndicator(
-                  value: usedPercent,
-                  minHeight: 12,
-                  backgroundColor: const Color(0xFFE0E0E0),
-                  valueColor: AlwaysStoppedAnimation(
-                    usedPercent > 0.85
-                        ? const Color(0xFFC62828)
-                        : usedPercent > 0.65
-                            ? const Color(0xFFF57F17)
-                            : const Color(0xFF006064),
-                  ),
-                ),
-              ),
+              const Text('Capacité utilisée', style: TextStyle(fontSize: 13, color: Color(0xFF546E7A))),
+              Text('${(usedPct * 100).toStringAsFixed(0)}%', style: TextStyle(fontWeight: FontWeight.bold, color: usedPct > 0.8 ? const Color(0xFFC62828) : const Color(0xFF006064))),
             ],
           ),
-
+          const SizedBox(height: 6),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8),
+            child: LinearProgressIndicator(
+              value: usedPct, minHeight: 12,
+              backgroundColor: const Color(0xFFE0E0E0),
+              valueColor: AlwaysStoppedAnimation(usedPct > 0.85 ? const Color(0xFFC62828) : usedPct > 0.65 ? const Color(0xFFF57F17) : const Color(0xFF006064)),
+            ),
+          ),
           const SizedBox(height: 16),
-
-          // Réserve & autonomie
           Row(
             children: [
-              Expanded(
-                child: _InfoTile(
-                  icon: '⛽',
-                  label: 'Réserve',
-                  value: '${r.reservePressure.round()} bar',
-                  subtitle: '${(_bottleVolume * r.reservePressure).round()} L',
-                  color: const Color(0xFFFF6F00),
-                ),
-              ),
+              Expanded(child: _InfoTile(icon: '⛽', label: 'Réserve', value: '${r.reservePressure.round()} bar', subtitle: '${(_bottleVolume * r.reservePressure).round()} L', color: const Color(0xFFFF6F00))),
               const SizedBox(width: 12),
-              Expanded(
-                child: _InfoTile(
-                  icon: '⏱️',
-                  label: 'Autonomie fond',
-                  value: '${r.autonomyMinutes.toStringAsFixed(0)} min',
-                  subtitle: 'hors réserve',
-                  color: const Color(0xFF1565C0),
-                ),
-              ),
+              Expanded(child: _InfoTile(icon: '⏱️', label: 'Autonomie fond', value: '${r.autonomyMinutes.toStringAsFixed(0)} min', subtitle: 'hors réserve', color: const Color(0xFF1565C0))),
             ],
           ),
-
           const SizedBox(height: 12),
-
-          // Verdict
           Container(
             padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-              color: r.hasEnoughGas
-                  ? const Color(0xFFE8F5E9)
-                  : const Color(0xFFFFEBEE),
+              color: r.hasEnoughGas ? const Color(0xFFE8F5E9) : const Color(0xFFFFEBEE),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: r.hasEnoughGas
-                    ? const Color(0xFF81C784)
-                    : const Color(0xFFEF9A9A),
-              ),
+              border: Border.all(color: r.hasEnoughGas ? const Color(0xFF81C784) : const Color(0xFFEF9A9A)),
             ),
             child: Row(
               children: [
-                Text(
-                  r.hasEnoughGas ? '✅' : '⚠️',
-                  style: const TextStyle(fontSize: 22),
-                ),
+                Text(r.hasEnoughGas ? '✅' : '⚠️', style: const TextStyle(fontSize: 22)),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
-                    r.hasEnoughGas
-                        ? 'Gaz suffisant pour ce profil\n(réserve de ${r.reservePressure.round()} bar conservée)'
-                        : 'Gaz insuffisant ! Réduisez la profondeur ou le temps.',
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: r.hasEnoughGas
-                          ? const Color(0xFF2E7D32)
-                          : const Color(0xFFC62828),
-                    ),
+                    r.hasEnoughGas ? 'Gaz suffisant (réserve ${r.reservePressure.round()} bar conservée)' : 'Gaz insuffisant ! Réduisez la profondeur ou le temps.',
+                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: r.hasEnoughGas ? const Color(0xFF2E7D32) : const Color(0xFFC62828)),
                   ),
                 ),
               ],
@@ -875,461 +814,303 @@ class _DivePlanningScreenState extends State<DivePlanningScreen>
     );
   }
 
-  // ─── Carte DTR / MN90 ───
+  // ─── Carte Bühlmann ───
 
-  Widget _buildDTRCard() {
-    final r = _result!;
-    final mn90 = r.mn90;
+  Widget _buildBuhlmannCard() {
+    final bh = _result!.buhlmann;
+    final satPct = (bh.maxSaturation * 100).clamp(0, 200).toDouble();
+    final satColor = satPct >= 100
+        ? const Color(0xFFC62828)
+        : satPct >= 80
+            ? const Color(0xFFF57F17)
+            : const Color(0xFF2E7D32);
 
     return _Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _SectionTitle(icon: '📊', title: 'Désaturation · Table MN90'),
+          const _SectionTitle(icon: '🫧', title: 'Désaturation — Bühlmann ZH-L16C'),
           const SizedBox(height: 16),
 
-          if (r.outOfTable) ...[
-            Container(
-              padding: const EdgeInsets.all(14),
-              decoration: BoxDecoration(
-                color: const Color(0xFFFFF8E1),
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: const Color(0xFFFFCC02)),
-              ),
-              child: const Row(
-                children: [
-                  Text('⚠️', style: TextStyle(fontSize: 22)),
-                  SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      'Hors table MN90 ! Ce profil dépasse les limites de la table. Plongée avec ordinateur obligatoire.',
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFFF57F17),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+          // Stats principales
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(colors: [Color(0xFF006064), Color(0xFF00838F)]),
+              borderRadius: BorderRadius.circular(14),
             ),
-          ] else if (mn90 == null) ...[
-            const Text(
-              'Profondeur hors plage MN90 (> 40 m). Utilisez un ordinateur de plongée.',
-              style: TextStyle(color: Color(0xFF78909C), fontSize: 13),
-            ),
-          ] else ...[
-            // DTR principal
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [Color(0xFF006064), Color(0xFF00838F)],
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                _DTRStat(icon: '⏱️', value: '${bh.tts} min', label: 'TTS'),
+                Container(width: 1, height: 50, color: Colors.white24),
+                _DTRStat(
+                  icon: bh.ndl ? '🟢' : '🔴',
+                  value: bh.ndl ? 'NDL' : 'DÉCO',
+                  label: bh.ndl ? 'Sans palier' : 'Avec palier',
                 ),
-                borderRadius: BorderRadius.circular(14),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  _DTRStat(
-                    icon: '⏱️',
-                    value: '${mn90['dtr']} min',
-                    label: 'DTR total',
-                  ),
-                  Container(width: 1, height: 50, color: Colors.white24),
-                  _DTRStat(
-                    icon: '🏷️',
-                    value: mn90['g'] as String,
-                    label: 'Groupe désat.',
-                  ),
-                  Container(width: 1, height: 50, color: Colors.white24),
-                  _DTRStat(
-                    icon: '📍',
-                    value: '${mn90['t']} min',
-                    label: 'Durée fond',
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 16),
-
-            // Paliers
-            if ((mn90['stops'] as List).isEmpty) ...[
-              _NoStopRow(),
-            ] else ...[
-              const Text(
-                'Paliers de décompression',
-                style: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 14,
-                  color: Color(0xFF37474F),
+                Container(width: 1, height: 50, color: Colors.white24),
+                _DTRStat(
+                  icon: '🫁',
+                  value: '${satPct.toStringAsFixed(0)}%',
+                  label: 'Saturation',
                 ),
-              ),
-              const SizedBox(height: 10),
-              ...(mn90['stops'] as List).map((stop) {
-                return _PalierRow(
-                  depth: stop['d'] as int,
-                  duration: stop['dur'] as int,
-                );
-              }),
-            ],
+              ],
+            ),
+          ),
 
-            const SizedBox(height: 12),
+          const SizedBox(height: 16),
 
-            // Remontée
+          // NDL restant ou paliers
+          if (bh.ndl) ...[
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: const Color(0xFFE0F7FA),
+                color: const Color(0xFFE8F5E9),
                 borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color(0xFF81C784)),
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.arrow_upward,
-                      color: Color(0xFF006064), size: 20),
-                  const SizedBox(width: 8),
-                  Text(
-                    'Vitesse de remontée : 9 m/min maximum',
-                    style: const TextStyle(
-                      fontSize: 13,
-                      color: Color(0xFF00838F),
-                      fontWeight: FontWeight.w600,
+                  const Text('✅', style: TextStyle(fontSize: 20)),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('Plongée sans décompression obligatoire', style: TextStyle(fontWeight: FontWeight.w700, color: Color(0xFF2E7D32))),
+                        Text('Durée sans déco restante estimée : ${bh.ndlMinutes} min supplémentaires', style: const TextStyle(fontSize: 12, color: Color(0xFF388E3C))),
+                      ],
                     ),
                   ),
                 ],
               ),
             ),
+          ] else ...[
+            const Text('Paliers de décompression', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14, color: Color(0xFF37474F))),
+            const SizedBox(height: 10),
+            ...bh.stops.map((s) => _PalierRow(depth: s.depth, duration: s.duration)),
           ],
+
+          const SizedBox(height: 12),
+
+          // Barre saturation
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('Saturation compartiment critique', style: TextStyle(fontSize: 13, color: Color(0xFF546E7A))),
+                  Text('${satPct.toStringAsFixed(0)}%', style: TextStyle(fontWeight: FontWeight.bold, color: satColor)),
+                ],
+              ),
+              const SizedBox(height: 6),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: LinearProgressIndicator(
+                  value: (satPct / 100).clamp(0.0, 1.0),
+                  minHeight: 10,
+                  backgroundColor: const Color(0xFFE0E0E0),
+                  valueColor: AlwaysStoppedAnimation(satColor),
+                ),
+              ),
+              const SizedBox(height: 4),
+              const Text('100% = M-value atteinte (limite de décompression)', style: TextStyle(fontSize: 10, color: Color(0xFF90A4AE))),
+            ],
+          ),
+
+          const SizedBox(height: 12),
+
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(color: const Color(0xFFE0F7FA), borderRadius: BorderRadius.circular(10)),
+            child: const Row(
+              children: [
+                Icon(Icons.arrow_upward, color: Color(0xFF006064), size: 20),
+                SizedBox(width: 8),
+                Expanded(child: Text('Vitesse de remontée : 9 m/min max · GF 100/100 (ZH-L16C conservateur)', style: TextStyle(fontSize: 12, color: Color(0xFF00838F), fontWeight: FontWeight.w600))),
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
 
-  // ─── Carte sécurité ───
+  // ─── Sécurité ───
 
   Widget _buildSafetyCard() {
     final r = _result!;
+    final ppO2 = r.pressureAtDepth * _selectedGas.fo2;
 
     return _Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _SectionTitle(icon: '🛡️', title: 'Sécurité & Narcose'),
+          const _SectionTitle(icon: '🛡️', title: 'Sécurité & Narcose'),
           const SizedBox(height: 14),
-          _GaugeRow(
-            label: 'END (profondeur narcotique équiv. air)',
-            value: '${r.end.toStringAsFixed(1)} m',
-            color: r.end > 30
-                ? const Color(0xFFC62828)
-                : const Color(0xFF2E7D32),
-          ),
-          _GaugeRow(
-            label: 'ppO₂ au fond',
-            value: '${(r.pressureAtDepth * _selectedGas.fo2).toStringAsFixed(2)} bar',
-            color: (r.pressureAtDepth * _selectedGas.fo2) > 1.4
-                ? const Color(0xFFC62828)
-                : const Color(0xFF2E7D32),
-          ),
-          _GaugeRow(
-            label: 'MOD (${_selectedGas.label})',
-            value: r.mod.isInfinite ? '∞' : '${r.mod.round()} m',
-            color: const Color(0xFF1565C0),
-          ),
+          _GaugeRow(label: 'END (profondeur narcotique équiv. air)', value: '${r.end.toStringAsFixed(1)} m', color: r.end > 30 ? const Color(0xFFC62828) : const Color(0xFF2E7D32)),
+          _GaugeRow(label: 'ppO₂ au fond', value: '${ppO2.toStringAsFixed(2)} bar', color: ppO2 > 1.4 ? const Color(0xFFC62828) : const Color(0xFF2E7D32)),
+          _GaugeRow(label: 'MOD (${_selectedGas.label})', value: r.mod.isInfinite ? '∞' : '${r.mod.round()} m', color: const Color(0xFF1565C0)),
           const SizedBox(height: 12),
-          const _SafetyNote(
-            icon: '📌',
-            text:
-                'Palier de sécurité conseillé : 3 minutes à 3 m pour toute plongée (non inclus dans le DTR MN90).',
-          ),
+          const _SafetyNote(icon: '📌', text: 'Palier de sécurité conseillé : 3 min à 3 m (non inclus dans le TTS Bühlmann).'),
           const SizedBox(height: 6),
-          const _SafetyNote(
-            icon: '📌',
-            text: 'Respectez le principe du tiers : 1/3 aller · 1/3 retour · 1/3 réserve.',
-          ),
+          const _SafetyNote(icon: '📌', text: 'Règle du tiers : 1/3 aller · 1/3 retour · 1/3 réserve.'),
+          const SizedBox(height: 6),
+          const _SafetyNote(icon: '⚠️', text: 'Ce calcul est indicatif. Toujours plonger avec un ordinateur de plongée homologué.'),
         ],
       ),
     );
   }
 }
 
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
 // Widgets réutilisables
-// ─────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
 
 class _Card extends StatelessWidget {
   final Widget child;
   const _Card({required this.child});
-
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.06),
-            blurRadius: 12,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: child,
-    );
-  }
+  Widget build(BuildContext context) => Container(
+    padding: const EdgeInsets.all(20),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(20),
+      boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12, offset: const Offset(0, 4))],
+    ),
+    child: child,
+  );
 }
 
 class _SectionTitle extends StatelessWidget {
   final String icon;
   final String title;
   const _SectionTitle({required this.icon, required this.title});
-
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(icon, style: const TextStyle(fontSize: 20)),
-        const SizedBox(width: 8),
-        Text(
-          title,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF006064),
-          ),
-        ),
-      ],
-    );
-  }
+  Widget build(BuildContext context) => Row(
+    children: [
+      Text(icon, style: const TextStyle(fontSize: 20)),
+      const SizedBox(width: 8),
+      Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF006064))),
+    ],
+  );
 }
 
 class _Label extends StatelessWidget {
   final String text;
   const _Label(this.text);
-
   @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: const TextStyle(
-        fontSize: 13,
-        fontWeight: FontWeight.w600,
-        color: Color(0xFF455A64),
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Text(text, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: Color(0xFF455A64)));
 }
 
 class _NumberInput extends StatelessWidget {
   final TextEditingController controller;
-  final String hint;
-  final String suffix;
+  final String hint, suffix;
   final ValueChanged<String> onChanged;
-
-  const _NumberInput({
-    required this.controller,
-    required this.hint,
-    required this.suffix,
-    required this.onChanged,
-  });
-
+  const _NumberInput({required this.controller, required this.hint, required this.suffix, required this.onChanged});
   @override
-  Widget build(BuildContext context) {
-    return TextField(
-      controller: controller,
-      keyboardType: const TextInputType.numberWithOptions(decimal: true),
-      inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[\d.]'))],
-      decoration: InputDecoration(
-        hintText: hint,
-        suffixText: suffix,
-        suffixStyle: const TextStyle(
-          color: Color(0xFF006064),
-          fontWeight: FontWeight.bold,
-        ),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Color(0xFFCFD8DC)),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Color(0xFF006064), width: 2),
-        ),
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-      ),
-      onChanged: onChanged,
-    );
-  }
+  Widget build(BuildContext context) => TextField(
+    controller: controller,
+    keyboardType: const TextInputType.numberWithOptions(decimal: true),
+    inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[\d.]'))],
+    decoration: InputDecoration(
+      hintText: hint, suffixText: suffix,
+      suffixStyle: const TextStyle(color: Color(0xFF006064), fontWeight: FontWeight.bold),
+      border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: Color(0xFFCFD8DC))),
+      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: Color(0xFF006064), width: 2)),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+    ),
+    onChanged: onChanged,
+  );
 }
 
 class _GaugeRow extends StatelessWidget {
-  final String label;
-  final String value;
+  final String label, value;
   final Color color;
-  const _GaugeRow(
-      {required this.label, required this.value, required this.color});
-
+  const _GaugeRow({required this.label, required this.value, required this.color});
   @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(label,
-              style: const TextStyle(fontSize: 13, color: Color(0xFF546E7A))),
-          Text(value,
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, fontSize: 14, color: color)),
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.only(bottom: 10),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(label, style: const TextStyle(fontSize: 13, color: Color(0xFF546E7A))),
+        Text(value, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: color)),
+      ],
+    ),
+  );
 }
 
 class _InfoTile extends StatelessWidget {
-  final String icon;
-  final String label;
-  final String value;
-  final String subtitle;
+  final String icon, label, value, subtitle;
   final Color color;
-
-  const _InfoTile({
-    required this.icon,
-    required this.label,
-    required this.value,
-    required this.subtitle,
-    required this.color,
-  });
-
+  const _InfoTile({required this.icon, required this.label, required this.value, required this.subtitle, required this.color});
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: color.withOpacity(0.08),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.2)),
-      ),
-      child: Column(
-        children: [
-          Text(icon, style: const TextStyle(fontSize: 22)),
-          const SizedBox(height: 4),
-          Text(value,
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, fontSize: 18, color: color)),
-          Text(label,
-              style: const TextStyle(fontSize: 11, color: Color(0xFF546E7A))),
-          Text(subtitle,
-              style: const TextStyle(fontSize: 10, color: Color(0xFF90A4AE))),
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Container(
+    padding: const EdgeInsets.all(12),
+    decoration: BoxDecoration(color: color.withOpacity(0.08), borderRadius: BorderRadius.circular(12), border: Border.all(color: color.withOpacity(0.2))),
+    child: Column(
+      children: [
+        Text(icon, style: const TextStyle(fontSize: 22)),
+        const SizedBox(height: 4),
+        Text(value, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: color)),
+        Text(label, style: const TextStyle(fontSize: 11, color: Color(0xFF546E7A))),
+        Text(subtitle, style: const TextStyle(fontSize: 10, color: Color(0xFF90A4AE))),
+      ],
+    ),
+  );
 }
 
 class _DTRStat extends StatelessWidget {
-  final String icon;
-  final String value;
-  final String label;
-  const _DTRStat(
-      {required this.icon, required this.value, required this.label});
-
+  final String icon, value, label;
+  const _DTRStat({required this.icon, required this.value, required this.label});
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(icon, style: const TextStyle(fontSize: 20)),
-        const SizedBox(height: 4),
-        Text(value,
-            style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 18)),
-        Text(label,
-            style: const TextStyle(color: Colors.white70, fontSize: 11)),
-      ],
-    );
-  }
+  Widget build(BuildContext context) => Column(
+    children: [
+      Text(icon, style: const TextStyle(fontSize: 20)),
+      const SizedBox(height: 4),
+      Text(value, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18)),
+      Text(label, style: const TextStyle(color: Colors.white70, fontSize: 11)),
+    ],
+  );
 }
 
 class _PalierRow extends StatelessWidget {
-  final int depth;
-  final int duration;
+  final int depth, duration;
   const _PalierRow({required this.depth, required this.duration});
-
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 8),
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-      decoration: BoxDecoration(
-        color: const Color(0xFFE0F2F1),
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: const Color(0xFF80CBC4)),
-      ),
-      child: Row(
-        children: [
-          const Icon(Icons.pause_circle_outline,
-              color: Color(0xFF006064), size: 20),
-          const SizedBox(width: 10),
-          Text('Palier à $depth m',
-              style: const TextStyle(
-                  fontWeight: FontWeight.w600, color: Color(0xFF006064))),
-          const Spacer(),
-          Text('$duration min',
-              style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF006064),
-                  fontSize: 15)),
-        ],
-      ),
-    );
-  }
-}
-
-class _NoStopRow extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: const Color(0xFFE8F5E9),
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: const Color(0xFF81C784)),
-      ),
-      child: const Row(
-        children: [
-          Text('✅', style: TextStyle(fontSize: 20)),
-          SizedBox(width: 10),
-          Text('Plongée sans palier obligatoire',
-              style: TextStyle(
-                  fontWeight: FontWeight.w600, color: Color(0xFF2E7D32))),
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Container(
+    margin: const EdgeInsets.only(bottom: 8),
+    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+    decoration: BoxDecoration(
+      color: const Color(0xFFE0F2F1),
+      borderRadius: BorderRadius.circular(10),
+      border: Border.all(color: const Color(0xFF80CBC4)),
+    ),
+    child: Row(
+      children: [
+        const Icon(Icons.pause_circle_outline, color: Color(0xFF006064), size: 20),
+        const SizedBox(width: 10),
+        Text('Palier à $depth m', style: const TextStyle(fontWeight: FontWeight.w600, color: Color(0xFF006064))),
+        const Spacer(),
+        Text('$duration min', style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF006064), fontSize: 15)),
+      ],
+    ),
+  );
 }
 
 class _SafetyNote extends StatelessWidget {
-  final String icon;
-  final String text;
+  final String icon, text;
   const _SafetyNote({required this.icon, required this.text});
-
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(icon, style: const TextStyle(fontSize: 14)),
-        const SizedBox(width: 8),
-        Expanded(
-          child: Text(text,
-              style: const TextStyle(fontSize: 12, color: Color(0xFF546E7A))),
-        ),
-      ],
-    );
-  }
+  Widget build(BuildContext context) => Row(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(icon, style: const TextStyle(fontSize: 14)),
+      const SizedBox(width: 8),
+      Expanded(child: Text(text, style: const TextStyle(fontSize: 12, color: Color(0xFF546E7A)))),
+    ],
+  );
 }

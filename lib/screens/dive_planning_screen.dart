@@ -260,7 +260,7 @@ BuhlmannResult computeBuhlmann({
     }
 
     // Remonter de 3 m
-    currentDepth = (currentDepth - 3).clamp(0, double.infinity);
+    currentDepth = (currentDepth - 3).clamp(0.0, double.infinity);
   }
 
   final ndl = stops.isEmpty;
@@ -282,7 +282,7 @@ double _simulateDirectAscent(
   double maxCeil = 0;
   double current = depth;
   while (current > 0) {
-    final next = (current - 3).clamp(0, double.infinity);
+    final next = (current - 3).clamp(0.0, double.infinity);
     final travelMin = (current - next) / _ascentRate;
     for (int s = 0; s < (travelMin * 10).round(); s++) {
       final frac = s / (travelMin * 10);

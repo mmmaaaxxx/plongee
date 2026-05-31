@@ -4485,7 +4485,7 @@ const List<Question> _niveau4Questions = [
     id: 'n4_12',
     text: 'Quel est le total maximum de points pour l’examen GP-N4 ?',
     options: ['400 points', '500 points', '600 points', '800 points'],
-    correctIndex: 2,
+    correctIndex: 3,
     explanation: 'L’examen comporte un maximum de 600 points.',
     category: 'Notation',
   ),

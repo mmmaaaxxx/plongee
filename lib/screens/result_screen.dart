@@ -110,9 +110,7 @@ class _ResultScreenState extends State<ResultScreen>
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
-                        _showDetails
-                            ? Icons.expand_less
-                            : Icons.expand_more,
+                        _showDetails ? Icons.expand_less : Icons.expand_more,
                         color: Colors.white,
                       ),
                       const SizedBox(width: 8),
@@ -136,14 +134,14 @@ class _ResultScreenState extends State<ResultScreen>
             if (_showDetails) ...[
               const SizedBox(height: 16),
               ...widget.result.questionResults.asMap().entries.map(
-                (entry) => Padding(
-                  padding: const EdgeInsets.only(bottom: 16),
-                  child: _QuestionReviewCard(
-                    index: entry.key,
-                    result: entry.value,
+                    (entry) => Padding(
+                      padding: const EdgeInsets.only(bottom: 16),
+                      child: _QuestionReviewCard(
+                        index: entry.key,
+                        result: entry.value,
+                      ),
+                    ),
                   ),
-                ),
-              ),
             ],
 
             const SizedBox(height: 20),
@@ -253,8 +251,7 @@ class _ScoreCard extends StatelessWidget {
                     CustomPaint(
                       size: const Size(160, 160),
                       painter: _CircleProgressPainter(
-                        progress:
-                            circleAnim.value * (result.percentage / 100),
+                        progress: circleAnim.value * (result.percentage / 100),
                         color: gradeColor,
                         backgroundColor: Colors.white24,
                       ),
@@ -460,12 +457,10 @@ class _QuestionReviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isCorrect = result.isCorrect;
-    final borderColor = isCorrect
-        ? const Color(0xFF4CAF50)
-        : const Color(0xFFF44336);
-    final bgColor = isCorrect
-        ? const Color(0xFFF1F8E9)
-        : const Color(0xFFFFF3E0);
+    final borderColor =
+        isCorrect ? const Color(0xFF4CAF50) : const Color(0xFFF44336);
+    final bgColor =
+        isCorrect ? const Color(0xFFF1F8E9) : const Color(0xFFFFF3E0);
 
     return Container(
       decoration: BoxDecoration(
@@ -625,7 +620,8 @@ class _QuestionReviewCard extends StatelessWidget {
                                 ),
                               Text(
                                 opt,
-                                style: const TextStyle(fontSize: 13, height: 1.3),
+                                style:
+                                    const TextStyle(fontSize: 13, height: 1.3),
                               ),
                             ],
                           ),

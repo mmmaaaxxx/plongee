@@ -50,8 +50,7 @@ class _QuizScreenState extends State<QuizScreen>
     super.dispose();
   }
 
-  Question get _currentQuestion =>
-      widget.module.questions[_currentIndex];
+  Question get _currentQuestion => widget.module.questions[_currentIndex];
 
   int get _totalQuestions => widget.module.questions.length;
 
@@ -108,7 +107,8 @@ class _QuizScreenState extends State<QuizScreen>
     if (index == _currentQuestion.correctIndex) {
       return const Color(0xFFE8F5E9);
     }
-    if (index == _selectedAnswer && !(_selectedAnswer == _currentQuestion.correctIndex)) {
+    if (index == _selectedAnswer &&
+        !(_selectedAnswer == _currentQuestion.correctIndex)) {
       return const Color(0xFFFFEBEE);
     }
     return Colors.white;
@@ -116,9 +116,7 @@ class _QuizScreenState extends State<QuizScreen>
 
   Color _getOptionBorderColor(int index) {
     if (!_answered) {
-      return _selectedAnswer == index
-          ? _moduleColor
-          : const Color(0xFFE0E0E0);
+      return _selectedAnswer == index ? _moduleColor : const Color(0xFFE0E0E0);
     }
     if (index == _currentQuestion.correctIndex) {
       return const Color(0xFF4CAF50);
@@ -137,7 +135,9 @@ class _QuizScreenState extends State<QuizScreen>
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           border: Border.all(
-            color: _selectedAnswer == index ? _moduleColor : const Color(0xFFBDBDBD),
+            color: _selectedAnswer == index
+                ? _moduleColor
+                : const Color(0xFFBDBDBD),
             width: 2,
           ),
           color: _selectedAnswer == index
@@ -355,12 +355,14 @@ class _QuizScreenState extends State<QuizScreen>
                                         height: 1.4,
                                         fontWeight: _answered &&
                                                 index ==
-                                                    _currentQuestion.correctIndex
+                                                    _currentQuestion
+                                                        .correctIndex
                                             ? FontWeight.w600
                                             : FontWeight.normal,
                                         color: _answered &&
                                                 index ==
-                                                    _currentQuestion.correctIndex
+                                                    _currentQuestion
+                                                        .correctIndex
                                             ? const Color(0xFF2E7D32)
                                             : _answered &&
                                                     index == _selectedAnswer &&

@@ -7,10 +7,12 @@ const List<Question> _niveau1Questions = [
   // --- PRÉROGATIVES & CONDITIONS D'ACCÈS ---
   Question(
     id: 'n1_01',
-    text: 'Quelle est la profondeur maximale d\'évolution pour un plongeur Niveau 1 ?',
+    text:
+        'Quelle est la profondeur maximale d\'évolution pour un plongeur Niveau 1 ?',
     options: ['10 mètres', '20 mètres', '40 mètres', '60 mètres'],
     correctIndex: 1,
-    explanation: 'Le plongeur N1 (PE20) évolue jusqu\'à 20 m, au sein d\'une palanquée encadrée par un guide de palanquée (GP).',
+    explanation:
+        'Le plongeur N1 (PE20) évolue jusqu\'à 20 m, au sein d\'une palanquée encadrée par un guide de palanquée (GP).',
     category: 'Prérogatives',
   ),
   Question(
@@ -18,241 +20,398 @@ const List<Question> _niveau1Questions = [
     text: 'Quel âge minimum est exigé pour entrer en formation Niveau 1 ?',
     options: ['10 ans', '12 ans', '14 ans', '16 ans'],
     correctIndex: 1,
-    explanation: 'Il faut avoir 12 ans au moins à la date d\'entrée en formation et de délivrance du brevet ; une autorisation du responsable légal est requise pour les mineurs.',
+    explanation:
+        'Il faut avoir 12 ans au moins à la date d\'entrée en formation et de délivrance du brevet ; une autorisation du responsable légal est requise pour les mineurs.',
     category: 'Conditions d\'accès',
   ),
   Question(
     id: 'n1_03',
-    text: 'Qui assure la conduite de la plongée lorsqu\'un N1 est dans une palanquée ?',
-    options: ['Le directeur de plongée', 'Le guide de palanquée', 'Le plongeur N1 lui-même', 'Le plongeur le plus expérimenté'],
+    text:
+        'Qui assure la conduite de la plongée lorsqu\'un N1 est dans une palanquée ?',
+    options: [
+      'Le directeur de plongée',
+      'Le guide de palanquée',
+      'Le plongeur N1 lui-même',
+      'Le plongeur le plus expérimenté'
+    ],
     correctIndex: 1,
-    explanation: 'Le guide de palanquée (GP) prend en charge la conduite de la plongée pour les plongeurs N1.',
+    explanation:
+        'Le guide de palanquée (GP) prend en charge la conduite de la plongée pour les plongeurs N1.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n1_04',
-    text: 'En cas de certification obtenue en milieu artificiel, dans quel délai le N1 doit-il effectuer ses 4 plongées en milieu naturel ?',
+    text:
+        'En cas de certification obtenue en milieu artificiel, dans quel délai le N1 doit-il effectuer ses 4 plongées en milieu naturel ?',
     options: ['6 mois', '12 mois', '18 mois', '24 mois'],
     correctIndex: 1,
-    explanation: 'Le N1 certifié en milieu artificiel doit réaliser au moins 4 plongées en milieu naturel attestées dans les 12 mois suivant l\'obtention du brevet.',
+    explanation:
+        'Le N1 certifié en milieu artificiel doit réaliser au moins 4 plongées en milieu naturel attestées dans les 12 mois suivant l\'obtention du brevet.',
     category: 'Organisation',
   ),
   Question(
     id: 'n1_05',
-    text: 'Qui peut délivrer le brevet de plongeur Niveau 1 dans un club affilié ?',
-    options: ['N\'importe quel plongeur N4', 'Le président du club ou un encadrant E3 minimum avec son accord', 'Uniquement un E4 FFESSM', 'Uniquement un moniteur d\'État BEES2'],
+    text:
+        'Qui peut délivrer le brevet de plongeur Niveau 1 dans un club affilié ?',
+    options: [
+      'N\'importe quel plongeur N4',
+      'Le président du club ou un encadrant E3 minimum avec son accord',
+      'Uniquement un E4 FFESSM',
+      'Uniquement un moniteur d\'État BEES2'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 est délivré par le président du club ou par un encadrant licencié au minimum E3 FFESSM (ou associé, BEES1, DEJEPS) avec son autorisation.',
+    explanation:
+        'Le N1 est délivré par le président du club ou par un encadrant licencié au minimum E3 FFESSM (ou associé, BEES1, DEJEPS) avec son autorisation.',
     category: 'Organisation',
   ),
   Question(
     id: 'n1_06',
-    text: 'Dans quel espace de profondeur l\'enseignement et la validation des compétences N1 s\'effectuent-ils réglementairement ?',
+    text:
+        'Dans quel espace de profondeur l\'enseignement et la validation des compétences N1 s\'effectuent-ils réglementairement ?',
     options: ['0 à 3 m', '0 à 6 m', '0 à 10 m', '0 à 20 m'],
     correctIndex: 1,
-    explanation: 'L\'enseignement et la validation des compétences s\'effectuent dans l\'espace de 0 à 6 m par un encadrant E1 minimum.',
+    explanation:
+        'L\'enseignement et la validation des compétences s\'effectuent dans l\'espace de 0 à 6 m par un encadrant E1 minimum.',
     category: 'Organisation',
   ),
   Question(
     id: 'n1_07',
-    text: 'Jusqu\'à quelle profondeur un N1 en formation peut-il évoluer sous la responsabilité d\'un E2 ?',
+    text:
+        'Jusqu\'à quelle profondeur un N1 en formation peut-il évoluer sous la responsabilité d\'un E2 ?',
     options: ['6 mètres', '10 mètres', '20 mètres', '40 mètres'],
     correctIndex: 2,
-    explanation: 'Conformément à l\'article A. 322-83 du Code du Sport, un plongeur en cours de formation technique peut évoluer dans l\'espace 0-20 m sous la responsabilité d\'un E2.',
+    explanation:
+        'Conformément à l\'article A. 322-83 du Code du Sport, un plongeur en cours de formation technique peut évoluer dans l\'espace 0-20 m sous la responsabilité d\'un E2.',
     category: 'Organisation',
   ),
   Question(
     id: 'n1_08',
-    text: 'Dans quel délai maximum toutes les compétences du brevet N1 doivent-elles être acquises ?',
+    text:
+        'Dans quel délai maximum toutes les compétences du brevet N1 doivent-elles être acquises ?',
     options: ['6 mois', '12 mois', '15 mois', '24 mois'],
     correctIndex: 2,
-    explanation: 'L\'ensemble des compétences doit être acquis dans un délai de 15 mois à compter de la délivrance de la première compétence.',
+    explanation:
+        'L\'ensemble des compétences doit être acquis dans un délai de 15 mois à compter de la délivrance de la première compétence.',
     category: 'Organisation',
   ),
   Question(
     id: 'n1_09',
-    text: 'Le plongeur N1 réalise ses plongées dans le cadre d\'une organisation sécurisée mise en place par :',
-    options: ['Le guide de palanquée', 'Le directeur de plongée', 'Le président du club', 'Le chef de palanquée'],
+    text:
+        'Le plongeur N1 réalise ses plongées dans le cadre d\'une organisation sécurisée mise en place par :',
+    options: [
+      'Le guide de palanquée',
+      'Le directeur de plongée',
+      'Le président du club',
+      'Le chef de palanquée'
+    ],
     correctIndex: 1,
-    explanation: 'Les plongées du N1 sont réalisées dans le cadre d\'une organisation sécurisée mise en place par un directeur de plongée (DP).',
+    explanation:
+        'Les plongées du N1 sont réalisées dans le cadre d\'une organisation sécurisée mise en place par un directeur de plongée (DP).',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n1_10',
-    text: 'Quel document réglementaire définit les règles de la plongée sportive en France ?',
-    options: ['Le règlement FFESSM', 'Le Code du Sport', 'L\'arrêté ministériel de 1998', 'La directive européenne plongée'],
+    text:
+        'Quel document réglementaire définit les règles de la plongée sportive en France ?',
+    options: [
+      'Le règlement FFESSM',
+      'Le Code du Sport',
+      'L\'arrêté ministériel de 1998',
+      'La directive européenne plongée'
+    ],
     correctIndex: 1,
-    explanation: 'Les plongées sont réalisées selon les règles définies par le Code du Sport (CdS).',
+    explanation:
+        'Les plongées sont réalisées selon les règles définies par le Code du Sport (CdS).',
     category: 'Réglementation',
   ),
 
   // --- ÉQUIPEMENT ---
   Question(
     id: 'n1_11',
-    text: 'Lors du gréage de son équipement, quelle vérification prioritaire le N1 doit-il effectuer ?',
-    options: ['La couleur du gilet', 'La pression de la bouteille et le bon fonctionnement du gilet et du détendeur', 'Le poids du lestage uniquement', 'La couleur de la combinaison'],
+    text:
+        'Lors du gréage de son équipement, quelle vérification prioritaire le N1 doit-il effectuer ?',
+    options: [
+      'La couleur du gilet',
+      'La pression de la bouteille et le bon fonctionnement du gilet et du détendeur',
+      'Le poids du lestage uniquement',
+      'La couleur de la combinaison'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit vérifier la pression de la bouteille avant utilisation ainsi que le bon fonctionnement du gilet et du détendeur.',
+    explanation:
+        'Le N1 doit vérifier la pression de la bouteille avant utilisation ainsi que le bon fonctionnement du gilet et du détendeur.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_12',
-    text: 'Quelle notion physique simple guide le choix du lestage au Niveau 1 ?',
-    options: ['La pression atmosphérique', 'La flottabilité en rapport avec le lestage', 'La viscosité de l\'eau', 'La loi de Boyle-Mariotte'],
+    text:
+        'Quelle notion physique simple guide le choix du lestage au Niveau 1 ?',
+    options: [
+      'La pression atmosphérique',
+      'La flottabilité en rapport avec le lestage',
+      'La viscosité de l\'eau',
+      'La loi de Boyle-Mariotte'
+    ],
     correctIndex: 1,
-    explanation: 'Le choix du lestage repose sur les notions de flottabilité (positive, négative, neutre) en rapport avec le lestage et le matériel utilisé.',
+    explanation:
+        'Le choix du lestage repose sur les notions de flottabilité (positive, négative, neutre) en rapport avec le lestage et le matériel utilisé.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_13',
-    text: 'Que faut-il adapter en cas de plongée en eau douce plutôt qu\'en eau salée concernant l\'équipement ?',
-    options: ['La taille du masque', 'Le lestage, car la flottabilité diffère', 'La longueur des palmes', 'La pression de la bouteille'],
+    text:
+        'Que faut-il adapter en cas de plongée en eau douce plutôt qu\'en eau salée concernant l\'équipement ?',
+    options: [
+      'La taille du masque',
+      'Le lestage, car la flottabilité diffère',
+      'La longueur des palmes',
+      'La pression de la bouteille'
+    ],
     correctIndex: 1,
-    explanation: 'Le lestage doit être approprié au milieu (eau douce, eau salée) car la flottabilité est différente selon la densité de l\'eau.',
+    explanation:
+        'Le lestage doit être approprié au milieu (eau douce, eau salée) car la flottabilité est différente selon la densité de l\'eau.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_14',
-    text: 'Quelle règle d\'hygiène s\'applique au matériel de plongée partagé ?',
-    options: ['Un simple rinçage suffit', 'Rinçage, désinfection et signalement de tout dysfonctionnement', 'Séchage au soleil uniquement', 'Aucune règle spécifique n\'existe'],
+    text:
+        'Quelle règle d\'hygiène s\'applique au matériel de plongée partagé ?',
+    options: [
+      'Un simple rinçage suffit',
+      'Rinçage, désinfection et signalement de tout dysfonctionnement',
+      'Séchage au soleil uniquement',
+      'Aucune règle spécifique n\'existe'
+    ],
     correctIndex: 1,
-    explanation: 'Le plongeur doit respecter les règles d\'entretien et d\'hygiène : signalement d\'un dysfonctionnement, rinçage, désinfection.',
+    explanation:
+        'Le plongeur doit respecter les règles d\'entretien et d\'hygiène : signalement d\'un dysfonctionnement, rinçage, désinfection.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_15',
     text: 'Le N1 doit être capable de s\'équiper dans quelle(s) condition(s) ?',
-    options: ['Uniquement au sec, avant la mise à l\'eau', 'Uniquement dans l\'eau', 'Au sec comme dans l\'eau de manière autonome', 'Seulement avec l\'aide du moniteur'],
+    options: [
+      'Uniquement au sec, avant la mise à l\'eau',
+      'Uniquement dans l\'eau',
+      'Au sec comme dans l\'eau de manière autonome',
+      'Seulement avec l\'aide du moniteur'
+    ],
     correctIndex: 2,
-    explanation: 'Le N1 doit être capable de s\'équiper au sec comme dans l\'eau de manière autonome.',
+    explanation:
+        'Le N1 doit être capable de s\'équiper au sec comme dans l\'eau de manière autonome.',
     category: 'Équipement',
   ),
 
   // --- MISE À L'EAU & SORTIE ---
   Question(
     id: 'n1_16',
-    text: 'Quelles techniques de mise à l\'eau en scaphandre le N1 doit-il maîtriser ?',
-    options: ['Uniquement le saut droit', 'Le saut droit, la bascule arrière et le départ plage', 'La bascule arrière uniquement', 'Uniquement le départ depuis une échelle'],
+    text:
+        'Quelles techniques de mise à l\'eau en scaphandre le N1 doit-il maîtriser ?',
+    options: [
+      'Uniquement le saut droit',
+      'Le saut droit, la bascule arrière et le départ plage',
+      'La bascule arrière uniquement',
+      'Uniquement le départ depuis une échelle'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit maîtriser le saut droit, la bascule arrière et le départ plage comme techniques de mise à l\'eau.',
+    explanation:
+        'Le N1 doit maîtriser le saut droit, la bascule arrière et le départ plage comme techniques de mise à l\'eau.',
     category: 'Mise à l\'eau',
   ),
   Question(
     id: 'n1_17',
     text: 'Comment le N1 sort-il son bloc-gilet de l\'eau ?',
-    options: ['En remontant directement à l\'échelle avec tout l\'équipement', 'En retirant l\'ensemble bloc-gilet en surface et en le passant à un support', 'En le laissant sur le fond pour le récupérer plus tard', 'En demandant à quelqu\'un sur le bateau de le hisser'],
+    options: [
+      'En remontant directement à l\'échelle avec tout l\'équipement',
+      'En retirant l\'ensemble bloc-gilet en surface et en le passant à un support',
+      'En le laissant sur le fond pour le récupérer plus tard',
+      'En demandant à quelqu\'un sur le bateau de le hisser'
+    ],
     correctIndex: 1,
-    explanation: 'La technique de sortie de l\'eau comprend le retrait de l\'ensemble bloc-gilet en surface et son passage à un support de plongée.',
+    explanation:
+        'La technique de sortie de l\'eau comprend le retrait de l\'ensemble bloc-gilet en surface et son passage à un support de plongée.',
     category: 'Mise à l\'eau',
   ),
   Question(
     id: 'n1_18',
-    text: 'Pour la mise à l\'eau, qu\'est-ce que le N1 doit avant tout respecter ?',
-    options: ['Sa propre décision sur le moment', 'Les consignes du directeur de plongée et la sécurité des autres', 'L\'ordre d\'ancienneté dans la palanquée', 'La priorité du guide de palanquée uniquement'],
+    text:
+        'Pour la mise à l\'eau, qu\'est-ce que le N1 doit avant tout respecter ?',
+    options: [
+      'Sa propre décision sur le moment',
+      'Les consignes du directeur de plongée et la sécurité des autres',
+      'L\'ordre d\'ancienneté dans la palanquée',
+      'La priorité du guide de palanquée uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 se met à l\'eau dans le souci de sa sécurité et de celle des autres, en respectant les consignes du DP.',
+    explanation:
+        'Le N1 se met à l\'eau dans le souci de sa sécurité et de celle des autres, en respectant les consignes du DP.',
     category: 'Mise à l\'eau',
   ),
 
   // --- PROPULSION ---
   Question(
     id: 'n1_19',
-    text: 'Sur quelle distance approximative le N1 est-il évalué en nage PMT de surface ?',
+    text:
+        'Sur quelle distance approximative le N1 est-il évalué en nage PMT de surface ?',
     options: ['50 mètres', '100 mètres', '200 mètres', '300 mètres'],
     correctIndex: 1,
-    explanation: 'Les deux types de nage de surface sont évalués sur des distances de l\'ordre de 100 m pour le PMT et 50 m pour le capelé.',
+    explanation:
+        'Les deux types de nage de surface sont évalués sur des distances de l\'ordre de 100 m pour le PMT et 50 m pour le capelé.',
     category: 'Propulsion',
   ),
   Question(
     id: 'n1_20',
-    text: 'Quel est le principal critère de performance retenu pour la nage de surface au N1 ?',
-    options: ['Battre un record de vitesse', 'Effectuer un parcours en surface dans de bonnes conditions physiques sans essoufflement', 'Nager en moins de 2 minutes', 'Maintenir une vitesse constante'],
+    text:
+        'Quel est le principal critère de performance retenu pour la nage de surface au N1 ?',
+    options: [
+      'Battre un record de vitesse',
+      'Effectuer un parcours en surface dans de bonnes conditions physiques sans essoufflement',
+      'Nager en moins de 2 minutes',
+      'Maintenir une vitesse constante'
+    ],
     correctIndex: 1,
-    explanation: 'La capacité à effectuer un parcours en surface dans de bonnes conditions physiques (absence d\'essoufflement) est le seul critère de performance au N1. Il n\'y a pas d\'épreuve chronométrée.',
+    explanation:
+        'La capacité à effectuer un parcours en surface dans de bonnes conditions physiques (absence d\'essoufflement) est le seul critère de performance au N1. Il n\'y a pas d\'épreuve chronométrée.',
     category: 'Propulsion',
   ),
   Question(
     id: 'n1_21',
     text: 'Quels types de palmage doit maîtriser le plongeur N1 ?',
-    options: ['Le palmage ventral uniquement', 'Palmage ventral, dorsal, de sustentation et en immersion, plus la nage capelée', 'Palmage dorsal et capelé uniquement', 'Palmage ventral et capelé uniquement'],
+    options: [
+      'Le palmage ventral uniquement',
+      'Palmage ventral, dorsal, de sustentation et en immersion, plus la nage capelée',
+      'Palmage dorsal et capelé uniquement',
+      'Palmage ventral et capelé uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit maîtriser le palmage ventral en surface, dorsal, de sustentation, en immersion et la nage en capelé.',
+    explanation:
+        'Le N1 doit maîtriser le palmage ventral en surface, dorsal, de sustentation, en immersion et la nage en capelé.',
     category: 'Propulsion',
   ),
   Question(
     id: 'n1_22',
-    text: 'Dans la pratique du palmage, quelle priorité doit-on donner selon le manuel N1 ?',
-    options: ['La rapidité et la performance chronométrée', 'La qualité de réalisation et l\'efficacité du geste technique', 'La force musculaire déployée', 'Le style esthétique du mouvement'],
+    text:
+        'Dans la pratique du palmage, quelle priorité doit-on donner selon le manuel N1 ?',
+    options: [
+      'La rapidité et la performance chronométrée',
+      'La qualité de réalisation et l\'efficacité du geste technique',
+      'La force musculaire déployée',
+      'Le style esthétique du mouvement'
+    ],
     correctIndex: 1,
-    explanation: 'La qualité de réalisation et l\'efficacité du geste technique doivent être privilégiées ; la performance n\'est pas une priorité.',
+    explanation:
+        'La qualité de réalisation et l\'efficacité du geste technique doivent être privilégiées ; la performance n\'est pas une priorité.',
     category: 'Propulsion',
   ),
 
   // --- VENTILATION ---
   Question(
     id: 'n1_23',
-    text: 'Lors de la remontée en expiration contrôlée (REC) au N1, quelle est la profondeur maximale de départ ?',
+    text:
+        'Lors de la remontée en expiration contrôlée (REC) au N1, quelle est la profondeur maximale de départ ?',
     options: ['3 mètres', '6 mètres', '10 mètres', '20 mètres'],
     correctIndex: 1,
-    explanation: 'La REC au N1 s\'effectue d\'une profondeur n\'excédant pas 6 m, avec rejet continu d\'air tout au long de la remontée après un départ du fond stabilisé.',
+    explanation:
+        'La REC au N1 s\'effectue d\'une profondeur n\'excédant pas 6 m, avec rejet continu d\'air tout au long de la remontée après un départ du fond stabilisé.',
     category: 'Ventilation',
   ),
   Question(
     id: 'n1_24',
     text: 'Comment le plongeur N1 vide-t-il son masque sous l\'eau ?',
-    options: ['En remontant en surface', 'En introduisant de l\'air par le nez tout en maintenant une ventilation normale', 'En soufflant par la bouche dans le masque', 'En retirant entièrement le masque'],
+    options: [
+      'En remontant en surface',
+      'En introduisant de l\'air par le nez tout en maintenant une ventilation normale',
+      'En soufflant par la bouche dans le masque',
+      'En retirant entièrement le masque'
+    ],
     correctIndex: 1,
-    explanation: 'Le vidage du masque s\'effectue par évacuation de l\'eau en introduisant de l\'air par le nez, tout en maintenant une ventilation normale au contact de l\'eau.',
+    explanation:
+        'Le vidage du masque s\'effectue par évacuation de l\'eau en introduisant de l\'air par le nez, tout en maintenant une ventilation normale au contact de l\'eau.',
     category: 'Ventilation',
   ),
   Question(
     id: 'n1_25',
-    text: 'Quelles sont les deux techniques de vidage d\'embout que le N1 doit maîtriser ?',
-    options: ['Retrait en surface et remplacement', 'Vidage par expiration et utilisation du bouton de suppression', 'Soufflage dans l\'embout et pompage', 'Aspiration et purge manuelle'],
+    text:
+        'Quelles sont les deux techniques de vidage d\'embout que le N1 doit maîtriser ?',
+    options: [
+      'Retrait en surface et remplacement',
+      'Vidage par expiration et utilisation du bouton de suppression',
+      'Soufflage dans l\'embout et pompage',
+      'Aspiration et purge manuelle'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit maîtriser le lâcher-reprise d\'embout et les deux techniques de vidage : par expiration et par utilisation du bouton de suppression.',
+    explanation:
+        'Le N1 doit maîtriser le lâcher-reprise d\'embout et les deux techniques de vidage : par expiration et par utilisation du bouton de suppression.',
     category: 'Ventilation',
   ),
   Question(
     id: 'n1_26',
     text: 'Où est évaluée la compétence de vidage de masque au N1 ?',
-    options: ['En piscine uniquement', 'Dans la zone 0 à 6 m', 'À 10 mètres minimum', 'En surface uniquement'],
+    options: [
+      'En piscine uniquement',
+      'Dans la zone 0 à 6 m',
+      'À 10 mètres minimum',
+      'En surface uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'L\'évaluation du vidage de masque se fait dans la zone de 0 à 6 m.',
+    explanation:
+        'L\'évaluation du vidage de masque se fait dans la zone de 0 à 6 m.',
     category: 'Ventilation',
   ),
   Question(
     id: 'n1_27',
-    text: 'Quel accident grave est principalement prévenu par la maîtrise de la ventilation à la remontée ?',
-    options: ['La narcose', 'La surpression pulmonaire (barotraumatisme)', 'L\'hypothermie', 'La crise de tétanie'],
+    text:
+        'Quel accident grave est principalement prévenu par la maîtrise de la ventilation à la remontée ?',
+    options: [
+      'La narcose',
+      'La surpression pulmonaire (barotraumatisme)',
+      'L\'hypothermie',
+      'La crise de tétanie'
+    ],
     correctIndex: 1,
-    explanation: 'La maîtrise de la ventilation à la remontée prévient principalement la surpression pulmonaire (barotraumatisme). Un accent particulier est mis sur ce point au N1.',
+    explanation:
+        'La maîtrise de la ventilation à la remontée prévient principalement la surpression pulmonaire (barotraumatisme). Un accent particulier est mis sur ce point au N1.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n1_28',
-    text: 'Comment le N1 s\'autocontrôle-t-il pour maintenir sa ventilation dans la zone de confort ?',
-    options: ['En regardant son manomètre fréquemment', 'Par des apnées de contrôle courtes', 'En comptant ses respirations', 'En demandant au GP de le surveiller'],
+    text:
+        'Comment le N1 s\'autocontrôle-t-il pour maintenir sa ventilation dans la zone de confort ?',
+    options: [
+      'En regardant son manomètre fréquemment',
+      'Par des apnées de contrôle courtes',
+      'En comptant ses respirations',
+      'En demandant au GP de le surveiller'
+    ],
     correctIndex: 1,
-    explanation: 'Le plongeur s\'autocontrôle par des apnées de contrôle, et maintient sa ventilation dans la zone de confort.',
+    explanation:
+        'Le plongeur s\'autocontrôle par des apnées de contrôle, et maintient sa ventilation dans la zone de confort.',
     category: 'Ventilation',
   ),
 
   // --- ÉQUILIBRE ---
   Question(
     id: 'n1_29',
-    text: 'Quelles sont les deux techniques combinées pour assurer l\'équilibre en plongée ?',
-    options: ['Les palmes et le gilet', 'Le poumon ballast et le gilet de stabilisation', 'La ceinture de plomb et la ventilation', 'L\'inflateur et la ceinture'],
+    text:
+        'Quelles sont les deux techniques combinées pour assurer l\'équilibre en plongée ?',
+    options: [
+      'Les palmes et le gilet',
+      'Le poumon ballast et le gilet de stabilisation',
+      'La ceinture de plomb et la ventilation',
+      'L\'inflateur et la ceinture'
+    ],
     correctIndex: 1,
-    explanation: 'L\'équilibre est assuré par la maîtrise combinée du poumon ballast et du gilet de stabilisation (utilisation de l\'inflateur et des différentes purges).',
+    explanation:
+        'L\'équilibre est assuré par la maîtrise combinée du poumon ballast et du gilet de stabilisation (utilisation de l\'inflateur et des différentes purges).',
     category: 'Équilibre',
   ),
   Question(
     id: 'n1_30',
-    text: 'Quelle variation de profondeur est tolérée lors de l\'évaluation de la stabilisation au N1 ?',
+    text:
+        'Quelle variation de profondeur est tolérée lors de l\'évaluation de la stabilisation au N1 ?',
     options: ['± 0,5 mètre', '± 1 mètre', '± 2 mètres', '± 3 mètres'],
     correctIndex: 1,
-    explanation: 'La performance est contrôlée avec une variation de plus ou moins 1 mètre dans des situations statique et dynamique.',
+    explanation:
+        'La performance est contrôlée avec une variation de plus ou moins 1 mètre dans des situations statique et dynamique.',
     category: 'Équilibre',
   ),
 
@@ -260,85 +419,147 @@ const List<Question> _niveau1Questions = [
   Question(
     id: 'n1_31',
     text: 'Quelles techniques d\'immersion le plongeur N1 doit-il maîtriser ?',
-    options: ['Uniquement le canard', 'Uniquement le phoque', 'Le canard et le phoque, en scaphandre et en plongée libre', 'Le saut droit et le canard'],
+    options: [
+      'Uniquement le canard',
+      'Uniquement le phoque',
+      'Le canard et le phoque, en scaphandre et en plongée libre',
+      'Le saut droit et le canard'
+    ],
     correctIndex: 2,
-    explanation: 'Le N1 doit maîtriser les deux techniques du phoque et du canard en scaphandre et en plongée libre.',
+    explanation:
+        'Le N1 doit maîtriser les deux techniques du phoque et du canard en scaphandre et en plongée libre.',
     category: 'Immersion',
   ),
   Question(
     id: 'n1_32',
-    text: 'À quelle profondeur le N1 doit-il rechercher l\'équilibre lors des techniques d\'immersion ?',
+    text:
+        'À quelle profondeur le N1 doit-il rechercher l\'équilibre lors des techniques d\'immersion ?',
     options: ['1 mètre', '3 mètres', '6 mètres', '10 mètres'],
     correctIndex: 1,
-    explanation: 'Le lestage adapté vise la recherche essentielle de l\'équilibre à 3 m lors de l\'immersion.',
+    explanation:
+        'Le lestage adapté vise la recherche essentielle de l\'équilibre à 3 m lors de l\'immersion.',
     category: 'Immersion',
   ),
   Question(
     id: 'n1_33',
-    text: 'Quel accident sont prévenus par une bonne technique d\'immersion et une compensation régulière ?',
-    options: ['L\'essoufflement uniquement', 'Les barotraumatismes de l\'oreille, des sinus et le plaquage de masque', 'La narcose', 'L\'accident de désaturation'],
+    text:
+        'Quel accident sont prévenus par une bonne technique d\'immersion et une compensation régulière ?',
+    options: [
+      'L\'essoufflement uniquement',
+      'Les barotraumatismes de l\'oreille, des sinus et le plaquage de masque',
+      'La narcose',
+      'L\'accident de désaturation'
+    ],
     correctIndex: 1,
-    explanation: 'La théorie du N1 couvre la prévention des barotraumatismes de l\'oreille, des sinus et du plaquage de masque lors de l\'immersion.',
+    explanation:
+        'La théorie du N1 couvre la prévention des barotraumatismes de l\'oreille, des sinus et du plaquage de masque lors de l\'immersion.',
     category: 'Sécurité',
   ),
 
   // --- COMMUNICATION ---
   Question(
     id: 'n1_34',
-    text: 'Quels signes conventionnels de base le plongeur N1 doit-il identifier et réaliser ?',
-    options: ['OK et fin de plongée uniquement', 'OK, monter, descendre, ça ne va pas, mi-pression, réserve, panne d\'air, essoufflement, froid, fin de plongée', 'Uniquement les signaux de danger', 'Tous les signes de la plongée technique'],
+    text:
+        'Quels signes conventionnels de base le plongeur N1 doit-il identifier et réaliser ?',
+    options: [
+      'OK et fin de plongée uniquement',
+      'OK, monter, descendre, ça ne va pas, mi-pression, réserve, panne d\'air, essoufflement, froid, fin de plongée',
+      'Uniquement les signaux de danger',
+      'Tous les signes de la plongée technique'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit identifier et réaliser l\'ensemble des signes conventionnels : OK, monter, descendre, ça ne va pas, mi-pression, réserve, panne d\'air, essoufflement, froid, fin de plongée/d\'exercice.',
+    explanation:
+        'Le N1 doit identifier et réaliser l\'ensemble des signes conventionnels : OK, monter, descendre, ça ne va pas, mi-pression, réserve, panne d\'air, essoufflement, froid, fin de plongée/d\'exercice.',
     category: 'Communication',
   ),
   Question(
     id: 'n1_35',
-    text: 'Quelle qualité comportementale est attendue du N1 en matière de communication ?',
-    options: ['Attendre que le GP pose les questions', 'Être attentif, réactif et prendre l\'initiative de communiquer sans attendre le GP', 'Communiquer uniquement en cas de problème grave', 'Limiter les signaux pour ne pas distraire le GP'],
+    text:
+        'Quelle qualité comportementale est attendue du N1 en matière de communication ?',
+    options: [
+      'Attendre que le GP pose les questions',
+      'Être attentif, réactif et prendre l\'initiative de communiquer sans attendre le GP',
+      'Communiquer uniquement en cas de problème grave',
+      'Limiter les signaux pour ne pas distraire le GP'
+    ],
     correctIndex: 1,
-    explanation: 'Le plongeur doit être attentif, réactif, anticiper les gestes et prendre l\'initiative de communiquer sans attendre le questionnement du GP.',
+    explanation:
+        'Le plongeur doit être attentif, réactif, anticiper les gestes et prendre l\'initiative de communiquer sans attendre le questionnement du GP.',
     category: 'Communication',
   ),
 
   // --- REMONTÉE EN SURFACE ---
   Question(
     id: 'n1_36',
-    text: 'Que doit effectuer le N1 à son arrivée en surface pour assurer sa sécurité ?',
-    options: ['Retirer son masque immédiatement', 'Effectuer un tour d\'horizon et gonfler son gilet', 'Plonger la tête pour vérifier le fond', 'Appeler immédiatement le bateau'],
+    text:
+        'Que doit effectuer le N1 à son arrivée en surface pour assurer sa sécurité ?',
+    options: [
+      'Retirer son masque immédiatement',
+      'Effectuer un tour d\'horizon et gonfler son gilet',
+      'Plonger la tête pour vérifier le fond',
+      'Appeler immédiatement le bateau'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit effectuer un tour d\'horizon et gonfler son gilet en surface pour assurer sa sécurité à la sortie de l\'eau.',
+    explanation:
+        'Le N1 doit effectuer un tour d\'horizon et gonfler son gilet en surface pour assurer sa sécurité à la sortie de l\'eau.',
     category: 'Remontée',
   ),
   Question(
     id: 'n1_37',
-    text: 'Quelle est la zone de profondeur particulièrement critique lors de la remontée concernant les variations de volume ?',
-    options: ['30 à 20 mètres', '20 à 10 mètres', '10 à 0 mètre (la zone 0-10 m)', '5 à 3 mètres uniquement'],
+    text:
+        'Quelle est la zone de profondeur particulièrement critique lors de la remontée concernant les variations de volume ?',
+    options: [
+      '30 à 20 mètres',
+      '20 à 10 mètres',
+      '10 à 0 mètre (la zone 0-10 m)',
+      '5 à 3 mètres uniquement'
+    ],
     correctIndex: 2,
-    explanation: 'La zone de 0 à 10 m est particulièrement critique pour les variations de volume liées aux barotraumatismes. Les règles d\'approche de la surface y sont explicitées.',
+    explanation:
+        'La zone de 0 à 10 m est particulièrement critique pour les variations de volume liées aux barotraumatismes. Les règles d\'approche de la surface y sont explicitées.',
     category: 'Remontée',
   ),
   Question(
     id: 'n1_38',
     text: 'Qu\'est-ce que la courbe de plongée sans palier ?',
-    options: ['Un profil de plongée avec plusieurs paliers', 'La durée maximale à une profondeur donnée sans obligation de palier de décompression', 'La vitesse de remontée recommandée', 'La profondeur maximale atteignable sans risque'],
+    options: [
+      'Un profil de plongée avec plusieurs paliers',
+      'La durée maximale à une profondeur donnée sans obligation de palier de décompression',
+      'La vitesse de remontée recommandée',
+      'La profondeur maximale atteignable sans risque'
+    ],
     correctIndex: 1,
-    explanation: 'La courbe de plongée sans palier représente la durée maximale à une profondeur donnée sans nécessiter de palier obligatoire de décompression.',
+    explanation:
+        'La courbe de plongée sans palier représente la durée maximale à une profondeur donnée sans nécessiter de palier obligatoire de décompression.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n1_39',
     text: 'Que comprend la gestion d\'une remontée isolée pour le N1 ?',
-    options: ['Remonter le plus vite possible en surface', 'Assurer sa propre sécurité : vitesse, paliers éventuels, approche surface, sortie de l\'eau', 'Attendre le GP en maintenant la profondeur', 'Signaler sa position par radio'],
+    options: [
+      'Remonter le plus vite possible en surface',
+      'Assurer sa propre sécurité : vitesse, paliers éventuels, approche surface, sortie de l\'eau',
+      'Attendre le GP en maintenant la profondeur',
+      'Signaler sa position par radio'
+    ],
     correctIndex: 1,
-    explanation: 'En cas de remontée isolée, le N1 doit assurer sa sécurité en maîtrisant : vitesse de remontée, paliers, arrêt et tour d\'horizon à l\'approche de la surface.',
+    explanation:
+        'En cas de remontée isolée, le N1 doit assurer sa sécurité en maîtrisant : vitesse de remontée, paliers, arrêt et tour d\'horizon à l\'approche de la surface.',
     category: 'Remontée',
   ),
   Question(
     id: 'n1_40',
-    text: 'Lors d\'une REC, à quel moment le plongeur doit-il commencer à expirer ?',
-    options: ['Uniquement en arrivant à 3 m', 'Tout au long de la remontée, dès le départ du fond', 'Seulement dans les derniers 3 m', 'Uniquement si l\'ordinateur le demande'],
+    text:
+        'Lors d\'une REC, à quel moment le plongeur doit-il commencer à expirer ?',
+    options: [
+      'Uniquement en arrivant à 3 m',
+      'Tout au long de la remontée, dès le départ du fond',
+      'Seulement dans les derniers 3 m',
+      'Uniquement si l\'ordinateur le demande'
+    ],
     correctIndex: 1,
-    explanation: 'Lors de la REC, le rejet d\'air se fait tout au long de la remontée après un départ du fond stabilisé, sans précipitation, sur une inspiration normale.',
+    explanation:
+        'Lors de la REC, le rejet d\'air se fait tout au long de la remontée après un départ du fond stabilisé, sans précipitation, sur une inspiration normale.',
     category: 'Ventilation',
   ),
 
@@ -346,125 +567,218 @@ const List<Question> _niveau1Questions = [
   Question(
     id: 'n1_41',
     text: 'En cas de panne d\'air, quelle procédure le N1 doit-il réaliser ?',
-    options: ['Remonter seul immédiatement en apnée sans limite de distance', 'Réaliser une apnée expiratoire sur 10 m à l\'horizontale ou utiliser l\'octopus du GP', 'Descendre vers le fond pour trouver de l\'air', 'Gonfler son gilet pour remonter sans expirer'],
+    options: [
+      'Remonter seul immédiatement en apnée sans limite de distance',
+      'Réaliser une apnée expiratoire sur 10 m à l\'horizontale ou utiliser l\'octopus du GP',
+      'Descendre vers le fond pour trouver de l\'air',
+      'Gonfler son gilet pour remonter sans expirer'
+    ],
     correctIndex: 1,
-    explanation: 'En cas de panne d\'air, le N1 réalise une apnée expiratoire sur une distance de 10 m à l\'horizontale ou utilise l\'octopus du GP.',
+    explanation:
+        'En cas de panne d\'air, le N1 réalise une apnée expiratoire sur une distance de 10 m à l\'horizontale ou utilise l\'octopus du GP.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n1_42',
     text: 'Que doit faire le N1 en cas de perte de sa palanquée ?',
-    options: ['Descendre chercher ses équipiers', 'Continuer la plongée seul jusqu\'à la fin du temps imparti', 'Remonter en surface et se signaler', 'Attendre sur le fond pendant 5 minutes'],
+    options: [
+      'Descendre chercher ses équipiers',
+      'Continuer la plongée seul jusqu\'à la fin du temps imparti',
+      'Remonter en surface et se signaler',
+      'Attendre sur le fond pendant 5 minutes'
+    ],
     correctIndex: 2,
-    explanation: 'En cas de perte de la palanquée, le N1 doit remonter en surface et se signaler.',
+    explanation:
+        'En cas de perte de la palanquée, le N1 doit remonter en surface et se signaler.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n1_43',
     text: 'Qu\'est-ce qu\'une intervention en relais au N1 ?',
-    options: ['Remplacer le GP pour guider la palanquée', 'Présenter son octopus à un équipier en difficulté et simuler un échange d\'embout', 'Remonter un plongeur inconscient depuis 20 m', 'Alerter les secours en surface'],
+    options: [
+      'Remplacer le GP pour guider la palanquée',
+      'Présenter son octopus à un équipier en difficulté et simuler un échange d\'embout',
+      'Remonter un plongeur inconscient depuis 20 m',
+      'Alerter les secours en surface'
+    ],
     correctIndex: 1,
-    explanation: 'L\'intervention en relais au N1 consiste à apporter son second détendeur (octopus) à un équipier en difficulté et à simuler un échange d\'embout en cas de panne d\'air.',
+    explanation:
+        'L\'intervention en relais au N1 consiste à apporter son second détendeur (octopus) à un équipier en difficulté et à simuler un échange d\'embout en cas de panne d\'air.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n1_44',
-    text: 'Quelle procédure s\'applique en cas d\'essoufflement pour un plongeur N1 ?',
-    options: ['Accélérer les palmes pour remonter plus vite', 'Informer le GP par le signe conventionnel et se laisser guider', 'Descendre pour se calmer', 'Ne rien faire et attendre que ça passe'],
+    text:
+        'Quelle procédure s\'applique en cas d\'essoufflement pour un plongeur N1 ?',
+    options: [
+      'Accélérer les palmes pour remonter plus vite',
+      'Informer le GP par le signe conventionnel et se laisser guider',
+      'Descendre pour se calmer',
+      'Ne rien faire et attendre que ça passe'
+    ],
     correctIndex: 1,
-    explanation: 'En cas d\'essoufflement, le N1 doit informer le GP par le signe conventionnel dédié et suivre sa procédure de prise en charge.',
+    explanation:
+        'En cas d\'essoufflement, le N1 doit informer le GP par le signe conventionnel dédié et suivre sa procédure de prise en charge.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n1_45',
-    text: 'Quelle est la caractéristique principale d\'une procédure de remontée anormale ?',
-    options: ['Remonter plus lentement que la normale', 'Adapter la vitesse de remontée et les paliers à une situation imprévue ou dégradée', 'Remonter directement sans palier', 'Chercher le fond pour reprendre de l\'air'],
+    text:
+        'Quelle est la caractéristique principale d\'une procédure de remontée anormale ?',
+    options: [
+      'Remonter plus lentement que la normale',
+      'Adapter la vitesse de remontée et les paliers à une situation imprévue ou dégradée',
+      'Remonter directement sans palier',
+      'Chercher le fond pour reprendre de l\'air'
+    ],
     correctIndex: 1,
-    explanation: 'Les procédures de remontée anormale (y compris la remontée isolée) visent à adapter la sécurité à une situation imprévue ou dégradée.',
+    explanation:
+        'Les procédures de remontée anormale (y compris la remontée isolée) visent à adapter la sécurité à une situation imprévue ou dégradée.',
     category: 'Sécurité',
   ),
 
   // --- MILIEU & ENVIRONNEMENT ---
   Question(
     id: 'n1_46',
-    text: 'Comment le N1 doit-il évoluer pour respecter l\'environnement subaquatique ?',
-    options: ['En touchant les espèces pour les observer de près', 'En limitant son impact, sans appui, avec palmage et stabilisation maîtrisés', 'En utilisant un éclairage puissant pour tout voir', 'En nourrissant les poissons pour les attirer'],
+    text:
+        'Comment le N1 doit-il évoluer pour respecter l\'environnement subaquatique ?',
+    options: [
+      'En touchant les espèces pour les observer de près',
+      'En limitant son impact, sans appui, avec palmage et stabilisation maîtrisés',
+      'En utilisant un éclairage puissant pour tout voir',
+      'En nourrissant les poissons pour les attirer'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit réaliser des déplacements équilibrés, sans appui, avec un palmage et une stabilisation maîtrisés pour limiter son impact sur l\'environnement.',
+    explanation:
+        'Le N1 doit réaliser des déplacements équilibrés, sans appui, avec un palmage et une stabilisation maîtrisés pour limiter son impact sur l\'environnement.',
     category: 'Environnement',
   ),
   Question(
     id: 'n1_47',
     text: 'Qu\'est-ce que la Charte internationale du plongeur responsable ?',
-    options: ['Un texte juridiquement contraignant', 'Un ensemble de gestes et attitudes éco-responsables que le plongeur s\'engage à respecter', 'Une liste de sites de plongée protégés', 'Un règlement interne FFESSM uniquement'],
+    options: [
+      'Un texte juridiquement contraignant',
+      'Un ensemble de gestes et attitudes éco-responsables que le plongeur s\'engage à respecter',
+      'Une liste de sites de plongée protégés',
+      'Un règlement interne FFESSM uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'La Charte internationale du plongeur responsable est un ensemble de gestes et attitudes que le plongeur éco-responsable s\'engage à respecter pour préserver le milieu subaquatique.',
+    explanation:
+        'La Charte internationale du plongeur responsable est un ensemble de gestes et attitudes que le plongeur éco-responsable s\'engage à respecter pour préserver le milieu subaquatique.',
     category: 'Environnement',
   ),
   Question(
     id: 'n1_48',
-    text: 'Quel comportement interdit le plongeur responsable vis-à-vis des animaux marins ?',
-    options: ['Les photographier', 'Les observer de loin', 'Les nourrir', 'Compter les espèces rencontrées'],
+    text:
+        'Quel comportement interdit le plongeur responsable vis-à-vis des animaux marins ?',
+    options: [
+      'Les photographier',
+      'Les observer de loin',
+      'Les nourrir',
+      'Compter les espèces rencontrées'
+    ],
     correctIndex: 2,
-    explanation: 'Le plongeur responsable refuse le nourrissage, qui perturbe le comportement naturel et l\'écosystème marin.',
+    explanation:
+        'Le plongeur responsable refuse le nourrissage, qui perturbe le comportement naturel et l\'écosystème marin.',
     category: 'Environnement',
   ),
   Question(
     id: 'n1_49',
     text: 'Comment le comportement respectueux du N1 est-il évalué ?',
-    options: ['Par un QCM écrit en salle', 'Au cours des plongées en milieu naturel', 'Par une présentation orale en dehors de l\'eau', 'En simulant des situations en piscine'],
+    options: [
+      'Par un QCM écrit en salle',
+      'Au cours des plongées en milieu naturel',
+      'Par une présentation orale en dehors de l\'eau',
+      'En simulant des situations en piscine'
+    ],
     correctIndex: 1,
-    explanation: 'Au cours des plongées en milieu naturel, le comportement respectueux et responsable du plongeur est évalué.',
+    explanation:
+        'Au cours des plongées en milieu naturel, le comportement respectueux et responsable du plongeur est évalué.',
     category: 'Environnement',
   ),
   Question(
     id: 'n1_50',
     text: 'Quelles connaissances du milieu le N1 doit-il posséder ?',
-    options: ['Uniquement les espèces protégées', 'Faune et flore courantes, risques et dangers du milieu, prévention du froid', 'La géologie sous-marine uniquement', 'La cartographie des sites de plongée'],
+    options: [
+      'Uniquement les espèces protégées',
+      'Faune et flore courantes, risques et dangers du milieu, prévention du froid',
+      'La géologie sous-marine uniquement',
+      'La cartographie des sites de plongée'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit avoir des connaissances du milieu (faune et flore courantes, risques et dangers) et sur la prévention du froid et des dangers du milieu.',
+    explanation:
+        'Le N1 doit avoir des connaissances du milieu (faune et flore courantes, risques et dangers) et sur la prévention du froid et des dangers du milieu.',
     category: 'Environnement',
   ),
 
   // --- THÉORIE : PHYSIQUE ---
   Question(
     id: 'n1_51',
-    text: 'En plongée, que se passe-t-il avec le volume d\'un espace gazeux quand la profondeur augmente ?',
-    options: ['Le volume augmente', 'Le volume reste constant', 'Le volume diminue', 'Le volume disparaît'],
+    text:
+        'En plongée, que se passe-t-il avec le volume d\'un espace gazeux quand la profondeur augmente ?',
+    options: [
+      'Le volume augmente',
+      'Le volume reste constant',
+      'Le volume diminue',
+      'Le volume disparaît'
+    ],
     correctIndex: 2,
-    explanation: 'Avec l\'augmentation de la pression (profondeur), le volume d\'un espace gazeux diminue (loi de Boyle-Mariotte).',
+    explanation:
+        'Avec l\'augmentation de la pression (profondeur), le volume d\'un espace gazeux diminue (loi de Boyle-Mariotte).',
     category: 'Physique',
   ),
   Question(
     id: 'n1_52',
-    text: 'Pourquoi les objets semblent-ils plus proches et plus grands sous l\'eau ?',
-    options: ['À cause de la pression de l\'eau', 'À cause de la réfraction de la lumière à l\'interface eau-masque', 'À cause de la faible luminosité', 'À cause de l\'état d\'apesanteur'],
+    text:
+        'Pourquoi les objets semblent-ils plus proches et plus grands sous l\'eau ?',
+    options: [
+      'À cause de la pression de l\'eau',
+      'À cause de la réfraction de la lumière à l\'interface eau-masque',
+      'À cause de la faible luminosité',
+      'À cause de l\'état d\'apesanteur'
+    ],
     correctIndex: 1,
-    explanation: 'La réfraction de la lumière à l\'interface eau-masque modifie la perception des distances et des tailles sous l\'eau.',
+    explanation:
+        'La réfraction de la lumière à l\'interface eau-masque modifie la perception des distances et des tailles sous l\'eau.',
     category: 'Physique',
   ),
   Question(
     id: 'n1_53',
-    text: 'Quelle couleur disparaît en premier lorsque l\'on s\'enfonce en profondeur ?',
+    text:
+        'Quelle couleur disparaît en premier lorsque l\'on s\'enfonce en profondeur ?',
     options: ['Le bleu', 'Le vert', 'Le rouge', 'Le jaune'],
     correctIndex: 2,
-    explanation: 'La lumière rouge est la première à être absorbée par l\'eau, disparaissant dès quelques mètres de profondeur.',
+    explanation:
+        'La lumière rouge est la première à être absorbée par l\'eau, disparaissant dès quelques mètres de profondeur.',
     category: 'Physique',
   ),
   Question(
     id: 'n1_54',
-    text: 'Comment la propagation du son se comporte-t-elle sous l\'eau comparée à l\'air ?',
-    options: ['Le son se propage moins vite et est moins bien localisé', 'Le son ne se propage pas sous l\'eau', 'Le son se propage plus vite et est difficile à localiser directionnellement', 'La propagation est identique à celle dans l\'air'],
+    text:
+        'Comment la propagation du son se comporte-t-elle sous l\'eau comparée à l\'air ?',
+    options: [
+      'Le son se propage moins vite et est moins bien localisé',
+      'Le son ne se propage pas sous l\'eau',
+      'Le son se propage plus vite et est difficile à localiser directionnellement',
+      'La propagation est identique à celle dans l\'air'
+    ],
     correctIndex: 2,
-    explanation: 'Sous l\'eau, le son se propage environ 4 fois plus vite que dans l\'air, ce qui rend difficile la localisation directionnelle de sa source.',
+    explanation:
+        'Sous l\'eau, le son se propage environ 4 fois plus vite que dans l\'air, ce qui rend difficile la localisation directionnelle de sa source.',
     category: 'Physique',
   ),
   Question(
     id: 'n1_55',
     text: 'Qu\'appelle-t-on flottabilité neutre en plongée ?',
-    options: ['Couler lentement vers le fond', 'Se maintenir sans effort à une profondeur stable', 'Remonter lentement en surface', 'Avoir un poids apparent nul seulement en surface'],
+    options: [
+      'Couler lentement vers le fond',
+      'Se maintenir sans effort à une profondeur stable',
+      'Remonter lentement en surface',
+      'Avoir un poids apparent nul seulement en surface'
+    ],
     correctIndex: 1,
-    explanation: 'La flottabilité neutre désigne l\'état où le plongeur ni ne coule ni ne remonte, se maintenant sans effort à la profondeur souhaitée.',
+    explanation:
+        'La flottabilité neutre désigne l\'état où le plongeur ni ne coule ni ne remonte, se maintenant sans effort à la profondeur souhaitée.',
     category: 'Physique',
   ),
 
@@ -472,41 +786,73 @@ const List<Question> _niveau1Questions = [
   Question(
     id: 'n1_56',
     text: 'Qu\'est-ce qu\'un barotraumatisme de l\'oreille ?',
-    options: ['Une lésion due au froid de l\'eau', 'Une lésion causée par une différence de pression entre l\'oreille et le milieu extérieur', 'Une infection bactérienne de l\'oreille', 'Un vertige causé par la profondeur'],
+    options: [
+      'Une lésion due au froid de l\'eau',
+      'Une lésion causée par une différence de pression entre l\'oreille et le milieu extérieur',
+      'Une infection bactérienne de l\'oreille',
+      'Un vertige causé par la profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'Un barotraumatisme de l\'oreille est une lésion causée par une différence de pression entre l\'oreille moyenne et le milieu extérieur, notamment lors de la descente.',
+    explanation:
+        'Un barotraumatisme de l\'oreille est une lésion causée par une différence de pression entre l\'oreille moyenne et le milieu extérieur, notamment lors de la descente.',
     category: 'Accidents',
   ),
   Question(
     id: 'n1_57',
-    text: 'Quelle manœuvre permet d\'équilibrer la pression dans l\'oreille moyenne lors de la descente ?',
-    options: ['La manœuvre de Heimlich', 'La manœuvre de Valsalva (souffler nez pincé) ou BTV/Frenzel', 'Le vidage de masque', 'Gonfler le gilet'],
+    text:
+        'Quelle manœuvre permet d\'équilibrer la pression dans l\'oreille moyenne lors de la descente ?',
+    options: [
+      'La manœuvre de Heimlich',
+      'La manœuvre de Valsalva (souffler nez pincé) ou BTV/Frenzel',
+      'Le vidage de masque',
+      'Gonfler le gilet'
+    ],
     correctIndex: 1,
-    explanation: 'La manœuvre de Valsalva (souffler nez pincé) ou les techniques BTV/Frenzel permettent d\'équilibrer la pression dans l\'oreille moyenne et de prévenir le barotraumatisme.',
+    explanation:
+        'La manœuvre de Valsalva (souffler nez pincé) ou les techniques BTV/Frenzel permettent d\'équilibrer la pression dans l\'oreille moyenne et de prévenir le barotraumatisme.',
     category: 'Accidents',
   ),
   Question(
     id: 'n1_58',
     text: 'Qu\'est-ce que la surpression pulmonaire et quand survient-elle ?',
-    options: ['Une compression des poumons à la descente', 'Un déchirement du tissu pulmonaire lors de la remontée si le plongeur retient sa respiration', 'Une infection pulmonaire due à l\'air comprimé', 'Un essoufflement sévère en profondeur'],
+    options: [
+      'Une compression des poumons à la descente',
+      'Un déchirement du tissu pulmonaire lors de la remontée si le plongeur retient sa respiration',
+      'Une infection pulmonaire due à l\'air comprimé',
+      'Un essoufflement sévère en profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'La surpression pulmonaire survient lors de la remontée si le plongeur retient sa respiration : les gaz se dilatent et peuvent déchirer le tissu pulmonaire. C\'est l\'accident le plus grave.',
+    explanation:
+        'La surpression pulmonaire survient lors de la remontée si le plongeur retient sa respiration : les gaz se dilatent et peuvent déchirer le tissu pulmonaire. C\'est l\'accident le plus grave.',
     category: 'Accidents',
   ),
   Question(
     id: 'n1_59',
-    text: 'Quelles sont les causes principales de l\'essoufflement en plongée ?',
-    options: ['Respirer trop lentement uniquement', 'Effort physique excessif, mauvaise ventilation, eau froide, stress, problème de matériel', 'Uniquement le froid de l\'eau', 'La fatigue musculaire des palmes'],
+    text:
+        'Quelles sont les causes principales de l\'essoufflement en plongée ?',
+    options: [
+      'Respirer trop lentement uniquement',
+      'Effort physique excessif, mauvaise ventilation, eau froide, stress, problème de matériel',
+      'Uniquement le froid de l\'eau',
+      'La fatigue musculaire des palmes'
+    ],
     correctIndex: 1,
-    explanation: 'L\'essoufflement peut être causé par un effort excessif, une mauvaise ventilation, le froid, le stress ou un problème de matériel (détendeur mal réglé, lestage excessif…).',
+    explanation:
+        'L\'essoufflement peut être causé par un effort excessif, une mauvaise ventilation, le froid, le stress ou un problème de matériel (détendeur mal réglé, lestage excessif…).',
     category: 'Accidents',
   ),
   Question(
     id: 'n1_60',
     text: 'Quel est le principe de l\'accident de désaturation ?',
-    options: ['Une embolie gazeuse par inhalation d\'air pollué', 'La formation de bulles d\'azote dans les tissus lors d\'une remontée trop rapide', 'Un écrasement du corps par la pression à grande profondeur', 'Une intoxication au dioxyde de carbone'],
+    options: [
+      'Une embolie gazeuse par inhalation d\'air pollué',
+      'La formation de bulles d\'azote dans les tissus lors d\'une remontée trop rapide',
+      'Un écrasement du corps par la pression à grande profondeur',
+      'Une intoxication au dioxyde de carbone'
+    ],
     correctIndex: 1,
-    explanation: 'L\'accident de désaturation (ADD) se produit quand la remontée est trop rapide : l\'azote dissous dans les tissus forme des bulles qui peuvent bloquer la circulation sanguine.',
+    explanation:
+        'L\'accident de désaturation (ADD) se produit quand la remontée est trop rapide : l\'azote dissous dans les tissus forme des bulles qui peuvent bloquer la circulation sanguine.',
     category: 'Accidents',
   ),
 
@@ -514,25 +860,45 @@ const List<Question> _niveau1Questions = [
   Question(
     id: 'n1_61',
     text: 'Qu\'est-ce que la table fédérale de plongée ?',
-    options: ['Un tableau de planification des sites de plongée', 'Un outil de calcul des durées et paliers de décompression', 'Un document d\'identification des espèces marines', 'Une liste des règles de sécurité FFESSM'],
+    options: [
+      'Un tableau de planification des sites de plongée',
+      'Un outil de calcul des durées et paliers de décompression',
+      'Un document d\'identification des espèces marines',
+      'Une liste des règles de sécurité FFESSM'
+    ],
     correctIndex: 1,
-    explanation: 'La table fédérale est un outil de calcul permettant de déterminer les durées de plongée et les paliers de décompression nécessaires.',
+    explanation:
+        'La table fédérale est un outil de calcul permettant de déterminer les durées de plongée et les paliers de décompression nécessaires.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n1_62',
-    text: 'Quel outil numérique peut remplacer ou compléter les tables pour gérer la désaturation ?',
-    options: ['Le GPS sous-marin', 'L\'ordinateur de plongée', 'La montre étanche', 'Le sondeur de profondeur'],
+    text:
+        'Quel outil numérique peut remplacer ou compléter les tables pour gérer la désaturation ?',
+    options: [
+      'Le GPS sous-marin',
+      'L\'ordinateur de plongée',
+      'La montre étanche',
+      'Le sondeur de profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'L\'ordinateur de plongée permet de gérer la désaturation en temps réel, remplaçant ou complétant les tables traditionnelles.',
+    explanation:
+        'L\'ordinateur de plongée permet de gérer la désaturation en temps réel, remplaçant ou complétant les tables traditionnelles.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n1_63',
-    text: 'Qu\'est-ce qu\'un palier de sécurité et à quelle profondeur se tient-il généralement ?',
-    options: ['Un arrêt à 10 m pour vérifier son équipement', 'Un arrêt entre 3 et 5 m pendant 3 minutes comme mesure préventive', 'Un palier obligatoire calculé par l\'ordinateur', 'Un palier d\'attente en cas de courant'],
+    text:
+        'Qu\'est-ce qu\'un palier de sécurité et à quelle profondeur se tient-il généralement ?',
+    options: [
+      'Un arrêt à 10 m pour vérifier son équipement',
+      'Un arrêt entre 3 et 5 m pendant 3 minutes comme mesure préventive',
+      'Un palier obligatoire calculé par l\'ordinateur',
+      'Un palier d\'attente en cas de courant'
+    ],
     correctIndex: 1,
-    explanation: 'Le palier de sécurité est un arrêt préventif généralement effectué entre 3 et 5 m pendant environ 3 minutes, même si aucun palier obligatoire n\'est calculé.',
+    explanation:
+        'Le palier de sécurité est un arrêt préventif généralement effectué entre 3 et 5 m pendant environ 3 minutes, même si aucun palier obligatoire n\'est calculé.',
     category: 'Désaturation',
   ),
 
@@ -540,299 +906,532 @@ const List<Question> _niveau1Questions = [
   Question(
     id: 'n1_64',
     text: 'Qu\'est-ce que la FFESSM ?',
-    options: ['La Fédération Française d\'Études et de Sports Sous-Marins', 'La Fédération Française d\'Enseignement de la Sécurité Sous-Marine', 'La Fédération Francophone des Études Sportives Sous-Marines', 'La Fédération Française des Explorateurs et Scientifiques Sous-Marins'],
+    options: [
+      'La Fédération Française d\'Études et de Sports Sous-Marins',
+      'La Fédération Française d\'Enseignement de la Sécurité Sous-Marine',
+      'La Fédération Francophone des Études Sportives Sous-Marines',
+      'La Fédération Française des Explorateurs et Scientifiques Sous-Marins'
+    ],
     correctIndex: 0,
-    explanation: 'La FFESSM est la Fédération Française d\'Études et de Sports Sous-Marins, organisme délégataire de l\'État pour la plongée sportive.',
+    explanation:
+        'La FFESSM est la Fédération Française d\'Études et de Sports Sous-Marins, organisme délégataire de l\'État pour la plongée sportive.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n1_65',
     text: 'À quoi sert le carnet de plongée numérique ?',
-    options: ['À réserver des sites de plongée en ligne', 'À attester et enregistrer les plongées effectuées, pouvant être signé par le GP', 'À télécharger des profils de plongée', 'À payer sa cotisation FFESSM'],
+    options: [
+      'À réserver des sites de plongée en ligne',
+      'À attester et enregistrer les plongées effectuées, pouvant être signé par le GP',
+      'À télécharger des profils de plongée',
+      'À payer sa cotisation FFESSM'
+    ],
     correctIndex: 1,
-    explanation: 'Le carnet de plongée numérique permet d\'attester et d\'enregistrer les plongées effectuées ; il peut être signé par le GP pour valider les plongées.',
+    explanation:
+        'Le carnet de plongée numérique permet d\'attester et d\'enregistrer les plongées effectuées ; il peut être signé par le GP pour valider les plongées.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n1_66',
-    text: 'Quels documents sont nécessaires pour pratiquer la plongée en club FFESSM ?',
-    options: ['Uniquement une pièce d\'identité', 'La licence FFESSM en cours de validité et le certificat médical d\'absence de contre-indication', 'Uniquement la carte de plongeur', 'Passeport et assurance personnelle'],
+    text:
+        'Quels documents sont nécessaires pour pratiquer la plongée en club FFESSM ?',
+    options: [
+      'Uniquement une pièce d\'identité',
+      'La licence FFESSM en cours de validité et le certificat médical d\'absence de contre-indication',
+      'Uniquement la carte de plongeur',
+      'Passeport et assurance personnelle'
+    ],
     correctIndex: 1,
-    explanation: 'Pour plonger en club FFESSM, il faut la licence fédérale en cours de validité et un certificat d\'absence de contre-indication à la plongée conforme à la réglementation fédérale.',
+    explanation:
+        'Pour plonger en club FFESSM, il faut la licence fédérale en cours de validité et un certificat d\'absence de contre-indication à la plongée conforme à la réglementation fédérale.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n1_67',
-    text: 'Quelle est la principale responsabilité du directeur de plongée (DP) ?',
-    options: ['Enseigner les techniques de plongée', 'Organiser, diriger et sécuriser l\'ensemble de l\'activité de plongée', 'Guider les palanquées en immersion', 'Vérifier le matériel de chaque plongeur'],
+    text:
+        'Quelle est la principale responsabilité du directeur de plongée (DP) ?',
+    options: [
+      'Enseigner les techniques de plongée',
+      'Organiser, diriger et sécuriser l\'ensemble de l\'activité de plongée',
+      'Guider les palanquées en immersion',
+      'Vérifier le matériel de chaque plongeur'
+    ],
     correctIndex: 1,
-    explanation: 'Le directeur de plongée (DP) est responsable de l\'organisation, de la direction et de la sécurisation de l\'ensemble de l\'activité de plongée.',
+    explanation:
+        'Le directeur de plongée (DP) est responsable de l\'organisation, de la direction et de la sécurisation de l\'ensemble de l\'activité de plongée.',
     category: 'Réglementation',
   ),
 
   // --- THÉORIE SUPPLÉMENTAIRE ---
   Question(
     id: 'n1_68',
-    text: 'Qu\'est-ce que la pression absolue à 20 m de profondeur en eau de mer ?',
+    text:
+        'Qu\'est-ce que la pression absolue à 20 m de profondeur en eau de mer ?',
     options: ['1 bar', '2 bars', '3 bars', '4 bars'],
     correctIndex: 2,
-    explanation: 'À 20 m de profondeur, la pression absolue est de 3 bars (1 bar atmosphérique + 2 bars de pression hydrostatique).',
+    explanation:
+        'À 20 m de profondeur, la pression absolue est de 3 bars (1 bar atmosphérique + 2 bars de pression hydrostatique).',
     category: 'Physique',
   ),
   Question(
     id: 'n1_69',
     text: 'Qu\'est-ce que le tuba permet de faire ?',
-    options: ['Respirer sous l\'eau en profondeur', 'Respirer en surface sans retirer le masque', 'Communiquer avec les autres plongeurs', 'Mesurer la profondeur'],
+    options: [
+      'Respirer sous l\'eau en profondeur',
+      'Respirer en surface sans retirer le masque',
+      'Communiquer avec les autres plongeurs',
+      'Mesurer la profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'Le tuba permet au plongeur de respirer en surface avec le visage dans l\'eau, sans avoir à relever la tête.',
+    explanation:
+        'Le tuba permet au plongeur de respirer en surface avec le visage dans l\'eau, sans avoir à relever la tête.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_70',
     text: 'Pourquoi le froid est-il un facteur de risque en plongée ?',
-    options: ['Il n\'est pas considéré comme dangereux en plongée', 'Il peut augmenter la consommation d\'air, favoriser les accidents de désaturation et causer une hypothermie', 'Il améliore la concentration du plongeur', 'Il n\'a d\'effet que sur les plongées de plus de 40 m'],
+    options: [
+      'Il n\'est pas considéré comme dangereux en plongée',
+      'Il peut augmenter la consommation d\'air, favoriser les accidents de désaturation et causer une hypothermie',
+      'Il améliore la concentration du plongeur',
+      'Il n\'a d\'effet que sur les plongées de plus de 40 m'
+    ],
     correctIndex: 1,
-    explanation: 'Le froid augmente la consommation d\'air, peut favoriser les accidents de désaturation et entraîner une hypothermie affectant les capacités physiques et mentales du plongeur.',
+    explanation:
+        'Le froid augmente la consommation d\'air, peut favoriser les accidents de désaturation et entraîner une hypothermie affectant les capacités physiques et mentales du plongeur.',
     category: 'Accidents',
   ),
   Question(
     id: 'n1_71',
-    text: 'Quel comportement est attendu concernant la cohésion de la palanquée ?',
-    options: ['Chaque plongeur évolue librement dans la zone', 'Rester à proximité du GP, respecter la profondeur et les consignes, dans l\'esprit d\'entraide', 'Suivre uniquement le plongeur devant soi', 'Se concentrer sur sa propre plongée sans se soucier des autres'],
+    text:
+        'Quel comportement est attendu concernant la cohésion de la palanquée ?',
+    options: [
+      'Chaque plongeur évolue librement dans la zone',
+      'Rester à proximité du GP, respecter la profondeur et les consignes, dans l\'esprit d\'entraide',
+      'Suivre uniquement le plongeur devant soi',
+      'Se concentrer sur sa propre plongée sans se soucier des autres'
+    ],
     correctIndex: 1,
-    explanation: 'Le plongeur N1 doit maintenir la cohésion de la palanquée : rester à proximité du GP, respecter la profondeur et les consignes, dans un esprit d\'entraide et de solidarité.',
+    explanation:
+        'Le plongeur N1 doit maintenir la cohésion de la palanquée : rester à proximité du GP, respecter la profondeur et les consignes, dans un esprit d\'entraide et de solidarité.',
     category: 'Comportement',
   ),
   Question(
     id: 'n1_72',
     text: 'Qu\'est-ce que le "plaquage de masque" et quand se produit-il ?',
-    options: ['Le masque qui se décolle en remontant', 'La compression douloureuse du masque sur le visage lors de la descente si la pression n\'est pas équilibrée', 'La buée sur le verre du masque', 'Le masque qui coule lorsqu\'on le retire'],
+    options: [
+      'Le masque qui se décolle en remontant',
+      'La compression douloureuse du masque sur le visage lors de la descente si la pression n\'est pas équilibrée',
+      'La buée sur le verre du masque',
+      'Le masque qui coule lorsqu\'on le retire'
+    ],
     correctIndex: 1,
-    explanation: 'Le plaquage de masque se produit lors de la descente quand on n\'équilibre pas la pression dans le masque en soufflant légèrement par le nez : le masque est comprimé sur le visage.',
+    explanation:
+        'Le plaquage de masque se produit lors de la descente quand on n\'équilibre pas la pression dans le masque en soufflant légèrement par le nez : le masque est comprimé sur le visage.',
     category: 'Accidents',
   ),
   Question(
     id: 'n1_73',
     text: 'Comment prévenir le plaquage de masque lors de la descente ?',
-    options: ['Fermer les yeux lors de la descente', 'Souffler légèrement par le nez dans le masque pour équilibrer la pression', 'Retirer le masque et le replacer', 'Descendre plus lentement'],
+    options: [
+      'Fermer les yeux lors de la descente',
+      'Souffler légèrement par le nez dans le masque pour équilibrer la pression',
+      'Retirer le masque et le replacer',
+      'Descendre plus lentement'
+    ],
     correctIndex: 1,
-    explanation: 'Pour prévenir le plaquage de masque, il suffit de souffler légèrement par le nez dans le masque pour équilibrer la pression avec la pression ambiante lors de la descente.',
+    explanation:
+        'Pour prévenir le plaquage de masque, il suffit de souffler légèrement par le nez dans le masque pour équilibrer la pression avec la pression ambiante lors de la descente.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n1_74',
-    text: 'Quelle est la différence entre un palier facultatif et un palier obligatoire ?',
-    options: ['Il n\'y a pas de différence', 'Le palier facultatif est recommandé par mesure de précaution, le palier obligatoire est exigé par les tables ou l\'ordinateur', 'Le palier obligatoire se fait à 3 m, le facultatif à 6 m', 'Le palier facultatif est plus long que l\'obligatoire'],
+    text:
+        'Quelle est la différence entre un palier facultatif et un palier obligatoire ?',
+    options: [
+      'Il n\'y a pas de différence',
+      'Le palier facultatif est recommandé par mesure de précaution, le palier obligatoire est exigé par les tables ou l\'ordinateur',
+      'Le palier obligatoire se fait à 3 m, le facultatif à 6 m',
+      'Le palier facultatif est plus long que l\'obligatoire'
+    ],
     correctIndex: 1,
-    explanation: 'Le palier facultatif (ou de sécurité) est recommandé par précaution ; le palier obligatoire est exigé par les tables ou l\'ordinateur de plongée pour dégazer en toute sécurité.',
+    explanation:
+        'Le palier facultatif (ou de sécurité) est recommandé par précaution ; le palier obligatoire est exigé par les tables ou l\'ordinateur de plongée pour dégazer en toute sécurité.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n1_75',
     text: 'Que signifie le signe "réserve" en communication subaquatique ?',
-    options: ['J\'ai besoin d\'aide', 'Ma pression d\'air est basse, je suis à la réserve', 'Je veux remonter', 'Tout va bien'],
+    options: [
+      'J\'ai besoin d\'aide',
+      'Ma pression d\'air est basse, je suis à la réserve',
+      'Je veux remonter',
+      'Tout va bien'
+    ],
     correctIndex: 1,
-    explanation: 'Le signe "réserve" indique que le plongeur a atteint la pression de réserve de sa bouteille : il doit en informer son GP et préparer la remontée.',
+    explanation:
+        'Le signe "réserve" indique que le plongeur a atteint la pression de réserve de sa bouteille : il doit en informer son GP et préparer la remontée.',
     category: 'Communication',
   ),
   Question(
     id: 'n1_76',
     text: 'Que représente le signe "mi-pression" pour le plongeur N1 ?',
-    options: ['La bouteille est aux trois quarts pleine', 'La pression en bouteille est à la moitié de la pression de départ', 'La plongée est à mi-parcours en temps', 'Le plongeur est à mi-profondeur'],
+    options: [
+      'La bouteille est aux trois quarts pleine',
+      'La pression en bouteille est à la moitié de la pression de départ',
+      'La plongée est à mi-parcours en temps',
+      'Le plongeur est à mi-profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'Le signe "mi-pression" signifie que la pression en bouteille est à la moitié de la pression de départ : signal important pour la gestion de l\'autonomie en air.',
+    explanation:
+        'Le signe "mi-pression" signifie que la pression en bouteille est à la moitié de la pression de départ : signal important pour la gestion de l\'autonomie en air.',
     category: 'Communication',
   ),
   Question(
     id: 'n1_77',
-    text: 'Pour la nage capelée en surface, sur quelle distance le N1 est-il évalué ?',
+    text:
+        'Pour la nage capelée en surface, sur quelle distance le N1 est-il évalué ?',
     options: ['25 mètres', '50 mètres', '100 mètres', '200 mètres'],
     correctIndex: 1,
-    explanation: 'La nage capelée en surface est évaluée sur une distance de l\'ordre de 50 m (simulation de retour au bateau).',
+    explanation:
+        'La nage capelée en surface est évaluée sur une distance de l\'ordre de 50 m (simulation de retour au bateau).',
     category: 'Propulsion',
   ),
   Question(
     id: 'n1_78',
     text: 'Que signifie le terme "capelé" pour une nage en surface ?',
-    options: ['Nager avec palmes et tuba uniquement', 'Nager avec l\'ensemble de l\'équipement de plongée (scaphandre) sur le dos', 'Nager en apnée', 'Nager en tenant son bloc à la main'],
+    options: [
+      'Nager avec palmes et tuba uniquement',
+      'Nager avec l\'ensemble de l\'équipement de plongée (scaphandre) sur le dos',
+      'Nager en apnée',
+      'Nager en tenant son bloc à la main'
+    ],
     correctIndex: 1,
-    explanation: 'Nager "capelé" signifie nager avec l\'ensemble de l\'équipement de plongée (bouteille, gilet, détendeur) sur le dos.',
+    explanation:
+        'Nager "capelé" signifie nager avec l\'ensemble de l\'équipement de plongée (bouteille, gilet, détendeur) sur le dos.',
     category: 'Propulsion',
   ),
   Question(
     id: 'n1_79',
     text: 'À quoi sert le gilet de stabilisation (BCD) en plongée ?',
-    options: ['Uniquement à flotter en surface', 'À gérer la flottabilité en surface et en immersion par gonflage/dégonflage', 'À transporter des accessoires de plongée', 'À maintenir la bouteille sur le dos uniquement'],
+    options: [
+      'Uniquement à flotter en surface',
+      'À gérer la flottabilité en surface et en immersion par gonflage/dégonflage',
+      'À transporter des accessoires de plongée',
+      'À maintenir la bouteille sur le dos uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'Le gilet de stabilisation (BCD) permet de gérer la flottabilité en surface (sustentation) et en immersion (stabilisation à la profondeur souhaitée) par gonflage/dégonflage.',
+    explanation:
+        'Le gilet de stabilisation (BCD) permet de gérer la flottabilité en surface (sustentation) et en immersion (stabilisation à la profondeur souhaitée) par gonflage/dégonflage.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_80',
     text: 'Que contrôle le manomètre immergeable du plongeur ?',
-    options: ['La profondeur atteinte', 'La pression d\'air restante dans la bouteille', 'La durée de la plongée', 'La vitesse de remontée'],
+    options: [
+      'La profondeur atteinte',
+      'La pression d\'air restante dans la bouteille',
+      'La durée de la plongée',
+      'La vitesse de remontée'
+    ],
     correctIndex: 1,
-    explanation: 'Le manomètre immergeable indique la pression d\'air restante dans la bouteille, permettant au plongeur de gérer son autonomie en air.',
+    explanation:
+        'Le manomètre immergeable indique la pression d\'air restante dans la bouteille, permettant au plongeur de gérer son autonomie en air.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_81',
     text: 'Quel est le rôle de la purge du gilet lors de la remontée ?',
-    options: ['Gonfler le gilet pour remonter plus vite', 'Laisser échapper l\'air du gilet pour contrôler la vitesse de remontée et éviter une remontée incontrôlée', 'Rincer l\'eau dans le gilet', 'Réguler la pression d\'air dans le détendeur'],
+    options: [
+      'Gonfler le gilet pour remonter plus vite',
+      'Laisser échapper l\'air du gilet pour contrôler la vitesse de remontée et éviter une remontée incontrôlée',
+      'Rincer l\'eau dans le gilet',
+      'Réguler la pression d\'air dans le détendeur'
+    ],
     correctIndex: 1,
-    explanation: 'Lors de la remontée, l\'air du gilet se dilate avec la diminution de pression : la purge permet de contrôler cette dilatation et d\'éviter une remontée incontrôlée.',
+    explanation:
+        'Lors de la remontée, l\'air du gilet se dilate avec la diminution de pression : la purge permet de contrôler cette dilatation et d\'éviter une remontée incontrôlée.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_82',
     text: 'Qu\'est-ce que le détendeur de secours (octopus) ?',
-    options: ['Un deuxième manomètre', 'Un second embout respiratoire, généralement de couleur jaune, permettant de partager l\'air', 'Un détendeur automatique de sécurité', 'Un dispositif de gonflage du gilet'],
+    options: [
+      'Un deuxième manomètre',
+      'Un second embout respiratoire, généralement de couleur jaune, permettant de partager l\'air',
+      'Un détendeur automatique de sécurité',
+      'Un dispositif de gonflage du gilet'
+    ],
     correctIndex: 1,
-    explanation: 'Le détendeur de secours (octopus) est un second embout respiratoire (souvent jaune pour être visible) permettant de partager l\'air avec un équipier en panne d\'air.',
+    explanation:
+        'Le détendeur de secours (octopus) est un second embout respiratoire (souvent jaune pour être visible) permettant de partager l\'air avec un équipier en panne d\'air.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_83',
     text: 'Qu\'est-ce que l\'inflateur du gilet stabilisateur ?',
-    options: ['Un dispositif de purge manuelle', 'Un tuyau permettant d\'introduire de l\'air dans le gilet depuis la bouteille ou la bouche', 'Un manomètre intégré', 'Un lest amovible'],
+    options: [
+      'Un dispositif de purge manuelle',
+      'Un tuyau permettant d\'introduire de l\'air dans le gilet depuis la bouteille ou la bouche',
+      'Un manomètre intégré',
+      'Un lest amovible'
+    ],
     correctIndex: 1,
-    explanation: 'L\'inflateur est un tuyau permettant d\'introduire de l\'air dans le gilet depuis la bouteille (par pression sur un bouton) ou par soufflage buccal.',
+    explanation:
+        'L\'inflateur est un tuyau permettant d\'introduire de l\'air dans le gilet depuis la bouteille (par pression sur un bouton) ou par soufflage buccal.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_84',
-    text: 'Pourquoi l\'accoutumance à la profondeur doit-elle être progressive au N1 ?',
-    options: ['Pour des raisons administratives de formation', 'Pour permettre au corps de s\'adapter et réduire les risques de barotraumatismes et d\'accidents', 'Pour respecter le calendrier pédagogique du club', 'Pour économiser les bouteilles de plongée'],
+    text:
+        'Pourquoi l\'accoutumance à la profondeur doit-elle être progressive au N1 ?',
+    options: [
+      'Pour des raisons administratives de formation',
+      'Pour permettre au corps de s\'adapter et réduire les risques de barotraumatismes et d\'accidents',
+      'Pour respecter le calendrier pédagogique du club',
+      'Pour économiser les bouteilles de plongée'
+    ],
     correctIndex: 1,
-    explanation: 'La progressivité permet à l\'organisme de s\'adapter aux effets de la pression et réduit les risques de barotraumatismes, d\'accidents de désaturation et d\'effets narcotiques.',
+    explanation:
+        'La progressivité permet à l\'organisme de s\'adapter aux effets de la pression et réduit les risques de barotraumatismes, d\'accidents de désaturation et d\'effets narcotiques.',
     category: 'Organisation',
   ),
   Question(
     id: 'n1_85',
     text: 'Que signifie avoir une "flottabilité positive" en plongée ?',
-    options: ['Le plongeur descend vers le fond', 'Le plongeur remonte naturellement vers la surface', 'Le plongeur reste stable à sa profondeur', 'Le plongeur avance horizontalement'],
+    options: [
+      'Le plongeur descend vers le fond',
+      'Le plongeur remonte naturellement vers la surface',
+      'Le plongeur reste stable à sa profondeur',
+      'Le plongeur avance horizontalement'
+    ],
     correctIndex: 1,
-    explanation: 'Avoir une flottabilité positive signifie que la poussée d\'Archimède est supérieure au poids du plongeur : il remonte naturellement vers la surface.',
+    explanation:
+        'Avoir une flottabilité positive signifie que la poussée d\'Archimède est supérieure au poids du plongeur : il remonte naturellement vers la surface.',
     category: 'Physique',
   ),
   Question(
     id: 'n1_86',
-    text: 'Lors d\'un tenue d\'un palier en pleine eau (sans repère visuel), quel outil permet au N1 de contrôler sa profondeur ?',
-    options: ['Uniquement le poumon ballast', 'L\'ordinateur de plongée ou le profondimètre couplé à la maîtrise du gilet', 'La montre uniquement', 'Le guide de palanquée indique la profondeur correcte'],
+    text:
+        'Lors d\'un tenue d\'un palier en pleine eau (sans repère visuel), quel outil permet au N1 de contrôler sa profondeur ?',
+    options: [
+      'Uniquement le poumon ballast',
+      'L\'ordinateur de plongée ou le profondimètre couplé à la maîtrise du gilet',
+      'La montre uniquement',
+      'Le guide de palanquée indique la profondeur correcte'
+    ],
     correctIndex: 1,
-    explanation: 'Pour tenir un palier en pleine eau, le N1 utilise son ordinateur ou profondimètre pour contrôler sa profondeur, en combinant maîtrise du gilet et poumon ballast.',
+    explanation:
+        'Pour tenir un palier en pleine eau, le N1 utilise son ordinateur ou profondimètre pour contrôler sa profondeur, en combinant maîtrise du gilet et poumon ballast.',
     category: 'Remontée',
   ),
   Question(
     id: 'n1_87',
-    text: 'Qu\'est-ce que la loi de Mariotte (Boyle-Mariotte) appliquée à la plongée ?',
-    options: ['La pression et la température sont proportionnelles', 'À température constante, la pression et le volume d\'un gaz sont inversement proportionnels', 'Les gaz se dissolvent proportionnellement à la pression', 'La vitesse de remontée est proportionnelle à la pression'],
+    text:
+        'Qu\'est-ce que la loi de Mariotte (Boyle-Mariotte) appliquée à la plongée ?',
+    options: [
+      'La pression et la température sont proportionnelles',
+      'À température constante, la pression et le volume d\'un gaz sont inversement proportionnels',
+      'Les gaz se dissolvent proportionnellement à la pression',
+      'La vitesse de remontée est proportionnelle à la pression'
+    ],
     correctIndex: 1,
-    explanation: 'La loi de Boyle-Mariotte stipule qu\'à température constante, la pression et le volume d\'un gaz sont inversement proportionnels : si la pression double, le volume est divisé par deux.',
+    explanation:
+        'La loi de Boyle-Mariotte stipule qu\'à température constante, la pression et le volume d\'un gaz sont inversement proportionnels : si la pression double, le volume est divisé par deux.',
     category: 'Physique',
   ),
   Question(
     id: 'n1_88',
-    text: 'Que fait le plongeur N1 lors d\'une procédure de "remontée anormale" ?',
-    options: ['Il ignore la procédure et remonte normalement', 'Il applique des procédures de rattrapage adaptées pour gérer une remontée non conforme au plan initial', 'Il descend de nouveau au fond pour repartir correctement', 'Il attend l\'intervention du DP'],
+    text:
+        'Que fait le plongeur N1 lors d\'une procédure de "remontée anormale" ?',
+    options: [
+      'Il ignore la procédure et remonte normalement',
+      'Il applique des procédures de rattrapage adaptées pour gérer une remontée non conforme au plan initial',
+      'Il descend de nouveau au fond pour repartir correctement',
+      'Il attend l\'intervention du DP'
+    ],
     correctIndex: 1,
-    explanation: 'La procédure de remontée anormale permet au N1 d\'appliquer des mesures de rattrapage adaptées en cas de remontée non conforme (trop rapide, isolée, avec incident).',
+    explanation:
+        'La procédure de remontée anormale permet au N1 d\'appliquer des mesures de rattrapage adaptées en cas de remontée non conforme (trop rapide, isolée, avec incident).',
     category: 'Sécurité',
   ),
   Question(
     id: 'n1_89',
-    text: 'Quel est le rôle du directeur de plongée (DP) lors du briefing d\'avant-plongée pour le N1 ?',
-    options: ['Le DP ne participe pas au briefing du N1', 'Le DP donne les consignes sur le site, les profondeurs, les temps et les procédures de sécurité', 'Le DP gère uniquement la logistique du bateau', 'Le DP s\'occupe uniquement des cas d\'urgence'],
+    text:
+        'Quel est le rôle du directeur de plongée (DP) lors du briefing d\'avant-plongée pour le N1 ?',
+    options: [
+      'Le DP ne participe pas au briefing du N1',
+      'Le DP donne les consignes sur le site, les profondeurs, les temps et les procédures de sécurité',
+      'Le DP gère uniquement la logistique du bateau',
+      'Le DP s\'occupe uniquement des cas d\'urgence'
+    ],
     correctIndex: 1,
-    explanation: 'Lors du briefing, le DP communique les consignes relatives au déroulement de la plongée selon les règles du Code du Sport : site, profondeurs autorisées, temps imparti, procédures de sécurité.',
+    explanation:
+        'Lors du briefing, le DP communique les consignes relatives au déroulement de la plongée selon les règles du Code du Sport : site, profondeurs autorisées, temps imparti, procédures de sécurité.',
     category: 'Organisation',
   ),
   Question(
     id: 'n1_90',
-    text: 'Quelle qualité est particulièrement développée lors de l\'épreuve "évoluer en sécurité" pour le N1 ?',
-    options: ['La vitesse de nage', 'La familiarisation avec les procédures du GP et la réactivité en situation d\'incident', 'La connaissance théorique des accidents', 'La maîtrise du matériel de secours'],
+    text:
+        'Quelle qualité est particulièrement développée lors de l\'épreuve "évoluer en sécurité" pour le N1 ?',
+    options: [
+      'La vitesse de nage',
+      'La familiarisation avec les procédures du GP et la réactivité en situation d\'incident',
+      'La connaissance théorique des accidents',
+      'La maîtrise du matériel de secours'
+    ],
     correctIndex: 1,
-    explanation: 'L\'épreuve "évoluer en sécurité" développe la familiarisation avec les procédures du GP et la réactivité en situation d\'incident (panne d\'air, essoufflement, crampe, malaise).',
+    explanation:
+        'L\'épreuve "évoluer en sécurité" développe la familiarisation avec les procédures du GP et la réactivité en situation d\'incident (panne d\'air, essoufflement, crampe, malaise).',
     category: 'Sécurité',
   ),
   Question(
     id: 'n1_91',
     text: 'Qu\'est-ce que le "poumon ballast" en plongée ?',
-    options: ['Un gilet de stabilisation gonflable', 'La gestion du volume d\'air dans les poumons pour ajuster finement la flottabilité', 'Un réservoir d\'urgence d\'air', 'Un exercice de respiration en surface'],
+    options: [
+      'Un gilet de stabilisation gonflable',
+      'La gestion du volume d\'air dans les poumons pour ajuster finement la flottabilité',
+      'Un réservoir d\'urgence d\'air',
+      'Un exercice de respiration en surface'
+    ],
     correctIndex: 1,
-    explanation: 'Le poumon ballast désigne la technique qui consiste à ajuster le volume d\'air dans les poumons (inspiration/expiration) pour contrôler finement sa flottabilité.',
+    explanation:
+        'Le poumon ballast désigne la technique qui consiste à ajuster le volume d\'air dans les poumons (inspiration/expiration) pour contrôler finement sa flottabilité.',
     category: 'Équilibre',
   ),
   Question(
     id: 'n1_92',
-    text: 'Lors d\'une nage en apnée au N1, quelle distance courte doit-il être capable d\'effectuer ?',
-    options: ['1 mètre', 'Quelques mètres en apnée inspiratoire et expiratoire', '20 mètres minimum', '50 mètres chronométrés'],
+    text:
+        'Lors d\'une nage en apnée au N1, quelle distance courte doit-il être capable d\'effectuer ?',
+    options: [
+      '1 mètre',
+      'Quelques mètres en apnée inspiratoire et expiratoire',
+      '20 mètres minimum',
+      '50 mètres chronométrés'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit être capable de réaliser des déplacements courts en apnée, sans difficulté (quelques mètres en apnée inspiratoire et expiratoire).',
+    explanation:
+        'Le N1 doit être capable de réaliser des déplacements courts en apnée, sans difficulté (quelques mètres en apnée inspiratoire et expiratoire).',
     category: 'Ventilation',
   ),
   Question(
     id: 'n1_93',
-    text: 'Que doit savoir faire le N1 pour signaler les paliers en pleine eau lors d\'une remontée ?',
-    options: ['Utiliser une lampe torche', 'Déployer un parachute de signalisation', 'Faire des bulles à la surface', 'Utiliser un sifflet subaquatique'],
+    text:
+        'Que doit savoir faire le N1 pour signaler les paliers en pleine eau lors d\'une remontée ?',
+    options: [
+      'Utiliser une lampe torche',
+      'Déployer un parachute de signalisation',
+      'Faire des bulles à la surface',
+      'Utiliser un sifflet subaquatique'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 doit savoir mettre en place un parachute de signalisation pour signaler sa position lors de paliers en pleine eau.',
+    explanation:
+        'Le N1 doit savoir mettre en place un parachute de signalisation pour signaler sa position lors de paliers en pleine eau.',
     category: 'Remontée',
   ),
   Question(
     id: 'n1_94',
-    text: 'Quand la compétence "intervenir et porter assistance" est-elle validée au cours de la formation N1 ?',
-    options: ['Dès la première séance pratique', 'À tout moment de la formation', 'Spécifiquement et en fin de formation', 'Seulement en piscine'],
+    text:
+        'Quand la compétence "intervenir et porter assistance" est-elle validée au cours de la formation N1 ?',
+    options: [
+      'Dès la première séance pratique',
+      'À tout moment de la formation',
+      'Spécifiquement et en fin de formation',
+      'Seulement en piscine'
+    ],
     correctIndex: 2,
-    explanation: 'Selon les règles de délivrance, la compétence "intervenir et porter assistance à un plongeur en difficulté" doit être validée spécifiquement et en fin de formation.',
+    explanation:
+        'Selon les règles de délivrance, la compétence "intervenir et porter assistance à un plongeur en difficulté" doit être validée spécifiquement et en fin de formation.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n1_95',
-    text: 'Quelle est la différence entre un plongeur N1 PE20 et un plongeur N2 PA20 ?',
-    options: ['Aucune différence', 'Le PA20 évolue en autonomie avec ses équipiers, le PE20 évolue toujours sous encadrement d\'un GP', 'Le PE20 peut plonger plus profond que le PA20', 'Le PA20 peut être directeur de plongée'],
+    text:
+        'Quelle est la différence entre un plongeur N1 PE20 et un plongeur N2 PA20 ?',
+    options: [
+      'Aucune différence',
+      'Le PA20 évolue en autonomie avec ses équipiers, le PE20 évolue toujours sous encadrement d\'un GP',
+      'Le PE20 peut plonger plus profond que le PA20',
+      'Le PA20 peut être directeur de plongée'
+    ],
     correctIndex: 1,
-    explanation: 'Le PE20 (N1) évolue toujours sous l\'encadrement d\'un guide de palanquée, tandis que le PA20 (N2) peut évoluer en autonomie avec des équipiers de même niveau.',
+    explanation:
+        'Le PE20 (N1) évolue toujours sous l\'encadrement d\'un guide de palanquée, tandis que le PA20 (N2) peut évoluer en autonomie avec des équipiers de même niveau.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n1_96',
-    text: 'Quelle attitude le N1 adopte-t-il concernant l\'entraide et la solidarité entre plongeurs ?',
-    options: ['Chaque plongeur est responsable uniquement de lui-même', 'Il développe les notions de palanquée, d\'entraide et de solidarité entre les plongeurs', 'Il délègue toute responsabilité au GP', 'Il n\'est pas impliqué dans la sécurité collective'],
+    text:
+        'Quelle attitude le N1 adopte-t-il concernant l\'entraide et la solidarité entre plongeurs ?',
+    options: [
+      'Chaque plongeur est responsable uniquement de lui-même',
+      'Il développe les notions de palanquée, d\'entraide et de solidarité entre les plongeurs',
+      'Il délègue toute responsabilité au GP',
+      'Il n\'est pas impliqué dans la sécurité collective'
+    ],
     correctIndex: 1,
-    explanation: 'Le N1 développe les notions de palanquée, d\'entraide et de solidarité entre les plongeurs, dans l\'esprit du co-responsable.',
+    explanation:
+        'Le N1 développe les notions de palanquée, d\'entraide et de solidarité entre les plongeurs, dans l\'esprit du co-responsable.',
     category: 'Comportement',
   ),
   Question(
     id: 'n1_97',
-    text: 'Que se passe-t-il si le N1 ferme les yeux dans l\'eau et essaie de localiser un son ?',
-    options: ['Il peut facilement localiser la source sonore', 'Il lui est difficile de localiser la source car le son se propage plus vite dans l\'eau', 'Le son est inaudible sous l\'eau', 'La localisation est aussi précise que dans l\'air'],
+    text:
+        'Que se passe-t-il si le N1 ferme les yeux dans l\'eau et essaie de localiser un son ?',
+    options: [
+      'Il peut facilement localiser la source sonore',
+      'Il lui est difficile de localiser la source car le son se propage plus vite dans l\'eau',
+      'Le son est inaudible sous l\'eau',
+      'La localisation est aussi précise que dans l\'air'
+    ],
     correctIndex: 1,
-    explanation: 'Sous l\'eau, le son se propage environ 4 fois plus vite que dans l\'air, rendant difficile la localisation directionnelle de la source sonore pour l\'oreille humaine.',
+    explanation:
+        'Sous l\'eau, le son se propage environ 4 fois plus vite que dans l\'air, rendant difficile la localisation directionnelle de la source sonore pour l\'oreille humaine.',
     category: 'Physique',
   ),
   Question(
     id: 'n1_98',
-    text: 'Qu\'est-ce que le "baptême de plongée" dans le parcours de formation N1 ?',
-    options: ['Une cérémonie officielle de la FFESSM', 'La première immersion en scaphandre qui constitue un prérequis à l\'entrée en formation N1', 'Un niveau de certification intermédiaire', 'Une plongée de nuit obligatoire'],
+    text:
+        'Qu\'est-ce que le "baptême de plongée" dans le parcours de formation N1 ?',
+    options: [
+      'Une cérémonie officielle de la FFESSM',
+      'La première immersion en scaphandre qui constitue un prérequis à l\'entrée en formation N1',
+      'Un niveau de certification intermédiaire',
+      'Une plongée de nuit obligatoire'
+    ],
     correctIndex: 1,
-    explanation: 'La première immersion scaphandre (baptême de plongée) est un prérequis à l\'entrée en formation N1, sauf si elle a déjà été réalisée auparavant.',
+    explanation:
+        'La première immersion scaphandre (baptême de plongée) est un prérequis à l\'entrée en formation N1, sauf si elle a déjà été réalisée auparavant.',
     category: 'Organisation',
   ),
   Question(
     id: 'n1_99',
-    text: 'Quelle est la principale différence entre la plongée libre et la plongée scaphandre ?',
-    options: ['La plongée libre se fait en piscine uniquement', 'La plongée libre (apnée) se pratique sans bouteille d\'air comprimé, contrairement à la plongée scaphandre', 'La plongée scaphandre est plus récente que la plongée libre', 'Il n\'y a pas de différence significative'],
+    text:
+        'Quelle est la principale différence entre la plongée libre et la plongée scaphandre ?',
+    options: [
+      'La plongée libre se fait en piscine uniquement',
+      'La plongée libre (apnée) se pratique sans bouteille d\'air comprimé, contrairement à la plongée scaphandre',
+      'La plongée scaphandre est plus récente que la plongée libre',
+      'Il n\'y a pas de différence significative'
+    ],
     correctIndex: 1,
-    explanation: 'La plongée libre (apnée) se pratique en retenant sa respiration sans source d\'air autonome, contrairement à la plongée scaphandre qui utilise une bouteille d\'air comprimé avec détendeur.',
+    explanation:
+        'La plongée libre (apnée) se pratique en retenant sa respiration sans source d\'air autonome, contrairement à la plongée scaphandre qui utilise une bouteille d\'air comprimé avec détendeur.',
     category: 'Équipement',
   ),
   Question(
     id: 'n1_100',
-    text: 'Quel est l\'objectif pédagogique principal de la compétence "évoluer en sécurité" au N1 ?',
-    options: ['Apprendre à guider une palanquée', 'Se familiariser avec les procédures liées aux différentes situations d\'incident en plongée', 'Obtenir le niveau de moniteur débutant', 'Maîtriser la désaturation avancée'],
+    text:
+        'Quel est l\'objectif pédagogique principal de la compétence "évoluer en sécurité" au N1 ?',
+    options: [
+      'Apprendre à guider une palanquée',
+      'Se familiariser avec les procédures liées aux différentes situations d\'incident en plongée',
+      'Obtenir le niveau de moniteur débutant',
+      'Maîtriser la désaturation avancée'
+    ],
     correctIndex: 1,
-    explanation: 'La compétence "évoluer en sécurité" vise à familiariser le N1 avec les procédures liées aux différentes situations d\'incident auxquelles il peut être confronté.',
+    explanation:
+        'La compétence "évoluer en sécurité" vise à familiariser le N1 avec les procédures liées aux différentes situations d\'incident auxquelles il peut être confronté.',
     category: 'Sécurité',
   ),
 ];
@@ -844,10 +1443,12 @@ const List<Question> _niveau2Questions = [
   // --- PRÉROGATIVES & CONDITIONS ---
   Question(
     id: 'n2_01',
-    text: 'Jusqu\'à quelle profondeur un plongeur PE40 peut-il évoluer avec un guide de palanquée ?',
+    text:
+        'Jusqu\'à quelle profondeur un plongeur PE40 peut-il évoluer avec un guide de palanquée ?',
     options: ['20 mètres', '30 mètres', '40 mètres', '60 mètres'],
     correctIndex: 2,
-    explanation: 'Le plongeur encadré à 40 m (PE40) peut réaliser des plongées d\'exploration jusqu\'à 40 m, au sein d\'une palanquée avec un Guide de Palanquée (GP).',
+    explanation:
+        'Le plongeur encadré à 40 m (PE40) peut réaliser des plongées d\'exploration jusqu\'à 40 m, au sein d\'une palanquée avec un Guide de Palanquée (GP).',
     category: 'Prérogatives',
   ),
   Question(
@@ -855,55 +1456,86 @@ const List<Question> _niveau2Questions = [
     text: 'Quel est l\'âge minimum pour obtenir la qualification PE40 ?',
     options: ['12 ans', '14 ans', '15 ans', '16 ans'],
     correctIndex: 1,
-    explanation: 'Pour le PE40, il faut être âgé de 14 ans au moins à la date d\'entrée en formation et de délivrance de la qualification.',
+    explanation:
+        'Pour le PE40, il faut être âgé de 14 ans au moins à la date d\'entrée en formation et de délivrance de la qualification.',
     category: 'Conditions d\'accès',
   ),
   Question(
     id: 'n2_03',
-    text: 'Quel est l\'âge minimum pour obtenir la qualification PA20 ou le brevet N2 ?',
+    text:
+        'Quel est l\'âge minimum pour obtenir la qualification PA20 ou le brevet N2 ?',
     options: ['14 ans', '15 ans', '16 ans', '18 ans'],
     correctIndex: 1,
-    explanation: 'Pour le PA20 et le brevet N2, il faut être âgé de 15 ans au moins à la date d\'entrée en formation et de délivrance.',
+    explanation:
+        'Pour le PA20 et le brevet N2, il faut être âgé de 15 ans au moins à la date d\'entrée en formation et de délivrance.',
     category: 'Conditions d\'accès',
   ),
   Question(
     id: 'n2_04',
-    text: 'À partir de quel âge les prérogatives d\'autonomie s\'exercent-elles pour un plongeur PA20 ?',
+    text:
+        'À partir de quel âge les prérogatives d\'autonomie s\'exercent-elles pour un plongeur PA20 ?',
     options: ['14 ans', '15 ans', '16 ans', '18 ans'],
     correctIndex: 2,
-    explanation: 'Les prérogatives d\'évolution en autonomie ne s\'exercent qu\'à partir de 16 ans pour le PA20.',
+    explanation:
+        'Les prérogatives d\'évolution en autonomie ne s\'exercent qu\'à partir de 16 ans pour le PA20.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n2_05',
     text: 'Quelle certification est requise pour commencer la formation N2 ?',
-    options: ['Aucun prérequis nécessaire', 'Le brevet N1 FFESSM et au moins 4 plongées attestées en milieu naturel', 'Le brevet N2 d\'une autre fédération uniquement', 'Uniquement la licence FFESSM'],
+    options: [
+      'Aucun prérequis nécessaire',
+      'Le brevet N1 FFESSM et au moins 4 plongées attestées en milieu naturel',
+      'Le brevet N2 d\'une autre fédération uniquement',
+      'Uniquement la licence FFESSM'
+    ],
     correctIndex: 1,
-    explanation: 'Pour débuter la formation N2, il faut être titulaire du brevet N1 FFESSM (ou équivalent) et avoir réalisé au moins 4 plongées attestées en milieu naturel.',
+    explanation:
+        'Pour débuter la formation N2, il faut être titulaire du brevet N1 FFESSM (ou équivalent) et avoir réalisé au moins 4 plongées attestées en milieu naturel.',
     category: 'Conditions d\'accès',
   ),
   Question(
     id: 'n2_06',
     text: 'Comment le brevet N2 est-il obtenu par un titulaire PE40 ou PA20 ?',
-    options: ['En passant un examen séparé', 'L\'acquisition de la seconde qualification (PE40 + PA20) entraîne automatiquement la délivrance du N2', 'En payant une cotisation supplémentaire', 'En effectuant 20 plongées supplémentaires'],
+    options: [
+      'En passant un examen séparé',
+      'L\'acquisition de la seconde qualification (PE40 + PA20) entraîne automatiquement la délivrance du N2',
+      'En payant une cotisation supplémentaire',
+      'En effectuant 20 plongées supplémentaires'
+    ],
     correctIndex: 1,
-    explanation: 'Pour les titulaires d\'une qualification PE40 ou PA20, l\'acquisition de la seconde qualification entraîne la délivrance du brevet et de la carte N2.',
+    explanation:
+        'Pour les titulaires d\'une qualification PE40 ou PA20, l\'acquisition de la seconde qualification entraîne la délivrance du brevet et de la carte N2.',
     category: 'Organisation',
   ),
   Question(
     id: 'n2_07',
-    text: 'Pour un plongeur PE40 de moins de 16 ans, quelle limite s\'applique lors de deux plongées dans la même journée ?',
-    options: ['La seconde plongée est limitée à 10 m si la première a dépassé 20 m', 'La seconde plongée est limitée à 20 m si la première a dépassé 30 m', 'La seconde plongée est interdite', 'Il n\'y a pas de restriction'],
+    text:
+        'Pour un plongeur PE40 de moins de 16 ans, quelle limite s\'applique lors de deux plongées dans la même journée ?',
+    options: [
+      'La seconde plongée est limitée à 10 m si la première a dépassé 20 m',
+      'La seconde plongée est limitée à 20 m si la première a dépassé 30 m',
+      'La seconde plongée est interdite',
+      'Il n\'y a pas de restriction'
+    ],
     correctIndex: 1,
-    explanation: 'Pour les plongeurs de moins de 16 ans, la seconde plongée est limitée à 20 m si la première a dépassé 30 m, avec un intervalle minimum de 3 heures entre les plongées.',
+    explanation:
+        'Pour les plongeurs de moins de 16 ans, la seconde plongée est limitée à 20 m si la première a dépassé 30 m, avec un intervalle minimum de 3 heures entre les plongées.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n2_08',
-    text: 'Quelle est la composition minimale d\'une palanquée PA20 en autonomie ?',
-    options: ['Le plongeur seul', '2 à 3 plongeurs de même niveau minimum', '1 PA20 et 1 moniteur', '3 plongeurs dont un N3'],
+    text:
+        'Quelle est la composition minimale d\'une palanquée PA20 en autonomie ?',
+    options: [
+      'Le plongeur seul',
+      '2 à 3 plongeurs de même niveau minimum',
+      '1 PA20 et 1 moniteur',
+      '3 plongeurs dont un N3'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA20 évolue en autonomie avec un ou deux équipiers ayant au minimum les mêmes compétences (pas d\'obligation d\'avoir des majeurs dans la palanquée).',
+    explanation:
+        'Le PA20 évolue en autonomie avec un ou deux équipiers ayant au minimum les mêmes compétences (pas d\'obligation d\'avoir des majeurs dans la palanquée).',
     category: 'Prérogatives',
   ),
 
@@ -911,101 +1543,178 @@ const List<Question> _niveau2Questions = [
   Question(
     id: 'n2_09',
     text: 'Qu\'est-ce que le principe de "compensation" d\'un détendeur ?',
-    options: ['La compensation du poids du détendeur', 'Le mécanisme qui maintient un effort d\'inhalation constant quelle que soit la pression de la bouteille et la profondeur', 'La purge automatique du détendeur', 'L\'équilibre entre les deux étages du détendeur'],
+    options: [
+      'La compensation du poids du détendeur',
+      'Le mécanisme qui maintient un effort d\'inhalation constant quelle que soit la pression de la bouteille et la profondeur',
+      'La purge automatique du détendeur',
+      'L\'équilibre entre les deux étages du détendeur'
+    ],
     correctIndex: 1,
-    explanation: 'La compensation d\'un détendeur est le mécanisme qui permet de maintenir un effort d\'inhalation constant quelle que soit la pression restante dans la bouteille et la profondeur de plongée.',
+    explanation:
+        'La compensation d\'un détendeur est le mécanisme qui permet de maintenir un effort d\'inhalation constant quelle que soit la pression restante dans la bouteille et la profondeur de plongée.',
     category: 'Équipement',
   ),
   Question(
     id: 'n2_10',
-    text: 'Quelle réglementation concerne le matériel obligatoire en plongée autonome au N2 ?',
-    options: ['Aucune réglementation spécifique au N2', 'Le Code du Sport définit le matériel obligatoire pour le plongeur autonome', 'Uniquement les recommandations du constructeur', 'Les règles varient selon le club'],
+    text:
+        'Quelle réglementation concerne le matériel obligatoire en plongée autonome au N2 ?',
+    options: [
+      'Aucune réglementation spécifique au N2',
+      'Le Code du Sport définit le matériel obligatoire pour le plongeur autonome',
+      'Uniquement les recommandations du constructeur',
+      'Les règles varient selon le club'
+    ],
     correctIndex: 1,
-    explanation: 'Le Code du Sport définit la réglementation sur le matériel obligatoire en plongée autonome : détendeur de secours, gilet, ordinateur ou tables, etc.',
+    explanation:
+        'Le Code du Sport définit la réglementation sur le matériel obligatoire en plongée autonome : détendeur de secours, gilet, ordinateur ou tables, etc.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n2_11',
-    text: 'Pourquoi le plongeur N2 doit-il connaître le matériel de ses équipiers ?',
-    options: ['Pour pouvoir emprunter leur matériel', 'Pour pouvoir intervenir efficacement en cas de difficulté et assurer la co-gestion de la palanquée', 'Pour rédiger le carnet de plongée', 'Pour vérifier la conformité réglementaire de leur équipement'],
+    text:
+        'Pourquoi le plongeur N2 doit-il connaître le matériel de ses équipiers ?',
+    options: [
+      'Pour pouvoir emprunter leur matériel',
+      'Pour pouvoir intervenir efficacement en cas de difficulté et assurer la co-gestion de la palanquée',
+      'Pour rédiger le carnet de plongée',
+      'Pour vérifier la conformité réglementaire de leur équipement'
+    ],
     correctIndex: 1,
-    explanation: 'Connaître le matériel des équipiers (gilet, détendeur de secours, ordinateur) permet d\'intervenir efficacement en cas de difficulté et d\'assurer la co-gestion de la sécurité.',
+    explanation:
+        'Connaître le matériel des équipiers (gilet, détendeur de secours, ordinateur) permet d\'intervenir efficacement en cas de difficulté et d\'assurer la co-gestion de la sécurité.',
     category: 'Équipement',
   ),
   Question(
     id: 'n2_12',
-    text: 'Quel est le principe de fonctionnement du premier étage d\'un détendeur à piston simple ?',
-    options: ['Réduction directe de la haute pression par valve électronique', 'La haute pression agit sur un piston qui s\'ouvre pour laisser passer l\'air à moyenne pression', 'Réduction de pression par membrane uniquement', 'Passage direct de l\'air sans réduction de pression'],
+    text:
+        'Quel est le principe de fonctionnement du premier étage d\'un détendeur à piston simple ?',
+    options: [
+      'Réduction directe de la haute pression par valve électronique',
+      'La haute pression agit sur un piston qui s\'ouvre pour laisser passer l\'air à moyenne pression',
+      'Réduction de pression par membrane uniquement',
+      'Passage direct de l\'air sans réduction de pression'
+    ],
     correctIndex: 1,
-    explanation: 'Dans un premier étage à piston simple, la haute pression de la bouteille agit sur un piston qui s\'ouvre pour laisser passer l\'air à une pression intermédiaire (moyenne pression).',
+    explanation:
+        'Dans un premier étage à piston simple, la haute pression de la bouteille agit sur un piston qui s\'ouvre pour laisser passer l\'air à une pression intermédiaire (moyenne pression).',
     category: 'Équipement',
   ),
 
   // --- TECHNIQUES ---
   Question(
     id: 'n2_13',
-    text: 'Quelle est la profondeur maximale pour la remontée en expiration contrôlée (REC) au N2 ?',
+    text:
+        'Quelle est la profondeur maximale pour la remontée en expiration contrôlée (REC) au N2 ?',
     options: ['6 mètres', '10 mètres', '20 mètres', '40 mètres'],
     correctIndex: 1,
-    explanation: 'La REC au N2 s\'effectue d\'une profondeur n\'excédant pas 10 m, en rejetant l\'air tout au long de la remontée.',
+    explanation:
+        'La REC au N2 s\'effectue d\'une profondeur n\'excédant pas 10 m, en rejetant l\'air tout au long de la remontée.',
     category: 'Techniques',
   ),
   Question(
     id: 'n2_14',
-    text: 'À quelle profondeur le plongeur N2 doit-il être capable de vider son masque ?',
-    options: ['En surface uniquement', 'À 6 m maximum', 'À 20 m dans des situations variées et sans stress', 'À 40 m'],
+    text:
+        'À quelle profondeur le plongeur N2 doit-il être capable de vider son masque ?',
+    options: [
+      'En surface uniquement',
+      'À 6 m maximum',
+      'À 20 m dans des situations variées et sans stress',
+      'À 40 m'
+    ],
     correctIndex: 2,
-    explanation: 'L\'évaluation du vidage de masque au N2 s\'effectue à 20 m dans des situations variées et sans stress.',
+    explanation:
+        'L\'évaluation du vidage de masque au N2 s\'effectue à 20 m dans des situations variées et sans stress.',
     category: 'Techniques',
   ),
   Question(
     id: 'n2_15',
     text: 'Sur quelles distances la nage de surface est-elle évaluée au N2 ?',
-    options: ['100 m PMT et 50 m capelé', '250 m PMT et 100 m capelé', '500 m PMT et 200 m capelé', '800 m PMT et 500 m capelé'],
+    options: [
+      '100 m PMT et 50 m capelé',
+      '250 m PMT et 100 m capelé',
+      '500 m PMT et 200 m capelé',
+      '800 m PMT et 500 m capelé'
+    ],
     correctIndex: 1,
-    explanation: 'Les nages de surface au N2 sont évaluées sur des distances de l\'ordre de 250 m pour le PMT et 100 m pour le capelé.',
+    explanation:
+        'Les nages de surface au N2 sont évaluées sur des distances de l\'ordre de 250 m pour le PMT et 100 m pour le capelé.',
     category: 'Techniques',
   ),
   Question(
     id: 'n2_16',
-    text: 'Comment l\'évolution subaquatique équilibrée est-elle réalisée au N2 lors de la descente, du fond et de la remontée ?',
-    options: ['Uniquement avec les palmes', 'Par l\'utilisation combinée du gilet et du poumon ballast', 'Avec le lest ceinture uniquement', 'En tenant un filin de descente'],
+    text:
+        'Comment l\'évolution subaquatique équilibrée est-elle réalisée au N2 lors de la descente, du fond et de la remontée ?',
+    options: [
+      'Uniquement avec les palmes',
+      'Par l\'utilisation combinée du gilet et du poumon ballast',
+      'Avec le lest ceinture uniquement',
+      'En tenant un filin de descente'
+    ],
     correctIndex: 1,
-    explanation: 'L\'évolution équilibrée se réalise à la descente, au fond, en profondeur, à la remontée et au palier par l\'utilisation combinée du gilet et du poumon ballast.',
+    explanation:
+        'L\'évolution équilibrée se réalise à la descente, au fond, en profondeur, à la remontée et au palier par l\'utilisation combinée du gilet et du poumon ballast.',
     category: 'Techniques',
   ),
   Question(
     id: 'n2_17',
-    text: 'Quelle technique d\'orientation le PA20 doit-il être capable de réaliser ?',
-    options: ['Uniquement s\'orienter par rapport au soleil', 'Réaliser un aller-retour au compas sur 20 à 30 m et suivre un court trajet prédéfini', 'Utiliser un GPS sous-marin', 'S\'orienter uniquement par rapport au relief'],
+    text:
+        'Quelle technique d\'orientation le PA20 doit-il être capable de réaliser ?',
+    options: [
+      'Uniquement s\'orienter par rapport au soleil',
+      'Réaliser un aller-retour au compas sur 20 à 30 m et suivre un court trajet prédéfini',
+      'Utiliser un GPS sous-marin',
+      'S\'orienter uniquement par rapport au relief'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA20 doit pouvoir réaliser un aller-retour au compas sur une distance courte (20 à 30 m) et suivre un court trajet prédéfini.',
+    explanation:
+        'Le PA20 doit pouvoir réaliser un aller-retour au compas sur une distance courte (20 à 30 m) et suivre un court trajet prédéfini.',
     category: 'Techniques',
   ),
 
   // --- PLANIFICATION ---
   Question(
     id: 'n2_18',
-    text: 'Que doit identifier le PA20 lors de la réception des consignes du DP avant la plongée ?',
-    options: ['Uniquement la profondeur maximale', 'Durée, profondeur, conditions de fin de plongée, règles de désaturation imposées, profil prévu', 'Seulement la durée totale de la plongée', 'Uniquement les points d\'intérêt du site'],
+    text:
+        'Que doit identifier le PA20 lors de la réception des consignes du DP avant la plongée ?',
+    options: [
+      'Uniquement la profondeur maximale',
+      'Durée, profondeur, conditions de fin de plongée, règles de désaturation imposées, profil prévu',
+      'Seulement la durée totale de la plongée',
+      'Uniquement les points d\'intérêt du site'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA20 doit identifier : consignes de durée et de profondeur, conditions de fin de plongée, règles de désaturation (pression du bloc en fin de plongée, paliers éventuels, durée totale de remontée).',
+    explanation:
+        'Le PA20 doit identifier : consignes de durée et de profondeur, conditions de fin de plongée, règles de désaturation (pression du bloc en fin de plongée, paliers éventuels, durée totale de remontée).',
     category: 'Planification',
   ),
   Question(
     id: 'n2_19',
-    text: 'Quel principe régit la planification d\'une palanquée utilisant des moyens de désaturation différents ?',
-    options: ['On utilise le moyen le plus laxiste pour simplifier', 'On s\'aligne sur le moyen le plus conservateur de la palanquée', 'Chaque plongeur suit son propre ordinateur indépendamment', 'On fait la moyenne des paliers calculés'],
+    text:
+        'Quel principe régit la planification d\'une palanquée utilisant des moyens de désaturation différents ?',
+    options: [
+      'On utilise le moyen le plus laxiste pour simplifier',
+      'On s\'aligne sur le moyen le plus conservateur de la palanquée',
+      'Chaque plongeur suit son propre ordinateur indépendamment',
+      'On fait la moyenne des paliers calculés'
+    ],
     correctIndex: 1,
-    explanation: 'Quand la palanquée utilise des moyens de désaturation différents, on s\'aligne sur le moyen le plus conservateur (paliers les plus longs) pour la sécurité de tous.',
+    explanation:
+        'Quand la palanquée utilise des moyens de désaturation différents, on s\'aligne sur le moyen le plus conservateur (paliers les plus longs) pour la sécurité de tous.',
     category: 'Planification',
   ),
   Question(
     id: 'n2_20',
-    text: 'Quelle est la règle concernant les paliers profonds à l\'air au N2 ?',
-    options: ['Ils sont autorisés jusqu\'à 6 m', 'Il n\'y a pas de paliers profonds à l\'air au N2', 'Ils sont obligatoires à partir de 30 m', 'Ils sont facultatifs selon l\'ordinateur'],
+    text:
+        'Quelle est la règle concernant les paliers profonds à l\'air au N2 ?',
+    options: [
+      'Ils sont autorisés jusqu\'à 6 m',
+      'Il n\'y a pas de paliers profonds à l\'air au N2',
+      'Ils sont obligatoires à partir de 30 m',
+      'Ils sont facultatifs selon l\'ordinateur'
+    ],
     correctIndex: 1,
-    explanation: 'Au N2, il n\'y a pas de paliers profonds à l\'air lors de la planification. Ce n\'est qu\'aux niveaux supérieurs (N3, N4) que cette notion est abordée.',
+    explanation:
+        'Au N2, il n\'y a pas de paliers profonds à l\'air lors de la planification. Ce n\'est qu\'aux niveaux supérieurs (N3, N4) que cette notion est abordée.',
     category: 'Planification',
   ),
 
@@ -1013,117 +1722,211 @@ const List<Question> _niveau2Questions = [
   Question(
     id: 'n2_21',
     text: 'Que signifie la co-responsabilité en plongée autonome PA20 ?',
-    options: ['Un seul plongeur est responsable de tous les autres', 'Chaque plongeur de la palanquée est responsable de sa sécurité et contribue à celle du groupe', 'Le GP reste responsable même en autonomie', 'Seul le plongeur le plus expérimenté est responsable'],
+    options: [
+      'Un seul plongeur est responsable de tous les autres',
+      'Chaque plongeur de la palanquée est responsable de sa sécurité et contribue à celle du groupe',
+      'Le GP reste responsable même en autonomie',
+      'Seul le plongeur le plus expérimenté est responsable'
+    ],
     correctIndex: 1,
-    explanation: 'En plongée autonome, les plongeurs sont co-responsables : chacun est responsable de sa propre sécurité et contribue activement à la sécurité collective de la palanquée.',
+    explanation:
+        'En plongée autonome, les plongeurs sont co-responsables : chacun est responsable de sa propre sécurité et contribue activement à la sécurité collective de la palanquée.',
     category: 'Autonomie',
   ),
   Question(
     id: 'n2_22',
-    text: 'Que doit contrôler le PA20 lors de l\'utilisation de son ordinateur en plongée ?',
-    options: ['Uniquement la profondeur', 'Durée, profondeur instantanée et maximale, durée sans palier, paliers, durée de remontée, vitesse', 'Seulement les paliers obligatoires', 'Uniquement la durée totale de plongée'],
+    text:
+        'Que doit contrôler le PA20 lors de l\'utilisation de son ordinateur en plongée ?',
+    options: [
+      'Uniquement la profondeur',
+      'Durée, profondeur instantanée et maximale, durée sans palier, paliers, durée de remontée, vitesse',
+      'Seulement les paliers obligatoires',
+      'Uniquement la durée totale de plongée'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA20 doit savoir identifier tous les paramètres de l\'ordinateur : durée, profondeurs, durée maximale sans palier, paliers facultatifs et obligatoires, durée de remontée, indicateurs de vitesse, alarmes.',
+    explanation:
+        'Le PA20 doit savoir identifier tous les paramètres de l\'ordinateur : durée, profondeurs, durée maximale sans palier, paliers facultatifs et obligatoires, durée de remontée, indicateurs de vitesse, alarmes.',
     category: 'Autonomie',
   ),
   Question(
     id: 'n2_23',
-    text: 'Quelles valeurs de Gradient Factor (GF) sont recommandées pour la plongée à l\'air au N2 ?',
-    options: ['GF bas = GF haut = 50 à 60%', 'GF bas = GF haut = 85 à 90%', 'GF bas = 30%, GF haut = 60%', 'GF bas = GF haut = 100%'],
+    text:
+        'Quelles valeurs de Gradient Factor (GF) sont recommandées pour la plongée à l\'air au N2 ?',
+    options: [
+      'GF bas = GF haut = 50 à 60%',
+      'GF bas = GF haut = 85 à 90%',
+      'GF bas = 30%, GF haut = 60%',
+      'GF bas = GF haut = 100%'
+    ],
     correctIndex: 1,
-    explanation: 'Pour la plongée à l\'air, les valeurs limites de Gradient Factor recommandées sont GF bas = GF haut = entre 85 et 90%.',
+    explanation:
+        'Pour la plongée à l\'air, les valeurs limites de Gradient Factor recommandées sont GF bas = GF haut = entre 85 et 90%.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_24',
     text: 'Comment le PA20 doit-il lancer son parachute de signalisation ?',
-    options: ['En remontant en surface puis en le déployant', 'En le déployant en pleine eau depuis la profondeur du palier', 'En le lançant depuis le bateau', 'En l\'attachant à un rocher'],
+    options: [
+      'En remontant en surface puis en le déployant',
+      'En le déployant en pleine eau depuis la profondeur du palier',
+      'En le lançant depuis le bateau',
+      'En l\'attachant à un rocher'
+    ],
     correctIndex: 1,
-    explanation: 'Le parachute de signalisation se déploie en pleine eau depuis la profondeur du palier, pour signaler la position de la palanquée à la surface.',
+    explanation:
+        'Le parachute de signalisation se déploie en pleine eau depuis la profondeur du palier, pour signaler la position de la palanquée à la surface.',
     category: 'Autonomie',
   ),
 
   // --- INTERVENTION ---
   Question(
     id: 'n2_25',
-    text: 'Lors d\'une intervention sur un plongeur en difficulté (PA20), combien de situations différentes minimum sont évaluées ?',
-    options: ['1 situation', '2 situations différentes, chacune au moins 2 fois', '3 situations, une seule fois chacune', '5 situations différentes'],
+    text:
+        'Lors d\'une intervention sur un plongeur en difficulté (PA20), combien de situations différentes minimum sont évaluées ?',
+    options: [
+      '1 situation',
+      '2 situations différentes, chacune au moins 2 fois',
+      '3 situations, une seule fois chacune',
+      '5 situations différentes'
+    ],
     correctIndex: 1,
-    explanation: 'L\'assistance doit être réalisée dans au moins deux situations différentes, chacune étant réalisée intégralement au moins deux fois.',
+    explanation:
+        'L\'assistance doit être réalisée dans au moins deux situations différentes, chacune étant réalisée intégralement au moins deux fois.',
     category: 'Intervention',
   ),
   Question(
     id: 'n2_26',
-    text: 'Dans quelle zone le plongeur doit-il effectuer un arrêt lors d\'une assistance à la remontée ?',
-    options: ['À 10 mètres', 'Dans la zone 5 à 3 mètres', 'En surface directement', 'À 20 mètres'],
+    text:
+        'Dans quelle zone le plongeur doit-il effectuer un arrêt lors d\'une assistance à la remontée ?',
+    options: [
+      'À 10 mètres',
+      'Dans la zone 5 à 3 mètres',
+      'En surface directement',
+      'À 20 mètres'
+    ],
     correctIndex: 1,
-    explanation: 'Lors d\'une assistance, le plongeur doit effectuer un arrêt marqué dans la zone 5 à 3 m avant la sortie d\'eau sécurisée.',
+    explanation:
+        'Lors d\'une assistance, le plongeur doit effectuer un arrêt marqué dans la zone 5 à 3 m avant la sortie d\'eau sécurisée.',
     category: 'Intervention',
   ),
   Question(
     id: 'n2_27',
-    text: 'Quelle est la technique de propulsion privilégiée lors d\'une assistance à la remontée ?',
-    options: ['Utiliser uniquement les palmes', 'Privilégier l\'utilisation optimale des gilets', 'Tenir le plongeur assisté par le détendeur', 'Utiliser un filin de remontée'],
+    text:
+        'Quelle est la technique de propulsion privilégiée lors d\'une assistance à la remontée ?',
+    options: [
+      'Utiliser uniquement les palmes',
+      'Privilégier l\'utilisation optimale des gilets',
+      'Tenir le plongeur assisté par le détendeur',
+      'Utiliser un filin de remontée'
+    ],
     correctIndex: 1,
-    explanation: 'Lors d\'une assistance, l\'utilisation optimale des gilets (gilet de l\'assisté et du plongeur assistant) doit être privilégiée par rapport au palmage.',
+    explanation:
+        'Lors d\'une assistance, l\'utilisation optimale des gilets (gilet de l\'assisté et du plongeur assistant) doit être privilégiée par rapport au palmage.',
     category: 'Intervention',
   ),
   Question(
     id: 'n2_28',
     text: 'Qu\'est-ce que l\'intervention "en relais" pour le PE40 ?',
-    options: ['Remplacer entièrement le GP pour guider la palanquée', 'Prendre en charge un équipier en difficulté en maintenant la profondeur, jusqu\'à l\'intervention du GP', 'Remonter seul pour alerter le bateau', 'Descendre chercher le plongeur perdu'],
+    options: [
+      'Remplacer entièrement le GP pour guider la palanquée',
+      'Prendre en charge un équipier en difficulté en maintenant la profondeur, jusqu\'à l\'intervention du GP',
+      'Remonter seul pour alerter le bateau',
+      'Descendre chercher le plongeur perdu'
+    ],
     correctIndex: 1,
-    explanation: 'L\'intervention en relais PE40 consiste à prendre en charge l\'équipier en difficulté, maintenir la profondeur, passer son second détendeur si nécessaire, jusqu\'à l\'intervention du GP.',
+    explanation:
+        'L\'intervention en relais PE40 consiste à prendre en charge l\'équipier en difficulté, maintenir la profondeur, passer son second détendeur si nécessaire, jusqu\'à l\'intervention du GP.',
     category: 'Intervention',
   ),
 
   // --- ACCIDENTS & PHYSIOPATHOLOGIE ---
   Question(
     id: 'n2_29',
-    text: 'Qu\'est-ce qu\'un profil de plongée "en yoyo" et pourquoi est-il à risque ?',
-    options: ['Un profil avec des paliers très longs', 'Un profil avec plusieurs montées et descentes successives augmentant le risque d\'ADD', 'Un profil à profondeur constante', 'Un profil avec une remontée très lente'],
+    text:
+        'Qu\'est-ce qu\'un profil de plongée "en yoyo" et pourquoi est-il à risque ?',
+    options: [
+      'Un profil avec des paliers très longs',
+      'Un profil avec plusieurs montées et descentes successives augmentant le risque d\'ADD',
+      'Un profil à profondeur constante',
+      'Un profil avec une remontée très lente'
+    ],
     correctIndex: 1,
-    explanation: 'Un profil "en yoyo" comprend plusieurs montées et descentes successives qui augmentent significativement le risque d\'accident de désaturation (ADD) car les tissus se saturent de façon non linéaire.',
+    explanation:
+        'Un profil "en yoyo" comprend plusieurs montées et descentes successives qui augmentent significativement le risque d\'accident de désaturation (ADD) car les tissus se saturent de façon non linéaire.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_30',
-    text: 'Qu\'est-ce que la "plongée de réadaptation" en matière de désaturation ?',
-    options: ['Une plongée effectuée après une longue absence', 'Une première plongée peu profonde et courte pour accoutumer l\'organisme après un accident ou une longue pause', 'Une plongée d\'entraînement intensif', 'Une plongée avec mélange enrichi en oxygène'],
+    text:
+        'Qu\'est-ce que la "plongée de réadaptation" en matière de désaturation ?',
+    options: [
+      'Une plongée effectuée après une longue absence',
+      'Une première plongée peu profonde et courte pour accoutumer l\'organisme après un accident ou une longue pause',
+      'Une plongée d\'entraînement intensif',
+      'Une plongée avec mélange enrichi en oxygène'
+    ],
     correctIndex: 1,
-    explanation: 'La plongée de réadaptation est une plongée peu profonde et courte réalisée après un accident de désaturation ou une longue période sans plonger, pour réaccoutumer l\'organisme progressivement.',
+    explanation:
+        'La plongée de réadaptation est une plongée peu profonde et courte réalisée après un accident de désaturation ou une longue période sans plonger, pour réaccoutumer l\'organisme progressivement.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_31',
     text: 'Quels facteurs favorisent les accidents de désaturation ?',
-    options: ['Uniquement les plongées profondes', 'Profils à risque (yoyo, inversé), fatigue, déshydratation, froid, plongées successives, alcool', 'Uniquement la vitesse de remontée', 'L\'utilisation d\'un ordinateur récent'],
+    options: [
+      'Uniquement les plongées profondes',
+      'Profils à risque (yoyo, inversé), fatigue, déshydratation, froid, plongées successives, alcool',
+      'Uniquement la vitesse de remontée',
+      'L\'utilisation d\'un ordinateur récent'
+    ],
     correctIndex: 1,
-    explanation: 'Les facteurs favorisants les ADD sont nombreux : profils à risque, vitesse de remontée excessive, fatigue, déshydratation, froid, plongées répétitives, alcool, effort intense...',
+    explanation:
+        'Les facteurs favorisants les ADD sont nombreux : profils à risque, vitesse de remontée excessive, fatigue, déshydratation, froid, plongées répétitives, alcool, effort intense...',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_32',
-    text: 'Qu\'est-ce qu\'un barotraumatisme pulmonaire et quelles en sont les conséquences graves ?',
-    options: ['Une douleur musculaire due à l\'effort de plongée', 'Une déchirure du tissu pulmonaire causant embolie gazeuse et/ou pneumothorax', 'Une infection des poumons due à l\'air comprimé', 'Une allergie au néoprène'],
+    text:
+        'Qu\'est-ce qu\'un barotraumatisme pulmonaire et quelles en sont les conséquences graves ?',
+    options: [
+      'Une douleur musculaire due à l\'effort de plongée',
+      'Une déchirure du tissu pulmonaire causant embolie gazeuse et/ou pneumothorax',
+      'Une infection des poumons due à l\'air comprimé',
+      'Une allergie au néoprène'
+    ],
     correctIndex: 1,
-    explanation: 'Un barotraumatisme pulmonaire est une déchirure du tissu pulmonaire (lors d\'une remontée trop rapide ou apnée) pouvant causer une embolie gazeuse, un pneumothorax ou un emphysème sous-cutané.',
+    explanation:
+        'Un barotraumatisme pulmonaire est une déchirure du tissu pulmonaire (lors d\'une remontée trop rapide ou apnée) pouvant causer une embolie gazeuse, un pneumothorax ou un emphysème sous-cutané.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_33',
-    text: 'Quels sont les symptômes qui doivent alerter sur un possible accident de désaturation (ADD) ?',
-    options: ['Uniquement des douleurs articulaires', 'Douleurs articulaires, troubles neurologiques, problèmes respiratoires, cutis marmorata, vertiges, survenant après la plongée', 'Uniquement des vertiges', 'Uniquement une fatigue anormale'],
+    text:
+        'Quels sont les symptômes qui doivent alerter sur un possible accident de désaturation (ADD) ?',
+    options: [
+      'Uniquement des douleurs articulaires',
+      'Douleurs articulaires, troubles neurologiques, problèmes respiratoires, cutis marmorata, vertiges, survenant après la plongée',
+      'Uniquement des vertiges',
+      'Uniquement une fatigue anormale'
+    ],
     correctIndex: 1,
-    explanation: 'Les symptômes d\'ADD peuvent inclure : douleurs articulaires, troubles neurologiques (paralysies, paresthésies), problèmes respiratoires, cutis marmorata, vertiges, fatigue intense - apparaissant après la plongée.',
+    explanation:
+        'Les symptômes d\'ADD peuvent inclure : douleurs articulaires, troubles neurologiques (paralysies, paresthésies), problèmes respiratoires, cutis marmorata, vertiges, fatigue intense - apparaissant après la plongée.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_34',
-    text: 'Que signifie le terme "profil de plongée inversé" et pourquoi est-il déconseillé ?',
-    options: ['Un profil où l\'on descend puis remonte normalement', 'Un profil où la seconde plongée est plus profonde que la première, augmentant le risque d\'ADD', 'Un profil avec remontée rapide suivie d\'une descente lente', 'Une plongée effectuée à l\'envers'],
+    text:
+        'Que signifie le terme "profil de plongée inversé" et pourquoi est-il déconseillé ?',
+    options: [
+      'Un profil où l\'on descend puis remonte normalement',
+      'Un profil où la seconde plongée est plus profonde que la première, augmentant le risque d\'ADD',
+      'Un profil avec remontée rapide suivie d\'une descente lente',
+      'Une plongée effectuée à l\'envers'
+    ],
     correctIndex: 1,
-    explanation: 'Un profil inversé signifie que la seconde plongée d\'une journée est plus profonde que la première. Cela est déconseillé car les tissus sont encore chargés en azote, augmentant le risque d\'ADD.',
+    explanation:
+        'Un profil inversé signifie que la seconde plongée d\'une journée est plus profonde que la première. Cela est déconseillé car les tissus sont encore chargés en azote, augmentant le risque d\'ADD.',
     category: 'Accidents',
   ),
 
@@ -1131,33 +1934,59 @@ const List<Question> _niveau2Questions = [
   Question(
     id: 'n2_35',
     text: 'Quel est le principe du modèle de désaturation de Haldane ?',
-    options: ['La décompression dépend uniquement de la profondeur maximale', 'Les tissus absorbent et éliminent l\'azote à des vitesses différentes ; des paliers permettent cette élimination progressive', 'L\'azote est éliminé uniquement par les poumons sans palier', 'La désaturation est la même pour tous les tissus'],
+    options: [
+      'La décompression dépend uniquement de la profondeur maximale',
+      'Les tissus absorbent et éliminent l\'azote à des vitesses différentes ; des paliers permettent cette élimination progressive',
+      'L\'azote est éliminé uniquement par les poumons sans palier',
+      'La désaturation est la même pour tous les tissus'
+    ],
     correctIndex: 1,
-    explanation: 'Le modèle de Haldane considère que différents tissus absorbent et éliminent l\'azote à des vitesses différentes. Des paliers permettent l\'élimination progressive de l\'azote sans former de bulles dangereuses.',
+    explanation:
+        'Le modèle de Haldane considère que différents tissus absorbent et éliminent l\'azote à des vitesses différentes. Des paliers permettent l\'élimination progressive de l\'azote sans former de bulles dangereuses.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_36',
     text: 'Qu\'est-ce que la "courbe de sécurité" ou limite sans palier ?',
-    options: ['La durée maximale à ne pas dépasser à une profondeur donnée sans palier obligatoire', 'La profondeur maximale autorisée sans palier', 'La vitesse de remontée maximale', 'La durée totale d\'une plongée'],
+    options: [
+      'La durée maximale à ne pas dépasser à une profondeur donnée sans palier obligatoire',
+      'La profondeur maximale autorisée sans palier',
+      'La vitesse de remontée maximale',
+      'La durée totale d\'une plongée'
+    ],
     correctIndex: 0,
-    explanation: 'La courbe de sécurité (ou limite sans palier) indique la durée maximale à ne pas dépasser à une profondeur donnée pour remonter sans nécessiter de palier obligatoire.',
+    explanation:
+        'La courbe de sécurité (ou limite sans palier) indique la durée maximale à ne pas dépasser à une profondeur donnée pour remonter sans nécessiter de palier obligatoire.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_37',
-    text: 'Quelle est la vitesse de remontée généralement recommandée par les organismes de plongée ?',
-    options: ['30 m/min maximum', '15 à 17 m/min maximum selon les modèles', '5 m/min', '50 m/min'],
+    text:
+        'Quelle est la vitesse de remontée généralement recommandée par les organismes de plongée ?',
+    options: [
+      '30 m/min maximum',
+      '15 à 17 m/min maximum selon les modèles',
+      '5 m/min',
+      '50 m/min'
+    ],
     correctIndex: 1,
-    explanation: 'La vitesse de remontée recommandée est généralement de 15 à 17 m/min maximum selon les modèles et ordinateurs (certains préconisent même 10 m/min pour les derniers mètres).',
+    explanation:
+        'La vitesse de remontée recommandée est généralement de 15 à 17 m/min maximum selon les modèles et ordinateurs (certains préconisent même 10 m/min pour les derniers mètres).',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_38',
-    text: 'Comment l\'ordinateur de plongée gère-t-il les plongées successives dans la même journée ?',
-    options: ['Il remet les compteurs à zéro après chaque plongée', 'Il tient compte de la saturation résiduelle en azote des tissus pour calculer les paliers de la plongée suivante', 'Il interdit automatiquement les plongées successives', 'Il calcule une durée maximale identique pour toutes les plongées'],
+    text:
+        'Comment l\'ordinateur de plongée gère-t-il les plongées successives dans la même journée ?',
+    options: [
+      'Il remet les compteurs à zéro après chaque plongée',
+      'Il tient compte de la saturation résiduelle en azote des tissus pour calculer les paliers de la plongée suivante',
+      'Il interdit automatiquement les plongées successives',
+      'Il calcule une durée maximale identique pour toutes les plongées'
+    ],
     correctIndex: 1,
-    explanation: 'L\'ordinateur mémorise et intègre la saturation résiduelle en azote des tissus lors de l\'intervalle de surface pour calculer les contraintes de décompression de la plongée suivante.',
+    explanation:
+        'L\'ordinateur mémorise et intègre la saturation résiduelle en azote des tissus lors de l\'intervalle de surface pour calculer les contraintes de décompression de la plongée suivante.',
     category: 'Désaturation',
   ),
 
@@ -1165,79 +1994,135 @@ const List<Question> _niveau2Questions = [
   Question(
     id: 'n2_39',
     text: 'Comment la consommation d\'air évolue-t-elle avec la profondeur ?',
-    options: ['Elle reste constante quelle que soit la profondeur', 'Elle augmente proportionnellement à la pression absolue : à 30 m (4 bars), on consomme 4 fois plus qu\'en surface', 'Elle diminue avec la profondeur car l\'air est plus dense', 'Elle double uniquement au-delà de 20 m'],
+    options: [
+      'Elle reste constante quelle que soit la profondeur',
+      'Elle augmente proportionnellement à la pression absolue : à 30 m (4 bars), on consomme 4 fois plus qu\'en surface',
+      'Elle diminue avec la profondeur car l\'air est plus dense',
+      'Elle double uniquement au-delà de 20 m'
+    ],
     correctIndex: 1,
-    explanation: 'La consommation d\'air augmente proportionnellement à la pression absolue : à 30 m (pression absolue de 4 bars), on consomme 4 fois plus d\'air par respiration qu\'en surface.',
+    explanation:
+        'La consommation d\'air augmente proportionnellement à la pression absolue : à 30 m (pression absolue de 4 bars), on consomme 4 fois plus d\'air par respiration qu\'en surface.',
     category: 'Physique',
   ),
   Question(
     id: 'n2_40',
-    text: 'Comment calculer l\'autonomie en air d\'un plongeur à 20 m avec une bouteille de 12 L à 200 bar et une consommation de 20 L/min en surface ?',
+    text:
+        'Comment calculer l\'autonomie en air d\'un plongeur à 20 m avec une bouteille de 12 L à 200 bar et une consommation de 20 L/min en surface ?',
     options: ['12 min', '20 min', '40 min', '60 min'],
     correctIndex: 2,
-    explanation: 'Volume total : 12 L × 200 bar = 2400 L. À 20 m (pression de 3 bars), consommation = 20 L/min × 3 = 60 L/min. Autonomie = 2400 / 60 = 40 minutes (hors réserve et paliers).',
+    explanation:
+        'Volume total : 12 L × 200 bar = 2400 L. À 20 m (pression de 3 bars), consommation = 20 L/min × 3 = 60 L/min. Autonomie = 2400 / 60 = 40 minutes (hors réserve et paliers).',
     category: 'Physique',
   ),
   Question(
     id: 'n2_41',
-    text: 'Que sont les "pressions partielles" des gaz et quel seuil de toxicité de l\'oxygène concerne la plongée à l\'air ?',
-    options: ['La part de chaque gaz dans un mélange ; toxicité O2 à partir de 1,6 bar de pression partielle', 'La pression totale du mélange uniquement', 'La concentration en azote uniquement', 'Il n\'y a pas de seuil de toxicité pour l\'oxygène'],
+    text:
+        'Que sont les "pressions partielles" des gaz et quel seuil de toxicité de l\'oxygène concerne la plongée à l\'air ?',
+    options: [
+      'La part de chaque gaz dans un mélange ; toxicité O2 à partir de 1,6 bar de pression partielle',
+      'La pression totale du mélange uniquement',
+      'La concentration en azote uniquement',
+      'Il n\'y a pas de seuil de toxicité pour l\'oxygène'
+    ],
     correctIndex: 0,
-    explanation: 'La pression partielle est la part qu\'exerce chaque gaz dans un mélange. Pour l\'oxygène en plongée à l\'air, la toxicité hyperoxique peut survenir à partir de 1,6 bar de pression partielle d\'O2 (équivalent à environ 66 m à l\'air).',
+    explanation:
+        'La pression partielle est la part qu\'exerce chaque gaz dans un mélange. Pour l\'oxygène en plongée à l\'air, la toxicité hyperoxique peut survenir à partir de 1,6 bar de pression partielle d\'O2 (équivalent à environ 66 m à l\'air).',
     category: 'Physique',
   ),
 
   // --- COMMUNICATION ---
   Question(
     id: 'n2_42',
-    text: 'Quels signes spécifiques à la plongée profonde (N2) le PE40 doit-il connaître en plus des signes de base ?',
-    options: ['Uniquement les signes d\'urgence', 'Narcose, paramètres de désaturation, consommation', 'Signaux de navigation sous-marine', 'Codes de communication avec le bateau'],
+    text:
+        'Quels signes spécifiques à la plongée profonde (N2) le PE40 doit-il connaître en plus des signes de base ?',
+    options: [
+      'Uniquement les signes d\'urgence',
+      'Narcose, paramètres de désaturation, consommation',
+      'Signaux de navigation sous-marine',
+      'Codes de communication avec le bateau'
+    ],
     correctIndex: 1,
-    explanation: 'En plus des signes de base, le PE40 doit connaître les signes propres à la plongée profonde : narcose, consommation d\'air, paramètres de désaturation.',
+    explanation:
+        'En plus des signes de base, le PE40 doit connaître les signes propres à la plongée profonde : narcose, consommation d\'air, paramètres de désaturation.',
     category: 'Communication',
   ),
   Question(
     id: 'n2_43',
-    text: 'Comment le PE40 doit-il informer le GP de ses paramètres de plongée ?',
-    options: ['Uniquement à la fin de la plongée', 'Spontanément, à terre et en plongée, sans attendre d\'être interrogé', 'Uniquement si le GP le demande', 'Par écrit sur une ardoise subaquatique uniquement'],
+    text:
+        'Comment le PE40 doit-il informer le GP de ses paramètres de plongée ?',
+    options: [
+      'Uniquement à la fin de la plongée',
+      'Spontanément, à terre et en plongée, sans attendre d\'être interrogé',
+      'Uniquement si le GP le demande',
+      'Par écrit sur une ardoise subaquatique uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'Le PE40 doit informer spontanément le GP à terre et en plongée de tous les paramètres utiles (consommation, désaturation), sans attendre d\'être questionné.',
+    explanation:
+        'Le PE40 doit informer spontanément le GP à terre et en plongée de tous les paramètres utiles (consommation, désaturation), sans attendre d\'être questionné.',
     category: 'Communication',
   ),
 
   // --- RÉGLEMENTATION ---
   Question(
     id: 'n2_44',
-    text: 'Qu\'est-ce que la responsabilité civile partagée des plongeurs autonomes ?',
-    options: ['Un plongeur peut être tenu responsable d\'un dommage causé à un tiers par sa négligence', 'Seul le DP est responsable en cas d\'accident', 'La responsabilité n\'existe qu\'en cas de dommage corporel grave', 'Seul l\'assureur est responsable'],
+    text:
+        'Qu\'est-ce que la responsabilité civile partagée des plongeurs autonomes ?',
+    options: [
+      'Un plongeur peut être tenu responsable d\'un dommage causé à un tiers par sa négligence',
+      'Seul le DP est responsable en cas d\'accident',
+      'La responsabilité n\'existe qu\'en cas de dommage corporel grave',
+      'Seul l\'assureur est responsable'
+    ],
     correctIndex: 0,
-    explanation: 'En plongée autonome, chaque plongeur peut être tenu responsable civilement (indemnisation) et pénalement (sanction) des dommages causés à un tiers par sa négligence ou son imprudence.',
+    explanation:
+        'En plongée autonome, chaque plongeur peut être tenu responsable civilement (indemnisation) et pénalement (sanction) des dommages causés à un tiers par sa négligence ou son imprudence.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n2_45',
-    text: 'Dans quel espace de profondeur l\'enseignement du N2 s\'effectue-t-il réglementairement ?',
-    options: ['0 à 10 m par un E1', '0 à 20 m par un E2 minimum ; possibilité de 0 à 40 m sous responsabilité E3', '0 à 40 m par n\'importe quel moniteur', '0 à 60 m par un E4'],
+    text:
+        'Dans quel espace de profondeur l\'enseignement du N2 s\'effectue-t-il réglementairement ?',
+    options: [
+      '0 à 10 m par un E1',
+      '0 à 20 m par un E2 minimum ; possibilité de 0 à 40 m sous responsabilité E3',
+      '0 à 40 m par n\'importe quel moniteur',
+      '0 à 60 m par un E4'
+    ],
     correctIndex: 1,
-    explanation: 'L\'enseignement N2 s\'effectue dans l\'espace 0-20 m par un E2 minimum. Conformément au Code du Sport, un plongeur en formation peut évoluer jusqu\'à 40 m sous la responsabilité d\'un E3.',
+    explanation:
+        'L\'enseignement N2 s\'effectue dans l\'espace 0-20 m par un E2 minimum. Conformément au Code du Sport, un plongeur en formation peut évoluer jusqu\'à 40 m sous la responsabilité d\'un E3.',
     category: 'Organisation',
   ),
 
   // --- ENVIRONNEMENT ---
   Question(
     id: 'n2_46',
-    text: 'Comment le plongeur N2 doit-il se comporter pour limiter son impact sur l\'environnement ?',
-    options: ['Toucher les coraux uniquement pour s\'équilibrer', 'Évoluer sans appui, maîtriser son palmage et sa stabilisation, refuser le nourrissage', 'Utiliser un éclairage puissant', 'S\'approcher au maximum de la faune'],
+    text:
+        'Comment le plongeur N2 doit-il se comporter pour limiter son impact sur l\'environnement ?',
+    options: [
+      'Toucher les coraux uniquement pour s\'équilibrer',
+      'Évoluer sans appui, maîtriser son palmage et sa stabilisation, refuser le nourrissage',
+      'Utiliser un éclairage puissant',
+      'S\'approcher au maximum de la faune'
+    ],
     correctIndex: 1,
-    explanation: 'Le N2 doit limiter son impact en évoluant sans appui, avec palmage et stabilisation maîtrisés, en limitant l\'éclairage et les nuisances sonores, en refusant le nourrissage.',
+    explanation:
+        'Le N2 doit limiter son impact en évoluant sans appui, avec palmage et stabilisation maîtrisés, en limitant l\'éclairage et les nuisances sonores, en refusant le nourrissage.',
     category: 'Environnement',
   ),
   Question(
     id: 'n2_47',
     text: 'Quels dangers du milieu le N2 doit-il connaître ?',
-    options: ['Uniquement les requins', 'Faune venimeuse ou urticante, épaves, grottes (piège d\'air), courants, visibilité réduite', 'Uniquement les épaves', 'Aucun danger particulier dans la zone 0-40 m'],
+    options: [
+      'Uniquement les requins',
+      'Faune venimeuse ou urticante, épaves, grottes (piège d\'air), courants, visibilité réduite',
+      'Uniquement les épaves',
+      'Aucun danger particulier dans la zone 0-40 m'
+    ],
     correctIndex: 1,
-    explanation: 'Le N2 doit connaître les risques et dangers du milieu : faune (venimeuse ou urticante), épaves, grottes, courants, mauvaise visibilité, filets de pêche...',
+    explanation:
+        'Le N2 doit connaître les risques et dangers du milieu : faune (venimeuse ou urticante), épaves, grottes, courants, mauvaise visibilité, filets de pêche...',
     category: 'Environnement',
   ),
 
@@ -1245,113 +2130,203 @@ const List<Question> _niveau2Questions = [
   Question(
     id: 'n2_48',
     text: 'Qu\'est-ce que le RIFAP et pourquoi est-il important ?',
-    options: ['Un règlement interne de la fédération', 'Le brevet de premiers secours spécifique à la plongée (Réaction et Intervention Face à un Accident de Plongée)', 'Un livre de référence pour les moniteurs', 'Un type de mélange gazeux pour la plongée'],
+    options: [
+      'Un règlement interne de la fédération',
+      'Le brevet de premiers secours spécifique à la plongée (Réaction et Intervention Face à un Accident de Plongée)',
+      'Un livre de référence pour les moniteurs',
+      'Un type de mélange gazeux pour la plongée'
+    ],
     correctIndex: 1,
-    explanation: 'Le RIFAP (Réaction et Intervention Face à un Accident de Plongée) est un brevet de premiers secours spécifique : gestion des urgences en attendant les secours professionnels.',
+    explanation:
+        'Le RIFAP (Réaction et Intervention Face à un Accident de Plongée) est un brevet de premiers secours spécifique : gestion des urgences en attendant les secours professionnels.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n2_49',
-    text: 'Quelle est la règle concernant la validation de la compétence "intervention et assistance" dans la formation N2 ?',
-    options: ['Elle peut être validée à n\'importe quelle séance', 'Elle doit être validée spécifiquement et en fin de formation', 'Elle est validée automatiquement dès l\'obtention de la première compétence', 'Elle peut être reportée après l\'obtention du diplôme'],
+    text:
+        'Quelle est la règle concernant la validation de la compétence "intervention et assistance" dans la formation N2 ?',
+    options: [
+      'Elle peut être validée à n\'importe quelle séance',
+      'Elle doit être validée spécifiquement et en fin de formation',
+      'Elle est validée automatiquement dès l\'obtention de la première compétence',
+      'Elle peut être reportée après l\'obtention du diplôme'
+    ],
     correctIndex: 1,
-    explanation: 'La compétence "intervenir et porter assistance" (PA20) et "intervenir en relais" (PE40) doivent être validées spécifiquement et en fin de formation.',
+    explanation:
+        'La compétence "intervenir et porter assistance" (PA20) et "intervenir en relais" (PE40) doivent être validées spécifiquement et en fin de formation.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n2_50',
-    text: 'Quelle est la profondeur de plafond lors d\'une remontée assistée PA20 après la zone 5-3 m ?',
-    options: ['Remonter directement en surface après l\'arrêt à 3-5 m', 'Rester à 5-3 m indéfiniment', 'Continuer à descendre pour équilibrer', 'Attendre le signal du DP depuis la surface'],
+    text:
+        'Quelle est la profondeur de plafond lors d\'une remontée assistée PA20 après la zone 5-3 m ?',
+    options: [
+      'Remonter directement en surface après l\'arrêt à 3-5 m',
+      'Rester à 5-3 m indéfiniment',
+      'Continuer à descendre pour équilibrer',
+      'Attendre le signal du DP depuis la surface'
+    ],
     correctIndex: 0,
-    explanation: 'Après l\'arrêt marqué dans la zone 5-3 m, le plongeur procède à la sortie d\'eau sécurisée, en remontant vers la surface de manière contrôlée.',
+    explanation:
+        'Après l\'arrêt marqué dans la zone 5-3 m, le plongeur procède à la sortie d\'eau sécurisée, en remontant vers la surface de manière contrôlée.',
     category: 'Intervention',
   ),
   Question(
     id: 'n2_51',
     text: 'Qu\'est-ce que l\'essoufflement et comment se manifeste-t-il ?',
-    options: ['Une simple fatigue musculaire', 'Une accumulation de CO2 entraînant sensation d\'oppression, anxiété, accélération respiratoire', 'Une intoxication à l\'oxygène', 'Un malaise cardiaque sous l\'eau'],
+    options: [
+      'Une simple fatigue musculaire',
+      'Une accumulation de CO2 entraînant sensation d\'oppression, anxiété, accélération respiratoire',
+      'Une intoxication à l\'oxygène',
+      'Un malaise cardiaque sous l\'eau'
+    ],
     correctIndex: 1,
-    explanation: 'L\'essoufflement résulte d\'une accumulation de CO2 liée à un effort excessif ou une mauvaise ventilation. Il se manifeste par oppression, anxiété, incapacité à ventiler correctement.',
+    explanation:
+        'L\'essoufflement résulte d\'une accumulation de CO2 liée à un effort excessif ou une mauvaise ventilation. Il se manifeste par oppression, anxiété, incapacité à ventiler correctement.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_52',
     text: 'Que signifie l\'acronyme CMAS en plongée internationale ?',
-    options: ['Confédération Mondiale des Activités Subaquatiques', 'Comité Mondial des Arts Sous-marins', 'Coordination Marine des Activités Sportives', 'Club Mondial d\'Aventure Subaquatique'],
+    options: [
+      'Confédération Mondiale des Activités Subaquatiques',
+      'Comité Mondial des Arts Sous-marins',
+      'Coordination Marine des Activités Sportives',
+      'Club Mondial d\'Aventure Subaquatique'
+    ],
     correctIndex: 0,
-    explanation: 'La CMAS (Confédération Mondiale des Activités Subaquatiques) est l\'organisation internationale de plongée sportive. La carte N2 FFESSM est reconnue internationalement comme CMAS 2*.',
+    explanation:
+        'La CMAS (Confédération Mondiale des Activités Subaquatiques) est l\'organisation internationale de plongée sportive. La carte N2 FFESSM est reconnue internationalement comme CMAS 2*.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n2_53',
-    text: 'Quel est le rôle du guide de palanquée (GP) lors d\'une plongée PE40 ?',
-    options: ['Uniquement surveiller depuis la surface', 'Assurer la conduite de la plongée, la sécurité de la palanquée et guider les plongeurs encadrés', 'Transporter l\'équipement', 'Calculer les paliers de décompression uniquement'],
+    text:
+        'Quel est le rôle du guide de palanquée (GP) lors d\'une plongée PE40 ?',
+    options: [
+      'Uniquement surveiller depuis la surface',
+      'Assurer la conduite de la plongée, la sécurité de la palanquée et guider les plongeurs encadrés',
+      'Transporter l\'équipement',
+      'Calculer les paliers de décompression uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'Le GP assure la conduite complète de la plongée : sécurité, orientation, gestion de la désaturation et guidage des plongeurs PE40 tout au long de la plongée.',
+    explanation:
+        'Le GP assure la conduite complète de la plongée : sécurité, orientation, gestion de la désaturation et guidage des plongeurs PE40 tout au long de la plongée.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n2_54',
-    text: 'Comment la pression partielle de l\'azote influence-t-elle la narcose ?',
-    options: ['Elle n\'a aucun rapport avec la narcose', 'Plus la pression partielle d\'azote augmente avec la profondeur, plus le risque de narcose augmente', 'La narcose est uniquement due à l\'oxygène', 'La narcose est due à la pression de l\'eau uniquement'],
+    text:
+        'Comment la pression partielle de l\'azote influence-t-elle la narcose ?',
+    options: [
+      'Elle n\'a aucun rapport avec la narcose',
+      'Plus la pression partielle d\'azote augmente avec la profondeur, plus le risque de narcose augmente',
+      'La narcose est uniquement due à l\'oxygène',
+      'La narcose est due à la pression de l\'eau uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'La narcose à l\'azote est liée à l\'augmentation de la pression partielle d\'azote avec la profondeur : les effets narcotiques s\'intensifient à mesure qu\'on descend.',
+    explanation:
+        'La narcose à l\'azote est liée à l\'augmentation de la pression partielle d\'azote avec la profondeur : les effets narcotiques s\'intensifient à mesure qu\'on descend.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_55',
-    text: 'Quelle est la principale différence entre les plongées "plafond" et les plongées "carrées" en termes de désaturation ?',
-    options: ['Il n\'y a pas de différence', 'Une plongée carrée (profondeur constante) est plus facile à gérer pour la désaturation qu\'une plongée avec remontées intermédiaires', 'La plongée plafond est toujours plus sûre', 'Les tables ne s\'appliquent qu\'aux plongées carrées'],
+    text:
+        'Quelle est la principale différence entre les plongées "plafond" et les plongées "carrées" en termes de désaturation ?',
+    options: [
+      'Il n\'y a pas de différence',
+      'Une plongée carrée (profondeur constante) est plus facile à gérer pour la désaturation qu\'une plongée avec remontées intermédiaires',
+      'La plongée plafond est toujours plus sûre',
+      'Les tables ne s\'appliquent qu\'aux plongées carrées'
+    ],
     correctIndex: 1,
-    explanation: 'Une plongée carrée (profondeur constante puis remontée directe) est le profil de référence des tables. Les variations de profondeur intermédiaires compliquent le calcul de désaturation.',
+    explanation:
+        'Une plongée carrée (profondeur constante puis remontée directe) est le profil de référence des tables. Les variations de profondeur intermédiaires compliquent le calcul de désaturation.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_56',
     text: 'Qu\'est-ce que le "conservatisme" d\'un ordinateur de plongée ?',
-    options: ['Le fait que l\'ordinateur est ancien et peu fiable', 'Un paramètre de réglage qui rend les calculs de désaturation plus sûrs en ajoutant des marges de sécurité', 'La tendance à surestimer la profondeur', 'Un mode d\'économie de batterie'],
+    options: [
+      'Le fait que l\'ordinateur est ancien et peu fiable',
+      'Un paramètre de réglage qui rend les calculs de désaturation plus sûrs en ajoutant des marges de sécurité',
+      'La tendance à surestimer la profondeur',
+      'Un mode d\'économie de batterie'
+    ],
     correctIndex: 1,
-    explanation: 'Le conservatisme est un paramètre de réglage qui ajoute des marges de sécurité aux calculs de désaturation : plus l\'ordinateur est conservateur, plus les paliers sont longs.',
+    explanation:
+        'Le conservatisme est un paramètre de réglage qui ajoute des marges de sécurité aux calculs de désaturation : plus l\'ordinateur est conservateur, plus les paliers sont longs.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_57',
     text: 'En quoi consiste la "gestion de l\'effort" en plongée N2 ?',
-    options: ['Nager aussi vite que possible pour maximiser le temps au fond', 'Adapter l\'intensité des efforts pour prévenir l\'essoufflement et les accidents, pour soi et ses équipiers', 'Ne jamais palmer sous l\'eau', 'Limiter les plongées à 30 minutes'],
+    options: [
+      'Nager aussi vite que possible pour maximiser le temps au fond',
+      'Adapter l\'intensité des efforts pour prévenir l\'essoufflement et les accidents, pour soi et ses équipiers',
+      'Ne jamais palmer sous l\'eau',
+      'Limiter les plongées à 30 minutes'
+    ],
     correctIndex: 1,
-    explanation: 'La gestion de l\'effort consiste à adapter l\'intensité des efforts pour éviter l\'essoufflement et les accidents, tant pour soi que pour les équipiers de la palanquée.',
+    explanation:
+        'La gestion de l\'effort consiste à adapter l\'intensité des efforts pour éviter l\'essoufflement et les accidents, tant pour soi que pour les équipiers de la palanquée.',
     category: 'Comportement',
   ),
   Question(
     id: 'n2_58',
-    text: 'Quelle est l\'utilité du mode "planification" d\'un ordinateur de plongée ?',
-    options: ['Enregistrer les photos de plongée', 'Planifier à l\'avance une plongée en estimant les paliers selon une profondeur et durée prévues', 'Alerter en cas de problème', 'Calculer la consommation d\'air'],
+    text:
+        'Quelle est l\'utilité du mode "planification" d\'un ordinateur de plongée ?',
+    options: [
+      'Enregistrer les photos de plongée',
+      'Planifier à l\'avance une plongée en estimant les paliers selon une profondeur et durée prévues',
+      'Alerter en cas de problème',
+      'Calculer la consommation d\'air'
+    ],
     correctIndex: 1,
-    explanation: 'Le mode planification permet de simuler à l\'avance une plongée en entrant la profondeur et durée prévues pour visualiser les paliers théoriques nécessaires.',
+    explanation:
+        'Le mode planification permet de simuler à l\'avance une plongée en entrant la profondeur et durée prévues pour visualiser les paliers théoriques nécessaires.',
     category: 'Équipement',
   ),
   Question(
     id: 'n2_59',
     text: 'Comment prévenir la noyade en plongée scaphandre ?',
-    options: ['En plongeant uniquement par temps calme', 'Par une bonne maîtrise de la ventilation, du gilet, et du comportement sécurisé en surface et en immersion', 'En portant un gilet de sauvetage de voile', 'En plongeant toujours à moins de 5 m'],
+    options: [
+      'En plongeant uniquement par temps calme',
+      'Par une bonne maîtrise de la ventilation, du gilet, et du comportement sécurisé en surface et en immersion',
+      'En portant un gilet de sauvetage de voile',
+      'En plongeant toujours à moins de 5 m'
+    ],
     correctIndex: 1,
-    explanation: 'La prévention de la noyade repose sur la maîtrise de la ventilation, l\'utilisation correcte du gilet (gonflage en surface), les bonnes pratiques de mise à l\'eau/sortie et le comportement sécurisé.',
+    explanation:
+        'La prévention de la noyade repose sur la maîtrise de la ventilation, l\'utilisation correcte du gilet (gonflage en surface), les bonnes pratiques de mise à l\'eau/sortie et le comportement sécurisé.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n2_60',
     text: 'Qu\'est-ce que la "loi de Dalton" et son application en plongée ?',
-    options: ['La loi qui régit la dissolution des gaz dans les liquides', 'La loi qui stipule que la pression totale d\'un mélange gazeux est égale à la somme des pressions partielles de chaque gaz', 'La loi sur les variations de volume des gaz', 'La loi sur la transmission de la pression dans les liquides'],
+    options: [
+      'La loi qui régit la dissolution des gaz dans les liquides',
+      'La loi qui stipule que la pression totale d\'un mélange gazeux est égale à la somme des pressions partielles de chaque gaz',
+      'La loi sur les variations de volume des gaz',
+      'La loi sur la transmission de la pression dans les liquides'
+    ],
     correctIndex: 1,
-    explanation: 'La loi de Dalton stipule que la pression totale d\'un mélange gazeux est la somme des pressions partielles de chaque composant. Elle explique l\'augmentation des effets toxiques des gaz avec la profondeur.',
+    explanation:
+        'La loi de Dalton stipule que la pression totale d\'un mélange gazeux est la somme des pressions partielles de chaque composant. Elle explique l\'augmentation des effets toxiques des gaz avec la profondeur.',
     category: 'Physique',
   ),
   Question(
     id: 'n2_61',
     text: 'Qu\'est-ce que la loi de Henry et son importance en plongée ?',
-    options: ['La loi sur la pression atmosphérique', 'La loi qui stipule que la quantité de gaz dissous dans un liquide est proportionnelle à la pression partielle de ce gaz', 'La loi sur la compression des gaz', 'La loi sur la transmission de la chaleur dans l\'eau'],
+    options: [
+      'La loi sur la pression atmosphérique',
+      'La loi qui stipule que la quantité de gaz dissous dans un liquide est proportionnelle à la pression partielle de ce gaz',
+      'La loi sur la compression des gaz',
+      'La loi sur la transmission de la chaleur dans l\'eau'
+    ],
     correctIndex: 1,
-    explanation: 'La loi de Henry stipule que la quantité de gaz dissous dans un liquide (comme l\'azote dans le sang) est proportionnelle à la pression partielle de ce gaz. C\'est le fondement physique des accidents de désaturation.',
+    explanation:
+        'La loi de Henry stipule que la quantité de gaz dissous dans un liquide (comme l\'azote dans le sang) est proportionnelle à la pression partielle de ce gaz. C\'est le fondement physique des accidents de désaturation.',
     category: 'Physique',
   ),
   Question(
@@ -1359,311 +2334,567 @@ const List<Question> _niveau2Questions = [
     text: 'Quelle est la pression absolue à 40 m de profondeur en eau de mer ?',
     options: ['4 bars', '5 bars', '6 bars', '8 bars'],
     correctIndex: 1,
-    explanation: 'À 40 m de profondeur, la pression absolue est de 5 bars (1 bar atmosphérique + 4 bars de pression hydrostatique).',
+    explanation:
+        'À 40 m de profondeur, la pression absolue est de 5 bars (1 bar atmosphérique + 4 bars de pression hydrostatique).',
     category: 'Physique',
   ),
   Question(
     id: 'n2_63',
-    text: 'Comment calcule-t-on la consommation d\'air en bar/minute à une profondeur donnée ?',
-    options: ['Consommation surface × profondeur en mètres', 'Consommation surface (L/min) × pression absolue / volume bouteille', 'Volume bouteille / durée de plongée', 'Consommation surface uniquement, la profondeur ne change rien'],
+    text:
+        'Comment calcule-t-on la consommation d\'air en bar/minute à une profondeur donnée ?',
+    options: [
+      'Consommation surface × profondeur en mètres',
+      'Consommation surface (L/min) × pression absolue / volume bouteille',
+      'Volume bouteille / durée de plongée',
+      'Consommation surface uniquement, la profondeur ne change rien'
+    ],
     correctIndex: 1,
-    explanation: 'La consommation en bar/min = (Conso surface en L/min × pression absolue en bars) / volume bouteille en litres. La pression absolue tient compte de la profondeur.',
+    explanation:
+        'La consommation en bar/min = (Conso surface en L/min × pression absolue en bars) / volume bouteille en litres. La pression absolue tient compte de la profondeur.',
     category: 'Physique',
   ),
   Question(
     id: 'n2_64',
     text: 'Qu\'est-ce que l\'hypothermie et comment la prévenir en plongée ?',
-    options: ['Une surchauffe du corps sous l\'eau', 'Un refroidissement excessif du corps pouvant altérer les capacités physiques et mentales ; prévention par une combinaison adaptée', 'Un type d\'essoufflement dû au froid', 'Une réaction allergique au matériel'],
+    options: [
+      'Une surchauffe du corps sous l\'eau',
+      'Un refroidissement excessif du corps pouvant altérer les capacités physiques et mentales ; prévention par une combinaison adaptée',
+      'Un type d\'essoufflement dû au froid',
+      'Une réaction allergique au matériel'
+    ],
     correctIndex: 1,
-    explanation: 'L\'hypothermie est un refroidissement excessif du corps pouvant altérer les capacités physiques et mentales (et favoriser les ADD). Elle se prévient par une combinaison adaptée à la température de l\'eau.',
+    explanation:
+        'L\'hypothermie est un refroidissement excessif du corps pouvant altérer les capacités physiques et mentales (et favoriser les ADD). Elle se prévient par une combinaison adaptée à la température de l\'eau.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_65',
-    text: 'Qu\'est-ce qu\'un "profil inverse" en plongée consécutive et pourquoi est-il déconseillé ?',
-    options: ['Faire la plongée la plus profonde en dernier, ce qui est déconseillé car les tissus sont chargés en azote résiduel', 'Un profil avec remontée plus rapide que descente', 'Un profil avec palier profond suivi d\'un palier peu profond', 'Plonger de nuit après une plongée de jour'],
+    text:
+        'Qu\'est-ce qu\'un "profil inverse" en plongée consécutive et pourquoi est-il déconseillé ?',
+    options: [
+      'Faire la plongée la plus profonde en dernier, ce qui est déconseillé car les tissus sont chargés en azote résiduel',
+      'Un profil avec remontée plus rapide que descente',
+      'Un profil avec palier profond suivi d\'un palier peu profond',
+      'Plonger de nuit après une plongée de jour'
+    ],
     correctIndex: 0,
-    explanation: 'Un profil inverse (plongée la plus profonde en second) est déconseillé car les tissus sont déjà chargés en azote résiduel, augmentant fortement le risque d\'ADD.',
+    explanation:
+        'Un profil inverse (plongée la plus profonde en second) est déconseillé car les tissus sont déjà chargés en azote résiduel, augmentant fortement le risque d\'ADD.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_66',
-    text: 'Que doit faire le N2 s\'il observe des signes de narcose chez un équipier de la palanquée PE40 ?',
-    options: ['Ne rien faire et continuer la plongée', 'Remonter immédiatement la palanquée à une profondeur moindre et en informer le GP', 'Donner de l\'eau à l\'équipier', 'Attendre que ça passe naturellement'],
+    text:
+        'Que doit faire le N2 s\'il observe des signes de narcose chez un équipier de la palanquée PE40 ?',
+    options: [
+      'Ne rien faire et continuer la plongée',
+      'Remonter immédiatement la palanquée à une profondeur moindre et en informer le GP',
+      'Donner de l\'eau à l\'équipier',
+      'Attendre que ça passe naturellement'
+    ],
     correctIndex: 1,
-    explanation: 'En cas de signes de narcose, il faut remonter la palanquée à une profondeur moindre (la narcose disparaît en remontant), informer le GP et surveiller l\'équipier.',
+    explanation:
+        'En cas de signes de narcose, il faut remonter la palanquée à une profondeur moindre (la narcose disparaît en remontant), informer le GP et surveiller l\'équipier.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_67',
-    text: 'Pourquoi les plongeurs doivent-ils s\'hydrater avant et après une plongée ?',
-    options: ['Uniquement pour améliorer leurs performances sportives', 'La déshydratation favorise les accidents de désaturation en rendant le sang plus visqueux', 'Pour compenser la transpiration due à la combinaison', 'Uniquement en cas de plongées profondes'],
+    text:
+        'Pourquoi les plongeurs doivent-ils s\'hydrater avant et après une plongée ?',
+    options: [
+      'Uniquement pour améliorer leurs performances sportives',
+      'La déshydratation favorise les accidents de désaturation en rendant le sang plus visqueux',
+      'Pour compenser la transpiration due à la combinaison',
+      'Uniquement en cas de plongées profondes'
+    ],
     correctIndex: 1,
-    explanation: 'La déshydratation rend le sang plus visqueux, ce qui diminue l\'élimination de l\'azote par les poumons et augmente le risque d\'accidents de désaturation.',
+    explanation:
+        'La déshydratation rend le sang plus visqueux, ce qui diminue l\'élimination de l\'azote par les poumons et augmente le risque d\'accidents de désaturation.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_68',
-    text: 'Quel est le rôle du certificat médical d\'absence de contre-indication (CACI) ?',
-    options: ['Attester uniquement l\'état physique général du plongeur', 'Certifier l\'absence de conditions médicales rendant la pratique de la plongée dangereuse', 'Permettre l\'accès aux sites de plongée protégés', 'Justifier le niveau de plongée atteint'],
+    text:
+        'Quel est le rôle du certificat médical d\'absence de contre-indication (CACI) ?',
+    options: [
+      'Attester uniquement l\'état physique général du plongeur',
+      'Certifier l\'absence de conditions médicales rendant la pratique de la plongée dangereuse',
+      'Permettre l\'accès aux sites de plongée protégés',
+      'Justifier le niveau de plongée atteint'
+    ],
     correctIndex: 1,
-    explanation: 'Le CACI (Certificat d\'Absence de Contre-Indication) certifie, après examen médical, qu\'une personne ne présente pas de conditions médicales rendant dangereuse la pratique de la plongée.',
+    explanation:
+        'Le CACI (Certificat d\'Absence de Contre-Indication) certifie, après examen médical, qu\'une personne ne présente pas de conditions médicales rendant dangereuse la pratique de la plongée.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n2_69',
-    text: 'Quelle est la durée de validité du délai entre les acquisitions de compétences pour le N2 ?',
+    text:
+        'Quelle est la durée de validité du délai entre les acquisitions de compétences pour le N2 ?',
     options: ['6 mois', '12 mois', '15 mois', '24 mois'],
     correctIndex: 2,
-    explanation: 'L\'ensemble des compétences du N2 doit être acquis dans un délai de 15 mois à compter de la délivrance de la première compétence.',
+    explanation:
+        'L\'ensemble des compétences du N2 doit être acquis dans un délai de 15 mois à compter de la délivrance de la première compétence.',
     category: 'Organisation',
   ),
   Question(
     id: 'n2_70',
-    text: 'Comment s\'appelle le principe de calcul de la désaturation utilisant des "compartiments tissulaires" à des vitesses d\'élimination différentes ?',
-    options: ['Modèle de Boyle', 'Modèle de Haldane (et ses dérivés ZHL-16C, RGBM)', 'Modèle de Dalton', 'Modèle de Henry'],
+    text:
+        'Comment s\'appelle le principe de calcul de la désaturation utilisant des "compartiments tissulaires" à des vitesses d\'élimination différentes ?',
+    options: [
+      'Modèle de Boyle',
+      'Modèle de Haldane (et ses dérivés ZHL-16C, RGBM)',
+      'Modèle de Dalton',
+      'Modèle de Henry'
+    ],
     correctIndex: 1,
-    explanation: 'Le modèle de Haldane et ses dérivés (Bühlmann ZHL-16C, RGBM) utilisent des compartiments tissulaires fictifs ayant des demi-temps différents pour modéliser l\'absorption et l\'élimination de l\'azote.',
+    explanation:
+        'Le modèle de Haldane et ses dérivés (Bühlmann ZHL-16C, RGBM) utilisent des compartiments tissulaires fictifs ayant des demi-temps différents pour modéliser l\'absorption et l\'élimination de l\'azote.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_71',
-    text: 'Quelle est la différence entre un palier obligatoire et un palier facultatif (de sécurité) dans le cadre du N2 ?',
-    options: ['Aucune différence pratique', 'Le palier obligatoire est calculé par les tables/ordinateur et doit être respecté ; le palier facultatif est recommandé par précaution', 'Le palier facultatif est plus profond', 'Le palier obligatoire dure toujours 3 minutes'],
+    text:
+        'Quelle est la différence entre un palier obligatoire et un palier facultatif (de sécurité) dans le cadre du N2 ?',
+    options: [
+      'Aucune différence pratique',
+      'Le palier obligatoire est calculé par les tables/ordinateur et doit être respecté ; le palier facultatif est recommandé par précaution',
+      'Le palier facultatif est plus profond',
+      'Le palier obligatoire dure toujours 3 minutes'
+    ],
     correctIndex: 1,
-    explanation: 'Le palier obligatoire est exigé par les tables ou l\'ordinateur et doit impérativement être effectué. Le palier facultatif (ou de sécurité) est recommandé par précaution même sans obligation calculée.',
+    explanation:
+        'Le palier obligatoire est exigé par les tables ou l\'ordinateur et doit impérativement être effectué. Le palier facultatif (ou de sécurité) est recommandé par précaution même sans obligation calculée.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_72',
     text: 'Qu\'est-ce que le "mode carnet de plongée" d\'un ordinateur ?',
-    options: ['Un mode de planification des prochaines plongées', 'La fonction permettant de relire les profils et données des plongées enregistrées', 'Un mode d\'économie d\'énergie', 'La possibilité de saisir des notes textuelles'],
+    options: [
+      'Un mode de planification des prochaines plongées',
+      'La fonction permettant de relire les profils et données des plongées enregistrées',
+      'Un mode d\'économie d\'énergie',
+      'La possibilité de saisir des notes textuelles'
+    ],
     correctIndex: 1,
-    explanation: 'Le mode carnet de plongée (logbook) permet de relire et d\'analyser les profils et données (profondeur, durée, paliers) des plongées enregistrées par l\'ordinateur.',
+    explanation:
+        'Le mode carnet de plongée (logbook) permet de relire et d\'analyser les profils et données (profondeur, durée, paliers) des plongées enregistrées par l\'ordinateur.',
     category: 'Équipement',
   ),
   Question(
     id: 'n2_73',
-    text: 'Pourquoi l\'effort physique intense augmente-t-il le risque d\'accident de désaturation ?',
-    options: ['Il n\'augmente pas le risque', 'Il augmente l\'absorption d\'azote et peut créer des microbulles favorisant l\'ADD', 'Il diminue la saturation en azote par l\'augmentation de la circulation', 'Il n\'a d\'effet qu\'en surface'],
+    text:
+        'Pourquoi l\'effort physique intense augmente-t-il le risque d\'accident de désaturation ?',
+    options: [
+      'Il n\'augmente pas le risque',
+      'Il augmente l\'absorption d\'azote et peut créer des microbulles favorisant l\'ADD',
+      'Il diminue la saturation en azote par l\'augmentation de la circulation',
+      'Il n\'a d\'effet qu\'en surface'
+    ],
     correctIndex: 1,
-    explanation: 'L\'effort physique intense augmente la perfusion des tissus et donc l\'absorption d\'azote, tout en pouvant créer des microbulles de cavitation qui favorisent la formation de bulles d\'ADD.',
+    explanation:
+        'L\'effort physique intense augmente la perfusion des tissus et donc l\'absorption d\'azote, tout en pouvant créer des microbulles de cavitation qui favorisent la formation de bulles d\'ADD.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_74',
-    text: 'Qu\'est-ce que le "protocol de saturation résiduelle" en plongées répétitives ?',
-    options: ['Un protocole médical après un ADD', 'Le calcul de l\'azote restant dans les tissus après une première plongée, influençant la seconde', 'Un tableau de planification des plongées en haute altitude', 'Une procédure d\'urgence en chambre hyperbare'],
+    text:
+        'Qu\'est-ce que le "protocol de saturation résiduelle" en plongées répétitives ?',
+    options: [
+      'Un protocole médical après un ADD',
+      'Le calcul de l\'azote restant dans les tissus après une première plongée, influençant la seconde',
+      'Un tableau de planification des plongées en haute altitude',
+      'Une procédure d\'urgence en chambre hyperbare'
+    ],
     correctIndex: 1,
-    explanation: 'La saturation résiduelle est la quantité d\'azote restant dans les tissus après une première plongée. Elle doit être prise en compte dans le calcul de désaturation de la plongée suivante.',
+    explanation:
+        'La saturation résiduelle est la quantité d\'azote restant dans les tissus après une première plongée. Elle doit être prise en compte dans le calcul de désaturation de la plongée suivante.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_75',
     text: 'Que faire si l\'ordinateur tombe en panne en cours de plongée ?',
-    options: ['Continuer la plongée normalement', 'Remonter immédiatement selon une procédure d\'urgence conservatrice en effectuant un palier prolongé', 'Ignorer le problème et finir la plongée prévue', 'Descendre plus profond pour réinitialiser l\'ordinateur'],
+    options: [
+      'Continuer la plongée normalement',
+      'Remonter immédiatement selon une procédure d\'urgence conservatrice en effectuant un palier prolongé',
+      'Ignorer le problème et finir la plongée prévue',
+      'Descendre plus profond pour réinitialiser l\'ordinateur'
+    ],
     correctIndex: 1,
-    explanation: 'En cas de panne d\'ordinateur, il faut remonter immédiatement selon une procédure conservatrice (palier long à 5-3 m) et ne pas replonger de la journée.',
+    explanation:
+        'En cas de panne d\'ordinateur, il faut remonter immédiatement selon une procédure conservatrice (palier long à 5-3 m) et ne pas replonger de la journée.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n2_76',
-    text: 'Qu\'est-ce que l\'espace "0-20 m" pour le PA20 et quelles en sont les caractéristiques réglementaires ?',
-    options: ['La zone libre sans contrainte réglementaire', 'L\'espace d\'évolution en autonomie du PA20, sous la responsabilité d\'un DP présent sur site', 'Une zone uniquement pour les débutants sans DP', 'Une zone sans palier ni ordinateur obligatoire'],
+    text:
+        'Qu\'est-ce que l\'espace "0-20 m" pour le PA20 et quelles en sont les caractéristiques réglementaires ?',
+    options: [
+      'La zone libre sans contrainte réglementaire',
+      'L\'espace d\'évolution en autonomie du PA20, sous la responsabilité d\'un DP présent sur site',
+      'Une zone uniquement pour les débutants sans DP',
+      'Une zone sans palier ni ordinateur obligatoire'
+    ],
     correctIndex: 1,
-    explanation: 'L\'espace 0-20 m est la zone d\'évolution en autonomie du PA20 : ces plongées se réalisent sous la responsabilité d\'un directeur de plongée (DP) présent sur le site qui donne les consignes.',
+    explanation:
+        'L\'espace 0-20 m est la zone d\'évolution en autonomie du PA20 : ces plongées se réalisent sous la responsabilité d\'un directeur de plongée (DP) présent sur le site qui donne les consignes.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n2_77',
-    text: 'Que doit vérifier le PA20 concernant les moyens de désaturation de ses équipiers avant la plongée ?',
-    options: ['Il n\'a pas à s\'en préoccuper', 'Le type d\'ordinateur ou tables utilisé par chaque équipier pour adapter la planification collective', 'Uniquement la marque de l\'ordinateur', 'Uniquement si l\'ordinateur est chargé'],
+    text:
+        'Que doit vérifier le PA20 concernant les moyens de désaturation de ses équipiers avant la plongée ?',
+    options: [
+      'Il n\'a pas à s\'en préoccuper',
+      'Le type d\'ordinateur ou tables utilisé par chaque équipier pour adapter la planification collective',
+      'Uniquement la marque de l\'ordinateur',
+      'Uniquement si l\'ordinateur est chargé'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA20 doit connaître les moyens de désaturation de ses équipiers (type d\'ordinateur, niveau de conservatisme) pour planifier collectivement la plongée en s\'alignant sur le plus conservateur.',
+    explanation:
+        'Le PA20 doit connaître les moyens de désaturation de ses équipiers (type d\'ordinateur, niveau de conservatisme) pour planifier collectivement la plongée en s\'alignant sur le plus conservateur.',
     category: 'Planification',
   ),
   Question(
     id: 'n2_78',
-    text: 'Quelle est la signification de "VDM" dans le contexte de la formation N2 ?',
-    options: ['Vitesse De Montée', 'Vidage De Masque', 'Volume Du Mélange', 'Vérification Du Matériel'],
+    text:
+        'Quelle est la signification de "VDM" dans le contexte de la formation N2 ?',
+    options: [
+      'Vitesse De Montée',
+      'Vidage De Masque',
+      'Volume Du Mélange',
+      'Vérification Du Matériel'
+    ],
     correctIndex: 1,
-    explanation: 'VDM signifie "Vidage De Masque", une technique fondamentale que le N2 doit maîtriser jusqu\'à 20 m dans des situations variées et sans stress.',
+    explanation:
+        'VDM signifie "Vidage De Masque", une technique fondamentale que le N2 doit maîtriser jusqu\'à 20 m dans des situations variées et sans stress.',
     category: 'Techniques',
   ),
   Question(
     id: 'n2_79',
-    text: 'Pour quelles raisons l\'utilisation du signe "mi-pression" est-elle importante en autonomie PA20 ?',
-    options: ['Pour informer le GP de l\'heure', 'Pour permettre à la palanquée de gérer collectivement l\'autonomie en air et décider d\'un éventuel raccourcissement de la plongée', 'Pour déclencher la mise en route de la réserve', 'Pour indiquer la position GPS du plongeur'],
+    text:
+        'Pour quelles raisons l\'utilisation du signe "mi-pression" est-elle importante en autonomie PA20 ?',
+    options: [
+      'Pour informer le GP de l\'heure',
+      'Pour permettre à la palanquée de gérer collectivement l\'autonomie en air et décider d\'un éventuel raccourcissement de la plongée',
+      'Pour déclencher la mise en route de la réserve',
+      'Pour indiquer la position GPS du plongeur'
+    ],
     correctIndex: 1,
-    explanation: 'Le signe "mi-pression" permet à la palanquée de gérer collectivement l\'autonomie en air : si un plongeur atteint la mi-pression, la plongée doit être orientée vers la remontée.',
+    explanation:
+        'Le signe "mi-pression" permet à la palanquée de gérer collectivement l\'autonomie en air : si un plongeur atteint la mi-pression, la plongée doit être orientée vers la remontée.',
     category: 'Autonomie',
   ),
   Question(
     id: 'n2_80',
-    text: 'Quelle est la différence entre la pression absolue et la pression relative (manométrique) en plongée ?',
-    options: ['Il n\'y a aucune différence', 'La pression absolue inclut la pression atmosphérique (1 bar) ; la pression relative ne compte que la pression hydrostatique', 'La pression relative est toujours supérieure', 'La pression absolue s\'exprime en mètres'],
+    text:
+        'Quelle est la différence entre la pression absolue et la pression relative (manométrique) en plongée ?',
+    options: [
+      'Il n\'y a aucune différence',
+      'La pression absolue inclut la pression atmosphérique (1 bar) ; la pression relative ne compte que la pression hydrostatique',
+      'La pression relative est toujours supérieure',
+      'La pression absolue s\'exprime en mètres'
+    ],
     correctIndex: 1,
-    explanation: 'La pression absolue = pression atmosphérique (1 bar) + pression hydrostatique. La pression relative (manométrique) ne mesure que la pression hydrostatique au-delà de la pression atmosphérique.',
+    explanation:
+        'La pression absolue = pression atmosphérique (1 bar) + pression hydrostatique. La pression relative (manométrique) ne mesure que la pression hydrostatique au-delà de la pression atmosphérique.',
     category: 'Physique',
   ),
   Question(
     id: 'n2_81',
-    text: 'Qu\'est-ce que la flottabilité négative et quand est-elle utile en plongée ?',
-    options: ['Elle n\'est jamais utile', 'Elle permet au plongeur de descendre vers le fond lors de l\'immersion initiale', 'Elle correspond à une panne de gilet', 'Elle est uniquement liée au lestage excessif'],
+    text:
+        'Qu\'est-ce que la flottabilité négative et quand est-elle utile en plongée ?',
+    options: [
+      'Elle n\'est jamais utile',
+      'Elle permet au plongeur de descendre vers le fond lors de l\'immersion initiale',
+      'Elle correspond à une panne de gilet',
+      'Elle est uniquement liée au lestage excessif'
+    ],
     correctIndex: 1,
-    explanation: 'La flottabilité négative (poids supérieur à la poussée d\'Archimède) permet d\'initier la descente lors de l\'immersion. Elle doit être maîtrisée pour ne pas descendre trop vite.',
+    explanation:
+        'La flottabilité négative (poids supérieur à la poussée d\'Archimède) permet d\'initier la descente lors de l\'immersion. Elle doit être maîtrisée pour ne pas descendre trop vite.',
     category: 'Physique',
   ),
   Question(
     id: 'n2_82',
-    text: 'Pourquoi est-il important de ne pas plonger après une consommation d\'alcool ?',
-    options: ['L\'alcool améliore la résistance au froid donc ce n\'est pas un problème', 'L\'alcool augmente la déshydratation, altère le jugement et les réflexes, et favorise les accidents de désaturation', 'Uniquement pour des raisons légales', 'L\'alcool n\'a pas d\'effet sous l\'eau'],
+    text:
+        'Pourquoi est-il important de ne pas plonger après une consommation d\'alcool ?',
+    options: [
+      'L\'alcool améliore la résistance au froid donc ce n\'est pas un problème',
+      'L\'alcool augmente la déshydratation, altère le jugement et les réflexes, et favorise les accidents de désaturation',
+      'Uniquement pour des raisons légales',
+      'L\'alcool n\'a pas d\'effet sous l\'eau'
+    ],
     correctIndex: 1,
-    explanation: 'L\'alcool déshydrate, altère le jugement et les réflexes, et est un facteur favorisant les accidents de désaturation. Il est déconseillé avant toute plongée.',
+    explanation:
+        'L\'alcool déshydrate, altère le jugement et les réflexes, et est un facteur favorisant les accidents de désaturation. Il est déconseillé avant toute plongée.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_83',
-    text: 'Quelle est la "marge de sécurité" dans le calcul de l\'autonomie en air ?',
-    options: ['L\'air utilisé pour les paliers uniquement', 'Une réserve d\'air (en pression ou volume) conservée pour les imprévus, les paliers et la remontée', 'L\'air restant dans la bouteille après la plongée', 'La quantité d\'air consommée pendant la descente'],
+    text:
+        'Quelle est la "marge de sécurité" dans le calcul de l\'autonomie en air ?',
+    options: [
+      'L\'air utilisé pour les paliers uniquement',
+      'Une réserve d\'air (en pression ou volume) conservée pour les imprévus, les paliers et la remontée',
+      'L\'air restant dans la bouteille après la plongée',
+      'La quantité d\'air consommée pendant la descente'
+    ],
     correctIndex: 1,
-    explanation: 'La marge de sécurité est une réserve d\'air planifiée pour faire face aux imprévus (incident, assistance), assurer les paliers de décompression et la remontée en sécurité.',
+    explanation:
+        'La marge de sécurité est une réserve d\'air planifiée pour faire face aux imprévus (incident, assistance), assurer les paliers de décompression et la remontée en sécurité.',
     category: 'Planification',
   ),
   Question(
     id: 'n2_84',
-    text: 'Qu\'est-ce que l\'indicateur de "vitesse de remontée" sur un ordinateur de plongée et pourquoi est-il important ?',
-    options: ['Il indique la vitesse de nage horizontale', 'Il signale si la vitesse de remontée dépasse la limite recommandée, permettant au plongeur de corriger immédiatement', 'Il mesure la pression de l\'eau uniquement', 'C\'est une fonction secondaire peu utile'],
+    text:
+        'Qu\'est-ce que l\'indicateur de "vitesse de remontée" sur un ordinateur de plongée et pourquoi est-il important ?',
+    options: [
+      'Il indique la vitesse de nage horizontale',
+      'Il signale si la vitesse de remontée dépasse la limite recommandée, permettant au plongeur de corriger immédiatement',
+      'Il mesure la pression de l\'eau uniquement',
+      'C\'est une fonction secondaire peu utile'
+    ],
     correctIndex: 1,
-    explanation: 'L\'indicateur de vitesse de remontée alerte le plongeur en temps réel si sa remontée est trop rapide, lui permettant de la ralentir immédiatement pour éviter tout risque d\'ADD.',
+    explanation:
+        'L\'indicateur de vitesse de remontée alerte le plongeur en temps réel si sa remontée est trop rapide, lui permettant de la ralentir immédiatement pour éviter tout risque d\'ADD.',
     category: 'Équipement',
   ),
   Question(
     id: 'n2_85',
-    text: 'En cas d\'intervention sur un plongeur en difficulté, quelle est l\'importance de l\'attitude "calme et rassurante" ?',
-    options: ['Elle n\'a pas d\'importance en situation d\'urgence', 'Elle évite d\'aggraver la panique du plongeur assisté et permet une prise en charge efficace et sécurisée', 'Elle est uniquement importante pour les plongeurs de haut niveau', 'Elle ralentit l\'intervention'],
+    text:
+        'En cas d\'intervention sur un plongeur en difficulté, quelle est l\'importance de l\'attitude "calme et rassurante" ?',
+    options: [
+      'Elle n\'a pas d\'importance en situation d\'urgence',
+      'Elle évite d\'aggraver la panique du plongeur assisté et permet une prise en charge efficace et sécurisée',
+      'Elle est uniquement importante pour les plongeurs de haut niveau',
+      'Elle ralentit l\'intervention'
+    ],
     correctIndex: 1,
-    explanation: 'Une attitude calme et rassurante est essentielle lors d\'une assistance : elle évite d\'aggraver la panique du plongeur en difficulté et permet une prise en charge plus efficace et sécurisée.',
+    explanation:
+        'Une attitude calme et rassurante est essentielle lors d\'une assistance : elle évite d\'aggraver la panique du plongeur en difficulté et permet une prise en charge plus efficace et sécurisée.',
     category: 'Intervention',
   ),
   Question(
     id: 'n2_86',
-    text: 'Quelle est la profondeur de référence pour le calcul de la consommation de la "réserve" d\'air ?',
-    options: ['La profondeur maximale atteinte', 'La profondeur maximale de la plongée + la profondeur du palier éventuel', 'La profondeur moyenne de la plongée', 'La profondeur d\'entrée dans l\'eau'],
+    text:
+        'Quelle est la profondeur de référence pour le calcul de la consommation de la "réserve" d\'air ?',
+    options: [
+      'La profondeur maximale atteinte',
+      'La profondeur maximale de la plongée + la profondeur du palier éventuel',
+      'La profondeur moyenne de la plongée',
+      'La profondeur d\'entrée dans l\'eau'
+    ],
     correctIndex: 1,
-    explanation: 'Pour calculer l\'autonomie avec sécurité, on prend en compte la consommation à la profondeur maximale (la plus élevée) ainsi que la consommation lors des paliers éventuels de décompression.',
+    explanation:
+        'Pour calculer l\'autonomie avec sécurité, on prend en compte la consommation à la profondeur maximale (la plus élevée) ainsi que la consommation lors des paliers éventuels de décompression.',
     category: 'Physique',
   ),
   Question(
     id: 'n2_87',
-    text: 'Dans quel contexte les compétences N2 peuvent-elles être évaluées par écrit selon le règlement FFESSM ?',
-    options: ['Jamais, tout est oral ou pratique', 'Les connaissances théoriques peuvent être évaluées oralement, en situation pratique ou par écrit', 'Uniquement par écrit', 'Uniquement lors de l\'examen national'],
+    text:
+        'Dans quel contexte les compétences N2 peuvent-elles être évaluées par écrit selon le règlement FFESSM ?',
+    options: [
+      'Jamais, tout est oral ou pratique',
+      'Les connaissances théoriques peuvent être évaluées oralement, en situation pratique ou par écrit',
+      'Uniquement par écrit',
+      'Uniquement lors de l\'examen national'
+    ],
     correctIndex: 1,
-    explanation: 'Selon les règles d\'organisation N2, les connaissances théoriques peuvent être évaluées oralement, en situation pratique ou par écrit, au choix de l\'encadrant.',
+    explanation:
+        'Selon les règles d\'organisation N2, les connaissances théoriques peuvent être évaluées oralement, en situation pratique ou par écrit, au choix de l\'encadrant.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n2_88',
-    text: 'Qu\'est-ce qu\'un "sinusite barotraumatique" et comment se produit-il ?',
-    options: ['Une inflammation des sinus suite à une infection bactérienne', 'Une douleur ou lésion des sinus causée par une différence de pression lors de la descente si les ostiums sinusaux sont obstrués', 'Un effet du froid sur les sinus', 'Un trouble de l\'oreille interne'],
+    text:
+        'Qu\'est-ce qu\'un "sinusite barotraumatique" et comment se produit-il ?',
+    options: [
+      'Une inflammation des sinus suite à une infection bactérienne',
+      'Une douleur ou lésion des sinus causée par une différence de pression lors de la descente si les ostiums sinusaux sont obstrués',
+      'Un effet du froid sur les sinus',
+      'Un trouble de l\'oreille interne'
+    ],
     correctIndex: 1,
-    explanation: 'Un barotraumatisme sinusien se produit lors de la descente si les passages sinusaux sont obstrués (rhume, congestion) : la pression ne peut pas s\'équilibrer, causant douleur et parfois lésion.',
+    explanation:
+        'Un barotraumatisme sinusien se produit lors de la descente si les passages sinusaux sont obstrués (rhume, congestion) : la pression ne peut pas s\'équilibrer, causant douleur et parfois lésion.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_89',
     text: 'Qu\'appelle-t-on "palanquée" en plongée ?',
-    options: ['L\'ensemble du matériel de plongée', 'Le groupe de plongeurs qui évoluent ensemble sous la responsabilité d\'un encadrant ou en autonomie', 'Le bateau support de plongée', 'La bouteille d\'air comprimé'],
+    options: [
+      'L\'ensemble du matériel de plongée',
+      'Le groupe de plongeurs qui évoluent ensemble sous la responsabilité d\'un encadrant ou en autonomie',
+      'Le bateau support de plongée',
+      'La bouteille d\'air comprimé'
+    ],
     correctIndex: 1,
-    explanation: 'Une palanquée est le groupe de plongeurs (2 à 5 généralement) qui évoluent ensemble sous la responsabilité d\'un encadrant ou en autonomie, solidaires les uns des autres.',
+    explanation:
+        'Une palanquée est le groupe de plongeurs (2 à 5 généralement) qui évoluent ensemble sous la responsabilité d\'un encadrant ou en autonomie, solidaires les uns des autres.',
     category: 'Organisation',
   ),
   Question(
     id: 'n2_90',
-    text: 'Quel est l\'avantage principal d\'un plongeur PA20 par rapport à un plongeur PE40 pour l\'organisation d\'une sortie ?',
-    options: ['Le PA20 peut plonger plus profond', 'Le PA20 peut plonger en autonomie sans avoir besoin d\'un GP encadrant sa palanquée', 'Le PA20 n\'a pas besoin de DP sur le site', 'Le PA20 peut former d\'autres plongeurs'],
+    text:
+        'Quel est l\'avantage principal d\'un plongeur PA20 par rapport à un plongeur PE40 pour l\'organisation d\'une sortie ?',
+    options: [
+      'Le PA20 peut plonger plus profond',
+      'Le PA20 peut plonger en autonomie sans avoir besoin d\'un GP encadrant sa palanquée',
+      'Le PA20 n\'a pas besoin de DP sur le site',
+      'Le PA20 peut former d\'autres plongeurs'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA20 peut évoluer en autonomie avec des équipiers de même niveau sans nécessiter d\'un guide de palanquée (GP) encadrant sa palanquée, à condition qu\'un DP soit présent sur le site.',
+    explanation:
+        'Le PA20 peut évoluer en autonomie avec des équipiers de même niveau sans nécessiter d\'un guide de palanquée (GP) encadrant sa palanquée, à condition qu\'un DP soit présent sur le site.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n2_91',
     text: 'Quelle est l\'utilité du "pavillon Alpha" en plongée ?',
-    options: ['Signal météo indiquant le vent', 'Pavillon de plongée obligatoire indiquant qu\'une plongée est en cours et demandant aux autres navires de s\'éloigner', 'Signal de détresse maritime', 'Indicateur de la qualité de l\'eau'],
+    options: [
+      'Signal météo indiquant le vent',
+      'Pavillon de plongée obligatoire indiquant qu\'une plongée est en cours et demandant aux autres navires de s\'éloigner',
+      'Signal de détresse maritime',
+      'Indicateur de la qualité de l\'eau'
+    ],
     correctIndex: 1,
-    explanation: 'Le pavillon Alpha (bleu et blanc) est le signal international indiquant qu\'une activité de plongée est en cours. Il demande aux autres navires de passer à distance et de ralentir.',
+    explanation:
+        'Le pavillon Alpha (bleu et blanc) est le signal international indiquant qu\'une activité de plongée est en cours. Il demande aux autres navires de passer à distance et de ralentir.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n2_92',
-    text: 'Quelle est la différence entre un "palier de décompression" et un "palier de sécurité" ?',
-    options: ['Aucune différence', 'Le palier de décompression est obligatoire selon les tables/ordinateur ; le palier de sécurité est facultatif mais recommandé', 'Le palier de sécurité est plus profond', 'Le palier de décompression dure toujours 3 minutes'],
+    text:
+        'Quelle est la différence entre un "palier de décompression" et un "palier de sécurité" ?',
+    options: [
+      'Aucune différence',
+      'Le palier de décompression est obligatoire selon les tables/ordinateur ; le palier de sécurité est facultatif mais recommandé',
+      'Le palier de sécurité est plus profond',
+      'Le palier de décompression dure toujours 3 minutes'
+    ],
     correctIndex: 1,
-    explanation: 'Le palier de décompression est calculé et obligatoire selon les tables ou l\'ordinateur. Le palier de sécurité (généralement 3 min à 5 m) est facultatif mais recommandé par précaution.',
+    explanation:
+        'Le palier de décompression est calculé et obligatoire selon les tables ou l\'ordinateur. Le palier de sécurité (généralement 3 min à 5 m) est facultatif mais recommandé par précaution.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_93',
-    text: 'Quel est l\'intervalle minimum de surface recommandé entre deux plongées en plongées répétitives ?',
-    options: ['30 minutes', '1 heure', 'Variable selon les tables/ordinateur, généralement au moins 1h pour les tables', '3 heures minimum dans tous les cas'],
+    text:
+        'Quel est l\'intervalle minimum de surface recommandé entre deux plongées en plongées répétitives ?',
+    options: [
+      '30 minutes',
+      '1 heure',
+      'Variable selon les tables/ordinateur, généralement au moins 1h pour les tables',
+      '3 heures minimum dans tous les cas'
+    ],
     correctIndex: 2,
-    explanation: 'L\'intervalle de surface minimum varie selon les tables et ordinateurs. Les tables fédérales recommandent généralement au minimum 1 heure de surface entre deux plongées.',
+    explanation:
+        'L\'intervalle de surface minimum varie selon les tables et ordinateurs. Les tables fédérales recommandent généralement au minimum 1 heure de surface entre deux plongées.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_94',
-    text: 'Qu\'est-ce qu\'un "conflit de plongée" pour un plongeur N2 en palanquée utilisant des ordinateurs différents ?',
-    options: ['Un désaccord entre plongeurs sur le site à choisir', 'La situation où les ordinateurs calculent des paliers différents selon leurs algorithmes, nécessitant de s\'aligner sur le plus conservateur', 'Un problème technique avec les ordinateurs', 'Une incompatibilité de certification'],
+    text:
+        'Qu\'est-ce qu\'un "conflit de plongée" pour un plongeur N2 en palanquée utilisant des ordinateurs différents ?',
+    options: [
+      'Un désaccord entre plongeurs sur le site à choisir',
+      'La situation où les ordinateurs calculent des paliers différents selon leurs algorithmes, nécessitant de s\'aligner sur le plus conservateur',
+      'Un problème technique avec les ordinateurs',
+      'Une incompatibilité de certification'
+    ],
     correctIndex: 1,
-    explanation: 'Quand les ordinateurs de la palanquée calculent des paliers différents, c\'est un conflit de désaturation : la règle est de s\'aligner sur l\'ordinateur le plus conservateur (paliers les plus longs).',
+    explanation:
+        'Quand les ordinateurs de la palanquée calculent des paliers différents, c\'est un conflit de désaturation : la règle est de s\'aligner sur l\'ordinateur le plus conservateur (paliers les plus longs).',
     category: 'Désaturation',
   ),
   Question(
     id: 'n2_95',
-    text: 'Quelle est la cause principale de l\'essoufflement lors d\'une descente rapide ?',
-    options: ['Le froid de l\'eau', 'L\'augmentation rapide de la densité de l\'air inspiré augmentant la résistance respiratoire et l\'effort nécessaire', 'La pression sur les oreilles', 'Une mauvaise position de plongée'],
+    text:
+        'Quelle est la cause principale de l\'essoufflement lors d\'une descente rapide ?',
+    options: [
+      'Le froid de l\'eau',
+      'L\'augmentation rapide de la densité de l\'air inspiré augmentant la résistance respiratoire et l\'effort nécessaire',
+      'La pression sur les oreilles',
+      'Une mauvaise position de plongée'
+    ],
     correctIndex: 1,
-    explanation: 'Lors d\'une descente rapide, la densité de l\'air augmente avec la pression, rendant chaque inspiration plus difficile et pouvant provoquer un essoufflement si le plongeur forçait déjà son effort.',
+    explanation:
+        'Lors d\'une descente rapide, la densité de l\'air augmente avec la pression, rendant chaque inspiration plus difficile et pouvant provoquer un essoufflement si le plongeur forçait déjà son effort.',
     category: 'Accidents',
   ),
   Question(
     id: 'n2_96',
     text: 'Qu\'est-ce que la "compensation par la manœuvre de Frenzel" ?',
-    options: ['Une technique de gonflage du gilet', 'Une technique d\'équilibrage de la pression dans les oreilles par contraction des muscles de la gorge sans forcer sur les poumons', 'Une méthode de descente rapide', 'Un exercice de respiration en surface'],
+    options: [
+      'Une technique de gonflage du gilet',
+      'Une technique d\'équilibrage de la pression dans les oreilles par contraction des muscles de la gorge sans forcer sur les poumons',
+      'Une méthode de descente rapide',
+      'Un exercice de respiration en surface'
+    ],
     correctIndex: 1,
-    explanation: 'La manœuvre de Frenzel est une technique d\'équilibrage de la pression des oreilles utilisant la contraction des muscles de la gorge (comme pour avaler), plus douce que la manœuvre de Valsalva et préférable en profondeur.',
+    explanation:
+        'La manœuvre de Frenzel est une technique d\'équilibrage de la pression des oreilles utilisant la contraction des muscles de la gorge (comme pour avaler), plus douce que la manœuvre de Valsalva et préférable en profondeur.',
     category: 'Techniques',
   ),
   Question(
     id: 'n2_97',
-    text: 'Pourquoi le N2 doit-il connaître la topologie du site avant de plonger ?',
-    options: ['Uniquement pour le briefing du GP', 'Pour planifier l\'orientation, prévoir les contraintes (courant, relief) et adapter le profil de la plongée', 'Pour remplir les documents réglementaires', 'Uniquement pour des raisons d\'assurance'],
+    text:
+        'Pourquoi le N2 doit-il connaître la topologie du site avant de plonger ?',
+    options: [
+      'Uniquement pour le briefing du GP',
+      'Pour planifier l\'orientation, prévoir les contraintes (courant, relief) et adapter le profil de la plongée',
+      'Pour remplir les documents réglementaires',
+      'Uniquement pour des raisons d\'assurance'
+    ],
     correctIndex: 1,
-    explanation: 'La connaissance de la topologie du site permet de planifier l\'orientation, identifier les repères, anticiper les contraintes (courant, relief, marée) et adapter le profil de plongée.',
+    explanation:
+        'La connaissance de la topologie du site permet de planifier l\'orientation, identifier les repères, anticiper les contraintes (courant, relief, marée) et adapter le profil de plongée.',
     category: 'Planification',
   ),
   Question(
     id: 'n2_98',
-    text: 'Quels sont les éléments que le N2 doit vérifier concernant le matériel de ses équipiers ?',
-    options: ['Uniquement la pression de leur bouteille', 'Moyen de désaturation, fonctionnement du gilet, localisation du détendeur de secours, moyen de contrôle de la pression d\'air', 'Uniquement la marque du matériel', 'Uniquement si le matériel est certifié CE'],
+    text:
+        'Quels sont les éléments que le N2 doit vérifier concernant le matériel de ses équipiers ?',
+    options: [
+      'Uniquement la pression de leur bouteille',
+      'Moyen de désaturation, fonctionnement du gilet, localisation du détendeur de secours, moyen de contrôle de la pression d\'air',
+      'Uniquement la marque du matériel',
+      'Uniquement si le matériel est certifié CE'
+    ],
     correctIndex: 1,
-    explanation: 'Le N2 doit connaître pour chaque équipier : le moyen de désaturation utilisé, le fonctionnement de leur gilet, la localisation de leur détendeur de secours et leur moyen de contrôle de la pression d\'air.',
+    explanation:
+        'Le N2 doit connaître pour chaque équipier : le moyen de désaturation utilisé, le fonctionnement de leur gilet, la localisation de leur détendeur de secours et leur moyen de contrôle de la pression d\'air.',
     category: 'Équipement',
   ),
   Question(
     id: 'n2_99',
-    text: 'Qu\'est-ce que l\'organisme FFESSM désigne par "certification équivalente" pour l\'accès à la formation N2 ?',
-    options: ['Uniquement les certifications CMAS', 'Les certifications d\'autres organismes reconnues comme ayant les aptitudes équivalentes au N1 FFESSM', 'Les certifications militaires uniquement', 'Uniquement les certifications européennes'],
+    text:
+        'Qu\'est-ce que l\'organisme FFESSM désigne par "certification équivalente" pour l\'accès à la formation N2 ?',
+    options: [
+      'Uniquement les certifications CMAS',
+      'Les certifications d\'autres organismes reconnues comme ayant les aptitudes équivalentes au N1 FFESSM',
+      'Les certifications militaires uniquement',
+      'Uniquement les certifications européennes'
+    ],
     correctIndex: 1,
-    explanation: 'Une "certification équivalente" au N1 peut être délivrée par d\'autres organismes de plongée reconnus (PADI, SSI, CMAS d\'autres fédérations) dès lors que les aptitudes sont jugées équivalentes.',
+    explanation:
+        'Une "certification équivalente" au N1 peut être délivrée par d\'autres organismes de plongée reconnus (PADI, SSI, CMAS d\'autres fédérations) dès lors que les aptitudes sont jugées équivalentes.',
     category: 'Conditions d\'accès',
   ),
   Question(
     id: 'n2_100',
-    text: 'Quel est le délai maximum accordé pour un "rattrapage" d\'une qualification N2 non obtenue lors d\'une première tentative ?',
-    options: ['Il n\'existe pas de système de rattrapage au N2', 'Les compétences non acquises peuvent être repassées dans les 15 mois suivant la première compétence obtenue', 'Uniquement 3 mois de délai supplémentaire', '24 mois supplémentaires'],
+    text:
+        'Quel est le délai maximum accordé pour un "rattrapage" d\'une qualification N2 non obtenue lors d\'une première tentative ?',
+    options: [
+      'Il n\'existe pas de système de rattrapage au N2',
+      'Les compétences non acquises peuvent être repassées dans les 15 mois suivant la première compétence obtenue',
+      'Uniquement 3 mois de délai supplémentaire',
+      '24 mois supplémentaires'
+    ],
     correctIndex: 1,
-    explanation: 'Toutes les compétences du N2 doivent être acquises dans les 15 mois à compter de la délivrance de la première compétence. Ce délai s\'applique à l\'ensemble du parcours de formation.',
+    explanation:
+        'Toutes les compétences du N2 doivent être acquises dans les 15 mois à compter de la délivrance de la première compétence. Ce délai s\'applique à l\'ensemble du parcours de formation.',
     category: 'Organisation',
   ),
 ];
@@ -1678,23 +2909,28 @@ const List<Question> _niveau3Questions = [
     text: 'Jusqu\'à quelle profondeur le PA40 peut-il évoluer en autonomie ?',
     options: ['30 mètres', '40 mètres', '60 mètres', '20 mètres'],
     correctIndex: 1,
-    explanation: 'Le plongeur autonome à 40 m (PA40) peut effectuer des plongées en autonomie jusqu\'à 40 m au sein d\'une palanquée avec des équipiers de même niveau.',
+    explanation:
+        'Le plongeur autonome à 40 m (PA40) peut effectuer des plongées en autonomie jusqu\'à 40 m au sein d\'une palanquée avec des équipiers de même niveau.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n3_02',
-    text: 'Quel niveau d\'encadrement minimum est requis pour les plongées PE60 dans la zone 40-60 m ?',
+    text:
+        'Quel niveau d\'encadrement minimum est requis pour les plongées PE60 dans la zone 40-60 m ?',
     options: ['E2 minimum', 'E3 minimum', 'E4 minimum', 'E5 minimum'],
     correctIndex: 2,
-    explanation: 'Le PE60 peut effectuer des plongées jusqu\'à 60 m dans une palanquée encadrée par un E4 minimum pour les évolutions entre 40 et 60 m.',
+    explanation:
+        'Le PE60 peut effectuer des plongées jusqu\'à 60 m dans une palanquée encadrée par un E4 minimum pour les évolutions entre 40 et 60 m.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n3_03',
-    text: 'Quel est l\'âge minimum pour accéder à la formation PE60 ou Niveau 3 ?',
+    text:
+        'Quel est l\'âge minimum pour accéder à la formation PE60 ou Niveau 3 ?',
     options: ['15 ans', '16 ans', '17 ans', '18 ans'],
     correctIndex: 2,
-    explanation: 'Pour le PE60 et le Niveau 3, il faut être âgé de 17 ans au moins à la date d\'entrée en formation et de délivrance de la certification.',
+    explanation:
+        'Pour le PE60 et le Niveau 3, il faut être âgé de 17 ans au moins à la date d\'entrée en formation et de délivrance de la certification.',
     category: 'Conditions d\'accès',
   ),
   Question(
@@ -1702,81 +2938,144 @@ const List<Question> _niveau3Questions = [
     text: 'Quel est l\'âge minimum pour la qualification PA40 ?',
     options: ['15 ans', '16 ans', '17 ans', '18 ans'],
     correctIndex: 1,
-    explanation: 'Pour la qualification PA40, il faut être âgé de 16 ans au moins à la date d\'entrée en formation et de délivrance.',
+    explanation:
+        'Pour la qualification PA40, il faut être âgé de 16 ans au moins à la date d\'entrée en formation et de délivrance.',
     category: 'Conditions d\'accès',
   ),
   Question(
     id: 'n3_05',
-    text: 'À partir de quel âge le PA40 peut-il évoluer en autonomie dans l\'espace 0-40 m ?',
-    options: ['16 ans', '17 ans', '18 ans dès l\'obtention', 'À partir de 17 ans sur décision du DP'],
+    text:
+        'À partir de quel âge le PA40 peut-il évoluer en autonomie dans l\'espace 0-40 m ?',
+    options: [
+      '16 ans',
+      '17 ans',
+      '18 ans dès l\'obtention',
+      'À partir de 17 ans sur décision du DP'
+    ],
     correctIndex: 3,
-    explanation: 'À partir de 17 ans, les plongeurs justifiant des aptitudes PA40 sont, sur décision du directeur de plongée, autorisés à évoluer en autonomie dans l\'espace 0-40 m.',
+    explanation:
+        'À partir de 17 ans, les plongeurs justifiant des aptitudes PA40 sont, sur décision du directeur de plongée, autorisés à évoluer en autonomie dans l\'espace 0-40 m.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n3_06',
-    text: 'Quelles certifications préalables sont nécessaires pour accéder à la formation PE60 ?',
-    options: ['Uniquement le N1', 'Le PE40 et au moins 20 plongées attestées en milieu naturel dont 5 entre 35 et 40 m', 'Le PA20 uniquement', 'Le N2 sans condition de plongées'],
+    text:
+        'Quelles certifications préalables sont nécessaires pour accéder à la formation PE60 ?',
+    options: [
+      'Uniquement le N1',
+      'Le PE40 et au moins 20 plongées attestées en milieu naturel dont 5 entre 35 et 40 m',
+      'Le PA20 uniquement',
+      'Le N2 sans condition de plongées'
+    ],
     correctIndex: 1,
-    explanation: 'Pour le PE60, il faut être titulaire du PE40 et avoir réalisé au moins 20 plongées attestées en milieu naturel, dont 5 à une profondeur comprise entre 35 et 40 m.',
+    explanation:
+        'Pour le PE60, il faut être titulaire du PE40 et avoir réalisé au moins 20 plongées attestées en milieu naturel, dont 5 à une profondeur comprise entre 35 et 40 m.',
     category: 'Conditions d\'accès',
   ),
   Question(
     id: 'n3_07',
-    text: 'Le N3 est-il requis pour accéder au brevet de guide de palanquée (GP-N4) ?',
-    options: ['Non, le PA40 suffit', 'Oui, le N3 est le niveau minimum requis pour accéder au GP-N4', 'Non, le PE60 suffit', 'Oui, mais uniquement depuis 2024'],
+    text:
+        'Le N3 est-il requis pour accéder au brevet de guide de palanquée (GP-N4) ?',
+    options: [
+      'Non, le PA40 suffit',
+      'Oui, le N3 est le niveau minimum requis pour accéder au GP-N4',
+      'Non, le PE60 suffit',
+      'Oui, mais uniquement depuis 2024'
+    ],
     correctIndex: 1,
-    explanation: 'Le brevet de niveau 3 (N3) est le niveau de plongeur minimum requis pour accéder au brevet de guide de palanquée (GP-N4).',
+    explanation:
+        'Le brevet de niveau 3 (N3) est le niveau de plongeur minimum requis pour accéder au brevet de guide de palanquée (GP-N4).',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n3_08',
     text: 'Que certifie la carte CMAS 3* délivrée avec le N3 FFESSM ?',
-    options: ['Des prérogatives uniquement valables en France', 'Des prérogatives étendues hors des frontières françaises selon les législations locales', 'Le droit de former des plongeurs N1', 'Une certification de moniteur international'],
+    options: [
+      'Des prérogatives uniquement valables en France',
+      'Des prérogatives étendues hors des frontières françaises selon les législations locales',
+      'Le droit de former des plongeurs N1',
+      'Une certification de moniteur international'
+    ],
     correctIndex: 1,
-    explanation: 'La carte CMAS 3* offre des prérogatives plus importantes hors des frontières françaises, en fonction des législations et réglementations locales.',
+    explanation:
+        'La carte CMAS 3* offre des prérogatives plus importantes hors des frontières françaises, en fonction des législations et réglementations locales.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n3_09',
-    text: 'Le PA60 (N3) peut-il effectuer des plongées sans directeur de plongée jusqu\'à 60 m ?',
-    options: ['Oui, sans restriction', 'Non, il peut aller en autonomie jusqu\'à 40 m sans DP, mais jusqu\'à 60 m seulement en présence d\'un DP', 'Oui, jusqu\'à 60 m sans DP', 'Non, il a toujours besoin d\'un GP'],
+    text:
+        'Le PA60 (N3) peut-il effectuer des plongées sans directeur de plongée jusqu\'à 60 m ?',
+    options: [
+      'Oui, sans restriction',
+      'Non, il peut aller en autonomie jusqu\'à 40 m sans DP, mais jusqu\'à 60 m seulement en présence d\'un DP',
+      'Oui, jusqu\'à 60 m sans DP',
+      'Non, il a toujours besoin d\'un GP'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA60 peut évoluer en autonomie sans DP jusqu\'à 40 m. Pour évoluer jusqu\'à 60 m, la présence d\'un directeur de plongée (DP) est requise.',
+    explanation:
+        'Le PA60 peut évoluer en autonomie sans DP jusqu\'à 40 m. Pour évoluer jusqu\'à 60 m, la présence d\'un directeur de plongée (DP) est requise.',
     category: 'Prérogatives',
   ),
   Question(
     id: 'n3_10',
-    text: 'Quel document est requis avec le N3 pour accéder à la formation GP-N4 ?',
-    options: ['Uniquement le brevet N3', 'Le N3 et le RIFA Plongée (au moment de la certification)', 'Le N3 et une attestation médicale spéciale', 'Le N3 et 50 plongées attestées'],
+    text:
+        'Quel document est requis avec le N3 pour accéder à la formation GP-N4 ?',
+    options: [
+      'Uniquement le brevet N3',
+      'Le N3 et le RIFA Plongée (au moment de la certification)',
+      'Le N3 et une attestation médicale spéciale',
+      'Le N3 et 50 plongées attestées'
+    ],
     correctIndex: 1,
-    explanation: 'Pour le Niveau 3, il faut être titulaire du N2 ou PA40 et du RIFA Plongée au moment de la certification.',
+    explanation:
+        'Pour le Niveau 3, il faut être titulaire du N2 ou PA40 et du RIFA Plongée au moment de la certification.',
     category: 'Conditions d\'accès',
   ),
 
   // --- PLANIFICATION ---
   Question(
     id: 'n3_11',
-    text: 'Que doit intégrer le PA40 dans la planification de sa plongée en autonomie ?',
-    options: ['Uniquement la profondeur maximale', 'Les consignes du DP, la topologie du site, le profil de plongée, les procédures de désaturation et le protocole de consommation', 'Uniquement les paliers de décompression', 'Uniquement les points d\'intérêt du site'],
+    text:
+        'Que doit intégrer le PA40 dans la planification de sa plongée en autonomie ?',
+    options: [
+      'Uniquement la profondeur maximale',
+      'Les consignes du DP, la topologie du site, le profil de plongée, les procédures de désaturation et le protocole de consommation',
+      'Uniquement les paliers de décompression',
+      'Uniquement les points d\'intérêt du site'
+    ],
     correctIndex: 1,
-    explanation: 'La planification PA40 intègre : directives du DP, topologie et orientation du site, profil de plongée, moyens de désaturation des équipiers, protocole de contrôle des consommations et procédures de retour.',
+    explanation:
+        'La planification PA40 intègre : directives du DP, topologie et orientation du site, profil de plongée, moyens de désaturation des équipiers, protocole de contrôle des consommations et procédures de retour.',
     category: 'Planification',
   ),
   Question(
     id: 'n3_12',
-    text: 'Quel est l\'impact de l\'application des "Gradient Factors" (GF) sur les paliers de décompression ?',
-    options: ['Les GF n\'ont aucun impact sur les paliers', 'Un GF bas/haut plus faible rend les paliers plus longs et conservateurs', 'Un GF plus élevé rend les paliers toujours plus courts', 'Les GF s\'appliquent uniquement aux plongées de plus de 60 m'],
+    text:
+        'Quel est l\'impact de l\'application des "Gradient Factors" (GF) sur les paliers de décompression ?',
+    options: [
+      'Les GF n\'ont aucun impact sur les paliers',
+      'Un GF bas/haut plus faible rend les paliers plus longs et conservateurs',
+      'Un GF plus élevé rend les paliers toujours plus courts',
+      'Les GF s\'appliquent uniquement aux plongées de plus de 60 m'
+    ],
     correctIndex: 1,
-    explanation: 'Les GF (Gradient Factors) permettent d\'ajuster le conservatisme des modèles de désaturation. Un GF bas/haut plus faible que 85-90% rend les paliers plus longs et plus conservateurs.',
+    explanation:
+        'Les GF (Gradient Factors) permettent d\'ajuster le conservatisme des modèles de désaturation. Un GF bas/haut plus faible que 85-90% rend les paliers plus longs et plus conservateurs.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_13',
-    text: 'Lors de la planification PA40, comment sont calculées les consommations en profondeur ?',
-    options: ['La consommation est identique quelle que soit la profondeur', 'En litre/minute et en bar/minute en tenant compte de la pression absolue à la profondeur de plongée', 'Uniquement en bar/min sans tenir compte du volume de la bouteille', 'En fonction de la durée totale sans calcul intermédiaire'],
+    text:
+        'Lors de la planification PA40, comment sont calculées les consommations en profondeur ?',
+    options: [
+      'La consommation est identique quelle que soit la profondeur',
+      'En litre/minute et en bar/minute en tenant compte de la pression absolue à la profondeur de plongée',
+      'Uniquement en bar/min sans tenir compte du volume de la bouteille',
+      'En fonction de la durée totale sans calcul intermédiaire'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA40 doit calculer l\'autonomie et la consommation en profondeur et au palier en litre/minute et en bar/minute, en tenant compte de la pression absolue.',
+    explanation:
+        'Le PA40 doit calculer l\'autonomie et la consommation en profondeur et au palier en litre/minute et en bar/minute, en tenant compte de la pression absolue.',
     category: 'Planification',
   ),
 
@@ -1784,67 +3083,117 @@ const List<Question> _niveau3Questions = [
   Question(
     id: 'n3_14',
     text: 'Quels comportements "à risques" le PA40 doit-il éviter ?',
-    options: ['Utiliser un ordinateur de plongée', 'Profils de plongée inversés, yoyo, plongées répétitives sans interval suffisant', 'Plonger avec des équipiers différents', 'Porter un parachute de signalisation'],
+    options: [
+      'Utiliser un ordinateur de plongée',
+      'Profils de plongée inversés, yoyo, plongées répétitives sans interval suffisant',
+      'Plonger avec des équipiers différents',
+      'Porter un parachute de signalisation'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA40 doit éviter les comportements à risques : profils inversés, profils en yoyo, plongées répétitives trop rapprochées, comportements susceptibles d\'augmenter le risque d\'ADD.',
+    explanation:
+        'Le PA40 doit éviter les comportements à risques : profils inversés, profils en yoyo, plongées répétitives trop rapprochées, comportements susceptibles d\'augmenter le risque d\'ADD.',
     category: 'Autonomie',
   ),
   Question(
     id: 'n3_15',
-    text: 'À quelle profondeur s\'effectue l\'arrêt de sécurité lors du retour en surface du PA40 ?',
-    options: ['À 5 m uniquement', 'Dans la zone 5 à 3 m avec un tour d\'horizon', 'À 10 m uniquement', 'En surface directement'],
+    text:
+        'À quelle profondeur s\'effectue l\'arrêt de sécurité lors du retour en surface du PA40 ?',
+    options: [
+      'À 5 m uniquement',
+      'Dans la zone 5 à 3 m avec un tour d\'horizon',
+      'À 10 m uniquement',
+      'En surface directement'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA40 rejoint la surface en respectant un arrêt et un tour d\'horizon de sécurité dans la zone de 5 à 3 m.',
+    explanation:
+        'Le PA40 rejoint la surface en respectant un arrêt et un tour d\'horizon de sécurité dans la zone de 5 à 3 m.',
     category: 'Autonomie',
   ),
   Question(
     id: 'n3_16',
-    text: 'Comment le PA40 signale-t-il l\'exécution de paliers en pleine eau ?',
-    options: ['Par un signal acoustique', 'Par le déploiement d\'un parachute de signalisation', 'En remontant brièvement en surface', 'Par un signal lumineux'],
+    text:
+        'Comment le PA40 signale-t-il l\'exécution de paliers en pleine eau ?',
+    options: [
+      'Par un signal acoustique',
+      'Par le déploiement d\'un parachute de signalisation',
+      'En remontant brièvement en surface',
+      'Par un signal lumineux'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA40 signale l\'exécution de paliers en pleine eau avec un parachute de signalisation déployé depuis la profondeur de palier.',
+    explanation:
+        'Le PA40 signale l\'exécution de paliers en pleine eau avec un parachute de signalisation déployé depuis la profondeur de palier.',
     category: 'Autonomie',
   ),
   Question(
     id: 'n3_17',
-    text: 'Dans la zone d\'évolution PE60 (40-60 m), quels risques accrus doit-on gérer ?',
-    options: ['Uniquement la narcose', 'Consommation accrue, essoufflement, narcose, froid, risque d\'ADD plus élevé', 'Uniquement les barotraumatismes', 'Uniquement la visibilité réduite'],
+    text:
+        'Dans la zone d\'évolution PE60 (40-60 m), quels risques accrus doit-on gérer ?',
+    options: [
+      'Uniquement la narcose',
+      'Consommation accrue, essoufflement, narcose, froid, risque d\'ADD plus élevé',
+      'Uniquement les barotraumatismes',
+      'Uniquement la visibilité réduite'
+    ],
     correctIndex: 1,
-    explanation: 'La zone 40-60 m implique des risques accrus : consommation d\'air plus importante, essoufflement, narcose à l\'azote, froid plus intense, risque d\'ADD plus élevé nécessitant une gestion rigoureuse.',
+    explanation:
+        'La zone 40-60 m implique des risques accrus : consommation d\'air plus importante, essoufflement, narcose à l\'azote, froid plus intense, risque d\'ADD plus élevé nécessitant une gestion rigoureuse.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n3_18',
-    text: 'Quelle évaluation spécifique s\'applique au PA40 concernant l\'orientation ?',
-    options: ['Aucune évaluation d\'orientation au PA40', 'L\'évaluation s\'effectue à une profondeur proche de 40 m en proposant au moins deux situations différentes', 'Uniquement en surface avec un compas', 'Uniquement sur des parcours de moins de 50 m'],
+    text:
+        'Quelle évaluation spécifique s\'applique au PA40 concernant l\'orientation ?',
+    options: [
+      'Aucune évaluation d\'orientation au PA40',
+      'L\'évaluation s\'effectue à une profondeur proche de 40 m en proposant au moins deux situations différentes',
+      'Uniquement en surface avec un compas',
+      'Uniquement sur des parcours de moins de 50 m'
+    ],
     correctIndex: 1,
-    explanation: 'L\'évaluation du PA40 s\'effectue à une profondeur proche de 40 m, en proposant au moins deux situations différentes pour évaluer l\'orientation et l\'évolution en autonomie.',
+    explanation:
+        'L\'évaluation du PA40 s\'effectue à une profondeur proche de 40 m, en proposant au moins deux situations différentes pour évaluer l\'orientation et l\'évolution en autonomie.',
     category: 'Évaluation',
   ),
 
   // --- INTERVENTION & ASSISTANCE ---
   Question(
     id: 'n3_19',
-    text: 'À quelle profondeur les situations d\'intervention et d\'assistance sont-elles évaluées au PA40 ?',
+    text:
+        'À quelle profondeur les situations d\'intervention et d\'assistance sont-elles évaluées au PA40 ?',
     options: ['À 20 m', 'À 40 m', 'À 60 m', 'À 10 m'],
     correctIndex: 1,
-    explanation: 'Toutes les situations qui nécessitent une intervention sont évaluées à 40 m pour le PA40.',
+    explanation:
+        'Toutes les situations qui nécessitent une intervention sont évaluées à 40 m pour le PA40.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n3_20',
-    text: 'Lors d\'une assistance au PA40, une sortie rapide de la zone jusqu\'à quelle profondeur est-elle acceptée ?',
-    options: ['Jusqu\'à 20 m', 'Jusqu\'à 30 m si suivie d\'une régulation de vitesse', 'Jusqu\'à 10 m', 'Aucune sortie rapide n\'est acceptée'],
+    text:
+        'Lors d\'une assistance au PA40, une sortie rapide de la zone jusqu\'à quelle profondeur est-elle acceptée ?',
+    options: [
+      'Jusqu\'à 20 m',
+      'Jusqu\'à 30 m si suivie d\'une régulation de vitesse',
+      'Jusqu\'à 10 m',
+      'Aucune sortie rapide n\'est acceptée'
+    ],
     correctIndex: 1,
-    explanation: 'Une sortie rapide de la zone d\'évolution jusqu\'à 30 m est acceptée dans la mesure où elle est suivie d\'une régulation de la vitesse de remontée.',
+    explanation:
+        'Une sortie rapide de la zone d\'évolution jusqu\'à 30 m est acceptée dans la mesure où elle est suivie d\'une régulation de la vitesse de remontée.',
     category: 'Intervention',
   ),
   Question(
     id: 'n3_21',
-    text: 'Quelle condition physique est évaluée lors de l\'intervention du PA40 ?',
-    options: ['La vitesse de nage', 'La capacité à effectuer un parcours en surface de 300 m nage capelée en bonnes conditions physiques', 'L\'endurance sur 1000 m', 'La résistance au froid'],
+    text:
+        'Quelle condition physique est évaluée lors de l\'intervention du PA40 ?',
+    options: [
+      'La vitesse de nage',
+      'La capacité à effectuer un parcours en surface de 300 m nage capelée en bonnes conditions physiques',
+      'L\'endurance sur 1000 m',
+      'La résistance au froid'
+    ],
     correctIndex: 1,
-    explanation: 'Les capacités physiques du PA40 sont évaluées par une nage capelée : un parcours en surface de 300 m dans de bonnes conditions physiques (pas d\'épreuve chronométrée).',
+    explanation:
+        'Les capacités physiques du PA40 sont évaluées par une nage capelée : un parcours en surface de 300 m dans de bonnes conditions physiques (pas d\'épreuve chronométrée).',
     category: 'Évaluation',
   ),
 
@@ -1852,75 +3201,129 @@ const List<Question> _niveau3Questions = [
   Question(
     id: 'n3_22',
     text: 'Quel est le modèle de désaturation de référence enseigné au N3 ?',
-    options: ['Uniquement le modèle RGBM', 'Le modèle de Haldane et ses dérivés (M-values, GF, ZHL-16C, Bühlmann, RGBM)', 'Le modèle américain de la Navy', 'Uniquement les tables FFESSM'],
+    options: [
+      'Uniquement le modèle RGBM',
+      'Le modèle de Haldane et ses dérivés (M-values, GF, ZHL-16C, Bühlmann, RGBM)',
+      'Le modèle américain de la Navy',
+      'Uniquement les tables FFESSM'
+    ],
     correctIndex: 1,
-    explanation: 'Au N3, on étudie le modèle de Haldane et ses dérivés : principe des M-values et GF, jeux de paramètres Bühlmann ZHL-16C et RGBM.',
+    explanation:
+        'Au N3, on étudie le modèle de Haldane et ses dérivés : principe des M-values et GF, jeux de paramètres Bühlmann ZHL-16C et RGBM.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_23',
-    text: 'Que signifie la "non-modélisation des plongées successives" par les tables classiques ?',
-    options: ['Les tables ne fonctionnent pas en profondeur', 'Les tables ne prennent pas en compte directement la saturation résiduelle des plongées précédentes ; une majoration est nécessaire', 'Les tables calculent toujours une plongée vierge', 'Les tables s\'appliquent uniquement en milieu tropical'],
+    text:
+        'Que signifie la "non-modélisation des plongées successives" par les tables classiques ?',
+    options: [
+      'Les tables ne fonctionnent pas en profondeur',
+      'Les tables ne prennent pas en compte directement la saturation résiduelle des plongées précédentes ; une majoration est nécessaire',
+      'Les tables calculent toujours une plongée vierge',
+      'Les tables s\'appliquent uniquement en milieu tropical'
+    ],
     correctIndex: 1,
-    explanation: 'Les tables classiques sont conçues pour des plongées uniques. Pour les plongées successives, elles utilisent un principe de majoration de la durée pour tenir compte de l\'azote résiduel.',
+    explanation:
+        'Les tables classiques sont conçues pour des plongées uniques. Pour les plongées successives, elles utilisent un principe de majoration de la durée pour tenir compte de l\'azote résiduel.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_24',
-    text: 'Quelle est la valeur limite du Gradient Factor (GF bas = GF haut) pour la plongée à l\'air selon le N3 ?',
+    text:
+        'Quelle est la valeur limite du Gradient Factor (GF bas = GF haut) pour la plongée à l\'air selon le N3 ?',
     options: ['50 à 60%', '70 à 80%', '85 à 90%', '100%'],
     correctIndex: 2,
-    explanation: 'Pour la plongée à l\'air, la valeur limite recommandée est GF bas = GF haut = 85 à 90%. Des valeurs inférieures donnent des paliers plus conservateurs.',
+    explanation:
+        'Pour la plongée à l\'air, la valeur limite recommandée est GF bas = GF haut = 85 à 90%. Des valeurs inférieures donnent des paliers plus conservateurs.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_25',
     text: 'Que sont les "M-values" dans les modèles de désaturation ?',
-    options: ['Les valeurs de profondeur maximale autorisées', 'Les surtensions maximales tolérable dans chaque compartiment tissulaire sans former de bulles dangereuses', 'Les vitesses maximales de remontée par palier', 'Les durées maximales des paliers de décompression'],
+    options: [
+      'Les valeurs de profondeur maximale autorisées',
+      'Les surtensions maximales tolérable dans chaque compartiment tissulaire sans former de bulles dangereuses',
+      'Les vitesses maximales de remontée par palier',
+      'Les durées maximales des paliers de décompression'
+    ],
     correctIndex: 1,
-    explanation: 'Les M-values (Maximum Values) représentent les surtensions maximales tolérables dans chaque compartiment tissulaire. Dépasser une M-value entraîne un risque de formation de bulles dangereuses.',
+    explanation:
+        'Les M-values (Maximum Values) représentent les surtensions maximales tolérables dans chaque compartiment tissulaire. Dépasser une M-value entraîne un risque de formation de bulles dangereuses.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_26',
     text: 'Qu\'est-ce que l\'acclimatation à la désaturation ?',
-    options: ['Un entraînement pour plonger sans paliers', 'Le processus par lequel l\'organisme s\'adapte progressivement aux contraintes de décompression lors des premières plongées après une longue pause', 'Un médicament préventif contre les ADD', 'Une certification spéciale pour les grandes profondeurs'],
+    options: [
+      'Un entraînement pour plonger sans paliers',
+      'Le processus par lequel l\'organisme s\'adapte progressivement aux contraintes de décompression lors des premières plongées après une longue pause',
+      'Un médicament préventif contre les ADD',
+      'Une certification spéciale pour les grandes profondeurs'
+    ],
     correctIndex: 1,
-    explanation: 'L\'acclimatation à la désaturation désigne le processus d\'adaptation progressive de l\'organisme aux contraintes de décompression, particulièrement recommandée en début de séjour de plongée.',
+    explanation:
+        'L\'acclimatation à la désaturation désigne le processus d\'adaptation progressive de l\'organisme aux contraintes de décompression, particulièrement recommandée en début de séjour de plongée.',
     category: 'Désaturation',
   ),
 
   // --- ACCIDENTS ---
   Question(
     id: 'n3_27',
-    text: 'Qu\'est-ce que la "cutis marmorata" et à quelle pathologie est-elle associée ?',
-    options: ['Une réaction allergique au néoprène', 'Une manifestation cutanée rare de l\'accident de désaturation : marbrures rosées/violacées de la peau', 'Une brûlure par des méduses', 'Un coup de soleil sévère'],
+    text:
+        'Qu\'est-ce que la "cutis marmorata" et à quelle pathologie est-elle associée ?',
+    options: [
+      'Une réaction allergique au néoprène',
+      'Une manifestation cutanée rare de l\'accident de désaturation : marbrures rosées/violacées de la peau',
+      'Une brûlure par des méduses',
+      'Un coup de soleil sévère'
+    ],
     correctIndex: 1,
-    explanation: 'La cutis marmorata est une manifestation cutanée rare d\'accident de désaturation se présentant sous forme de marbrures rosées ou violacées de la peau, généralement de bon pronostic.',
+    explanation:
+        'La cutis marmorata est une manifestation cutanée rare d\'accident de désaturation se présentant sous forme de marbrures rosées ou violacées de la peau, généralement de bon pronostic.',
     category: 'Accidents',
   ),
   Question(
     id: 'n3_28',
-    text: 'Dans le traitement d\'un ADD, à quoi se limite la prise en charge enseignée avec le RIFAP ?',
-    options: ['À administrer de l\'azote pur', 'À placer le blessé en position adaptée, administrer de l\'oxygène normobare et alerter les secours', 'À effectuer une décompression immédiate en plongée', 'À administrer des médicaments spéciaux'],
+    text:
+        'Dans le traitement d\'un ADD, à quoi se limite la prise en charge enseignée avec le RIFAP ?',
+    options: [
+      'À administrer de l\'azote pur',
+      'À placer le blessé en position adaptée, administrer de l\'oxygène normobare et alerter les secours',
+      'À effectuer une décompression immédiate en plongée',
+      'À administrer des médicaments spéciaux'
+    ],
     correctIndex: 1,
-    explanation: 'La prise en charge RIFAP d\'un ADD se limite à : position adaptée, oxygène normobare à fort débit, hydratation si conscient, alerte des secours (SAMU, CROSS) et suivi jusqu\'à la prise en charge médicale.',
+    explanation:
+        'La prise en charge RIFAP d\'un ADD se limite à : position adaptée, oxygène normobare à fort débit, hydratation si conscient, alerte des secours (SAMU, CROSS) et suivi jusqu\'à la prise en charge médicale.',
     category: 'Accidents',
   ),
   Question(
     id: 'n3_29',
-    text: 'Quels sont les mécanismes de l\'accident de désaturation à connaître au N3 ?',
-    options: ['Uniquement la formation de bulles articulaires', 'Formation de bulles dans les tissus et la circulation lors d\'une remontée trop rapide ou d\'une sursaturation critique', 'Uniquement les effets neurologiques', 'La dissolution de l\'oxygène uniquement'],
+    text:
+        'Quels sont les mécanismes de l\'accident de désaturation à connaître au N3 ?',
+    options: [
+      'Uniquement la formation de bulles articulaires',
+      'Formation de bulles dans les tissus et la circulation lors d\'une remontée trop rapide ou d\'une sursaturation critique',
+      'Uniquement les effets neurologiques',
+      'La dissolution de l\'oxygène uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'Au N3, on étudie les mécanismes de l\'ADD : sursaturation critique entraînant la formation de bulles dans les tissus et la circulation, avec compréhension du rôle des compartiments tissulaires.',
+    explanation:
+        'Au N3, on étudie les mécanismes de l\'ADD : sursaturation critique entraînant la formation de bulles dans les tissus et la circulation, avec compréhension du rôle des compartiments tissulaires.',
     category: 'Accidents',
   ),
   Question(
     id: 'n3_30',
     text: 'Comment prévenir la narcose lors de plongées profondes ?',
-    options: ['Descendre le plus rapidement possible', 'Descente progressive, éviter l\'effort physique intense, remonter si les signes apparaissent, ne pas plonger en état de fatigue', 'Respirer plus rapidement en profondeur', 'Utiliser de l\'oxygène pur'],
+    options: [
+      'Descendre le plus rapidement possible',
+      'Descente progressive, éviter l\'effort physique intense, remonter si les signes apparaissent, ne pas plonger en état de fatigue',
+      'Respirer plus rapidement en profondeur',
+      'Utiliser de l\'oxygène pur'
+    ],
     correctIndex: 1,
-    explanation: 'La prévention de la narcose inclut : descente progressive, éviter l\'effort intense, remonter immédiatement si signes de narcose apparaissent, ne pas plonger en état de fatigue ou d\'alcoolisation.',
+    explanation:
+        'La prévention de la narcose inclut : descente progressive, éviter l\'effort intense, remonter immédiatement si signes de narcose apparaissent, ne pas plonger en état de fatigue ou d\'alcoolisation.',
     category: 'Accidents',
   ),
 
@@ -1928,163 +3331,279 @@ const List<Question> _niveau3Questions = [
   Question(
     id: 'n3_31',
     text: 'Qu\'est-ce que le modèle ZHL-16C de Bühlmann ?',
-    options: ['Un modèle de plongée en altitude', 'Un modèle mathématique de désaturation utilisant 16 compartiments tissulaires avec des demi-temps spécifiques', 'Un ordinateur de plongée de marque Bühlmann', 'Un modèle de décompression à l\'oxygène'],
+    options: [
+      'Un modèle de plongée en altitude',
+      'Un modèle mathématique de désaturation utilisant 16 compartiments tissulaires avec des demi-temps spécifiques',
+      'Un ordinateur de plongée de marque Bühlmann',
+      'Un modèle de décompression à l\'oxygène'
+    ],
     correctIndex: 1,
-    explanation: 'Le modèle ZHL-16C (Zürich Limits 16 Compartments) de Bühlmann est un modèle mathématique de désaturation utilisant 16 compartiments tissulaires fictifs avec des demi-temps allant de 4 à 635 minutes.',
+    explanation:
+        'Le modèle ZHL-16C (Zürich Limits 16 Compartments) de Bühlmann est un modèle mathématique de désaturation utilisant 16 compartiments tissulaires fictifs avec des demi-temps allant de 4 à 635 minutes.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_32',
     text: 'Qu\'est-ce que le modèle RGBM (Reduced Gradient Bubble Model) ?',
-    options: ['Un modèle de plongée récréative simplifié', 'Un modèle de désaturation tenant compte de la dynamique des bulles et non pas seulement de la dissolution gazeuse', 'Un modèle exclusivement pour la plongée technique', 'Un modèle de navigation sous-marine'],
+    options: [
+      'Un modèle de plongée récréative simplifié',
+      'Un modèle de désaturation tenant compte de la dynamique des bulles et non pas seulement de la dissolution gazeuse',
+      'Un modèle exclusivement pour la plongée technique',
+      'Un modèle de navigation sous-marine'
+    ],
     correctIndex: 1,
-    explanation: 'Le RGBM est un modèle de désaturation qui prend en compte non seulement la dissolution des gaz dans les tissus mais aussi la dynamique des microbulles, offrant une approche complémentaire aux modèles haldaniens.',
+    explanation:
+        'Le RGBM est un modèle de désaturation qui prend en compte non seulement la dissolution des gaz dans les tissus mais aussi la dynamique des microbulles, offrant une approche complémentaire aux modèles haldaniens.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_33',
-    text: 'Comment calculer la consommation d\'air en litre/minute à une profondeur de 40 m si la consommation de surface est de 20 L/min ?',
+    text:
+        'Comment calculer la consommation d\'air en litre/minute à une profondeur de 40 m si la consommation de surface est de 20 L/min ?',
     options: ['20 L/min', '60 L/min', '80 L/min', '100 L/min'],
     correctIndex: 3,
-    explanation: 'À 40 m, la pression absolue est de 5 bars. Consommation = 20 L/min × 5 = 100 L/min. C\'est 5 fois plus qu\'en surface.',
+    explanation:
+        'À 40 m, la pression absolue est de 5 bars. Consommation = 20 L/min × 5 = 100 L/min. C\'est 5 fois plus qu\'en surface.',
     category: 'Physique',
   ),
   Question(
     id: 'n3_34',
-    text: 'À quelle profondeur se situe généralement la limite de la zone de narcose perceptible à l\'azote pour un plongeur moyen ?',
-    options: ['À 20 m', 'À partir de 30-40 m, avec effets variables selon les individus', 'Uniquement à plus de 80 m', 'La narcose ne se produit qu\'en plongée technique'],
+    text:
+        'À quelle profondeur se situe généralement la limite de la zone de narcose perceptible à l\'azote pour un plongeur moyen ?',
+    options: [
+      'À 20 m',
+      'À partir de 30-40 m, avec effets variables selon les individus',
+      'Uniquement à plus de 80 m',
+      'La narcose ne se produit qu\'en plongée technique'
+    ],
     correctIndex: 1,
-    explanation: 'La narcose à l\'azote devient généralement perceptible à partir de 30-40 m, avec des variations importantes selon les individus, l\'état de fatigue, le stress et l\'expérience.',
+    explanation:
+        'La narcose à l\'azote devient généralement perceptible à partir de 30-40 m, avec des variations importantes selon les individus, l\'état de fatigue, le stress et l\'expérience.',
     category: 'Accidents',
   ),
   Question(
     id: 'n3_35',
-    text: 'Qu\'est-ce que le mode "planification" d\'un ordinateur et comment l\'utiliser au PA40 ?',
-    options: ['Une fonction pour programmer les destinations de plongée', 'Un mode permettant de simuler une plongée future en entrant profondeur et durée prévues pour voir les paliers résultants', 'Un mode pour enregistrer les coordonnées GPS du site', 'Un mode de communication avec les secours'],
+    text:
+        'Qu\'est-ce que le mode "planification" d\'un ordinateur et comment l\'utiliser au PA40 ?',
+    options: [
+      'Une fonction pour programmer les destinations de plongée',
+      'Un mode permettant de simuler une plongée future en entrant profondeur et durée prévues pour voir les paliers résultants',
+      'Un mode pour enregistrer les coordonnées GPS du site',
+      'Un mode de communication avec les secours'
+    ],
     correctIndex: 1,
-    explanation: 'Le mode planification permet de simuler à l\'avance une plongée en entrant profondeur et durée prévues, pour visualiser les paliers résultants et vérifier la faisabilité du plan de plongée.',
+    explanation:
+        'Le mode planification permet de simuler à l\'avance une plongée en entrant profondeur et durée prévues, pour visualiser les paliers résultants et vérifier la faisabilité du plan de plongée.',
     category: 'Équipement',
   ),
 
   // --- ORGANISATION ---
   Question(
     id: 'n3_36',
-    text: 'Quelle est la différence entre PA40, PE60 et N3 en termes de compétences ?',
-    options: ['Aucune différence entre ces certifications', 'PA40 = autonomie jusqu\'à 40 m ; PE60 = encadré jusqu\'à 60 m ; N3 (PA60) = combine PA40 + PE60 + compétences complémentaires', 'PE60 inclut toujours les compétences PA40', 'N3 = uniquement PA60'],
+    text:
+        'Quelle est la différence entre PA40, PE60 et N3 en termes de compétences ?',
+    options: [
+      'Aucune différence entre ces certifications',
+      'PA40 = autonomie jusqu\'à 40 m ; PE60 = encadré jusqu\'à 60 m ; N3 (PA60) = combine PA40 + PE60 + compétences complémentaires',
+      'PE60 inclut toujours les compétences PA40',
+      'N3 = uniquement PA60'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA40 donne l\'autonomie jusqu\'à 40 m. Le PE60 donne l\'accès encadré jusqu\'à 60 m. Le N3 (PA60) combine PA40, PE60 et des compétences complémentaires (organiser la plongée, autonomie jusqu\'à 60 m).',
+    explanation:
+        'Le PA40 donne l\'autonomie jusqu\'à 40 m. Le PE60 donne l\'accès encadré jusqu\'à 60 m. Le N3 (PA60) combine PA40, PE60 et des compétences complémentaires (organiser la plongée, autonomie jusqu\'à 60 m).',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_37',
-    text: 'Que comprend la compétence "organiser la plongée" spécifique au N3 ?',
-    options: ['Uniquement la gestion du carnet de plongée', 'Choix du site, organisation des conditions, sécurisation avec fiche de sécurité, pavillon alpha et matériel de secours', 'Uniquement la planification des paliers', 'Uniquement le briefing des plongeurs'],
+    text:
+        'Que comprend la compétence "organiser la plongée" spécifique au N3 ?',
+    options: [
+      'Uniquement la gestion du carnet de plongée',
+      'Choix du site, organisation des conditions, sécurisation avec fiche de sécurité, pavillon alpha et matériel de secours',
+      'Uniquement la planification des paliers',
+      'Uniquement le briefing des plongeurs'
+    ],
     correctIndex: 1,
-    explanation: 'La compétence "organiser la plongée" du N3 inclut : choix du site (météo, topologie), organisation des conditions (modalités, rotation), sécurisation (fiche de sécurité, pavillon alpha, matériel de secours et oxygène).',
+    explanation:
+        'La compétence "organiser la plongée" du N3 inclut : choix du site (météo, topologie), organisation des conditions (modalités, rotation), sécurisation (fiche de sécurité, pavillon alpha, matériel de secours et oxygène).',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_38',
-    text: 'Dans quelle zone de profondeur le N3 peut-il organiser une plongée sans directeur de plongée ?',
-    options: ['0 à 20 m uniquement', '0 à 40 m conformément à ses prérogatives', '0 à 60 m', '0 à 20 m avec DP présent'],
+    text:
+        'Dans quelle zone de profondeur le N3 peut-il organiser une plongée sans directeur de plongée ?',
+    options: [
+      '0 à 20 m uniquement',
+      '0 à 40 m conformément à ses prérogatives',
+      '0 à 60 m',
+      '0 à 20 m avec DP présent'
+    ],
     correctIndex: 1,
-    explanation: 'Le N3 (PA60) peut organiser et mettre en œuvre une plongée dans la zone de 0 à 40 m en l\'absence de DP, conformément à ses prérogatives.',
+    explanation:
+        'Le N3 (PA60) peut organiser et mettre en œuvre une plongée dans la zone de 0 à 40 m en l\'absence de DP, conformément à ses prérogatives.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_39',
-    text: 'Quelle réglementation maritime doit connaître le N3 pour organiser une plongée depuis une embarcation ?',
-    options: ['Uniquement le pavillon alpha', 'Vérification de la conformité de l\'embarcation, règles de mouillage, zones protégées ou interdites, prise d\'informations météorologiques', 'Uniquement les règles de circulation maritime', 'Aucune réglementation spécifique'],
+    text:
+        'Quelle réglementation maritime doit connaître le N3 pour organiser une plongée depuis une embarcation ?',
+    options: [
+      'Uniquement le pavillon alpha',
+      'Vérification de la conformité de l\'embarcation, règles de mouillage, zones protégées ou interdites, prise d\'informations météorologiques',
+      'Uniquement les règles de circulation maritime',
+      'Aucune réglementation spécifique'
+    ],
     correctIndex: 1,
-    explanation: 'Le N3 doit connaître : conformité de l\'embarcation, règles de mouillage, zones protégées ou interdites, prise d\'informations météo (vent, courant, houle), conditions réglementaires du site.',
+    explanation:
+        'Le N3 doit connaître : conformité de l\'embarcation, règles de mouillage, zones protégées ou interdites, prise d\'informations météo (vent, courant, houle), conditions réglementaires du site.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_40',
-    text: 'Qu\'est-ce que la "fiche de sécurité" dans l\'organisation d\'une plongée N3 ?',
-    options: ['Un document de certification du plongeur', 'Un document réglementaire recensant les plongeurs, le site, les paramètres de plongée et les contacts de secours', 'Un contrat d\'assurance', 'Un rapport post-plongée'],
+    text:
+        'Qu\'est-ce que la "fiche de sécurité" dans l\'organisation d\'une plongée N3 ?',
+    options: [
+      'Un document de certification du plongeur',
+      'Un document réglementaire recensant les plongeurs, le site, les paramètres de plongée et les contacts de secours',
+      'Un contrat d\'assurance',
+      'Un rapport post-plongée'
+    ],
     correctIndex: 1,
-    explanation: 'La fiche de sécurité est un document obligatoire qui recense les informations des plongeurs, le site de plongée, les paramètres et les contacts de secours (SAMU, CROSS), permettant une intervention rapide en cas d\'accident.',
+    explanation:
+        'La fiche de sécurité est un document obligatoire qui recense les informations des plongeurs, le site de plongée, les paramètres et les contacts de secours (SAMU, CROSS), permettant une intervention rapide en cas d\'accident.',
     category: 'Organisation',
   ),
 
   // --- MILIEU & ENVIRONNEMENT ---
   Question(
     id: 'n3_41',
-    text: 'Quelle est la Charte internationale du plongeur responsable et comment le N3 la met-il en pratique ?',
-    options: ['Un texte décoratif sans application pratique', 'Un engagement éco-responsable appliqué par une technique irréprochable, sans appui, nourrissage interdit, observation respectueuse', 'Un document légal contraignant', 'Un code réservé aux moniteurs de plongée'],
+    text:
+        'Quelle est la Charte internationale du plongeur responsable et comment le N3 la met-il en pratique ?',
+    options: [
+      'Un texte décoratif sans application pratique',
+      'Un engagement éco-responsable appliqué par une technique irréprochable, sans appui, nourrissage interdit, observation respectueuse',
+      'Un document légal contraignant',
+      'Un code réservé aux moniteurs de plongée'
+    ],
     correctIndex: 1,
-    explanation: 'La Charte internationale du plongeur responsable est appliquée au N3 par : maîtrise de la stabilisation et du palmage, absence d\'appui, refus du nourrissage, discrétion vis-à-vis de la faune.',
+    explanation:
+        'La Charte internationale du plongeur responsable est appliquée au N3 par : maîtrise de la stabilisation et du palmage, absence d\'appui, refus du nourrissage, discrétion vis-à-vis de la faune.',
     category: 'Environnement',
   ),
   Question(
     id: 'n3_42',
-    text: 'Quels dangers spécifiques du milieu doit connaître le N3 pour la zone 0-60 m ?',
-    options: ['Uniquement les courants', 'Filets de pêche, épaves, grottes, courants forts, visibilité réduite, faune dangereuse, thermoclines', 'Uniquement les méduses', 'Aucun danger spécifique dans cette zone'],
+    text:
+        'Quels dangers spécifiques du milieu doit connaître le N3 pour la zone 0-60 m ?',
+    options: [
+      'Uniquement les courants',
+      'Filets de pêche, épaves, grottes, courants forts, visibilité réduite, faune dangereuse, thermoclines',
+      'Uniquement les méduses',
+      'Aucun danger spécifique dans cette zone'
+    ],
     correctIndex: 1,
-    explanation: 'Le N3 doit connaître les dangers du milieu dans la zone 0-60 m : filets de pêche, épaves (risques d\'enchevêtrement), grottes (risque de décompression), courants, faune dangereuse, thermoclines...',
+    explanation:
+        'Le N3 doit connaître les dangers du milieu dans la zone 0-60 m : filets de pêche, épaves (risques d\'enchevêtrement), grottes (risque de décompression), courants, faune dangereuse, thermoclines...',
     category: 'Environnement',
   ),
 
   // --- RÉGLEMENTATION ---
   Question(
     id: 'n3_43',
-    text: 'Quelles sont les obligations réglementaires en matière de responsabilité civile et pénale pour le N3 organisant une plongée ?',
-    options: ['Aucune responsabilité spécifique pour le N3', 'Obligation de respecter la réglementation, responsabilité civile et pénale en cas de négligence entraînant un préjudice', 'Uniquement une responsabilité morale', 'La responsabilité est uniquement celle du DP'],
+    text:
+        'Quelles sont les obligations réglementaires en matière de responsabilité civile et pénale pour le N3 organisant une plongée ?',
+    options: [
+      'Aucune responsabilité spécifique pour le N3',
+      'Obligation de respecter la réglementation, responsabilité civile et pénale en cas de négligence entraînant un préjudice',
+      'Uniquement une responsabilité morale',
+      'La responsabilité est uniquement celle du DP'
+    ],
     correctIndex: 1,
-    explanation: 'Le N3 organisant une plongée engage sa responsabilité civile (indemnisation) et pénale (sanction) en cas de négligence. Il doit respecter la réglementation des espaces d\'évolution et la plongée en autonomie.',
+    explanation:
+        'Le N3 organisant une plongée engage sa responsabilité civile (indemnisation) et pénale (sanction) en cas de négligence. Il doit respecter la réglementation des espaces d\'évolution et la plongée en autonomie.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n3_44',
-    text: 'Quelles ressources peut consulter le N3 pour s\'informer sur les conditions et réglementations locales ?',
-    options: ['Uniquement internet', 'Différentes autorités maritimes, clubs locaux, préfectures maritimes, bulletins météo', 'Uniquement les autres plongeurs', 'Uniquement le responsable du club'],
+    text:
+        'Quelles ressources peut consulter le N3 pour s\'informer sur les conditions et réglementations locales ?',
+    options: [
+      'Uniquement internet',
+      'Différentes autorités maritimes, clubs locaux, préfectures maritimes, bulletins météo',
+      'Uniquement les autres plongeurs',
+      'Uniquement le responsable du club'
+    ],
     correctIndex: 1,
-    explanation: 'Le N3 doit connaître les ressources et rechercher l\'information auprès : des différentes autorités (préfecture maritime, DDTM), clubs locaux, stations météo (Météo France, CROSS).',
+    explanation:
+        'Le N3 doit connaître les ressources et rechercher l\'information auprès : des différentes autorités (préfecture maritime, DDTM), clubs locaux, stations météo (Météo France, CROSS).',
     category: 'Organisation',
   ),
 
   // --- PHYSIQUE AVANCÉE ---
   Question(
     id: 'n3_45',
-    text: 'Quel est le volume d\'air consommé à chaque inspiration à 60 m (pression de 7 bars) si la respiration est de 1 L en surface ?',
+    text:
+        'Quel est le volume d\'air consommé à chaque inspiration à 60 m (pression de 7 bars) si la respiration est de 1 L en surface ?',
     options: ['1 litre', '3 litres', '7 litres', '10 litres'],
     correctIndex: 2,
-    explanation: 'À 60 m (7 bars de pression absolue), chaque litre d\'air inspiré en surface correspond à 7 litres d\'air à la pression de surface. La consommation d\'air est 7 fois plus importante qu\'en surface.',
+    explanation:
+        'À 60 m (7 bars de pression absolue), chaque litre d\'air inspiré en surface correspond à 7 litres d\'air à la pression de surface. La consommation d\'air est 7 fois plus importante qu\'en surface.',
     category: 'Physique',
   ),
   Question(
     id: 'n3_46',
-    text: 'Qu\'est-ce que l\'autonomie en gaz pour une plongée à 40 m avec une bouteille de 15 L à 200 bar et une consommation de 25 L/min de surface ?',
+    text:
+        'Qu\'est-ce que l\'autonomie en gaz pour une plongée à 40 m avec une bouteille de 15 L à 200 bar et une consommation de 25 L/min de surface ?',
     options: ['24 minutes', '12 minutes', '48 minutes', '6 minutes'],
     correctIndex: 0,
-    explanation: 'Volume total = 15 × 200 = 3000 L. À 40 m (5 bars), consommation = 25 × 5 = 125 L/min. Autonomie = 3000 / 125 = 24 minutes (hors réserve et paliers).',
+    explanation:
+        'Volume total = 15 × 200 = 3000 L. À 40 m (5 bars), consommation = 25 × 5 = 125 L/min. Autonomie = 3000 / 125 = 24 minutes (hors réserve et paliers).',
     category: 'Physique',
   ),
   Question(
     id: 'n3_47',
-    text: 'À partir de quelle profondeur à l\'air les prérogatives d\'évolution en autonomie du N3 ne s\'exercent-elles qu\'à partir de 18 ans ?',
-    options: ['À partir de 30 m', 'À partir de 40 m', 'Au-delà de 40 m', 'À partir de 20 m'],
+    text:
+        'À partir de quelle profondeur à l\'air les prérogatives d\'évolution en autonomie du N3 ne s\'exercent-elles qu\'à partir de 18 ans ?',
+    options: [
+      'À partir de 30 m',
+      'À partir de 40 m',
+      'Au-delà de 40 m',
+      'À partir de 20 m'
+    ],
     correctIndex: 2,
-    explanation: 'Les prérogatives d\'évolution en autonomie au-delà de 40 m (zone PE60/PA60) ne s\'exercent qu\'à partir de 18 ans.',
+    explanation:
+        'Les prérogatives d\'évolution en autonomie au-delà de 40 m (zone PE60/PA60) ne s\'exercent qu\'à partir de 18 ans.',
     category: 'Prérogatives',
   ),
 
   // --- ÉVALUATION ---
   Question(
     id: 'n3_48',
-    text: 'Pour l\'évaluation de l\'évolution en autonomie du N3 (PA60), que précise le manuel si elle ne peut se faire à 60 m ?',
-    options: ['Elle doit obligatoirement se faire à 60 m', 'Si elle s\'effectue à une profondeur maximale de 40 m, le comportement attendu doit correspondre aux exigences de la zone 40-60 m', 'Elle peut se faire en piscine', 'Elle est dispensée si le N3 a le PE60'],
+    text:
+        'Pour l\'évaluation de l\'évolution en autonomie du N3 (PA60), que précise le manuel si elle ne peut se faire à 60 m ?',
+    options: [
+      'Elle doit obligatoirement se faire à 60 m',
+      'Si elle s\'effectue à une profondeur maximale de 40 m, le comportement attendu doit correspondre aux exigences de la zone 40-60 m',
+      'Elle peut se faire en piscine',
+      'Elle est dispensée si le N3 a le PE60'
+    ],
     correctIndex: 1,
-    explanation: 'Pour l\'évaluation de l\'autonomie 0-60 m, si elle s\'effectue à 40 m maximum, le comportement attendu du candidat doit correspondre aux exigences des conditions de pratique de l\'espace 40-60 m.',
+    explanation:
+        'Pour l\'évaluation de l\'autonomie 0-60 m, si elle s\'effectue à 40 m maximum, le comportement attendu du candidat doit correspondre aux exigences des conditions de pratique de l\'espace 40-60 m.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n3_49',
-    text: 'Comment s\'effectue l\'évaluation des capacités à utiliser un ordinateur de plongée au PA40 ?',
-    options: ['Par un examen écrit uniquement', 'Par analyse de cas concrets, captures d\'écrans, situations induisant des comportements adaptés', 'Uniquement par démonstration pratique en plongée', 'Pas d\'évaluation spécifique à l\'ordinateur'],
+    text:
+        'Comment s\'effectue l\'évaluation des capacités à utiliser un ordinateur de plongée au PA40 ?',
+    options: [
+      'Par un examen écrit uniquement',
+      'Par analyse de cas concrets, captures d\'écrans, situations induisant des comportements adaptés',
+      'Uniquement par démonstration pratique en plongée',
+      'Pas d\'évaluation spécifique à l\'ordinateur'
+    ],
     correctIndex: 1,
-    explanation: 'L\'évaluation de l\'utilisation de l\'ordinateur s\'effectue à partir de cas concrets, de captures d\'écrans. Les situations proposées doivent induire des comportements adaptés de la part du candidat.',
+    explanation:
+        'L\'évaluation de l\'utilisation de l\'ordinateur s\'effectue à partir de cas concrets, de captures d\'écrans. Les situations proposées doivent induire des comportements adaptés de la part du candidat.',
     category: 'Évaluation',
   ),
   Question(
@@ -2092,409 +3611,751 @@ const List<Question> _niveau3Questions = [
     text: 'Dans quel délai les compétences du N3 doivent-elles être acquises ?',
     options: ['6 mois', '12 mois', '15 mois', '24 mois'],
     correctIndex: 2,
-    explanation: 'L\'ensemble des compétences du N3 doit être acquis dans un délai de 15 mois à compter de la délivrance de la première compétence.',
+    explanation:
+        'L\'ensemble des compétences du N3 doit être acquis dans un délai de 15 mois à compter de la délivrance de la première compétence.',
     category: 'Organisation',
   ),
 
   // --- QUESTIONS COMPLÉMENTAIRES ---
   Question(
     id: 'n3_51',
-    text: 'Quelle est la particularité de la plongée à 60 m mentionnée dans les règles du N3 ?',
-    options: ['Elle est accessible à tout plongeur ayant le PE40', 'Elle nécessite une très bonne technicité et un bon état général de forme physique ; la formation doit être réalisée avec rigueur', 'Elle est identique à une plongée à 40 m', 'Elle ne nécessite pas de paliers'],
+    text:
+        'Quelle est la particularité de la plongée à 60 m mentionnée dans les règles du N3 ?',
+    options: [
+      'Elle est accessible à tout plongeur ayant le PE40',
+      'Elle nécessite une très bonne technicité et un bon état général de forme physique ; la formation doit être réalisée avec rigueur',
+      'Elle est identique à une plongée à 40 m',
+      'Elle ne nécessite pas de paliers'
+    ],
     correctIndex: 1,
-    explanation: 'La plongée à 60 m nécessite une très bonne technicité et un bon état général de forme physique, indépendamment de l\'aptitude médicale. Elle s\'adresse à des plongeurs expérimentés.',
+    explanation:
+        'La plongée à 60 m nécessite une très bonne technicité et un bon état général de forme physique, indépendamment de l\'aptitude médicale. Elle s\'adresse à des plongeurs expérimentés.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_52',
-    text: 'Qu\'est-ce que l\'essoufflement spécifique à la zone profonde (40-60 m) ?',
-    options: ['Un simple essoufflement dû à l\'effort', 'Un essoufflement aggravé par la densité plus importante de l\'air respiré, le froid et la narcose pouvant créer un cercle vicieux dangereux', 'Un phénomène uniquement psychologique', 'Un effet de la narcose uniquement'],
+    text:
+        'Qu\'est-ce que l\'essoufflement spécifique à la zone profonde (40-60 m) ?',
+    options: [
+      'Un simple essoufflement dû à l\'effort',
+      'Un essoufflement aggravé par la densité plus importante de l\'air respiré, le froid et la narcose pouvant créer un cercle vicieux dangereux',
+      'Un phénomène uniquement psychologique',
+      'Un effet de la narcose uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'En zone profonde, l\'essoufflement est aggravé par la densité de l\'air (plus difficile à respirer), le froid et la possible narcose. Ce cercle vicieux (CO2 → essoufflement → panique → plus de CO2) est particulièrement dangereux.',
+    explanation:
+        'En zone profonde, l\'essoufflement est aggravé par la densité de l\'air (plus difficile à respirer), le froid et la possible narcose. Ce cercle vicieux (CO2 → essoufflement → panique → plus de CO2) est particulièrement dangereux.',
     category: 'Accidents',
   ),
   Question(
     id: 'n3_53',
-    text: 'Qu\'est-ce que la désaturation "multi-compartiments" dans le contexte des ordinateurs N3 ?',
-    options: ['Un ordinateur avec plusieurs écrans', 'La prise en compte simultanée de multiples compartiments tissulaires avec des demi-temps différents pour calculer la décompression', 'Un système de plongée avec plusieurs bouteilles', 'Un modèle de plongée en équipe'],
+    text:
+        'Qu\'est-ce que la désaturation "multi-compartiments" dans le contexte des ordinateurs N3 ?',
+    options: [
+      'Un ordinateur avec plusieurs écrans',
+      'La prise en compte simultanée de multiples compartiments tissulaires avec des demi-temps différents pour calculer la décompression',
+      'Un système de plongée avec plusieurs bouteilles',
+      'Un modèle de plongée en équipe'
+    ],
     correctIndex: 1,
-    explanation: 'La désaturation multi-compartiments consiste à calculer simultanément la saturation de nombreux compartiments tissulaires (de 4 à 635 min de demi-temps) pour déterminer le profil de décompression le plus sûr.',
+    explanation:
+        'La désaturation multi-compartiments consiste à calculer simultanément la saturation de nombreux compartiments tissulaires (de 4 à 635 min de demi-temps) pour déterminer le profil de décompression le plus sûr.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_54',
-    text: 'Qu\'est-ce que le RIFA Plongée et pourquoi est-il obligatoire pour le N3 ?',
-    options: ['Un registre des incidents de plongée', 'Un brevet de premiers secours spécifiques à la plongée (oxygénothérapie, position de sécurité, alerte) requis pour le brevet N3', 'Une formation à la navigation sous-marine', 'Un brevet de secourisme généraliste'],
+    text:
+        'Qu\'est-ce que le RIFA Plongée et pourquoi est-il obligatoire pour le N3 ?',
+    options: [
+      'Un registre des incidents de plongée',
+      'Un brevet de premiers secours spécifiques à la plongée (oxygénothérapie, position de sécurité, alerte) requis pour le brevet N3',
+      'Une formation à la navigation sous-marine',
+      'Un brevet de secourisme généraliste'
+    ],
     correctIndex: 1,
-    explanation: 'Le RIFA Plongée (Réaction et Intervention Face à un Accident de Plongée) est un brevet de premiers secours spécifiques. Il est obligatoire pour l\'obtention du brevet N3 au moment de la certification.',
+    explanation:
+        'Le RIFA Plongée (Réaction et Intervention Face à un Accident de Plongée) est un brevet de premiers secours spécifiques. Il est obligatoire pour l\'obtention du brevet N3 au moment de la certification.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_55',
-    text: 'À quelle profondeur s\'effectue l\'évaluation PA40 de l\'intervention sur un plongeur en difficulté ?',
+    text:
+        'À quelle profondeur s\'effectue l\'évaluation PA40 de l\'intervention sur un plongeur en difficulté ?',
     options: ['À 20 m', 'À 30 m', 'À 40 m', 'À 60 m'],
     correctIndex: 2,
-    explanation: 'Toutes les situations qui nécessitent une intervention pour le PA40 sont évaluées à 40 m.',
+    explanation:
+        'Toutes les situations qui nécessitent une intervention pour le PA40 sont évaluées à 40 m.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n3_56',
-    text: 'Que doit faire le PA40 lors de la gestion de la désaturation au sein d\'une palanquée utilisant des moyens différents ?',
-    options: ['Chaque plongeur suit son propre ordinateur sans tenir compte des autres', 'Anticiper les différences avant la plongée et s\'aligner sur les paliers les plus conservateurs lors de la remontée', 'Ignorer les différences et remonter à la même vitesse', 'Utiliser uniquement les tables fédérales'],
+    text:
+        'Que doit faire le PA40 lors de la gestion de la désaturation au sein d\'une palanquée utilisant des moyens différents ?',
+    options: [
+      'Chaque plongeur suit son propre ordinateur sans tenir compte des autres',
+      'Anticiper les différences avant la plongée et s\'aligner sur les paliers les plus conservateurs lors de la remontée',
+      'Ignorer les différences et remonter à la même vitesse',
+      'Utiliser uniquement les tables fédérales'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA40 doit anticiper les différences de désaturation avant la plongée et s\'aligner sur les contraintes les plus conservatrices lors de la remontée pour assurer la sécurité de tous.',
+    explanation:
+        'Le PA40 doit anticiper les différences de désaturation avant la plongée et s\'aligner sur les contraintes les plus conservatrices lors de la remontée pour assurer la sécurité de tous.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_57',
-    text: 'Qu\'est-ce que l\'orientation "instinctive" mentionnée dans la compétence PA40 ?',
-    options: ['Se fier uniquement à son instinct sans outil', 'S\'orienter en utilisant les éléments naturels du milieu (courant, relief, lumière, ombres, inclinaison des fonds)', 'Ne pas s\'orienter du tout et se laisser dériver', 'Suivre uniquement le GP'],
+    text:
+        'Qu\'est-ce que l\'orientation "instinctive" mentionnée dans la compétence PA40 ?',
+    options: [
+      'Se fier uniquement à son instinct sans outil',
+      'S\'orienter en utilisant les éléments naturels du milieu (courant, relief, lumière, ombres, inclinaison des fonds)',
+      'Ne pas s\'orienter du tout et se laisser dériver',
+      'Suivre uniquement le GP'
+    ],
     correctIndex: 1,
-    explanation: 'L\'orientation instinctive désigne l\'utilisation des éléments naturels (courant, relief, lumière, ombres, inclinaison des fonds, faune fixée) pour s\'orienter sans instrument.',
+    explanation:
+        'L\'orientation instinctive désigne l\'utilisation des éléments naturels (courant, relief, lumière, ombres, inclinaison des fonds, faune fixée) pour s\'orienter sans instrument.',
     category: 'Techniques',
   ),
   Question(
     id: 'n3_58',
     text: 'Qu\'est-ce que la "cohésion de la palanquée" au N3 PA40 ?',
-    options: ['Tous les plongeurs se tiennent par la main', 'Le maintien du contact visuel, de la communication régulière et de la surveillance mutuelle entre équipiers autonomes', 'Le fait de suivre uniquement le plongeur de tête', 'Une formation spécifique imposée'],
+    options: [
+      'Tous les plongeurs se tiennent par la main',
+      'Le maintien du contact visuel, de la communication régulière et de la surveillance mutuelle entre équipiers autonomes',
+      'Le fait de suivre uniquement le plongeur de tête',
+      'Une formation spécifique imposée'
+    ],
     correctIndex: 1,
-    explanation: 'La cohésion de la palanquée PA40 implique : maintien du contact visuel, communication régulière (consommation, désaturation, bien-être), surveillance mutuelle et respect des paramètres convenus.',
+    explanation:
+        'La cohésion de la palanquée PA40 implique : maintien du contact visuel, communication régulière (consommation, désaturation, bien-être), surveillance mutuelle et respect des paramètres convenus.',
     category: 'Autonomie',
   ),
   Question(
     id: 'n3_59',
-    text: 'Quel signe spécifique à la profondeur doit pouvoir reconnaître un PE60 chez ses équipiers ?',
-    options: ['Uniquement le signe OK', 'Les signes de narcose : attitude inadaptée, sourire béat, indifférence aux signaux des équipiers', 'Uniquement les signes de panne d\'air', 'Il n\'y a pas de signe spécifique à la profondeur'],
+    text:
+        'Quel signe spécifique à la profondeur doit pouvoir reconnaître un PE60 chez ses équipiers ?',
+    options: [
+      'Uniquement le signe OK',
+      'Les signes de narcose : attitude inadaptée, sourire béat, indifférence aux signaux des équipiers',
+      'Uniquement les signes de panne d\'air',
+      'Il n\'y a pas de signe spécifique à la profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'Le PE60 doit être capable de reconnaître les signes de narcose chez ses équipiers : euphorie, indifférence, lenteur de réaction, sourire béat, prise de risques inconsidérée, pour prendre les mesures adéquates (remonter).',
+    explanation:
+        'Le PE60 doit être capable de reconnaître les signes de narcose chez ses équipiers : euphorie, indifférence, lenteur de réaction, sourire béat, prise de risques inconsidérée, pour prendre les mesures adéquates (remonter).',
     category: 'Accidents',
   ),
   Question(
     id: 'n3_60',
-    text: 'Pourquoi la plongée à 60 m est-elle spécifiquement mentionnée dans les règles du N3 comme nécessitant une très bonne technicité ?',
-    options: ['Pour des raisons purement administratives', 'Car les risques y sont cumulés : narcose, essoufflement, froid, désaturation contraignante, consommation élevée', 'Uniquement pour limiter le nombre de candidats', 'Car l\'équipement est différent à cette profondeur'],
+    text:
+        'Pourquoi la plongée à 60 m est-elle spécifiquement mentionnée dans les règles du N3 comme nécessitant une très bonne technicité ?',
+    options: [
+      'Pour des raisons purement administratives',
+      'Car les risques y sont cumulés : narcose, essoufflement, froid, désaturation contraignante, consommation élevée',
+      'Uniquement pour limiter le nombre de candidats',
+      'Car l\'équipement est différent à cette profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'À 60 m, tous les risques se cumulent : narcose intense, essoufflement (air très dense), froid, désaturation contraignante avec paliers importants, consommation d\'air très élevée. Une technicité irréprochable est indispensable.',
+    explanation:
+        'À 60 m, tous les risques se cumulent : narcose intense, essoufflement (air très dense), froid, désaturation contraignante avec paliers importants, consommation d\'air très élevée. Une technicité irréprochable est indispensable.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n3_61',
-    text: 'Quel est le rôle de l\'oxygénothérapie normobare dans la prise en charge d\'un ADD sur site ?',
-    options: ['Elle guérit définitivement l\'ADD', 'Elle réduit la taille des bulles et améliore l\'oxygénation des tissus en attendant la recompression en caisson hyperbare', 'Elle est uniquement utilisée en caisson hyperbare', 'Elle n\'a aucun effet sur les ADD'],
+    text:
+        'Quel est le rôle de l\'oxygénothérapie normobare dans la prise en charge d\'un ADD sur site ?',
+    options: [
+      'Elle guérit définitivement l\'ADD',
+      'Elle réduit la taille des bulles et améliore l\'oxygénation des tissus en attendant la recompression en caisson hyperbare',
+      'Elle est uniquement utilisée en caisson hyperbare',
+      'Elle n\'a aucun effet sur les ADD'
+    ],
     correctIndex: 1,
-    explanation: 'L\'oxygène normobare (à pression atmosphérique) administré sur site réduit la taille des bulles par gradient de pression, améliore l\'oxygénation et constitue la première prise en charge en attendant le caisson hyperbare.',
+    explanation:
+        'L\'oxygène normobare (à pression atmosphérique) administré sur site réduit la taille des bulles par gradient de pression, améliore l\'oxygénation et constitue la première prise en charge en attendant le caisson hyperbare.',
     category: 'Accidents',
   ),
   Question(
     id: 'n3_62',
-    text: 'Qu\'est-ce que l\'espace d\'évolution "0-20 m" pour le plongeur N3 selon le Code du Sport ?',
-    options: ['La zone d\'entraînement uniquement', 'La zone validée par un E2 minimum pour l\'enseignement ; le N3 peut évoluer jusqu\'à 40 m en autonomie ou jusqu\'à 60 m avec DP', 'Une zone réservée aux débutants', 'La zone maximale sans palier'],
+    text:
+        'Qu\'est-ce que l\'espace d\'évolution "0-20 m" pour le plongeur N3 selon le Code du Sport ?',
+    options: [
+      'La zone d\'entraînement uniquement',
+      'La zone validée par un E2 minimum pour l\'enseignement ; le N3 peut évoluer jusqu\'à 40 m en autonomie ou jusqu\'à 60 m avec DP',
+      'Une zone réservée aux débutants',
+      'La zone maximale sans palier'
+    ],
     correctIndex: 1,
-    explanation: 'L\'espace 0-20 m est validé par un E2. Le N3 a des prérogatives étendues : autonomie jusqu\'à 40 m (sans DP) et jusqu\'à 60 m en présence d\'un DP.',
+    explanation:
+        'L\'espace 0-20 m est validé par un E2. Le N3 a des prérogatives étendues : autonomie jusqu\'à 40 m (sans DP) et jusqu\'à 60 m en présence d\'un DP.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_63',
-    text: 'Comment le PE60 s\'adapte-t-il à la plongée dans la zone 40-60 m concernant la stabilisation ?',
-    options: ['La technique est identique à celle de la zone 0-40 m', 'Il utilise la combinaison gilet et poumon ballast en tenant compte des effets accrus de la pression sur les variations de flottabilité', 'Il utilise uniquement les palmes pour se stabiliser', 'Il n\'a pas besoin de se stabiliser dans cette zone'],
+    text:
+        'Comment le PE60 s\'adapte-t-il à la plongée dans la zone 40-60 m concernant la stabilisation ?',
+    options: [
+      'La technique est identique à celle de la zone 0-40 m',
+      'Il utilise la combinaison gilet et poumon ballast en tenant compte des effets accrus de la pression sur les variations de flottabilité',
+      'Il utilise uniquement les palmes pour se stabiliser',
+      'Il n\'a pas besoin de se stabiliser dans cette zone'
+    ],
     correctIndex: 1,
-    explanation: 'Dans la zone 40-60 m, la stabilisation nécessite une adaptation : les variations de pression lors des mouvements sont plus importantes et nécessitent un maniement très précis du gilet et du poumon ballast.',
+    explanation:
+        'Dans la zone 40-60 m, la stabilisation nécessite une adaptation : les variations de pression lors des mouvements sont plus importantes et nécessitent un maniement très précis du gilet et du poumon ballast.',
     category: 'Techniques',
   ),
   Question(
     id: 'n3_64',
-    text: 'Quelle formation continue est recommandée au N3 pour maintenir ses aptitudes de plongée profonde ?',
-    options: ['Aucune formation continue n\'est requise après l\'obtention du N3', 'Des plongées régulières dans la zone de ses prérogatives, avec acclimatation progressive après une longue pause', 'Une revalidation annuelle obligatoire du brevet', 'Uniquement des plongées en piscine'],
+    text:
+        'Quelle formation continue est recommandée au N3 pour maintenir ses aptitudes de plongée profonde ?',
+    options: [
+      'Aucune formation continue n\'est requise après l\'obtention du N3',
+      'Des plongées régulières dans la zone de ses prérogatives, avec acclimatation progressive après une longue pause',
+      'Une revalidation annuelle obligatoire du brevet',
+      'Uniquement des plongées en piscine'
+    ],
     correctIndex: 1,
-    explanation: 'Pour maintenir ses aptitudes, le N3 doit pratiquer régulièrement. Après une longue pause, il est recommandé de s\'acclimater progressivement avec des plongées moins profondes (plongées de réadaptation).',
+    explanation:
+        'Pour maintenir ses aptitudes, le N3 doit pratiquer régulièrement. Après une longue pause, il est recommandé de s\'acclimater progressivement avec des plongées moins profondes (plongées de réadaptation).',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_65',
-    text: 'Quel document réglementaire doit être rempli par le N3 organisant une plongée depuis un bateau ?',
-    options: ['Uniquement le carnet de plongée', 'La fiche de sécurité et le livre de bord du bateau', 'Uniquement un registre de plongée simplifié', 'Aucun document spécifique n\'est requis'],
+    text:
+        'Quel document réglementaire doit être rempli par le N3 organisant une plongée depuis un bateau ?',
+    options: [
+      'Uniquement le carnet de plongée',
+      'La fiche de sécurité et le livre de bord du bateau',
+      'Uniquement un registre de plongée simplifié',
+      'Aucun document spécifique n\'est requis'
+    ],
     correctIndex: 0,
-    explanation: 'La fiche de sécurité est le document réglementaire principal à remplir lors de l\'organisation d\'une plongée. Elle recense toutes les informations nécessaires à une intervention de secours.',
+    explanation:
+        'La fiche de sécurité est le document réglementaire principal à remplir lors de l\'organisation d\'une plongée. Elle recense toutes les informations nécessaires à une intervention de secours.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_66',
     text: 'Qu\'est-ce que la "palanquée co-responsable" au N3 ?',
-    options: ['Une palanquée où chaque plongeur est entièrement autonome sans lien avec les autres', 'Une palanquée où chaque membre partage équitablement la responsabilité de la sécurité collective', 'Une palanquée sans guide ni DP', 'Un terme administratif pour les plongées en groupe'],
+    options: [
+      'Une palanquée où chaque plongeur est entièrement autonome sans lien avec les autres',
+      'Une palanquée où chaque membre partage équitablement la responsabilité de la sécurité collective',
+      'Une palanquée sans guide ni DP',
+      'Un terme administratif pour les plongées en groupe'
+    ],
     correctIndex: 1,
-    explanation: 'En plongée autonome N3, les membres de la palanquée sont co-responsables : chacun surveille ses équipiers, communique ses paramètres et contribue à la sécurité de tous.',
+    explanation:
+        'En plongée autonome N3, les membres de la palanquée sont co-responsables : chacun surveille ses équipiers, communique ses paramètres et contribue à la sécurité de tous.',
     category: 'Autonomie',
   ),
   Question(
     id: 'n3_67',
-    text: 'Pourquoi le N3 doit-il connaître les "profils de plongée à risques" ?',
-    options: ['Pour les suivre systématiquement', 'Pour les reconnaître et les éviter afin de prévenir les accidents de désaturation', 'Pour les utiliser uniquement en plongée technique', 'Pour les enseigner aux plongeurs N1'],
+    text:
+        'Pourquoi le N3 doit-il connaître les "profils de plongée à risques" ?',
+    options: [
+      'Pour les suivre systématiquement',
+      'Pour les reconnaître et les éviter afin de prévenir les accidents de désaturation',
+      'Pour les utiliser uniquement en plongée technique',
+      'Pour les enseigner aux plongeurs N1'
+    ],
     correctIndex: 1,
-    explanation: 'Le N3 doit connaître les profils à risques (yoyo, inversé, plongées répétitives trop rapprochées) pour les reconnaître et les éviter, réduisant ainsi le risque d\'accident de désaturation.',
+    explanation:
+        'Le N3 doit connaître les profils à risques (yoyo, inversé, plongées répétitives trop rapprochées) pour les reconnaître et les éviter, réduisant ainsi le risque d\'accident de désaturation.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_68',
     text: 'Quelles sont les compétences spécifiques au PE60 et non au PA40 ?',
-    options: ['Planifier la plongée', 'S\'adapter à la profondeur (techniques de stabilisation et adaptation aux contraintes de la zone 40-60 m)', 'Intervenir sur un plongeur en difficulté', 'Respecter le milieu et l\'environnement'],
+    options: [
+      'Planifier la plongée',
+      'S\'adapter à la profondeur (techniques de stabilisation et adaptation aux contraintes de la zone 40-60 m)',
+      'Intervenir sur un plongeur en difficulté',
+      'Respecter le milieu et l\'environnement'
+    ],
     correctIndex: 1,
-    explanation: 'La compétence "s\'adapter à la profondeur" est spécifique au PE60 : elle concerne l\'utilisation combinée du gilet et du poumon ballast dans la zone 40-60 m et la gestion des risques spécifiques à cette zone.',
+    explanation:
+        'La compétence "s\'adapter à la profondeur" est spécifique au PE60 : elle concerne l\'utilisation combinée du gilet et du poumon ballast dans la zone 40-60 m et la gestion des risques spécifiques à cette zone.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n3_69',
-    text: 'Dans quel cadre réglementaire s\'inscrit la plongée à 60 m selon le N3 ?',
-    options: ['Aucun cadre réglementaire spécifique', 'Conformément à l\'article A.322-86 du Code du Sport, sous la responsabilité d\'un E4 pour la formation technique', 'Uniquement dans les clubs affiliés CMAS', 'Seulement dans les eaux tropicales'],
+    text:
+        'Dans quel cadre réglementaire s\'inscrit la plongée à 60 m selon le N3 ?',
+    options: [
+      'Aucun cadre réglementaire spécifique',
+      'Conformément à l\'article A.322-86 du Code du Sport, sous la responsabilité d\'un E4 pour la formation technique',
+      'Uniquement dans les clubs affiliés CMAS',
+      'Seulement dans les eaux tropicales'
+    ],
     correctIndex: 1,
-    explanation: 'Conformément à l\'article A.322-86 du Code du Sport, un plongeur en cours de formation technique peut évoluer dans l\'espace 0-60 m sous la responsabilité d\'un E4.',
+    explanation:
+        'Conformément à l\'article A.322-86 du Code du Sport, un plongeur en cours de formation technique peut évoluer dans l\'espace 0-60 m sous la responsabilité d\'un E4.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n3_70',
-    text: 'Qu\'est-ce que la "gestion de la désaturation en palanquée hétérogène" au N3 ?',
-    options: ['Une plongée avec des plongeurs de niveaux très différents', 'La gestion des paliers quand les plongeurs utilisent des moyens de désaturation différents (ordinateurs de modèles ou conservatismes différents)', 'Une technique de plongée en binôme', 'Un mode de plongée sans palier'],
+    text:
+        'Qu\'est-ce que la "gestion de la désaturation en palanquée hétérogène" au N3 ?',
+    options: [
+      'Une plongée avec des plongeurs de niveaux très différents',
+      'La gestion des paliers quand les plongeurs utilisent des moyens de désaturation différents (ordinateurs de modèles ou conservatismes différents)',
+      'Une technique de plongée en binôme',
+      'Un mode de plongée sans palier'
+    ],
     correctIndex: 1,
-    explanation: 'En palanquée hétérogène, les plongeurs peuvent avoir des ordinateurs avec algorithmes ou conservatismes différents, entraînant des paliers différents. Le N3 doit gérer cette situation en s\'alignant sur le plus conservateur.',
+    explanation:
+        'En palanquée hétérogène, les plongeurs peuvent avoir des ordinateurs avec algorithmes ou conservatismes différents, entraînant des paliers différents. Le N3 doit gérer cette situation en s\'alignant sur le plus conservateur.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_71',
-    text: 'Quel est le rôle du matériel de secours lors de l\'organisation d\'une plongée N3 ?',
-    options: ['Il n\'est requis que pour les plongées de plus de 40 m', 'Il doit être présent (oxygène, DEA, trousse de secours), vérifié et accessible immédiatement en cas d\'accident', 'Il est uniquement requis sur les plongées commerciales', 'Il est optionnel si un médecin est présent'],
+    text:
+        'Quel est le rôle du matériel de secours lors de l\'organisation d\'une plongée N3 ?',
+    options: [
+      'Il n\'est requis que pour les plongées de plus de 40 m',
+      'Il doit être présent (oxygène, DEA, trousse de secours), vérifié et accessible immédiatement en cas d\'accident',
+      'Il est uniquement requis sur les plongées commerciales',
+      'Il est optionnel si un médecin est présent'
+    ],
     correctIndex: 1,
-    explanation: 'Le matériel de secours (oxygène, DEA si disponible, trousse de secours) doit être présent, vérifié et immédiatement accessible lors de toute plongée organisée par un N3.',
+    explanation:
+        'Le matériel de secours (oxygène, DEA si disponible, trousse de secours) doit être présent, vérifié et immédiatement accessible lors de toute plongée organisée par un N3.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_72',
     text: 'Qu\'est-ce que l\'évaluation en "contrôle continu" au N3 ?',
-    options: ['Une évaluation unique en fin de formation', 'L\'évaluation des compétences tout au long de la formation, lors des situations pratiques variées', 'Un examen théorique continu', 'Une auto-évaluation par le plongeur'],
+    options: [
+      'Une évaluation unique en fin de formation',
+      'L\'évaluation des compétences tout au long de la formation, lors des situations pratiques variées',
+      'Un examen théorique continu',
+      'Une auto-évaluation par le plongeur'
+    ],
     correctIndex: 1,
-    explanation: 'Au N3, l\'évaluation des compétences se fait en contrôle continu tout au long de la formation, lors de situations pratiques variées. Le niveau est validé quand toutes les compétences sont acquises.',
+    explanation:
+        'Au N3, l\'évaluation des compétences se fait en contrôle continu tout au long de la formation, lors de situations pratiques variées. Le niveau est validé quand toutes les compétences sont acquises.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n3_73',
-    text: 'Selon le N3, comment le plongeur doit-il gérer les "comportements avant, pendant et après la plongée" pour prévenir les ADD ?',
-    options: ['Uniquement pendant la plongée', 'Avant (bonne condition physique, hydratation, éviter l\'alcool), pendant (respect des procédures) et après (rester à terre, ne pas plonger à nouveau immédiatement)', 'Uniquement après la plongée', 'Ces comportements ne préviennent pas les ADD'],
+    text:
+        'Selon le N3, comment le plongeur doit-il gérer les "comportements avant, pendant et après la plongée" pour prévenir les ADD ?',
+    options: [
+      'Uniquement pendant la plongée',
+      'Avant (bonne condition physique, hydratation, éviter l\'alcool), pendant (respect des procédures) et après (rester à terre, ne pas plonger à nouveau immédiatement)',
+      'Uniquement après la plongée',
+      'Ces comportements ne préviennent pas les ADD'
+    ],
     correctIndex: 1,
-    explanation: 'La prévention des ADD implique une gestion avant (hydratation, repos, éviter alcool/excès), pendant (respect des vitesses et paliers) et après (pas de plongée immédiate, surveiller les symptômes).',
+    explanation:
+        'La prévention des ADD implique une gestion avant (hydratation, repos, éviter alcool/excès), pendant (respect des vitesses et paliers) et après (pas de plongée immédiate, surveiller les symptômes).',
     category: 'Accidents',
   ),
   Question(
     id: 'n3_74',
-    text: 'Qu\'est-ce que la "majoration" dans l\'utilisation des tables de plongée pour les plongées successives ?',
-    options: ['Une pénalité appliquée pour les plongées profondes', 'Un allongement fictif de la durée de la plongée suivante pour tenir compte de la saturation résiduelle en azote', 'Une majoration du lestage pour les plongées profondes', 'Un temps de surface obligatoire supplémentaire'],
+    text:
+        'Qu\'est-ce que la "majoration" dans l\'utilisation des tables de plongée pour les plongées successives ?',
+    options: [
+      'Une pénalité appliquée pour les plongées profondes',
+      'Un allongement fictif de la durée de la plongée suivante pour tenir compte de la saturation résiduelle en azote',
+      'Une majoration du lestage pour les plongées profondes',
+      'Un temps de surface obligatoire supplémentaire'
+    ],
     correctIndex: 1,
-    explanation: 'La majoration est le principe qui consiste à ajouter un temps fictif à la durée réelle de la plongée suivante pour tenir compte de l\'azote résiduel, aboutissant à des paliers plus importants.',
+    explanation:
+        'La majoration est le principe qui consiste à ajouter un temps fictif à la durée réelle de la plongée suivante pour tenir compte de l\'azote résiduel, aboutissant à des paliers plus importants.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_75',
-    text: 'Quel est l\'espace d\'évolution de l\'enseignement théorique et pratique du N3 PA40 ?',
-    options: ['0 à 20 m uniquement', '0 à 40 m par un E3 minimum avec accoutumance progressive à la profondeur', '0 à 60 m par n\'importe quel moniteur', '0 à 30 m uniquement'],
+    text:
+        'Quel est l\'espace d\'évolution de l\'enseignement théorique et pratique du N3 PA40 ?',
+    options: [
+      '0 à 20 m uniquement',
+      '0 à 40 m par un E3 minimum avec accoutumance progressive à la profondeur',
+      '0 à 60 m par n\'importe quel moniteur',
+      '0 à 30 m uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'L\'enseignement et la validation des compétences PA40 s\'effectuent dans l\'espace 0-40 m par un E3 minimum, avec une accoutumance progressive à la profondeur.',
+    explanation:
+        'L\'enseignement et la validation des compétences PA40 s\'effectuent dans l\'espace 0-40 m par un E3 minimum, avec une accoutumance progressive à la profondeur.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_76',
-    text: 'Comment le N3 évalue-t-il la topologie d\'un site de plongée pour l\'organisation ?',
-    options: ['Il n\'évalue pas la topologie', 'Analyse du relief, courant, vent, marée, possibilités de mouillage, zones protégées, conditions réglementaires', 'Uniquement la profondeur maximale', 'Uniquement les conditions météo en surface'],
+    text:
+        'Comment le N3 évalue-t-il la topologie d\'un site de plongée pour l\'organisation ?',
+    options: [
+      'Il n\'évalue pas la topologie',
+      'Analyse du relief, courant, vent, marée, possibilités de mouillage, zones protégées, conditions réglementaires',
+      'Uniquement la profondeur maximale',
+      'Uniquement les conditions météo en surface'
+    ],
     correctIndex: 1,
-    explanation: 'L\'évaluation topologique d\'un site inclut : relief et particularités, courant, vent, marée, possibilités de mouillage, conditions réglementaires (zones protégées, interdites, restrictions).',
+    explanation:
+        'L\'évaluation topologique d\'un site inclut : relief et particularités, courant, vent, marée, possibilités de mouillage, conditions réglementaires (zones protégées, interdites, restrictions).',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_77',
-    text: 'Qu\'est-ce que la "vitesse de remontée" dans le contexte de la désaturation N3 et comment doit-elle être gérée ?',
-    options: ['Elle n\'a pas d\'importance', 'Elle doit être contrôlée et adaptée aux contraintes des différents modèles de désaturation utilisés dans la palanquée', 'Elle doit être maximale pour limiter le temps d\'exposition', 'Elle est identique quelle que soit la profondeur'],
+    text:
+        'Qu\'est-ce que la "vitesse de remontée" dans le contexte de la désaturation N3 et comment doit-elle être gérée ?',
+    options: [
+      'Elle n\'a pas d\'importance',
+      'Elle doit être contrôlée et adaptée aux contraintes des différents modèles de désaturation utilisés dans la palanquée',
+      'Elle doit être maximale pour limiter le temps d\'exposition',
+      'Elle est identique quelle que soit la profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'La vitesse de remontée doit être contrôlée selon les recommandations du moyen de désaturation utilisé et adaptée à l\'ensemble de la palanquée, en respectant le plus conservateur.',
+    explanation:
+        'La vitesse de remontée doit être contrôlée selon les recommandations du moyen de désaturation utilisé et adaptée à l\'ensemble de la palanquée, en respectant le plus conservateur.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_78',
-    text: 'Pourquoi la plongée N3 à 60 m implique-t-elle une "très bonne maîtrise de la désaturation" ?',
-    options: ['Uniquement pour des raisons administratives', 'Car les paliers sont plus contraignants, la consommation d\'air au palier est importante, et les risques en cas d\'erreur sont plus graves', 'Car les tables sont plus compliquées à lire', 'Car les ordinateurs sont moins précis en profondeur'],
+    text:
+        'Pourquoi la plongée N3 à 60 m implique-t-elle une "très bonne maîtrise de la désaturation" ?',
+    options: [
+      'Uniquement pour des raisons administratives',
+      'Car les paliers sont plus contraignants, la consommation d\'air au palier est importante, et les risques en cas d\'erreur sont plus graves',
+      'Car les tables sont plus compliquées à lire',
+      'Car les ordinateurs sont moins précis en profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'À 60 m, la désaturation est plus contraignante (paliers longs), la consommation d\'air au palier est importante à cause de la pression, et les conséquences d\'une erreur (vitesse excessive, palier raccourci) sont potentiellement graves.',
+    explanation:
+        'À 60 m, la désaturation est plus contraignante (paliers longs), la consommation d\'air au palier est importante à cause de la pression, et les conséquences d\'une erreur (vitesse excessive, palier raccourci) sont potentiellement graves.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_79',
-    text: 'Quels sont les éléments de la compétence "s\'adapter à la profondeur" spécifique PE60 ?',
-    options: ['Uniquement la connaissance théorique des risques', 'Adaptation de la stabilisation aux effets de la pression, entretien des compétences PE40, sensibilisation aux risques spécifiques de la zone profonde', 'Uniquement la technique de palmage', 'Uniquement le vidage de masque en profondeur'],
+    text:
+        'Quels sont les éléments de la compétence "s\'adapter à la profondeur" spécifique PE60 ?',
+    options: [
+      'Uniquement la connaissance théorique des risques',
+      'Adaptation de la stabilisation aux effets de la pression, entretien des compétences PE40, sensibilisation aux risques spécifiques de la zone profonde',
+      'Uniquement la technique de palmage',
+      'Uniquement le vidage de masque en profondeur'
+    ],
     correctIndex: 1,
-    explanation: 'La compétence PE60 "s\'adapter à la profondeur" comprend : adaptation de la stabilisation (gilet + poumon ballast), entretien des compétences PE40 (ventilation, déplacement, communication), sensibilisation aux risques accrus (consommation, narcose, désaturation, froid).',
+    explanation:
+        'La compétence PE60 "s\'adapter à la profondeur" comprend : adaptation de la stabilisation (gilet + poumon ballast), entretien des compétences PE40 (ventilation, déplacement, communication), sensibilisation aux risques accrus (consommation, narcose, désaturation, froid).',
     category: 'Techniques',
   ),
   Question(
     id: 'n3_80',
-    text: 'Qu\'est-ce que la "co-gestion" de la désaturation en palanquée autonome PA40 ?',
-    options: ['Un seul plongeur gère la désaturation pour tous', 'Chaque plongeur gère sa propre désaturation tout en informant ses équipiers et en s\'adaptant aux contraintes des autres', 'Uniquement le plongeur le plus expérimenté gère la désaturation', 'Il n\'y a pas de co-gestion en autonomie'],
+    text:
+        'Qu\'est-ce que la "co-gestion" de la désaturation en palanquée autonome PA40 ?',
+    options: [
+      'Un seul plongeur gère la désaturation pour tous',
+      'Chaque plongeur gère sa propre désaturation tout en informant ses équipiers et en s\'adaptant aux contraintes des autres',
+      'Uniquement le plongeur le plus expérimenté gère la désaturation',
+      'Il n\'y a pas de co-gestion en autonomie'
+    ],
     correctIndex: 1,
-    explanation: 'En co-gestion, chaque plongeur du PA40 est responsable de sa désaturation, communique ses paramètres (paliers, durée) et s\'adapte aux contraintes les plus conservatrices de la palanquée.',
+    explanation:
+        'En co-gestion, chaque plongeur du PA40 est responsable de sa désaturation, communique ses paramètres (paliers, durée) et s\'adapte aux contraintes les plus conservatrices de la palanquée.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_81',
-    text: 'Lors d\'une plongée organisée par un N3, quelles conditions météo doit-il vérifier ?',
-    options: ['Uniquement la pluie ou le soleil', 'Vent, état de la mer, courants, houle, prévisions météo marines, visibilité en surface', 'Uniquement la température de l\'air', 'Aucune condition météo n\'est à vérifier pour la plongée'],
+    text:
+        'Lors d\'une plongée organisée par un N3, quelles conditions météo doit-il vérifier ?',
+    options: [
+      'Uniquement la pluie ou le soleil',
+      'Vent, état de la mer, courants, houle, prévisions météo marines, visibilité en surface',
+      'Uniquement la température de l\'air',
+      'Aucune condition météo n\'est à vérifier pour la plongée'
+    ],
     correctIndex: 1,
-    explanation: 'Avant d\'organiser une plongée, le N3 doit vérifier : vent (force et direction), état de la mer (houle, vagues), courants marins, prévisions météo marines (bulletins CROSS, Météo France Marine).',
+    explanation:
+        'Avant d\'organiser une plongée, le N3 doit vérifier : vent (force et direction), état de la mer (houle, vagues), courants marins, prévisions météo marines (bulletins CROSS, Météo France Marine).',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_82',
-    text: 'Qu\'est-ce que la "surveillance et rotation des palanquées" dans l\'organisation N3 ?',
-    options: ['Une technique de plongée en groupe', 'L\'organisation des sorties d\'eau successives et de la surveillance des plongeurs depuis la surface', 'Un exercice de communication subaquatique', 'Une procédure de remontée d\'urgence'],
+    text:
+        'Qu\'est-ce que la "surveillance et rotation des palanquées" dans l\'organisation N3 ?',
+    options: [
+      'Une technique de plongée en groupe',
+      'L\'organisation des sorties d\'eau successives et de la surveillance des plongeurs depuis la surface',
+      'Un exercice de communication subaquatique',
+      'Une procédure de remontée d\'urgence'
+    ],
     correctIndex: 1,
-    explanation: 'La rotation des palanquées concerne l\'organisation des sorties successives (qui plonge quand) et la surveillance de surface pour s\'assurer que chaque palanquée revient correctement.',
+    explanation:
+        'La rotation des palanquées concerne l\'organisation des sorties successives (qui plonge quand) et la surveillance de surface pour s\'assurer que chaque palanquée revient correctement.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_83',
-    text: 'Qu\'est-ce que la "stabilisation sur poumon ballast" au niveau N3 en profondeur ?',
-    options: ['Gonfler le gilet à maximum', 'Maintenir sa profondeur uniquement par la gestion du volume d\'air dans les poumons, sans action sur le gilet', 'Utiliser les palmes pour se maintenir', 'S\'accrocher au fond'],
+    text:
+        'Qu\'est-ce que la "stabilisation sur poumon ballast" au niveau N3 en profondeur ?',
+    options: [
+      'Gonfler le gilet à maximum',
+      'Maintenir sa profondeur uniquement par la gestion du volume d\'air dans les poumons, sans action sur le gilet',
+      'Utiliser les palmes pour se maintenir',
+      'S\'accrocher au fond'
+    ],
     correctIndex: 1,
-    explanation: 'La stabilisation sur poumon ballast consiste à maintenir sa profondeur uniquement par la gestion fine des inspirations/expirations, sans avoir à gonfler ou purger le gilet. C\'est une technique de précision essentielle en profondeur.',
+    explanation:
+        'La stabilisation sur poumon ballast consiste à maintenir sa profondeur uniquement par la gestion fine des inspirations/expirations, sans avoir à gonfler ou purger le gilet. C\'est une technique de précision essentielle en profondeur.',
     category: 'Techniques',
   ),
   Question(
     id: 'n3_84',
-    text: 'Quelle est la valeur de profondeur pour l\'évaluation de la compétence "s\'adapter à la profondeur" du PE60 ?',
-    options: ['À 60 m obligatoirement', 'L\'évaluation est réalisée à une profondeur n\'excédant pas 40 m par un E3 minimum', 'À 20 m seulement', 'En piscine profonde'],
+    text:
+        'Quelle est la valeur de profondeur pour l\'évaluation de la compétence "s\'adapter à la profondeur" du PE60 ?',
+    options: [
+      'À 60 m obligatoirement',
+      'L\'évaluation est réalisée à une profondeur n\'excédant pas 40 m par un E3 minimum',
+      'À 20 m seulement',
+      'En piscine profonde'
+    ],
     correctIndex: 1,
-    explanation: 'L\'évaluation de la compétence PE60 "s\'adapter à la profondeur" est réalisée en situation pratique à une profondeur n\'excédant pas 40 m par un E3 minimum. Les éléments théoriques sont intégrés à la pratique.',
+    explanation:
+        'L\'évaluation de la compétence PE60 "s\'adapter à la profondeur" est réalisée en situation pratique à une profondeur n\'excédant pas 40 m par un E3 minimum. Les éléments théoriques sont intégrés à la pratique.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n3_85',
-    text: 'Pourquoi le N3 doit-il avoir une "bonne condition physique" pour la plongée à 60 m ?',
-    options: ['Pour des raisons esthétiques uniquement', 'Car la profondeur augmente la densité de l\'air, l\'effort respiratoire et le risque d\'essoufflement qui compromet la sécurité', 'Pour passer les épreuves physiques de l\'examen', 'Car l\'eau est plus froide en profondeur uniquement'],
+    text:
+        'Pourquoi le N3 doit-il avoir une "bonne condition physique" pour la plongée à 60 m ?',
+    options: [
+      'Pour des raisons esthétiques uniquement',
+      'Car la profondeur augmente la densité de l\'air, l\'effort respiratoire et le risque d\'essoufflement qui compromet la sécurité',
+      'Pour passer les épreuves physiques de l\'examen',
+      'Car l\'eau est plus froide en profondeur uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'Une bonne condition physique est indispensable à 60 m : la densité de l\'air est 7 fois plus élevée qu\'en surface, rendant l\'effort respiratoire plus important et le risque d\'essoufflement accru.',
+    explanation:
+        'Une bonne condition physique est indispensable à 60 m : la densité de l\'air est 7 fois plus élevée qu\'en surface, rendant l\'effort respiratoire plus important et le risque d\'essoufflement accru.',
     category: 'Sécurité',
   ),
   Question(
     id: 'n3_86',
-    text: 'Quelle est la différence entre les connaissances théoriques N3 pour le PA40 et pour le PE60 ?',
-    options: ['Il n\'y a aucune différence', 'Le PA40 couvre la désaturation en autonomie et la réglementation d\'autonomie ; le PE60 ajoute la sensibilisation aux risques liés à la profondeur et aux accidents de désaturation spécifiques', 'Le PE60 n\'a pas de connaissances théoriques supplémentaires', 'Le PA40 a plus de théorie que le PE60'],
+    text:
+        'Quelle est la différence entre les connaissances théoriques N3 pour le PA40 et pour le PE60 ?',
+    options: [
+      'Il n\'y a aucune différence',
+      'Le PA40 couvre la désaturation en autonomie et la réglementation d\'autonomie ; le PE60 ajoute la sensibilisation aux risques liés à la profondeur et aux accidents de désaturation spécifiques',
+      'Le PE60 n\'a pas de connaissances théoriques supplémentaires',
+      'Le PA40 a plus de théorie que le PE60'
+    ],
     correctIndex: 1,
-    explanation: 'Le PA40 approfondit la désaturation en autonomie, la réglementation et les calculs de consommation. Le PE60 ajoute la sensibilisation aux risques accrus en zone profonde et aux accidents de désaturation (mécanismes, cutis marmorata, facteurs favorisants).',
+    explanation:
+        'Le PA40 approfondit la désaturation en autonomie, la réglementation et les calculs de consommation. Le PE60 ajoute la sensibilisation aux risques accrus en zone profonde et aux accidents de désaturation (mécanismes, cutis marmorata, facteurs favorisants).',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_87',
-    text: 'Quelle est la procédure d\'alerte recommandée en cas d\'accident de plongée (ADD) lors d\'une plongée organisée par un N3 ?',
-    options: ['Replonger immédiatement le blessé', 'Administrer l\'oxygène, contacter le SAMU (15) ou le CROSS et attendre les secours en maintenant le blessé conscient et couché', 'Attendre que les symptômes disparaissent', 'Transporter le blessé directement en caisson sans appeler'],
+    text:
+        'Quelle est la procédure d\'alerte recommandée en cas d\'accident de plongée (ADD) lors d\'une plongée organisée par un N3 ?',
+    options: [
+      'Replonger immédiatement le blessé',
+      'Administrer l\'oxygène, contacter le SAMU (15) ou le CROSS et attendre les secours en maintenant le blessé conscient et couché',
+      'Attendre que les symptômes disparaissent',
+      'Transporter le blessé directement en caisson sans appeler'
+    ],
     correctIndex: 1,
-    explanation: 'En cas d\'ADD : sortir le blessé, installer en position adaptée, administrer l\'O2, appeler le SAMU (15) ou CROSS maritime (196) qui contactera le médecin hyperbariste, informer des paramètres de plongée.',
+    explanation:
+        'En cas d\'ADD : sortir le blessé, installer en position adaptée, administrer l\'O2, appeler le SAMU (15) ou CROSS maritime (196) qui contactera le médecin hyperbariste, informer des paramètres de plongée.',
     category: 'Accidents',
   ),
   Question(
     id: 'n3_88',
-    text: 'Qu\'est-ce que la "réglementation des espaces d\'évolution" au sens de la plongée autonome N3 ?',
-    options: ['Des règles uniquement pour la plongée en eau douce', 'Les dispositions du Code du Sport définissant les profondeurs autorisées selon le niveau et le mode d\'encadrement', 'Des règles uniquement pour les zones marines protégées', 'Des règles non contraignantes'],
+    text:
+        'Qu\'est-ce que la "réglementation des espaces d\'évolution" au sens de la plongée autonome N3 ?',
+    options: [
+      'Des règles uniquement pour la plongée en eau douce',
+      'Les dispositions du Code du Sport définissant les profondeurs autorisées selon le niveau et le mode d\'encadrement',
+      'Des règles uniquement pour les zones marines protégées',
+      'Des règles non contraignantes'
+    ],
     correctIndex: 1,
-    explanation: 'La réglementation des espaces d\'évolution définit dans le Code du Sport les profondeurs autorisées selon le niveau (N1, N2, N3) et le mode d\'encadrement (encadré, autonome, avec ou sans DP).',
+    explanation:
+        'La réglementation des espaces d\'évolution définit dans le Code du Sport les profondeurs autorisées selon le niveau (N1, N2, N3) et le mode d\'encadrement (encadré, autonome, avec ou sans DP).',
     category: 'Réglementation',
   ),
   Question(
     id: 'n3_89',
-    text: 'Quelle est la position de plongée recommandée lors d\'une intervention sur un plongeur en difficulté pour éviter une remontée trop rapide ?',
-    options: ['Position horizontale tête en bas', 'Position verticale légèrement inclinée, en utilisant le gilet pour contrôler la remontée', 'Position accroupie au fond', 'Position sur le dos du plongeur assisté'],
+    text:
+        'Quelle est la position de plongée recommandée lors d\'une intervention sur un plongeur en difficulté pour éviter une remontée trop rapide ?',
+    options: [
+      'Position horizontale tête en bas',
+      'Position verticale légèrement inclinée, en utilisant le gilet pour contrôler la remontée',
+      'Position accroupie au fond',
+      'Position sur le dos du plongeur assisté'
+    ],
     correctIndex: 1,
-    explanation: 'Lors d\'une assistance à la remontée, le plongeur se positionne de façon à pouvoir contrôler la vitesse via le gilet de l\'assisté, en maintenant le contact et en surveillant la vitesse de remontée.',
+    explanation:
+        'Lors d\'une assistance à la remontée, le plongeur se positionne de façon à pouvoir contrôler la vitesse via le gilet de l\'assisté, en maintenant le contact et en surveillant la vitesse de remontée.',
     category: 'Intervention',
   ),
   Question(
     id: 'n3_90',
-    text: 'À quel niveau pédagogique se situe l\'évaluation des connaissances théoriques N3 selon le manuel ?',
-    options: ['Niveau universitaire spécialisé', 'Niveau de compréhension des mécanismes principaux avec application pratique dans le cadre des prérogatives N3', 'Niveau ingénieur en physique des fluides', 'Uniquement mémorisation de définitions'],
+    text:
+        'À quel niveau pédagogique se situe l\'évaluation des connaissances théoriques N3 selon le manuel ?',
+    options: [
+      'Niveau universitaire spécialisé',
+      'Niveau de compréhension des mécanismes principaux avec application pratique dans le cadre des prérogatives N3',
+      'Niveau ingénieur en physique des fluides',
+      'Uniquement mémorisation de définitions'
+    ],
     correctIndex: 1,
-    explanation: 'L\'évaluation théorique N3 porte sur la compréhension des mécanismes principaux (désaturation, accidents) avec application pratique dans le cadre des prérogatives du niveau, pas sur des calculs savants.',
+    explanation:
+        'L\'évaluation théorique N3 porte sur la compréhension des mécanismes principaux (désaturation, accidents) avec application pratique dans le cadre des prérogatives du niveau, pas sur des calculs savants.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n3_91',
-    text: 'Que doit communiquer le N3 PA40 à ses équipiers avant de démarrer l\'exploration au fond ?',
-    options: ['Rien, chacun gère sa plongée', 'Vérification du bien-être de tous, confirmation des paramètres (profondeur cible, durée, direction) et des procédures convenues', 'Uniquement la profondeur maximale', 'Uniquement le temps de plongée restant'],
+    text:
+        'Que doit communiquer le N3 PA40 à ses équipiers avant de démarrer l\'exploration au fond ?',
+    options: [
+      'Rien, chacun gère sa plongée',
+      'Vérification du bien-être de tous, confirmation des paramètres (profondeur cible, durée, direction) et des procédures convenues',
+      'Uniquement la profondeur maximale',
+      'Uniquement le temps de plongée restant'
+    ],
     correctIndex: 1,
-    explanation: 'Avant de démarrer l\'exploration, le PA40 doit s\'assurer que tous vont bien (communication OK), confirmer les paramètres et procédures convenus (profondeur, durée, direction, seuil de déclenchement de la remontée).',
+    explanation:
+        'Avant de démarrer l\'exploration, le PA40 doit s\'assurer que tous vont bien (communication OK), confirmer les paramètres et procédures convenus (profondeur, durée, direction, seuil de déclenchement de la remontée).',
     category: 'Autonomie',
   ),
   Question(
     id: 'n3_92',
-    text: 'Qu\'est-ce que la "plongée de réadaptation" recommandée au N3 après un ADD ou une longue pause ?',
-    options: ['Une plongée à la profondeur maximale pour tester ses capacités', 'Une première plongée courte et peu profonde pour réaccoutumer l\'organisme progressivement', 'Une plongée avec de l\'oxygène pur', 'Une plongée supervisée par un médecin hyperbariste'],
+    text:
+        'Qu\'est-ce que la "plongée de réadaptation" recommandée au N3 après un ADD ou une longue pause ?',
+    options: [
+      'Une plongée à la profondeur maximale pour tester ses capacités',
+      'Une première plongée courte et peu profonde pour réaccoutumer l\'organisme progressivement',
+      'Une plongée avec de l\'oxygène pur',
+      'Une plongée supervisée par un médecin hyperbariste'
+    ],
     correctIndex: 1,
-    explanation: 'La plongée de réadaptation est une plongée peu profonde et courte réalisée après un accident de désaturation ou une longue absence pour accoutumer progressivement l\'organisme avant de reprendre des plongées normales.',
+    explanation:
+        'La plongée de réadaptation est une plongée peu profonde et courte réalisée après un accident de désaturation ou une longue absence pour accoutumer progressivement l\'organisme avant de reprendre des plongées normales.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_93',
-    text: 'Pourquoi le N3 doit-il maîtriser les "critères de conservatisme" de son ordinateur ?',
-    options: ['Pour économiser la batterie', 'Pour adapter le niveau de sécurité de sa désaturation à sa physiologie, ses antécédents et les conditions de plongée', 'Pour obtenir des paliers plus courts', 'Pour faciliter les plongées répétitives'],
+    text:
+        'Pourquoi le N3 doit-il maîtriser les "critères de conservatisme" de son ordinateur ?',
+    options: [
+      'Pour économiser la batterie',
+      'Pour adapter le niveau de sécurité de sa désaturation à sa physiologie, ses antécédents et les conditions de plongée',
+      'Pour obtenir des paliers plus courts',
+      'Pour faciliter les plongées répétitives'
+    ],
     correctIndex: 1,
-    explanation: 'Maîtriser les critères de conservatisme permet d\'adapter le niveau de sécurité de la désaturation à sa physiologie personnelle, ses antécédents médicaux et les conditions de la plongée (froid, effort, plongées répétitives).',
+    explanation:
+        'Maîtriser les critères de conservatisme permet d\'adapter le niveau de sécurité de la désaturation à sa physiologie personnelle, ses antécédents médicaux et les conditions de la plongée (froid, effort, plongées répétitives).',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_94',
-    text: 'Quelle est la règle concernant le "retour en surface" après l\'exécution des paliers au N3 PA40 ?',
-    options: ['Remonter le plus vite possible après le palier', 'Rejoindre la surface en respectant l\'arrêt et le tour d\'horizon de sécurité dans la zone 5-3 m', 'Attendre que l\'ordinateur indique "décompression terminée"', 'Retourner au fond avant de remonter définitivement'],
+    text:
+        'Quelle est la règle concernant le "retour en surface" après l\'exécution des paliers au N3 PA40 ?',
+    options: [
+      'Remonter le plus vite possible après le palier',
+      'Rejoindre la surface en respectant l\'arrêt et le tour d\'horizon de sécurité dans la zone 5-3 m',
+      'Attendre que l\'ordinateur indique "décompression terminée"',
+      'Retourner au fond avant de remonter définitivement'
+    ],
     correctIndex: 1,
-    explanation: 'Après les paliers, le PA40 rejoint la surface en respectant un arrêt et un tour d\'horizon de sécurité à 3-5 m, pour vérifier l\'absence d\'obstruction (bateau, plongeur) avant de percer la surface.',
+    explanation:
+        'Après les paliers, le PA40 rejoint la surface en respectant un arrêt et un tour d\'horizon de sécurité à 3-5 m, pour vérifier l\'absence d\'obstruction (bateau, plongeur) avant de percer la surface.',
     category: 'Remontée',
   ),
   Question(
     id: 'n3_95',
-    text: 'Quelle est la signification de "gestion collégiale" de la planification au PA40 ?',
-    options: ['Un seul plongeur planifie pour tous', 'La planification est effectuée en concertation et accord mutuel entre tous les membres de la palanquée', 'La planification est imposée par le DP', 'Il n\'y a pas de planification nécessaire en autonomie'],
+    text:
+        'Quelle est la signification de "gestion collégiale" de la planification au PA40 ?',
+    options: [
+      'Un seul plongeur planifie pour tous',
+      'La planification est effectuée en concertation et accord mutuel entre tous les membres de la palanquée',
+      'La planification est imposée par le DP',
+      'Il n\'y a pas de planification nécessaire en autonomie'
+    ],
     correctIndex: 1,
-    explanation: 'La gestion collégiale signifie que la planification est effectuée en commun, avec la participation et l\'accord de tous les membres de la palanquée, en tenant compte de l\'expérience de chacun.',
+    explanation:
+        'La gestion collégiale signifie que la planification est effectuée en commun, avec la participation et l\'accord de tous les membres de la palanquée, en tenant compte de l\'expérience de chacun.',
     category: 'Planification',
   ),
   Question(
     id: 'n3_96',
-    text: 'Qu\'est-ce que la "plongée sans palier" et jusqu\'à quelle profondeur elle est généralement applicable ?',
-    options: ['Une plongée à plus de 60 m sans risque', 'Une plongée dont la durée ne dépasse pas la limite sans palier calculée par l\'ordinateur ou les tables, possible à toutes profondeurs dans ces limites', 'Une plongée uniquement pour les niveaux N1', 'Une plongée en apnée uniquement'],
+    text:
+        'Qu\'est-ce que la "plongée sans palier" et jusqu\'à quelle profondeur elle est généralement applicable ?',
+    options: [
+      'Une plongée à plus de 60 m sans risque',
+      'Une plongée dont la durée ne dépasse pas la limite sans palier calculée par l\'ordinateur ou les tables, possible à toutes profondeurs dans ces limites',
+      'Une plongée uniquement pour les niveaux N1',
+      'Une plongée en apnée uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'Une plongée sans palier (ou sans palier obligatoire) est une plongée dont la durée reste dans les limites calculées par l\'ordinateur ou les tables. Elle est possible à toute profondeur tant que cette durée n\'est pas dépassée.',
+    explanation:
+        'Une plongée sans palier (ou sans palier obligatoire) est une plongée dont la durée reste dans les limites calculées par l\'ordinateur ou les tables. Elle est possible à toute profondeur tant que cette durée n\'est pas dépassée.',
     category: 'Désaturation',
   ),
   Question(
     id: 'n3_97',
-    text: 'Comment le N3 organise-t-il la surveillance de surface lors d\'une plongée en autonomie ?',
-    options: ['Il n\'y a pas de surveillance de surface nécessaire en autonomie', 'En désignant un plongeur ou une personne de surface avec les moyens de communication et secours pour surveiller les plongeurs', 'En utilisant uniquement une bouée de signalisation', 'Le DP surveille automatiquement depuis le bateau'],
+    text:
+        'Comment le N3 organise-t-il la surveillance de surface lors d\'une plongée en autonomie ?',
+    options: [
+      'Il n\'y a pas de surveillance de surface nécessaire en autonomie',
+      'En désignant un plongeur ou une personne de surface avec les moyens de communication et secours pour surveiller les plongeurs',
+      'En utilisant uniquement une bouée de signalisation',
+      'Le DP surveille automatiquement depuis le bateau'
+    ],
     correctIndex: 1,
-    explanation: 'La surveillance de surface doit être organisée par le N3 : désignation d\'un responsable de surface avec les moyens de communication (VHF, téléphone) et le matériel de secours (O2, trousse), capable d\'alerter les secours.',
+    explanation:
+        'La surveillance de surface doit être organisée par le N3 : désignation d\'un responsable de surface avec les moyens de communication (VHF, téléphone) et le matériel de secours (O2, trousse), capable d\'alerter les secours.',
     category: 'Organisation',
   ),
   Question(
     id: 'n3_98',
-    text: 'Qu\'est-ce que la "responsabilité partagée" des plongeurs au sens du Code du Sport au niveau N3 ?',
-    options: ['Une absence de responsabilité individuelle', 'Chaque plongeur autonome peut être tenu civilement et pénalement responsable en cas de faute entraînant un dommage', 'Uniquement le DP est responsable', 'La responsabilité est partagée entre le club et le plongeur uniquement'],
+    text:
+        'Qu\'est-ce que la "responsabilité partagée" des plongeurs au sens du Code du Sport au niveau N3 ?',
+    options: [
+      'Une absence de responsabilité individuelle',
+      'Chaque plongeur autonome peut être tenu civilement et pénalement responsable en cas de faute entraînant un dommage',
+      'Uniquement le DP est responsable',
+      'La responsabilité est partagée entre le club et le plongeur uniquement'
+    ],
     correctIndex: 1,
-    explanation: 'En plongée autonome, chaque plongeur assume une responsabilité civile (indemnisation des victimes) et pénale (sanction en cas d\'infraction) en cas de faute ou négligence entraînant un dommage.',
+    explanation:
+        'En plongée autonome, chaque plongeur assume une responsabilité civile (indemnisation des victimes) et pénale (sanction en cas d\'infraction) en cas de faute ou négligence entraînant un dommage.',
     category: 'Réglementation',
   ),
   Question(
     id: 'n3_99',
-    text: 'Selon le manuel N3, quelle valeur pédagogique principale retient-on de la compétence "organiser la plongée" ?',
-    options: ['La vitesse d\'organisation', 'La faisabilité et la pertinence des choix d\'organisation, dans le respect de la sécurité', 'L\'utilisation de supports informatiques', 'La connaissance de tous les sites de plongée'],
+    text:
+        'Selon le manuel N3, quelle valeur pédagogique principale retient-on de la compétence "organiser la plongée" ?',
+    options: [
+      'La vitesse d\'organisation',
+      'La faisabilité et la pertinence des choix d\'organisation, dans le respect de la sécurité',
+      'L\'utilisation de supports informatiques',
+      'La connaissance de tous les sites de plongée'
+    ],
     correctIndex: 1,
-    explanation: 'Selon le manuel, la faisabilité et la pertinence des choix d\'organisation constituent les critères principaux de validation de la compétence "organiser la plongée" du N3.',
+    explanation:
+        'Selon le manuel, la faisabilité et la pertinence des choix d\'organisation constituent les critères principaux de validation de la compétence "organiser la plongée" du N3.',
     category: 'Évaluation',
   ),
   Question(
     id: 'n3_100',
-    text: 'Quelle est la nature de l\'évaluation des connaissances théoriques au N3 selon le manuel ?',
-    options: ['Uniquement écrite', 'Oralement, en situation pratique ou par écrit, selon les choix de l\'encadrant', 'Uniquement pratique', 'Uniquement par QCM informatisé'],
+    text:
+        'Quelle est la nature de l\'évaluation des connaissances théoriques au N3 selon le manuel ?',
+    options: [
+      'Uniquement écrite',
+      'Oralement, en situation pratique ou par écrit, selon les choix de l\'encadrant',
+      'Uniquement pratique',
+      'Uniquement par QCM informatisé'
+    ],
     correctIndex: 1,
-    explanation: 'Les connaissances théoriques au N3 sont évaluées oralement, en situation pratique ou par écrit, au choix de l\'encadrant, en veillant à varier les situations d\'évaluation.',
+    explanation:
+        'Les connaissances théoriques au N3 sont évaluées oralement, en situation pratique ou par écrit, au choix de l\'encadrant, en veillant à varier les situations d\'évaluation.',
     category: 'Évaluation',
   ),
 ];
@@ -2504,826 +4365,1221 @@ const List<Question> _niveau3Questions = [
 
 const List<Question> _niveau4Questions = [
 // --- ACCÈS À L'EXAMEN & PRÉREQUIS ---
-Question(
-  id: 'n4_01',
-  text: 'Quel âge minimum est requis le jour du début de l’examen GP-N4 ?',
-  options: ['16 ans', '17 ans', '18 ans', '21 ans'],
-  correctIndex: 1,
-  explanation: 'Le candidat doit être âgé de 17 ans au moins le jour du début de l’examen GP-N4.',
-  category: 'Accès à l’examen',
-),
-Question(
-  id: 'n4_02',
-  text: 'Quelle certification de plongeur est exigée pour se présenter à l’examen GP-N4 ?',
-  options: ['Le PA40 suffit', 'Le brevet N3 FFESSM ou un diplôme admis en équivalence', 'Uniquement le PE60', 'Le N2 avec 50 plongées attestées'],
-  correctIndex: 1,
-  explanation: 'Pour accéder à l’examen GP-N4, il faut être titulaire du diplôme de niveau 3 (N3) de la FFESSM ou d’un diplôme admis en équivalence.',
-  category: 'Accès à l’examen',
-),
-Question(
-  id: 'n4_03',
-  text: 'Quelle est la durée de validité des aptitudes préalables (A1 à A4) à l’examen GP-N4 ?',
-  options: ['3 mois', '6 mois', '9 mois', '12 mois'],
-  correctIndex: 2,
-  explanation: 'Les aptitudes A1 à A4 préalables à l’examen ont une validité de 9 mois.',
-  category: 'Accès à l’examen',
-),
-Question(
-  id: 'n4_04',
-  text: 'Quel document de secourisme doit présenter le candidat GP-N4 ?',
-  options: ['PSC1', 'RIFA Plongée de la FFESSM', 'SST uniquement', 'Aucun document n’est requis'],
-  correctIndex: 1,
-  explanation: 'Le candidat doit être titulaire de la carte RIFA Plongée de la FFESSM.',
-  category: 'Accès à l’examen',
-),
-Question(
-  id: 'n4_05',
-  text: 'Quel niveau minimum doit avoir l’encadrant qui atteste les aptitudes préalables au GP-N4 ?',
-  options: ['E2 FFESSM', 'MF1 ou BEES1 ou DEJEPS (E3) minimum', 'E4 uniquement', 'N4 suffit'],
-  correctIndex: 1,
-  explanation: 'Les aptitudes sont attestées par un MF1 de la FFESSM ou BEES1 ou DEJEPS (E3) minimum, titulaire de la licence fédérale.',
-  category: 'Accès à l’examen',
-),
-Question(
-  id: 'n4_06',
-  text: 'Quelle aptitude correspond à la conduite de palanquée ?',
-  options: ['A1', 'A2', 'A3', 'A4'],
-  correctIndex: 0,
-  explanation: 'L’aptitude A1 correspond à la conduite de palanquée.',
-  category: 'Accès à l’examen',
-),
-Question(
-  id: 'n4_07',
-  text: 'Quelle aptitude correspond à l’intervention sur un plongeur en difficulté à 40 m ?',
-  options: ['A1', 'A2', 'A3', 'A4'],
-  correctIndex: 1,
-  explanation: 'L’aptitude A2 correspond à l’intervention sur un plongeur en difficulté à 40 m.',
-  category: 'Accès à l’examen',
-),
-Question(
-  id: 'n4_08',
-  text: 'Quelle aptitude correspond à la DTMR de 25 m ?',
-  options: ['A1', 'A2', 'A3', 'A4'],
-  correctIndex: 2,
-  explanation: 'L’aptitude A3 correspond à la démonstration technique de maîtrise de remontée gilet (DTMR) de 25 m.',
-  category: 'Accès à l’examen',
-),
-Question(
-  id: 'n4_09',
-  text: 'Quelle aptitude correspond aux nages PMT et capelée ?',
-  options: ['A1', 'A2', 'A3', 'A4'],
-  correctIndex: 3,
-  explanation: 'L’aptitude A4 correspond aux nages PMT et capelée.',
-  category: 'Accès à l’examen',
-),
-Question(
-  id: 'n4_10',
-  text: 'Quelle est la durée de validité d’une aptitude préalable au GP-N4 ?',
-  options: ['6 mois', '9 mois', '12 mois', '18 mois'],
-  correctIndex: 1,
-  explanation: 'La durée de validité de chacune des aptitudes est de 9 mois.',
-  category: 'Accès à l’examen',
-),
+  Question(
+    id: 'n4_01',
+    text: 'Quel âge minimum est requis le jour du début de l’examen GP-N4 ?',
+    options: ['16 ans', '17 ans', '18 ans', '21 ans'],
+    correctIndex: 1,
+    explanation:
+        'Le candidat doit être âgé de 17 ans au moins le jour du début de l’examen GP-N4.',
+    category: 'Accès à l’examen',
+  ),
+  Question(
+    id: 'n4_02',
+    text:
+        'Quelle certification de plongeur est exigée pour se présenter à l’examen GP-N4 ?',
+    options: [
+      'Le PA40 suffit',
+      'Le brevet N3 FFESSM ou un diplôme admis en équivalence',
+      'Uniquement le PE60',
+      'Le N2 avec 50 plongées attestées'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Pour accéder à l’examen GP-N4, il faut être titulaire du diplôme de niveau 3 (N3) de la FFESSM ou d’un diplôme admis en équivalence.',
+    category: 'Accès à l’examen',
+  ),
+  Question(
+    id: 'n4_03',
+    text:
+        'Quelle est la durée de validité des aptitudes préalables (A1 à A4) à l’examen GP-N4 ?',
+    options: ['3 mois', '6 mois', '9 mois', '12 mois'],
+    correctIndex: 2,
+    explanation:
+        'Les aptitudes A1 à A4 préalables à l’examen ont une validité de 9 mois.',
+    category: 'Accès à l’examen',
+  ),
+  Question(
+    id: 'n4_04',
+    text: 'Quel document de secourisme doit présenter le candidat GP-N4 ?',
+    options: [
+      'PSC1',
+      'RIFA Plongée de la FFESSM',
+      'SST uniquement',
+      'Aucun document n’est requis'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le candidat doit être titulaire de la carte RIFA Plongée de la FFESSM.',
+    category: 'Accès à l’examen',
+  ),
+  Question(
+    id: 'n4_05',
+    text:
+        'Quel niveau minimum doit avoir l’encadrant qui atteste les aptitudes préalables au GP-N4 ?',
+    options: [
+      'E2 FFESSM',
+      'MF1 ou BEES1 ou DEJEPS (E3) minimum',
+      'E4 uniquement',
+      'N4 suffit'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Les aptitudes sont attestées par un MF1 de la FFESSM ou BEES1 ou DEJEPS (E3) minimum, titulaire de la licence fédérale.',
+    category: 'Accès à l’examen',
+  ),
+  Question(
+    id: 'n4_06',
+    text: 'Quelle aptitude correspond à la conduite de palanquée ?',
+    options: ['A1', 'A2', 'A3', 'A4'],
+    correctIndex: 0,
+    explanation: 'L’aptitude A1 correspond à la conduite de palanquée.',
+    category: 'Accès à l’examen',
+  ),
+  Question(
+    id: 'n4_07',
+    text:
+        'Quelle aptitude correspond à l’intervention sur un plongeur en difficulté à 40 m ?',
+    options: ['A1', 'A2', 'A3', 'A4'],
+    correctIndex: 1,
+    explanation:
+        'L’aptitude A2 correspond à l’intervention sur un plongeur en difficulté à 40 m.',
+    category: 'Accès à l’examen',
+  ),
+  Question(
+    id: 'n4_08',
+    text: 'Quelle aptitude correspond à la DTMR de 25 m ?',
+    options: ['A1', 'A2', 'A3', 'A4'],
+    correctIndex: 2,
+    explanation:
+        'L’aptitude A3 correspond à la démonstration technique de maîtrise de remontée gilet (DTMR) de 25 m.',
+    category: 'Accès à l’examen',
+  ),
+  Question(
+    id: 'n4_09',
+    text: 'Quelle aptitude correspond aux nages PMT et capelée ?',
+    options: ['A1', 'A2', 'A3', 'A4'],
+    correctIndex: 3,
+    explanation: 'L’aptitude A4 correspond aux nages PMT et capelée.',
+    category: 'Accès à l’examen',
+  ),
+  Question(
+    id: 'n4_10',
+    text: 'Quelle est la durée de validité d’une aptitude préalable au GP-N4 ?',
+    options: ['6 mois', '9 mois', '12 mois', '18 mois'],
+    correctIndex: 1,
+    explanation: 'La durée de validité de chacune des aptitudes est de 9 mois.',
+    category: 'Accès à l’examen',
+  ),
 
 // --- STRUCTURE DE L’EXAMEN ---
-Question(
-  id: 'n4_11',
-  text: 'Combien de groupes d’épreuves compose l’examen GP-N4 ?',
-  options: ['2 groupes', '3 groupes', '4 groupes', '5 groupes'],
-  correctIndex: 1,
-  explanation: 'L’examen GP-N4 est constitué de 3 groupes d’épreuves.',
-  category: 'Structure de l’examen',
-),
-Question(
-  id: 'n4_12',
-  text: 'Quel est le total maximum de points pour l’examen GP-N4 ?',
-  options: ['400 points', '500 points', '600 points', '800 points'],
-  correctIndex: 2,
-  explanation: 'L’examen comporte un maximum de 600 points.',
-  category: 'Notation',
-),
-Question(
-  id: 'n4_13',
-  text: 'Quel score total minimum faut-il obtenir pour réussir l’examen GP-N4 ?',
-  options: ['200 points', '250 points', '300 points', '350 points'],
-  correctIndex: 2,
-  explanation: 'Il faut obtenir au minimum 300 points, soit une moyenne de 10/20.',
-  category: 'Notation',
-),
-Question(
-  id: 'n4_14',
-  text: 'Quelle note individuelle est éliminatoire à l’examen GP-N4 ?',
-  options: ['Moins de 3/20', 'Moins de 5/20', 'Moins de 7/20', 'Moins de 8/20'],
-  correctIndex: 1,
-  explanation: 'Toute note inférieure à 5/20 est éliminatoire.',
-  category: 'Notation',
-),
-Question(
-  id: 'n4_15',
-  text: 'Quelle est la durée maximale pour réaliser l’ensemble de l’examen GP-N4 ?',
-  options: ['2 jours', '4 jours', '7 jours', '10 jours'],
-  correctIndex: 1,
-  explanation: 'L’ensemble de l’examen doit se dérouler de façon continue dans un délai maximum de 4 jours.',
-  category: 'Organisation de l’examen',
-),
-Question(
-  id: 'n4_16',
-  text: 'Quel groupe d’épreuves concerne la condition physique ?',
-  options: ['Groupe 1', 'Groupe 2', 'Groupe 3', 'Groupe 4'],
-  correctIndex: 0,
-  explanation: 'Le groupe 1 correspond aux épreuves de condition physique.',
-  category: 'Structure de l’examen',
-),
-Question(
-  id: 'n4_17',
-  text: 'Quel groupe d’épreuves concerne les pratiques ?',
-  options: ['Groupe 1', 'Groupe 2', 'Groupe 3', 'Groupe 4'],
-  correctIndex: 1,
-  explanation: 'Le groupe 2 correspond aux épreuves pratiques.',
-  category: 'Structure de l’examen',
-),
-Question(
-  id: 'n4_18',
-  text: 'Quel groupe d’épreuves concerne la théorie ?',
-  options: ['Groupe 1', 'Groupe 2', 'Groupe 3', 'Groupe 4'],
-  correctIndex: 2,
-  explanation: 'Le groupe 3 correspond aux épreuves théoriques.',
-  category: 'Structure de l’examen',
-),
-Question(
-  id: 'n4_19',
-  text: 'Combien de points maximum vaut le groupe 1 ?',
-  options: ['80 points', '100 points', '120 points', '140 points'],
-  correctIndex: 1,
-  explanation: 'Le groupe 1 vaut 100 points au total.',
-  category: 'Notation',
-),
-Question(
-  id: 'n4_20',
-  text: 'Combien de points maximum vaut le groupe 2 ?',
-  options: ['180 points', '220 points', '280 points', '320 points'],
-  correctIndex: 2,
-  explanation: 'Le groupe 2 vaut 280 points au total.',
-  category: 'Notation',
-),
+  Question(
+    id: 'n4_11',
+    text: 'Combien de groupes d’épreuves compose l’examen GP-N4 ?',
+    options: ['2 groupes', '3 groupes', '4 groupes', '5 groupes'],
+    correctIndex: 1,
+    explanation: 'L’examen GP-N4 est constitué de 3 groupes d’épreuves.',
+    category: 'Structure de l’examen',
+  ),
+  Question(
+    id: 'n4_12',
+    text: 'Quel est le total maximum de points pour l’examen GP-N4 ?',
+    options: ['400 points', '500 points', '600 points', '800 points'],
+    correctIndex: 2,
+    explanation: 'L’examen comporte un maximum de 600 points.',
+    category: 'Notation',
+  ),
+  Question(
+    id: 'n4_13',
+    text:
+        'Quel score total minimum faut-il obtenir pour réussir l’examen GP-N4 ?',
+    options: ['200 points', '250 points', '300 points', '350 points'],
+    correctIndex: 2,
+    explanation:
+        'Il faut obtenir au minimum 300 points, soit une moyenne de 10/20.',
+    category: 'Notation',
+  ),
+  Question(
+    id: 'n4_14',
+    text: 'Quelle note individuelle est éliminatoire à l’examen GP-N4 ?',
+    options: [
+      'Moins de 3/20',
+      'Moins de 5/20',
+      'Moins de 7/20',
+      'Moins de 8/20'
+    ],
+    correctIndex: 1,
+    explanation: 'Toute note inférieure à 5/20 est éliminatoire.',
+    category: 'Notation',
+  ),
+  Question(
+    id: 'n4_15',
+    text:
+        'Quelle est la durée maximale pour réaliser l’ensemble de l’examen GP-N4 ?',
+    options: ['2 jours', '4 jours', '7 jours', '10 jours'],
+    correctIndex: 1,
+    explanation:
+        'L’ensemble de l’examen doit se dérouler de façon continue dans un délai maximum de 4 jours.',
+    category: 'Organisation de l’examen',
+  ),
+  Question(
+    id: 'n4_16',
+    text: 'Quel groupe d’épreuves concerne la condition physique ?',
+    options: ['Groupe 1', 'Groupe 2', 'Groupe 3', 'Groupe 4'],
+    correctIndex: 0,
+    explanation: 'Le groupe 1 correspond aux épreuves de condition physique.',
+    category: 'Structure de l’examen',
+  ),
+  Question(
+    id: 'n4_17',
+    text: 'Quel groupe d’épreuves concerne les pratiques ?',
+    options: ['Groupe 1', 'Groupe 2', 'Groupe 3', 'Groupe 4'],
+    correctIndex: 1,
+    explanation: 'Le groupe 2 correspond aux épreuves pratiques.',
+    category: 'Structure de l’examen',
+  ),
+  Question(
+    id: 'n4_18',
+    text: 'Quel groupe d’épreuves concerne la théorie ?',
+    options: ['Groupe 1', 'Groupe 2', 'Groupe 3', 'Groupe 4'],
+    correctIndex: 2,
+    explanation: 'Le groupe 3 correspond aux épreuves théoriques.',
+    category: 'Structure de l’examen',
+  ),
+  Question(
+    id: 'n4_19',
+    text: 'Combien de points maximum vaut le groupe 1 ?',
+    options: ['80 points', '100 points', '120 points', '140 points'],
+    correctIndex: 1,
+    explanation: 'Le groupe 1 vaut 100 points au total.',
+    category: 'Notation',
+  ),
+  Question(
+    id: 'n4_20',
+    text: 'Combien de points maximum vaut le groupe 2 ?',
+    options: ['180 points', '220 points', '280 points', '320 points'],
+    correctIndex: 2,
+    explanation: 'Le groupe 2 vaut 280 points au total.',
+    category: 'Notation',
+  ),
 
 // --- CONDITION PHYSIQUE ---
-Question(
-  id: 'n4_21',
-  text: 'Quelle est la profondeur du mannequin pour l’épreuve de condition physique ?',
-  options: ['2 à 3 m', '4 à 6 m', '8 à 10 m', '10 à 12 m'],
-  correctIndex: 1,
-  explanation: 'Le mannequin est immergé à une profondeur comprise entre 4 et 6 m.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_22',
-  text: 'Quelle distance de PMT doit être parcourue pendant l’épreuve du mannequin ?',
-  options: ['50 m', '75 m', '100 m', '150 m'],
-  correctIndex: 2,
-  explanation: 'Le candidat nage en surface en PMT sur une distance de 100 m.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_23',
-  text: 'Quelle durée minimale d’apnée est exigée pendant l’épreuve du mannequin ?',
-  options: ['10 secondes', '15 secondes', '20 secondes', '30 secondes'],
-  correctIndex: 2,
-  explanation: 'Le candidat doit tenir une apnée de 20 secondes minimum en déplacement.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_24',
-  text: 'Quelle est la distance de remorquage du mannequin ?',
-  options: ['50 m', '75 m', '100 m', '150 m'],
-  correctIndex: 2,
-  explanation: 'Le mannequin doit être remorqué sur une distance de 100 m.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_25',
-  text: 'Quel temps maximal autorise la réussite de l’épreuve du mannequin ?',
-  options: ['6 minutes', '7 minutes', '8 minutes', '9 minutes'],
-  correctIndex: 2,
-  explanation: 'L’épreuve doit être réalisée en moins de 8 minutes.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_26',
-  text: 'Quelle récupération maximale est autorisée en surface avant la seconde descente lors de l’épreuve du mannequin ?',
-  options: ['5 secondes', '10 secondes', '15 secondes', '20 secondes'],
-  correctIndex: 1,
-  explanation: 'La récupération en surface ne doit pas dépasser 10 secondes.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_27',
-  text: 'Quel type de mannequin doit être utilisé pour l’épreuve du mannequin ?',
-  options: ['Enfant, homologué FFSS', 'Adulte, homologué FFSS', 'Adulte, non homologué', 'Tout mannequin est accepté'],
-  correctIndex: 1,
-  explanation: 'Un mannequin adulte homologué FFSS, poids apparent 1,5 kg, doit être utilisé.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_28',
-  text: 'Quelle épreuve du groupe 1 est liée à l’aptitude A4 ?',
-  options: ['Mannequin', 'Nage PMT sur 800 m', 'Plongée libre à 10 m', 'Aucune'],
-  correctIndex: 1,
-  explanation: 'L’aptitude A4 se réfère à la nage PMT sur 800 m.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_29',
-  text: 'Quelle est la distance de l’épreuve de nage PMT ?',
-  options: ['500 m', '800 m', '1000 m', '1200 m'],
-  correctIndex: 1,
-  explanation: 'L’épreuve de nage PMT se déroule sur 800 m.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_30',
-  text: 'Quelle est la profondeur de l’épreuve de plongée libre ?',
-  options: ['6 m', '8 m', '10 m', '12 m'],
-  correctIndex: 2,
-  explanation: 'L’épreuve de plongée libre se déroule à 10 m.',
-  category: 'Condition physique',
-),
+  Question(
+    id: 'n4_21',
+    text:
+        'Quelle est la profondeur du mannequin pour l’épreuve de condition physique ?',
+    options: ['2 à 3 m', '4 à 6 m', '8 à 10 m', '10 à 12 m'],
+    correctIndex: 1,
+    explanation:
+        'Le mannequin est immergé à une profondeur comprise entre 4 et 6 m.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_22',
+    text:
+        'Quelle distance de PMT doit être parcourue pendant l’épreuve du mannequin ?',
+    options: ['50 m', '75 m', '100 m', '150 m'],
+    correctIndex: 2,
+    explanation:
+        'Le candidat nage en surface en PMT sur une distance de 100 m.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_23',
+    text:
+        'Quelle durée minimale d’apnée est exigée pendant l’épreuve du mannequin ?',
+    options: ['10 secondes', '15 secondes', '20 secondes', '30 secondes'],
+    correctIndex: 2,
+    explanation:
+        'Le candidat doit tenir une apnée de 20 secondes minimum en déplacement.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_24',
+    text: 'Quelle est la distance de remorquage du mannequin ?',
+    options: ['50 m', '75 m', '100 m', '150 m'],
+    correctIndex: 2,
+    explanation: 'Le mannequin doit être remorqué sur une distance de 100 m.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_25',
+    text: 'Quel temps maximal autorise la réussite de l’épreuve du mannequin ?',
+    options: ['6 minutes', '7 minutes', '8 minutes', '9 minutes'],
+    correctIndex: 2,
+    explanation: 'L’épreuve doit être réalisée en moins de 8 minutes.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_26',
+    text:
+        'Quelle récupération maximale est autorisée en surface avant la seconde descente lors de l’épreuve du mannequin ?',
+    options: ['5 secondes', '10 secondes', '15 secondes', '20 secondes'],
+    correctIndex: 1,
+    explanation: 'La récupération en surface ne doit pas dépasser 10 secondes.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_27',
+    text:
+        'Quel type de mannequin doit être utilisé pour l’épreuve du mannequin ?',
+    options: [
+      'Enfant, homologué FFSS',
+      'Adulte, homologué FFSS',
+      'Adulte, non homologué',
+      'Tout mannequin est accepté'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Un mannequin adulte homologué FFSS, poids apparent 1,5 kg, doit être utilisé.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_28',
+    text: 'Quelle épreuve du groupe 1 est liée à l’aptitude A4 ?',
+    options: [
+      'Mannequin',
+      'Nage PMT sur 800 m',
+      'Plongée libre à 10 m',
+      'Aucune'
+    ],
+    correctIndex: 1,
+    explanation: 'L’aptitude A4 se réfère à la nage PMT sur 800 m.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_29',
+    text: 'Quelle est la distance de l’épreuve de nage PMT ?',
+    options: ['500 m', '800 m', '1000 m', '1200 m'],
+    correctIndex: 1,
+    explanation: 'L’épreuve de nage PMT se déroule sur 800 m.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_30',
+    text: 'Quelle est la profondeur de l’épreuve de plongée libre ?',
+    options: ['6 m', '8 m', '10 m', '12 m'],
+    correctIndex: 2,
+    explanation: 'L’épreuve de plongée libre se déroule à 10 m.',
+    category: 'Condition physique',
+  ),
 
 // --- PLONGÉE LIBRE & PALMAGE ---
-Question(
-  id: 'n4_31',
-  text: 'Que doit faire le candidat une fois arrivé à 10 m en plongée libre ?',
-  options: ['Continuer à descendre', 'Se stabiliser, faire face à l’examinateur et répondre OK', 'Retirer son masque', 'Faire demi-tour immédiatement sans s’arrêter'],
-  correctIndex: 1,
-  explanation: 'Le candidat se stabilise, fait face, répond OK, s’identifie puis remonte.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_32',
-  text: 'Quelle durée d’observation en surface suit l’épreuve de plongée libre ?',
-  options: ['10 secondes', '20 secondes', '30 secondes', '1 minute'],
-  correctIndex: 2,
-  explanation: 'Le candidat reste pendant 30 secondes après le retour en surface sous contrôle du jury.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_33',
-  text: 'Le tuba doit-il être dans la bouche à la sortie de l’eau lors de l’épreuve de plongée libre ?',
-  options: ['Oui', 'Non', 'Seulement en eau froide', 'Au choix du candidat'],
-  correctIndex: 1,
-  explanation: 'Le tuba ne doit pas être en bouche à la sortie de l’eau.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_34',
-  text: 'Quelle est la note éliminatoire en plongée libre ?',
-  options: ['Inférieure à 3', 'Inférieure à 5', 'Inférieure à 7', 'Inférieure à 10'],
-  correctIndex: 1,
-  explanation: 'Une note inférieure à 5 est éliminatoire.',
-  category: 'Condition physique',
-),
-Question(
-  id: 'n4_35',
-  text: 'Quel paramètre n’apporte plus de points au-delà d’un certain seuil en plongée libre ?',
-  options: ['La vitesse de palmage', 'Le temps d’apnée supérieur à 1’15', 'La profondeur atteinte', 'Le nombre de mouvements de bras'],
-  correctIndex: 1,
-  explanation: 'Un temps d’apnée supérieur à 1’15 n’apporte pas de points supplémentaires.',
-  category: 'Condition physique',
-),
+  Question(
+    id: 'n4_31',
+    text:
+        'Que doit faire le candidat une fois arrivé à 10 m en plongée libre ?',
+    options: [
+      'Continuer à descendre',
+      'Se stabiliser, faire face à l’examinateur et répondre OK',
+      'Retirer son masque',
+      'Faire demi-tour immédiatement sans s’arrêter'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le candidat se stabilise, fait face, répond OK, s’identifie puis remonte.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_32',
+    text:
+        'Quelle durée d’observation en surface suit l’épreuve de plongée libre ?',
+    options: ['10 secondes', '20 secondes', '30 secondes', '1 minute'],
+    correctIndex: 2,
+    explanation:
+        'Le candidat reste pendant 30 secondes après le retour en surface sous contrôle du jury.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_33',
+    text:
+        'Le tuba doit-il être dans la bouche à la sortie de l’eau lors de l’épreuve de plongée libre ?',
+    options: ['Oui', 'Non', 'Seulement en eau froide', 'Au choix du candidat'],
+    correctIndex: 1,
+    explanation: 'Le tuba ne doit pas être en bouche à la sortie de l’eau.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_34',
+    text: 'Quelle est la note éliminatoire en plongée libre ?',
+    options: [
+      'Inférieure à 3',
+      'Inférieure à 5',
+      'Inférieure à 7',
+      'Inférieure à 10'
+    ],
+    correctIndex: 1,
+    explanation: 'Une note inférieure à 5 est éliminatoire.',
+    category: 'Condition physique',
+  ),
+  Question(
+    id: 'n4_35',
+    text:
+        'Quel paramètre n’apporte plus de points au-delà d’un certain seuil en plongée libre ?',
+    options: [
+      'La vitesse de palmage',
+      'Le temps d’apnée supérieur à 1’15',
+      'La profondeur atteinte',
+      'Le nombre de mouvements de bras'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Un temps d’apnée supérieur à 1’15 n’apporte pas de points supplémentaires.',
+    category: 'Condition physique',
+  ),
 
 // --- CONDUITE DE PALANQUÉE ---
-Question(
-  id: 'n4_36',
-  text: 'Quel est le support de l’épreuve de conduite de palanquée ?',
-  options: ['Une plongée d’exploration', 'Une plongée de formation', 'Une séance d’apnée', 'Une plongée de nuit uniquement'],
-  correctIndex: 0,
-  explanation: 'Le support est une plongée d’exploration où le jury joue le rôle des plongeurs encadrés.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_37',
-  text: 'De quels niveaux peuvent être les plongeurs encadrés dans l’épreuve de conduite de palanquée ?',
-  options: ['PE6, PE12, PE20', 'PE12, PE20 ou PE40', 'N1, N2, N3 uniquement', 'PA20, PA40, PA60'],
-  correctIndex: 1,
-  explanation: 'Le sujet indique des plongeurs PE12, PE20 ou PE40.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_38',
-  text: 'Combien de temps le candidat dispose-t-il pour préparer son sujet de conduite de palanquée ?',
-  options: ['5 minutes', '10 minutes', '15 minutes', '20 minutes'],
-  correctIndex: 1,
-  explanation: 'Le candidat dispose de 10 minutes pour préparer son sujet.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_39',
-  text: 'Quelle partie de l’épreuve de conduite de palanquée est évaluée à partir du briefing et du débriefing ?',
-  options: ['La partie immersion', 'La partie surface', 'La partie orientation', 'La partie secours'],
-  correctIndex: 1,
-  explanation: 'La partie en surface comprend un briefing avant et un débriefing après l’immersion.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_40',
-  text: 'Quelle est la durée d’immersion possible pendant l’épreuve de conduite de palanquée ?',
-  options: ['5 à 10 minutes', '10 à 25 minutes', '25 à 40 minutes', '30 à 45 minutes'],
-  correctIndex: 1,
-  explanation: 'La durée est déterminée entre 10 et 25 minutes selon la profondeur et l’appréciation du jury.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_41',
-  text: 'Quelle situation est éliminatoire pendant l’épreuve de conduite de palanquée ?',
-  options: ['Une hésitation de briefing', 'Toute mise en danger', 'Un silence prolongé', 'Une modification du parcours'],
-  correctIndex: 1,
-  explanation: 'Toute mise en danger est éliminatoire.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_42',
-  text: 'Que doit écouter et intégrer le GP avant l’immersion ?',
-  options: ['Les consignes du DP', 'Les conseils des plongeurs encadrés', 'Les préférences du bateau', 'Les habitudes du club'],
-  correctIndex: 0,
-  explanation: 'Le GP doit écouter le briefing du DP et prendre en compte les éléments qui lui serviront à organiser son action.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_43',
-  text: 'Que doit faire le GP avant l’immersion concernant les plongeurs ?',
-  options: ['Les laisser préparer seuls', 'Les accueillir, les prendre en charge et les informer', 'N’intervenir qu’au fond', 'Les faire attendre sans briefing'],
-  correctIndex: 1,
-  explanation: 'Le GP doit accueillir, prendre en charge et informer la palanquée sur le déroulement de la plongée.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_44',
-  text: 'Que doit vérifier le GP lors de la mise à l’eau ?',
-  options: ['La météo uniquement', 'Le matériel des plongeurs et la sécurité de la mise à l’eau', 'Le nombre de photos prises', 'La couleur des blocs'],
-  correctIndex: 1,
-  explanation: 'Le GP vérifie le matériel des plongeurs et assure la phase de mise à l’eau en sécurité.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_45',
-  text: 'Que doit faire le GP au fond avant de démarrer l’exploration ?',
-  options: ['Se séparer immédiatement', 'Assurer la cohésion de la palanquée et vérifier que tout va bien', 'Remonter sans exploration', 'Changer de site'],
-  correctIndex: 1,
-  explanation: 'Le GP assure le regroupement de sa palanquée et vérifie que tout va bien avant de démarrer l’exploration.',
-  category: 'Conduite de palanquée',
-),
+  Question(
+    id: 'n4_36',
+    text: 'Quel est le support de l’épreuve de conduite de palanquée ?',
+    options: [
+      'Une plongée d’exploration',
+      'Une plongée de formation',
+      'Une séance d’apnée',
+      'Une plongée de nuit uniquement'
+    ],
+    correctIndex: 0,
+    explanation:
+        'Le support est une plongée d’exploration où le jury joue le rôle des plongeurs encadrés.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_37',
+    text:
+        'De quels niveaux peuvent être les plongeurs encadrés dans l’épreuve de conduite de palanquée ?',
+    options: [
+      'PE6, PE12, PE20',
+      'PE12, PE20 ou PE40',
+      'N1, N2, N3 uniquement',
+      'PA20, PA40, PA60'
+    ],
+    correctIndex: 1,
+    explanation: 'Le sujet indique des plongeurs PE12, PE20 ou PE40.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_38',
+    text:
+        'Combien de temps le candidat dispose-t-il pour préparer son sujet de conduite de palanquée ?',
+    options: ['5 minutes', '10 minutes', '15 minutes', '20 minutes'],
+    correctIndex: 1,
+    explanation: 'Le candidat dispose de 10 minutes pour préparer son sujet.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_39',
+    text:
+        'Quelle partie de l’épreuve de conduite de palanquée est évaluée à partir du briefing et du débriefing ?',
+    options: [
+      'La partie immersion',
+      'La partie surface',
+      'La partie orientation',
+      'La partie secours'
+    ],
+    correctIndex: 1,
+    explanation:
+        'La partie en surface comprend un briefing avant et un débriefing après l’immersion.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_40',
+    text:
+        'Quelle est la durée d’immersion possible pendant l’épreuve de conduite de palanquée ?',
+    options: [
+      '5 à 10 minutes',
+      '10 à 25 minutes',
+      '25 à 40 minutes',
+      '30 à 45 minutes'
+    ],
+    correctIndex: 1,
+    explanation:
+        'La durée est déterminée entre 10 et 25 minutes selon la profondeur et l’appréciation du jury.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_41',
+    text:
+        'Quelle situation est éliminatoire pendant l’épreuve de conduite de palanquée ?',
+    options: [
+      'Une hésitation de briefing',
+      'Toute mise en danger',
+      'Un silence prolongé',
+      'Une modification du parcours'
+    ],
+    correctIndex: 1,
+    explanation: 'Toute mise en danger est éliminatoire.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_42',
+    text: 'Que doit écouter et intégrer le GP avant l’immersion ?',
+    options: [
+      'Les consignes du DP',
+      'Les conseils des plongeurs encadrés',
+      'Les préférences du bateau',
+      'Les habitudes du club'
+    ],
+    correctIndex: 0,
+    explanation:
+        'Le GP doit écouter le briefing du DP et prendre en compte les éléments qui lui serviront à organiser son action.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_43',
+    text: 'Que doit faire le GP avant l’immersion concernant les plongeurs ?',
+    options: [
+      'Les laisser préparer seuls',
+      'Les accueillir, les prendre en charge et les informer',
+      'N’intervenir qu’au fond',
+      'Les faire attendre sans briefing'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP doit accueillir, prendre en charge et informer la palanquée sur le déroulement de la plongée.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_44',
+    text: 'Que doit vérifier le GP lors de la mise à l’eau ?',
+    options: [
+      'La météo uniquement',
+      'Le matériel des plongeurs et la sécurité de la mise à l’eau',
+      'Le nombre de photos prises',
+      'La couleur des blocs'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP vérifie le matériel des plongeurs et assure la phase de mise à l’eau en sécurité.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_45',
+    text: 'Que doit faire le GP au fond avant de démarrer l’exploration ?',
+    options: [
+      'Se séparer immédiatement',
+      'Assurer la cohésion de la palanquée et vérifier que tout va bien',
+      'Remonter sans exploration',
+      'Changer de site'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP assure le regroupement de sa palanquée et vérifie que tout va bien avant de démarrer l’exploration.',
+    category: 'Conduite de palanquée',
+  ),
 
 // --- PENDANT L’IMMERSION ---
-Question(
-  id: 'n4_46',
-  text: 'Le GP peut-il adapter le parcours de plongée ?',
-  options: ['Non, jamais', 'Oui, selon l’intérêt et les capacités des plongeurs, dans le respect des consignes du DP', 'Oui, uniquement pour aller plus profond', 'Oui, sans tenir compte du DP'],
-  correctIndex: 1,
-  explanation: 'Le GP adapte le parcours selon l’intérêt et les capacités des plongeurs en respectant les consignes du DP.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_47',
-  text: 'Quelle attitude doit adopter le GP face à une situation imprévue ?',
-  options: ['Ignorer et continuer', 'Réagir dans le sens de la sécurité', 'Demander aux plongeurs de se débrouiller', 'Accélérer la plongée'],
-  correctIndex: 1,
-  explanation: 'Le GP doit s’adapter aux situations imprévues dans le sens de la sécurité.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_48',
-  text: 'Sur quoi le GP peut-il s’appuyer pour s’orienter ?',
-  options: ['Uniquement le compas', 'Les éléments naturels et des instruments', 'Uniquement le relief', 'Uniquement le soleil'],
-  correctIndex: 1,
-  explanation: 'Le GP doit savoir s’orienter en s’appuyant sur les éléments naturels mais aussi à l’aide d’instruments.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_49',
-  text: 'Que doit faire le GP pour agrémenter la plongée ?',
-  options: ['Ne rien commenter', 'Mettre en valeur les ressources du site et impliquer une action éducative', 'Raccourcir systématiquement la plongée', 'Supprimer toute observation'],
-  correctIndex: 1,
-  explanation: 'Le GP met en valeur les ressources du site et s’implique dans une action éducative.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_50',
-  text: 'Que doit faire le GP si un comportement de plongeur l’exige ?',
-  options: ['Ignorer le plongeur', 'Intervenir de manière adaptée', 'Mettre fin à l’examen immédiatement', 'Laisser faire jusqu’à la fin'],
-  correctIndex: 1,
-  explanation: 'Le GP est attentif aux comportements des plongeurs et réagit de manière adaptée en cas de besoin.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_51',
-  text: 'Comment le GP doit-il gérer la fin de plongée ?',
-  options: ['Sans désaturation', 'En toute sécurité avec désaturation pertinente et cohésion', 'En laissant les plongeurs remonter seuls', 'En remontant sans contrôle'],
-  correctIndex: 1,
-  explanation: 'Le GP gère la fin de plongée et le retour en surface en toute sécurité, avec désaturation pertinente et efficace.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_52',
-  text: 'Que peut utiliser le GP pour baliser les paliers si nécessaire ?',
-  options: ['Un parachute', 'Une lampe', 'Un mousqueton', 'Un tuba'],
-  correctIndex: 0,
-  explanation: 'Si nécessaire, il balise les paliers à l’aide du parachute.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_53',
-  text: 'Le GP peut-il commenter le déroulement de la plongée après immersion ?',
-  options: ['Non', 'Oui, il doit assurer le débriefing', 'Seulement si le DP le demande', 'Seulement sur le bateau'],
-  correctIndex: 1,
-  explanation: 'Le GP assure le débriefing et commente le déroulement de la plongée.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_54',
-  text: 'Que doit faire le GP après la plongée en restant auprès de sa palanquée ?',
-  options: ['Partir immédiatement', 'Observer et surveiller', 'Oublier les plongeurs', 'Débrancher les blocs'],
-  correctIndex: 1,
-  explanation: 'Le GP reste en contact avec sa palanquée, aide éventuellement au déséquipement et rappelle les consignes de sécurité.',
-  category: 'Conduite de palanquée',
-),
-Question(
-  id: 'n4_55',
-  text: 'Quel est le point central de l’évaluation du GP pendant l’immersion ?',
-  options: ['La vitesse pure', 'L’adaptation au niveau réel des plongeurs', 'La profondeur maximale', 'Le nombre d’objets observés'],
-  correctIndex: 1,
-  explanation: 'L’évaluation porte principalement sur les capacités d’adaptation du Guide de Palanquée au niveau réel des plongeurs et aux situations rencontrées.',
-  category: 'Conduite de palanquée',
-),
+  Question(
+    id: 'n4_46',
+    text: 'Le GP peut-il adapter le parcours de plongée ?',
+    options: [
+      'Non, jamais',
+      'Oui, selon l’intérêt et les capacités des plongeurs, dans le respect des consignes du DP',
+      'Oui, uniquement pour aller plus profond',
+      'Oui, sans tenir compte du DP'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP adapte le parcours selon l’intérêt et les capacités des plongeurs en respectant les consignes du DP.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_47',
+    text: 'Quelle attitude doit adopter le GP face à une situation imprévue ?',
+    options: [
+      'Ignorer et continuer',
+      'Réagir dans le sens de la sécurité',
+      'Demander aux plongeurs de se débrouiller',
+      'Accélérer la plongée'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP doit s’adapter aux situations imprévues dans le sens de la sécurité.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_48',
+    text: 'Sur quoi le GP peut-il s’appuyer pour s’orienter ?',
+    options: [
+      'Uniquement le compas',
+      'Les éléments naturels et des instruments',
+      'Uniquement le relief',
+      'Uniquement le soleil'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP doit savoir s’orienter en s’appuyant sur les éléments naturels mais aussi à l’aide d’instruments.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_49',
+    text: 'Que doit faire le GP pour agrémenter la plongée ?',
+    options: [
+      'Ne rien commenter',
+      'Mettre en valeur les ressources du site et impliquer une action éducative',
+      'Raccourcir systématiquement la plongée',
+      'Supprimer toute observation'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP met en valeur les ressources du site et s’implique dans une action éducative.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_50',
+    text: 'Que doit faire le GP si un comportement de plongeur l’exige ?',
+    options: [
+      'Ignorer le plongeur',
+      'Intervenir de manière adaptée',
+      'Mettre fin à l’examen immédiatement',
+      'Laisser faire jusqu’à la fin'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP est attentif aux comportements des plongeurs et réagit de manière adaptée en cas de besoin.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_51',
+    text: 'Comment le GP doit-il gérer la fin de plongée ?',
+    options: [
+      'Sans désaturation',
+      'En toute sécurité avec désaturation pertinente et cohésion',
+      'En laissant les plongeurs remonter seuls',
+      'En remontant sans contrôle'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP gère la fin de plongée et le retour en surface en toute sécurité, avec désaturation pertinente et efficace.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_52',
+    text: 'Que peut utiliser le GP pour baliser les paliers si nécessaire ?',
+    options: ['Un parachute', 'Une lampe', 'Un mousqueton', 'Un tuba'],
+    correctIndex: 0,
+    explanation: 'Si nécessaire, il balise les paliers à l’aide du parachute.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_53',
+    text:
+        'Le GP peut-il commenter le déroulement de la plongée après immersion ?',
+    options: [
+      'Non',
+      'Oui, il doit assurer le débriefing',
+      'Seulement si le DP le demande',
+      'Seulement sur le bateau'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP assure le débriefing et commente le déroulement de la plongée.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_54',
+    text:
+        'Que doit faire le GP après la plongée en restant auprès de sa palanquée ?',
+    options: [
+      'Partir immédiatement',
+      'Observer et surveiller',
+      'Oublier les plongeurs',
+      'Débrancher les blocs'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP reste en contact avec sa palanquée, aide éventuellement au déséquipement et rappelle les consignes de sécurité.',
+    category: 'Conduite de palanquée',
+  ),
+  Question(
+    id: 'n4_55',
+    text:
+        'Quel est le point central de l’évaluation du GP pendant l’immersion ?',
+    options: [
+      'La vitesse pure',
+      'L’adaptation au niveau réel des plongeurs',
+      'La profondeur maximale',
+      'Le nombre d’objets observés'
+    ],
+    correctIndex: 1,
+    explanation:
+        'L’évaluation porte principalement sur les capacités d’adaptation du Guide de Palanquée au niveau réel des plongeurs et aux situations rencontrées.',
+    category: 'Conduite de palanquée',
+  ),
 
 // --- INTERVENTION À 40 M ---
-Question(
-  id: 'n4_56',
-  text: 'À quelle profondeur s’effectue l’intervention sur un plongeur en difficulté ?',
-  options: ['20 m', '30 m', '40 m', '50 m'],
-  correctIndex: 2,
-  explanation: 'L’épreuve d’intervention s’effectue à 40 mètres.',
-  category: 'Intervention à 40 m',
-),
-Question(
-  id: 'n4_57',
-  text: 'Jusqu’à quelle profondeur le candidat doit-il amener le plongeur en difficulté ?',
-  options: ['10 à 8 m', '8 à 6 m', '6 à 4 m', '4 à 2 m'],
-  correctIndex: 1,
-  explanation: 'Le candidat doit remonter le plongeur jusqu’à une profondeur plafond de 6 m, soit une zone comprise entre 8 et 6 m.',
-  category: 'Intervention à 40 m',
-),
-Question(
-  id: 'n4_58',
-  text: 'Quelle technique de propulsion doit être privilégiée pendant l’intervention ?',
-  options: ['Les palmes uniquement', 'Le gilet', 'Les bras', 'Le palmage rapide'],
-  correctIndex: 1,
-  explanation: 'L’utilisation du gilet doit être privilégiée.',
-  category: 'Intervention à 40 m',
-),
-Question(
-  id: 'n4_59',
-  text: 'Quel comportement est attendu tout au long de l’intervention ?',
-  options: ['Stress visible', 'Attitude sécurisante', 'Fuite vers la surface', 'Immobilité totale'],
-  correctIndex: 1,
-  explanation: 'Tout au long de l’intervention, le candidat doit conserver une attitude sécurisante.',
-  category: 'Intervention à 40 m',
-),
-Question(
-  id: 'n4_60',
-  text: 'Que doit faire le candidat à l’approche de la surface ?',
-  options: ['Percer la surface', 'Réaliser un arrêt franc entre 8 et 6 m puis un tour d’horizon', 'Accélérer la remontée', 'Retirer le détendeur'],
-  correctIndex: 1,
-  explanation: 'Le candidat réalise un arrêt franc entre 8 et 6 m puis effectue un tour d’horizon.',
-  category: 'Intervention à 40 m',
-),
-Question(
-  id: 'n4_61',
-  text: 'Que doit faire le candidat après s’être stabilisé en zone d’arrêt ?',
-  options: ['Abandonner le binôme', 'Déployer son parachute', 'Descendre au fond', 'Retirer son gilet'],
-  correctIndex: 1,
-  explanation: 'Une fois stabilisé, le candidat déploie son parachute en conservant son niveau d’immersion.',
-  category: 'Intervention à 40 m',
-),
-Question(
-  id: 'n4_62',
-  text: 'Quelle situation évolutive doit être anticipée pendant l’intervention ?',
-  options: ['Changement de météo', 'Perte de conscience ou panne d’air', 'Nuit tombante', 'Variation de couleur du fond'],
-  correctIndex: 1,
-  explanation: 'Le candidat doit pouvoir s’adapter à une situation évolutive : perte de conscience, lâcher du détendeur ou panne d’air.',
-  category: 'Intervention à 40 m',
-),
-Question(
-  id: 'n4_63',
-  text: 'Quel point est éliminatoire pendant l’intervention à 40 m ?',
-  options: ['Utiliser un parachute', 'Tout comportement impactant la sécurité', 'Ralentir légèrement', 'Faire un tour d’horizon'],
-  correctIndex: 1,
-  explanation: 'Tout comportement impactant la sécurité est éliminatoire.',
-  category: 'Intervention à 40 m',
-),
-Question(
-  id: 'n4_64',
-  text: 'Quel écart vertical est éliminatoire pendant la remontée ?',
-  options: ['Plus de 1 m', 'Plus de 2 m', 'Plus de 3 m', 'Plus de 4 m'],
-  correctIndex: 1,
-  explanation: 'Une redescente de plus de 2 m à tout moment est éliminatoire.',
-  category: 'Intervention à 40 m',
-),
-Question(
-  id: 'n4_65',
-  text: 'À quel moment la vitesse de remontée doit-elle être définitivement maîtrisée ?',
-  options: ['À 40 m', 'À 35 m', 'À 20 m', 'À 10 m'],
-  correctIndex: 1,
-  explanation: 'Si une vitesse rapide est tolérée en début de remontée, elle doit être maîtrisée au plus tard à l’arrivée à 35 m.',
-  category: 'Intervention à 40 m',
-),
+  Question(
+    id: 'n4_56',
+    text:
+        'À quelle profondeur s’effectue l’intervention sur un plongeur en difficulté ?',
+    options: ['20 m', '30 m', '40 m', '50 m'],
+    correctIndex: 2,
+    explanation: 'L’épreuve d’intervention s’effectue à 40 mètres.',
+    category: 'Intervention à 40 m',
+  ),
+  Question(
+    id: 'n4_57',
+    text:
+        'Jusqu’à quelle profondeur le candidat doit-il amener le plongeur en difficulté ?',
+    options: ['10 à 8 m', '8 à 6 m', '6 à 4 m', '4 à 2 m'],
+    correctIndex: 1,
+    explanation:
+        'Le candidat doit remonter le plongeur jusqu’à une profondeur plafond de 6 m, soit une zone comprise entre 8 et 6 m.',
+    category: 'Intervention à 40 m',
+  ),
+  Question(
+    id: 'n4_58',
+    text:
+        'Quelle technique de propulsion doit être privilégiée pendant l’intervention ?',
+    options: [
+      'Les palmes uniquement',
+      'Le gilet',
+      'Les bras',
+      'Le palmage rapide'
+    ],
+    correctIndex: 1,
+    explanation: 'L’utilisation du gilet doit être privilégiée.',
+    category: 'Intervention à 40 m',
+  ),
+  Question(
+    id: 'n4_59',
+    text: 'Quel comportement est attendu tout au long de l’intervention ?',
+    options: [
+      'Stress visible',
+      'Attitude sécurisante',
+      'Fuite vers la surface',
+      'Immobilité totale'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Tout au long de l’intervention, le candidat doit conserver une attitude sécurisante.',
+    category: 'Intervention à 40 m',
+  ),
+  Question(
+    id: 'n4_60',
+    text: 'Que doit faire le candidat à l’approche de la surface ?',
+    options: [
+      'Percer la surface',
+      'Réaliser un arrêt franc entre 8 et 6 m puis un tour d’horizon',
+      'Accélérer la remontée',
+      'Retirer le détendeur'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le candidat réalise un arrêt franc entre 8 et 6 m puis effectue un tour d’horizon.',
+    category: 'Intervention à 40 m',
+  ),
+  Question(
+    id: 'n4_61',
+    text: 'Que doit faire le candidat après s’être stabilisé en zone d’arrêt ?',
+    options: [
+      'Abandonner le binôme',
+      'Déployer son parachute',
+      'Descendre au fond',
+      'Retirer son gilet'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Une fois stabilisé, le candidat déploie son parachute en conservant son niveau d’immersion.',
+    category: 'Intervention à 40 m',
+  ),
+  Question(
+    id: 'n4_62',
+    text:
+        'Quelle situation évolutive doit être anticipée pendant l’intervention ?',
+    options: [
+      'Changement de météo',
+      'Perte de conscience ou panne d’air',
+      'Nuit tombante',
+      'Variation de couleur du fond'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le candidat doit pouvoir s’adapter à une situation évolutive : perte de conscience, lâcher du détendeur ou panne d’air.',
+    category: 'Intervention à 40 m',
+  ),
+  Question(
+    id: 'n4_63',
+    text: 'Quel point est éliminatoire pendant l’intervention à 40 m ?',
+    options: [
+      'Utiliser un parachute',
+      'Tout comportement impactant la sécurité',
+      'Ralentir légèrement',
+      'Faire un tour d’horizon'
+    ],
+    correctIndex: 1,
+    explanation: 'Tout comportement impactant la sécurité est éliminatoire.',
+    category: 'Intervention à 40 m',
+  ),
+  Question(
+    id: 'n4_64',
+    text: 'Quel écart vertical est éliminatoire pendant la remontée ?',
+    options: ['Plus de 1 m', 'Plus de 2 m', 'Plus de 3 m', 'Plus de 4 m'],
+    correctIndex: 1,
+    explanation:
+        'Une redescente de plus de 2 m à tout moment est éliminatoire.',
+    category: 'Intervention à 40 m',
+  ),
+  Question(
+    id: 'n4_65',
+    text:
+        'À quel moment la vitesse de remontée doit-elle être définitivement maîtrisée ?',
+    options: ['À 40 m', 'À 35 m', 'À 20 m', 'À 10 m'],
+    correctIndex: 1,
+    explanation:
+        'Si une vitesse rapide est tolérée en début de remontée, elle doit être maîtrisée au plus tard à l’arrivée à 35 m.',
+    category: 'Intervention à 40 m',
+  ),
 
 // --- MATELOTAGE ---
-Question(
-  id: 'n4_66',
-  text: 'Quel est l’objet principal de l’épreuve de matelotage ?',
-  options: ['Évaluer la vitesse de nage', 'Évaluer les qualités d’un futur guide de palanquée comme équipier du directeur de plongée', 'Évaluer la profondeur maximale', 'Évaluer la théorie de la désaturation'],
-  correctIndex: 1,
-  explanation: 'L’épreuve de matelotage évalue le GP comme équipier du directeur de plongée, attentif à la sécurité et à l’environnement maritime.',
-  category: 'Matelotage',
-),
-Question(
-  id: 'n4_67',
-  text: 'Quels nœuds usuels le candidat doit-il connaître en matelotage ?',
-  options: ['Noeud plat seulement', 'Nœud de chaise, de cabestan, d’arrêt et de taquet', 'Noeud de prussik uniquement', 'Nœud gordien'],
-  correctIndex: 1,
-  explanation: 'Le candidat doit savoir effectuer les nœuds de chaise, de cabestan, d’arrêt et de taquet.',
-  category: 'Matelotage',
-),
-Question(
-  id: 'n4_68',
-  text: 'Quel matériel peut être installé et utilisé pendant l’épreuve de matelotage ?',
-  options: ['Pendeur, bloc de secours, ligne de vie, parachute d’ancre', 'Palmes, masque, tuba', 'Combinaison chauffante', 'Lampe photo uniquement'],
-  correctIndex: 0,
-  explanation: 'Le candidat doit savoir installer et utiliser des supports comme pendeur, bloc de secours, ligne de vie, parachute d’ancre.',
-  category: 'Matelotage',
-),
-Question(
-  id: 'n4_69',
-  text: 'Quelle information doit savoir rechercher le candidat pour le choix du site ?',
-  options: ['La couleur de l’eau', 'La météo, les zones interdites et les réserves', 'La taille du bateau uniquement', 'La température du vestiaire'],
-  correctIndex: 1,
-  explanation: 'Il doit savoir où prendre les informations indispensables : météo, zones interdites, réserves.',
-  category: 'Matelotage',
-),
-Question(
-  id: 'n4_70',
-  text: 'Le repérage d’un site de plongée peut s’appuyer sur quoi ?',
-  options: ['GPS et sonar uniquement', 'Amers, enseignures, cartes marines, GPS et sonar', 'Compas et montre uniquement', 'L’orientation du vent seulement'],
-  correctIndex: 1,
-  explanation: 'Le repérage peut s’appuyer sur des amers, enseignures, cartes marines, GPS et sonar.',
-  category: 'Matelotage',
-),
-Question(
-  id: 'n4_71',
-  text: 'Quel moyen de rappel des plongeurs doit être connu par le GP ?',
-  options: ['Aucun', 'Les moyens de rappel des plongeurs', 'Seulement les signaux sonores', 'Le sifflet du bateau uniquement'],
-  correctIndex: 1,
-  explanation: 'Le GP doit connaître les moyens de rappel des plongeurs.',
-  category: 'Matelotage',
-),
-Question(
-  id: 'n4_72',
-  text: 'Quel matériel d’assistance et de secours doit être connu par le GP ?',
-  options: ['Le seul masque du DP', 'Le matériel imposé par le Code du Sport', 'Uniquement une bouée', 'Un bloc vide'],
-  correctIndex: 1,
-  explanation: 'Le GP doit connaître le matériel d’assistance et de secours spécifique à l’activité imposé par le Code du Sport.',
-  category: 'Matelotage',
-),
-Question(
-  id: 'n4_73',
-  text: 'Sur quoi se fonde l’évaluation en matelotage ?',
-  options: ['Sur des cas simples décrits par le jury', 'Sur un test écrit de 2 heures', 'Sur un tirage au sort aléatoire', 'Sur un seul nœud'],
-  correctIndex: 0,
-  explanation: 'L’évaluation pratique se fait à partir de cas simples décrits par le jury.',
-  category: 'Matelotage',
-),
-Question(
-  id: 'n4_74',
-  text: 'Quelle est la logique du matelotage pour le GP-N4 ?',
-  options: ['Être discret mais lent', 'Être un équipier efficace du DP, attentif à la sécurité', 'Être le plus rapide possible', 'Ne s’occuper que du matériel personnel'],
-  correctIndex: 1,
-  explanation: 'Le matelotage vise à faire du candidat un équipier du DP attentif à la sécurité.',
-  category: 'Matelotage',
-),
-Question(
-  id: 'n4_75',
-  text: 'Quel rôle le GP-N4 peut-il avoir vis-à-vis de la sécurité du site ?',
-  options: ['Aucun', 'Participer à la mise en place des outils nécessaires à l’activité', 'Négocier la météo', 'Remplacer le pilote'],
-  correctIndex: 1,
-  explanation: 'Le GP participe à la mise en place des outils nécessaires à l’activité sur le site.',
-  category: 'Matelotage',
-),
+  Question(
+    id: 'n4_66',
+    text: 'Quel est l’objet principal de l’épreuve de matelotage ?',
+    options: [
+      'Évaluer la vitesse de nage',
+      'Évaluer les qualités d’un futur guide de palanquée comme équipier du directeur de plongée',
+      'Évaluer la profondeur maximale',
+      'Évaluer la théorie de la désaturation'
+    ],
+    correctIndex: 1,
+    explanation:
+        'L’épreuve de matelotage évalue le GP comme équipier du directeur de plongée, attentif à la sécurité et à l’environnement maritime.',
+    category: 'Matelotage',
+  ),
+  Question(
+    id: 'n4_67',
+    text: 'Quels nœuds usuels le candidat doit-il connaître en matelotage ?',
+    options: [
+      'Noeud plat seulement',
+      'Nœud de chaise, de cabestan, d’arrêt et de taquet',
+      'Noeud de prussik uniquement',
+      'Nœud gordien'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le candidat doit savoir effectuer les nœuds de chaise, de cabestan, d’arrêt et de taquet.',
+    category: 'Matelotage',
+  ),
+  Question(
+    id: 'n4_68',
+    text:
+        'Quel matériel peut être installé et utilisé pendant l’épreuve de matelotage ?',
+    options: [
+      'Pendeur, bloc de secours, ligne de vie, parachute d’ancre',
+      'Palmes, masque, tuba',
+      'Combinaison chauffante',
+      'Lampe photo uniquement'
+    ],
+    correctIndex: 0,
+    explanation:
+        'Le candidat doit savoir installer et utiliser des supports comme pendeur, bloc de secours, ligne de vie, parachute d’ancre.',
+    category: 'Matelotage',
+  ),
+  Question(
+    id: 'n4_69',
+    text:
+        'Quelle information doit savoir rechercher le candidat pour le choix du site ?',
+    options: [
+      'La couleur de l’eau',
+      'La météo, les zones interdites et les réserves',
+      'La taille du bateau uniquement',
+      'La température du vestiaire'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Il doit savoir où prendre les informations indispensables : météo, zones interdites, réserves.',
+    category: 'Matelotage',
+  ),
+  Question(
+    id: 'n4_70',
+    text: 'Le repérage d’un site de plongée peut s’appuyer sur quoi ?',
+    options: [
+      'GPS et sonar uniquement',
+      'Amers, enseignures, cartes marines, GPS et sonar',
+      'Compas et montre uniquement',
+      'L’orientation du vent seulement'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le repérage peut s’appuyer sur des amers, enseignures, cartes marines, GPS et sonar.',
+    category: 'Matelotage',
+  ),
+  Question(
+    id: 'n4_71',
+    text: 'Quel moyen de rappel des plongeurs doit être connu par le GP ?',
+    options: [
+      'Aucun',
+      'Les moyens de rappel des plongeurs',
+      'Seulement les signaux sonores',
+      'Le sifflet du bateau uniquement'
+    ],
+    correctIndex: 1,
+    explanation: 'Le GP doit connaître les moyens de rappel des plongeurs.',
+    category: 'Matelotage',
+  ),
+  Question(
+    id: 'n4_72',
+    text:
+        'Quel matériel d’assistance et de secours doit être connu par le GP ?',
+    options: [
+      'Le seul masque du DP',
+      'Le matériel imposé par le Code du Sport',
+      'Uniquement une bouée',
+      'Un bloc vide'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP doit connaître le matériel d’assistance et de secours spécifique à l’activité imposé par le Code du Sport.',
+    category: 'Matelotage',
+  ),
+  Question(
+    id: 'n4_73',
+    text: 'Sur quoi se fonde l’évaluation en matelotage ?',
+    options: [
+      'Sur des cas simples décrits par le jury',
+      'Sur un test écrit de 2 heures',
+      'Sur un tirage au sort aléatoire',
+      'Sur un seul nœud'
+    ],
+    correctIndex: 0,
+    explanation:
+        'L’évaluation pratique se fait à partir de cas simples décrits par le jury.',
+    category: 'Matelotage',
+  ),
+  Question(
+    id: 'n4_74',
+    text: 'Quelle est la logique du matelotage pour le GP-N4 ?',
+    options: [
+      'Être discret mais lent',
+      'Être un équipier efficace du DP, attentif à la sécurité',
+      'Être le plus rapide possible',
+      'Ne s’occuper que du matériel personnel'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le matelotage vise à faire du candidat un équipier du DP attentif à la sécurité.',
+    category: 'Matelotage',
+  ),
+  Question(
+    id: 'n4_75',
+    text: 'Quel rôle le GP-N4 peut-il avoir vis-à-vis de la sécurité du site ?',
+    options: [
+      'Aucun',
+      'Participer à la mise en place des outils nécessaires à l’activité',
+      'Négocier la météo',
+      'Remplacer le pilote'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le GP participe à la mise en place des outils nécessaires à l’activité sur le site.',
+    category: 'Matelotage',
+  ),
 
 // --- DESCENTE 40 M & VIDAGE DE MASQUE ---
-Question(
-  id: 'n4_76',
-  text: 'L’épreuve de descente, stabilisation et vidage de masque à 40 m est-elle une simulation de situation réelle ?',
-  options: ['Oui', 'Non', 'Seulement en piscine', 'Seulement au retour'],
-  correctIndex: 1,
-  explanation: 'C’est une démonstration technique sans rapport direct avec une situation réelle.',
-  category: 'Technique à 40 m',
-),
-Question(
-  id: 'n4_77',
-  text: 'Dans quelle position le candidat doit-il descendre vers 40 m ?',
-  options: ['Horizontale', 'Assise', 'Verticale tête en bas', 'Libre'],
-  correctIndex: 2,
-  explanation: 'Le candidat descend en position verticale tête vers le bas sans vriller.',
-  category: 'Technique à 40 m',
-),
-Question(
-  id: 'n4_78',
-  text: 'À quelle vitesse la descente doit-elle être effectuée ?',
-  options: ['5 à 10 m/min', '10 à 15 m/min', '20 à 30 m/min', '40 m/min'],
-  correctIndex: 2,
-  explanation: 'La descente doit être réalisée à une vitesse constante entre 20 et 30 m/min, éventuellement plus lente sur la fin.',
-  category: 'Technique à 40 m',
-),
-Question(
-  id: 'n4_79',
-  text: 'À quelle profondeur le retournement ne doit-il pas intervenir avant ?',
-  options: ['30 m', '35 m', '40 m', '45 m'],
-  correctIndex: 1,
-  explanation: 'Le retournement ne doit pas intervenir avant 35 m.',
-  category: 'Technique à 40 m',
-),
-Question(
-  id: 'n4_80',
-  text: 'Combien de cycles ventilatoires doit effectuer le candidat avant de remettre son masque ?',
-  options: ['1', '2', '3', '4'],
-  correctIndex: 2,
-  explanation: 'Le candidat effectue 3 cycles ventilatoires avant de remettre et vider son masque.',
-  category: 'Technique à 40 m',
-),
-Question(
-  id: 'n4_81',
-  text: 'Quelle variation autour de la profondeur plancher est éliminatoire pendant l’épreuve ?',
-  options: ['± 1 m', '± 2 m', '± 3 m', '± 4 m'],
-  correctIndex: 1,
-  explanation: 'Une variation de +/- 2 m autour de la profondeur plancher est éliminatoire.',
-  category: 'Technique à 40 m',
-),
-Question(
-  id: 'n4_82',
-  text: 'Pendant la phase de stabilisation à 40 m, quel seul léger mouvement est autorisé ?',
-  options: ['Palmage propulsif', 'Léger palmage de positionnement', 'Aucun mouvement du tout', 'Nage avec les bras'],
-  correctIndex: 1,
-  explanation: 'Seul un léger palmage de positionnement est autorisé.',
-  category: 'Technique à 40 m',
-),
-Question(
-  id: 'n4_83',
-  text: 'Quel critère ventilatoire est évalué pendant l’épreuve à 40 m ?',
-  options: ['La ventilation et l’équilibre', 'La durée d’immersion totale', 'Le nombre de coups de palmes', 'La consommation d’air uniquement'],
-  correctIndex: 0,
-  explanation: 'L’épreuve évalue la maîtrise de la ventilation, de l’équilibre, de la propulsion et du stress.',
-  category: 'Technique à 40 m',
-),
-Question(
-  id: 'n4_84',
-  text: 'Que doit faire le candidat lorsqu’il estime être correctement stabilisé à 40 m ?',
-  options: ['Remonter immédiatement', 'L’indiquer au jury', 'Fermer les yeux', 'Retirer son gilet'],
-  correctIndex: 1,
-  explanation: 'Lorsqu’il estime être correctement stabilisé, le candidat l’indique au jury.',
-  category: 'Technique à 40 m',
-),
-Question(
-  id: 'n4_85',
-  text: 'Quelle action suit la remise du masque pendant l’épreuve à 40 m ?',
-  options: ['Un sprint', 'Le vidage du masque et le signe OK', 'Le retrait du détendeur', 'L’oubli du masque'],
-  correctIndex: 1,
-  explanation: 'Le candidat remet et vide son masque, puis effectue un signe OK au jury.',
-  category: 'Technique à 40 m',
-),
+  Question(
+    id: 'n4_76',
+    text:
+        'L’épreuve de descente, stabilisation et vidage de masque à 40 m est-elle une simulation de situation réelle ?',
+    options: ['Oui', 'Non', 'Seulement en piscine', 'Seulement au retour'],
+    correctIndex: 1,
+    explanation:
+        'C’est une démonstration technique sans rapport direct avec une situation réelle.',
+    category: 'Technique à 40 m',
+  ),
+  Question(
+    id: 'n4_77',
+    text: 'Dans quelle position le candidat doit-il descendre vers 40 m ?',
+    options: ['Horizontale', 'Assise', 'Verticale tête en bas', 'Libre'],
+    correctIndex: 2,
+    explanation:
+        'Le candidat descend en position verticale tête vers le bas sans vriller.',
+    category: 'Technique à 40 m',
+  ),
+  Question(
+    id: 'n4_78',
+    text: 'À quelle vitesse la descente doit-elle être effectuée ?',
+    options: ['5 à 10 m/min', '10 à 15 m/min', '20 à 30 m/min', '40 m/min'],
+    correctIndex: 2,
+    explanation:
+        'La descente doit être réalisée à une vitesse constante entre 20 et 30 m/min, éventuellement plus lente sur la fin.',
+    category: 'Technique à 40 m',
+  ),
+  Question(
+    id: 'n4_79',
+    text:
+        'À quelle profondeur le retournement ne doit-il pas intervenir avant ?',
+    options: ['30 m', '35 m', '40 m', '45 m'],
+    correctIndex: 1,
+    explanation: 'Le retournement ne doit pas intervenir avant 35 m.',
+    category: 'Technique à 40 m',
+  ),
+  Question(
+    id: 'n4_80',
+    text:
+        'Combien de cycles ventilatoires doit effectuer le candidat avant de remettre son masque ?',
+    options: ['1', '2', '3', '4'],
+    correctIndex: 2,
+    explanation:
+        'Le candidat effectue 3 cycles ventilatoires avant de remettre et vider son masque.',
+    category: 'Technique à 40 m',
+  ),
+  Question(
+    id: 'n4_81',
+    text:
+        'Quelle variation autour de la profondeur plancher est éliminatoire pendant l’épreuve ?',
+    options: ['± 1 m', '± 2 m', '± 3 m', '± 4 m'],
+    correctIndex: 1,
+    explanation:
+        'Une variation de +/- 2 m autour de la profondeur plancher est éliminatoire.',
+    category: 'Technique à 40 m',
+  ),
+  Question(
+    id: 'n4_82',
+    text:
+        'Pendant la phase de stabilisation à 40 m, quel seul léger mouvement est autorisé ?',
+    options: [
+      'Palmage propulsif',
+      'Léger palmage de positionnement',
+      'Aucun mouvement du tout',
+      'Nage avec les bras'
+    ],
+    correctIndex: 1,
+    explanation: 'Seul un léger palmage de positionnement est autorisé.',
+    category: 'Technique à 40 m',
+  ),
+  Question(
+    id: 'n4_83',
+    text: 'Quel critère ventilatoire est évalué pendant l’épreuve à 40 m ?',
+    options: [
+      'La ventilation et l’équilibre',
+      'La durée d’immersion totale',
+      'Le nombre de coups de palmes',
+      'La consommation d’air uniquement'
+    ],
+    correctIndex: 0,
+    explanation:
+        'L’épreuve évalue la maîtrise de la ventilation, de l’équilibre, de la propulsion et du stress.',
+    category: 'Technique à 40 m',
+  ),
+  Question(
+    id: 'n4_84',
+    text:
+        'Que doit faire le candidat lorsqu’il estime être correctement stabilisé à 40 m ?',
+    options: [
+      'Remonter immédiatement',
+      'L’indiquer au jury',
+      'Fermer les yeux',
+      'Retirer son gilet'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Lorsqu’il estime être correctement stabilisé, le candidat l’indique au jury.',
+    category: 'Technique à 40 m',
+  ),
+  Question(
+    id: 'n4_85',
+    text: 'Quelle action suit la remise du masque pendant l’épreuve à 40 m ?',
+    options: [
+      'Un sprint',
+      'Le vidage du masque et le signe OK',
+      'Le retrait du détendeur',
+      'L’oubli du masque'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le candidat remet et vide son masque, puis effectue un signe OK au jury.',
+    category: 'Technique à 40 m',
+  ),
 
 // --- DTMR 25 M ---
-Question(
-  id: 'n4_86',
-  text: 'Que signifie DTMR ?',
-  options: ['Démonstration Technique de Maîtrise de la Remontée gilet', 'Descente Technique en Milieu Réduit', 'Détenteur Technique de Matériel de Remontée', 'Démonstration Temporaire de Matelotage Rapide'],
-  correctIndex: 0,
-  explanation: 'DTMR signifie Démonstration Technique de Maîtrise de la Remontée gilet.',
-  category: 'DTMR',
-),
-Question(
-  id: 'n4_87',
-  text: 'À quelle profondeur démarre la DTMR ?',
-  options: ['20 m', '25 m', '30 m', '40 m'],
-  correctIndex: 1,
-  explanation: 'La DTMR se déroule à 25 m.',
-  category: 'DTMR',
-),
-Question(
-  id: 'n4_88',
-  text: 'Quelle est la vitesse de référence de la DTMR ?',
-  options: ['5 à 7 m/min', '10 à 12 m/min', '15 à 18 m/min', '20 à 25 m/min'],
-  correctIndex: 1,
-  explanation: 'La vitesse de référence est de 10 à 12 m/min.',
-  category: 'DTMR',
-),
-Question(
-  id: 'n4_89',
-  text: 'Quel arrêt doit être réalisé à la remontée en DTMR ?',
-  options: ['Entre 12 et 10 m', 'Entre 8 et 6 m', 'À 3 m', 'À la surface'],
-  correctIndex: 1,
-  explanation: 'Le candidat effectue un arrêt franc entre 8 et 6 mètres.',
-  category: 'DTMR',
-),
-Question(
-  id: 'n4_90',
-  text: 'Qu’est-ce que le candidat doit utiliser pour gonfler son parachute en DTMR ?',
-  options: ['Le détendeur de secours', 'Le détendeur principal', 'Le tuba', 'Aucun matériel'],
-  correctIndex: 0,
-  explanation: 'Le candidat sort son parachute et le gonfle à l’aide de son détendeur de secours.',
-  category: 'DTMR',
-),
-Question(
-  id: 'n4_91',
-  text: 'Quel moyen de propulsion est interdit pendant la remontée en DTMR ?',
-  options: ['La ventilation', 'L’utilisation des palmes comme moteur de la remontée', 'Le gilet', 'Le parachute'],
-  correctIndex: 1,
-  explanation: 'L’utilisation des palmes comme moteur de la remontée est interdite.',
-  category: 'DTMR',
-),
-Question(
-  id: 'n4_92',
-  text: 'Le regonflage du gilet est-il autorisé pendant la remontée en DTMR ?',
-  options: ['Oui, sans limite', 'Oui, deux fois maximum', 'Non, il est pénalisant', 'Oui, uniquement à partir de 10 m'],
-  correctIndex: 2,
-  explanation: 'L’absence de regonflage des gilets est demandée ; le regonflage est pénalisant.',
-  category: 'DTMR',
-),
-Question(
-  id: 'n4_93',
-  text: 'Que doit faire le candidat à l’arrivée à la profondeur d’arrêt en DTMR ?',
-  options: ['Un tour d’horizon stabilisé', 'Descendre plus bas', 'Retirer son parachute sans arrêt', 'Percer la surface'],
-  correctIndex: 0,
-  explanation: 'À l’arrivée, il réalise un tour d’horizon complet, stabilisé, regard vers la surface.',
-  category: 'DTMR',
-),
-Question(
-  id: 'n4_94',
-  text: 'Que doit assurer le candidat pendant l’arrêt en DTMR ?',
-  options: ['La gestion de la désaturation de la palanquée', 'L’augmentation de la vitesse', 'La disparition du parachute', 'Le remplacement du jury'],
-  correctIndex: 0,
-  explanation: 'Le candidat assure une gestion adaptée de la désaturation de la palanquée en conservant la profondeur d’arrêt.',
-  category: 'DTMR',
-),
-Question(
-  id: 'n4_95',
-  text: 'Quelle erreur est éliminatoire en DTMR si elle dépasse 2 m ?',
-  options: ['La redescente', 'La remontée', 'Le tour d’horizon', 'Le déploiement du parachute'],
-  correctIndex: 0,
-  explanation: 'Redescendre de plus de 2 mètres au décollage, pendant la remontée ou à la profondeur d’arrêt est éliminatoire.',
-  category: 'DTMR',
-),
+  Question(
+    id: 'n4_86',
+    text: 'Que signifie DTMR ?',
+    options: [
+      'Démonstration Technique de Maîtrise de la Remontée gilet',
+      'Descente Technique en Milieu Réduit',
+      'Détenteur Technique de Matériel de Remontée',
+      'Démonstration Temporaire de Matelotage Rapide'
+    ],
+    correctIndex: 0,
+    explanation:
+        'DTMR signifie Démonstration Technique de Maîtrise de la Remontée gilet.',
+    category: 'DTMR',
+  ),
+  Question(
+    id: 'n4_87',
+    text: 'À quelle profondeur démarre la DTMR ?',
+    options: ['20 m', '25 m', '30 m', '40 m'],
+    correctIndex: 1,
+    explanation: 'La DTMR se déroule à 25 m.',
+    category: 'DTMR',
+  ),
+  Question(
+    id: 'n4_88',
+    text: 'Quelle est la vitesse de référence de la DTMR ?',
+    options: ['5 à 7 m/min', '10 à 12 m/min', '15 à 18 m/min', '20 à 25 m/min'],
+    correctIndex: 1,
+    explanation: 'La vitesse de référence est de 10 à 12 m/min.',
+    category: 'DTMR',
+  ),
+  Question(
+    id: 'n4_89',
+    text: 'Quel arrêt doit être réalisé à la remontée en DTMR ?',
+    options: ['Entre 12 et 10 m', 'Entre 8 et 6 m', 'À 3 m', 'À la surface'],
+    correctIndex: 1,
+    explanation: 'Le candidat effectue un arrêt franc entre 8 et 6 mètres.',
+    category: 'DTMR',
+  ),
+  Question(
+    id: 'n4_90',
+    text:
+        'Qu’est-ce que le candidat doit utiliser pour gonfler son parachute en DTMR ?',
+    options: [
+      'Le détendeur de secours',
+      'Le détendeur principal',
+      'Le tuba',
+      'Aucun matériel'
+    ],
+    correctIndex: 0,
+    explanation:
+        'Le candidat sort son parachute et le gonfle à l’aide de son détendeur de secours.',
+    category: 'DTMR',
+  ),
+  Question(
+    id: 'n4_91',
+    text: 'Quel moyen de propulsion est interdit pendant la remontée en DTMR ?',
+    options: [
+      'La ventilation',
+      'L’utilisation des palmes comme moteur de la remontée',
+      'Le gilet',
+      'Le parachute'
+    ],
+    correctIndex: 1,
+    explanation:
+        'L’utilisation des palmes comme moteur de la remontée est interdite.',
+    category: 'DTMR',
+  ),
+  Question(
+    id: 'n4_92',
+    text:
+        'Le regonflage du gilet est-il autorisé pendant la remontée en DTMR ?',
+    options: [
+      'Oui, sans limite',
+      'Oui, deux fois maximum',
+      'Non, il est pénalisant',
+      'Oui, uniquement à partir de 10 m'
+    ],
+    correctIndex: 2,
+    explanation:
+        'L’absence de regonflage des gilets est demandée ; le regonflage est pénalisant.',
+    category: 'DTMR',
+  ),
+  Question(
+    id: 'n4_93',
+    text:
+        'Que doit faire le candidat à l’arrivée à la profondeur d’arrêt en DTMR ?',
+    options: [
+      'Un tour d’horizon stabilisé',
+      'Descendre plus bas',
+      'Retirer son parachute sans arrêt',
+      'Percer la surface'
+    ],
+    correctIndex: 0,
+    explanation:
+        'À l’arrivée, il réalise un tour d’horizon complet, stabilisé, regard vers la surface.',
+    category: 'DTMR',
+  ),
+  Question(
+    id: 'n4_94',
+    text: 'Que doit assurer le candidat pendant l’arrêt en DTMR ?',
+    options: [
+      'La gestion de la désaturation de la palanquée',
+      'L’augmentation de la vitesse',
+      'La disparition du parachute',
+      'Le remplacement du jury'
+    ],
+    correctIndex: 0,
+    explanation:
+        'Le candidat assure une gestion adaptée de la désaturation de la palanquée en conservant la profondeur d’arrêt.',
+    category: 'DTMR',
+  ),
+  Question(
+    id: 'n4_95',
+    text: 'Quelle erreur est éliminatoire en DTMR si elle dépasse 2 m ?',
+    options: [
+      'La redescente',
+      'La remontée',
+      'Le tour d’horizon',
+      'Le déploiement du parachute'
+    ],
+    correctIndex: 0,
+    explanation:
+        'Redescendre de plus de 2 mètres au décollage, pendant la remontée ou à la profondeur d’arrêt est éliminatoire.',
+    category: 'DTMR',
+  ),
 
 // --- NAGE CAPELÉE & MATÉRIEL ---
-Question(
-  id: 'n4_96',
-  text: 'Quelle distance doit être parcourue pour l’épreuve de nage avec scaphandre ?',
-  options: ['100 m', '250 m', '500 m', '800 m'],
-  correctIndex: 2,
-  explanation: 'L’épreuve consiste à réaliser un parcours de 500 m en moins de 16 minutes.',
-  category: 'Nage capelée',
-),
-Question(
-  id: 'n4_97',
-  text: 'Dans l’épreuve de nage avec scaphandre, le candidat peut-il se servir de son scaphandre pour nager ?',
-  options: ['Oui', 'Non', 'Uniquement pour flotter', 'Seulement en surface'],
-  correctIndex: 1,
-  explanation: 'Le candidat ne doit pas se servir du scaphandre qu’il porte, ni s’aider de ses bras.',
-  category: 'Nage capelée',
-),
-Question(
-  id: 'n4_98',
-  text: 'Quelle partie du GP-N4 est évaluée à l’oral en groupe 3 ?',
-  options: ['Désaturation', 'Matériel de plongée', 'Réglementation', 'Anatomie du plongeur'],
-  correctIndex: 1,
-  explanation: 'L’épreuve 13 “Matériel de plongée” est orale.',
-  category: 'Matériel de plongée',
-),
-Question(
-  id: 'n4_99',
-  text: 'Que doit savoir expliquer le candidat sur les détendeurs ?',
-  options: ['Uniquement leur marque', 'Le fonctionnement de principe des principaux éléments', 'Le prix des pièces', 'Le transport du matériel'],
-  correctIndex: 1,
-  explanation: 'Le candidat doit connaître les notions élémentaires nécessaires à la compréhension du fonctionnement d’un détendeur.',
-  category: 'Matériel de plongée',
-),
-Question(
-  id: 'n4_100',
-  text: 'Que doit connaître le candidat à propos de l’ordinateur de plongée ?',
-  options: ['Seulement l’allumage', 'Ses fonctions, réglages et l’interprétation des écrans courants', 'Uniquement sa marque', 'Rien de particulier'],
-  correctIndex: 1,
-  explanation: 'Le candidat doit être capable de décrire les fonctions de son ordinateur, ses réglages et lire les écrans courants.',
-  category: 'Matériel de plongée',
-),
+  Question(
+    id: 'n4_96',
+    text:
+        'Quelle distance doit être parcourue pour l’épreuve de nage avec scaphandre ?',
+    options: ['100 m', '250 m', '500 m', '800 m'],
+    correctIndex: 2,
+    explanation:
+        'L’épreuve consiste à réaliser un parcours de 500 m en moins de 16 minutes.',
+    category: 'Nage capelée',
+  ),
+  Question(
+    id: 'n4_97',
+    text:
+        'Dans l’épreuve de nage avec scaphandre, le candidat peut-il se servir de son scaphandre pour nager ?',
+    options: ['Oui', 'Non', 'Uniquement pour flotter', 'Seulement en surface'],
+    correctIndex: 1,
+    explanation:
+        'Le candidat ne doit pas se servir du scaphandre qu’il porte, ni s’aider de ses bras.',
+    category: 'Nage capelée',
+  ),
+  Question(
+    id: 'n4_98',
+    text: 'Quelle partie du GP-N4 est évaluée à l’oral en groupe 3 ?',
+    options: [
+      'Désaturation',
+      'Matériel de plongée',
+      'Réglementation',
+      'Anatomie du plongeur'
+    ],
+    correctIndex: 1,
+    explanation: 'L’épreuve 13 “Matériel de plongée” est orale.',
+    category: 'Matériel de plongée',
+  ),
+  Question(
+    id: 'n4_99',
+    text: 'Que doit savoir expliquer le candidat sur les détendeurs ?',
+    options: [
+      'Uniquement leur marque',
+      'Le fonctionnement de principe des principaux éléments',
+      'Le prix des pièces',
+      'Le transport du matériel'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le candidat doit connaître les notions élémentaires nécessaires à la compréhension du fonctionnement d’un détendeur.',
+    category: 'Matériel de plongée',
+  ),
+  Question(
+    id: 'n4_100',
+    text:
+        'Que doit connaître le candidat à propos de l’ordinateur de plongée ?',
+    options: [
+      'Seulement l’allumage',
+      'Ses fonctions, réglages et l’interprétation des écrans courants',
+      'Uniquement sa marque',
+      'Rien de particulier'
+    ],
+    correctIndex: 1,
+    explanation:
+        'Le candidat doit être capable de décrire les fonctions de son ordinateur, ses réglages et lire les écrans courants.',
+    category: 'Matériel de plongée',
+  ),
 ];
 
 const List<QuizModule> quizModules = [
@@ -3364,6 +5620,3 @@ const List<QuizModule> quizModules = [
     questions: _niveau4Questions,
   ),
 ];
-
-
-

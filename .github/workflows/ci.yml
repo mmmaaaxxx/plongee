@@ -104,7 +104,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: build/app/outputs/flutter-apk/plongee.ap
+          path: build/app/outputs/flutter-apk/app-release.apk
 
   build-web:
     name: 🌐 Build Web
@@ -149,8 +149,19 @@ jobs:
           channel: stable
           cache: true
 
+      - name: Sélection Xcode stable
+        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
       - name: Récupération des dépendances
         run: flutter pub get
+
+      - name: Activation de la plateforme iOS
+        run: flutter create --platforms=ios . --project-name ffessm_qcm
+
+      - name: Installation des pods CocoaPods
+        run: |
+          cd ios
+          pod install --repo-update
 
       - name: Build iOS (no codesign)
         run: flutter build ios --release --no-codesign
@@ -175,24 +186,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout du code
-        uses: actions/checkout@v4
-
-      - name: Installation Flutter
-        uses: subosito/flutter-action@v2
+      - name: Téléchargement de l'artefact web
+        uses: actions/download-artifact@v4
         with:
-          flutter-version: ${{ env.FLUTTER_VERSION }}
-          channel: stable
-          cache: true
-
-      - name: Récupération des dépendances
-        run: flutter pub get
-
-      - name: Build Web pour GitHub Pages
-        run: |
-          flutter build web --release \
-            --web-renderer canvaskit \
-            --base-href "/${{ github.event.repository.name }}/"
+          name: ffessm-qcm-web
+          path: build/web
 
       - name: Configuration GitHub Pages
         uses: actions/configure-pages@v4

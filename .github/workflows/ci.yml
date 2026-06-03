@@ -63,7 +63,7 @@ jobs:
         with:
           file: coverage/lcov.info
           flags: unittests
-          name: ffessm-qcm-coverage
+          name: plouf-coverage
         continue-on-error: true
 
   build-android:

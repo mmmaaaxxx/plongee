@@ -247,22 +247,22 @@ jobs:
       - name: Créer archive web
         run: |
           cd build/web
-          zip -r ../../ffessm-qcm-web.zip .
+          zip -r ../../plouf-web.zip .
 
       - name: Création de la GitHub Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
             build/app/outputs/flutter-apk/app-release.apk
-            ffessm-qcm-web.zip
+            plouf-web.zip
           body: |
             ## 🤿 FFESSM QCM — ${{ github.ref_name }}
 
             Application de révision pour les certifications FFESSM de plongée.
 
             ### 📱 Téléchargements
-            - **Android APK** : `app-release.apk`
-            - **Web** : `ffessm-qcm-web.zip` (à décompresser sur un serveur)
+            - **Android APK** : `plouf.apk`
+            - **Web** : `plouf-web.zip` (à décompresser sur un serveur)
 
             ### 📚 Modules disponibles
             - 🐟 Niveau 1 — PE20

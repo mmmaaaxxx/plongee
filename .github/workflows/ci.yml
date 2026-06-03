@@ -104,7 +104,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: build/app/outputs/flutter-apk/plouf.apk
+          # ✅ Flutter génère toujours app-release.apk, pas plouf.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
 
   build-web:
     name: 🌐 Build Web
@@ -127,14 +128,15 @@ jobs:
       - name: Activation de la plateforme Web
         run: flutter create --platforms=web . --project-name plouf
 
-
       - name: Build Web (CanvasKit)
-        run: flutter build web --release --web-renderer canvaskit
+        # ✅ --base-href requis pour que GitHub Pages trouve les assets
+        run: flutter build web --release --web-renderer canvaskit --base-href "/${{ github.event.repository.name }}/"
 
       - name: Upload build web
         uses: actions/upload-artifact@v4
         with:
-          name: plouf
+          # ✅ Était "plouf", corrigé en "plouf-web" pour correspondre au download-artifact
+          name: plouf-web
           path: build/web/
           retention-days: 7
 
@@ -193,6 +195,7 @@ jobs:
       - name: Téléchargement de l'artefact web
         uses: actions/download-artifact@v4
         with:
+          # ✅ Correspond maintenant à l'upload "plouf-web"
           name: plouf-web
           path: build/web
 
@@ -242,7 +245,8 @@ jobs:
         run: flutter create --platforms=web . --project-name plouf
 
       - name: Build Web release
-        run: flutter build web --release --web-renderer canvaskit
+        # ✅ --base-href aussi pour la release
+        run: flutter build web --release --web-renderer canvaskit --base-href "/${{ github.event.repository.name }}/"
 
       - name: Créer archive web
         run: |
@@ -256,12 +260,12 @@ jobs:
             build/app/outputs/flutter-apk/app-release.apk
             plouf-web.zip
           body: |
-            ## 🤿 FFESSM QCM — ${{ github.ref_name }}
+            ## 🌊 Plouf — ${{ github.ref_name }}
 
             Application de révision pour les certifications FFESSM de plongée.
 
             ### 📱 Téléchargements
-            - **Android APK** : `plouf.apk`
+            - **Android APK** : `app-release.apk`
             - **Web** : `plouf-web.zip` (à décompresser sur un serveur)
 
             ### 📚 Modules disponibles

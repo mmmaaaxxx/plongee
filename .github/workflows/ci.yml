@@ -1,4 +1,4 @@
-name: FFESSM QCM — CI/CD Flutter
+name: plouf — CI/CD Flutter
 
 on:
   push:
@@ -104,7 +104,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: build/app/outputs/flutter-apk/plouf.apk
 
   build-web:
     name: 🌐 Build Web
@@ -125,7 +125,8 @@ jobs:
         run: flutter pub get
 
       - name: Activation de la plateforme Web
-        run: flutter create --platforms=web . --project-name ffessm_qcm
+        run: flutter create --platforms=web . --project-name plouf
+
 
       - name: Build Web (CanvasKit)
         run: flutter build web --release --web-renderer canvaskit
@@ -133,7 +134,7 @@ jobs:
       - name: Upload build web
         uses: actions/upload-artifact@v4
         with:
-          name: ffessm-qcm-web
+          name: plouf
           path: build/web/
           retention-days: 7
 
@@ -159,7 +160,7 @@ jobs:
         run: flutter pub get
 
       - name: Activation de la plateforme iOS
-        run: flutter create --platforms=ios . --project-name ffessm_qcm
+        run: flutter create --platforms=ios . --project-name plouf
 
       - name: Installation des pods CocoaPods
         run: |
@@ -172,7 +173,7 @@ jobs:
       - name: Upload build iOS
         uses: actions/upload-artifact@v4
         with:
-          name: ffessm-qcm-ios
+          name: plouf-ios
           path: build/ios/iphoneos/
           retention-days: 7
 
@@ -192,7 +193,7 @@ jobs:
       - name: Téléchargement de l'artefact web
         uses: actions/download-artifact@v4
         with:
-          name: ffessm-qcm-web
+          name: plouf-web
           path: build/web
 
       - name: Configuration GitHub Pages
@@ -238,7 +239,7 @@ jobs:
         run: flutter build apk --release --target-platform android-arm64
 
       - name: Activation de la plateforme Web
-        run: flutter create --platforms=web . --project-name ffessm_qcm
+        run: flutter create --platforms=web . --project-name plouf
 
       - name: Build Web release
         run: flutter build web --release --web-renderer canvaskit

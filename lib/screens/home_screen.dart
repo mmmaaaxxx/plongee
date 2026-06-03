@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Text(
-                                  'FFESSM QCM',
+                                  'PLOUF',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 28,

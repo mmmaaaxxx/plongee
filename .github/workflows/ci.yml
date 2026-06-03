@@ -71,34 +71,40 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-      - name: Checkout du code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Installation de Java 17
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
+          distribution: 'temurin'
           java-version: '17'
 
-      - name: Installation Flutter
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: ${{ env.FLUTTER_VERSION }}
-          channel: stable
-          cache: true
+          flutter-version: '3.24.0'
+          channel: 'stable'
 
-      - name: Récupération des dépendances
+      - name: Create Flutter project
+        run: flutter create --platforms=android .
+
+      - name: Fix Kotlin version
+        run: |
+          sed -i 's/ext.kotlin_version = .*/ext.kotlin_version = "1.9.24"/' android/build.gradle
+          sed -i 's/org.jetbrains.kotlin.android\" version .*/org.jetbrains.kotlin.android" version "1.9.24" apply false/' android/settings.gradle
+
+      - name: Install dependencies
         run: flutter pub get
 
-      - name: Build APK debug
-        run: flutter build apk --debug --target-platform android-arm64
+      - name: Build APK
+        run: flutter build apk --release
 
-      - name: Upload APK debug
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: ffessm-qcm-debug-apk
-          path: build/app/outputs/flutter-apk/app-debug.apk
-          retention-days: 7
+          name: app-release
+          path: build/app/outputs/flutter-apk/plongee.ap
 
   build-web:
     name: 🌐 Build Web
